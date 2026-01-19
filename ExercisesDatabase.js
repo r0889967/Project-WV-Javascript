@@ -53,6 +53,19 @@ let exercise1_4 = {
     correctAnswers : [0,1,2,3,4],
 }
 
+let exercise1_5 = {
+    title:"The man and the snail",
+    text:["An confident man and a snail decided to have a very long race, the one who reaches the finish first wins.",
+        "When the race started, the man was already gone while the snail was just crawling slowly.",
+        "The man was very confident that he will win but once he reaches the finish, the snail was already there.",
+        "The man couldn't believe that he lost.",
+        "What are the possible and logical causes that made the slow snail beat the fast man?"],
+    type : "A",
+    choices : ["The snail was a super-snail that can go very fast.","The man decided to sleep for many hours during the race, allowing the snail to win.",
+    "The snail had asked an identical looking snail to stand at the finish line beforehand.","The snail had learned to teleport.","The man might had faced some unforeseen circumstances during the race, causing him to lose."],
+    correctAnswers : [1,2],
+}
+
 let exercise3_1 = {
     title: "Next number in sequence",
     text : ["Given the following sequence of numbers.",
@@ -129,10 +142,43 @@ let exercise3_8 = {
     correctAnswers : [2,3,5],
 }
 
+let exercise4_1 = {
+    title: "Encrypted text",
+    text:["The following text has been encrypted using a simple algorithm.",
+    "J thjnk ypv cbn dp thjs pnf",
+        "You need to decrypt this text.(The answer is case-sensitive)"],
+    type: "B",
+    correctAnswer : "I think you can do this one",
+}
+
+let exercise4_2 = {
+    title:"Encrypted text",
+    text:["The following text has been encrypted using a simple algorithm.",
+    "J bn zpvs cftu gsjfoe",
+        "You need to decrypt this text.(The answer is case-sensitive)"],
+    type : "B",
+    correctAnswer : "I am your best friend",
+}
+
+let exercise4_3 = {
+    title:"",
+    text:[],
+    type : "B",
+    correctAnswer : "",
+}
+
+let exercise4_4 = {
+    title:"",
+    text:[],
+    type : "B",
+    correctAnswer : "",
+}
+
 abstractionExercises.push(exercise1_1);
 abstractionExercises.push(exercise1_2);
 abstractionExercises.push(exercise1_3);
 abstractionExercises.push(exercise1_4);
+abstractionExercises.push(exercise1_5);
 
 patternExercises.push(exercise3_1);
 patternExercises.push(exercise3_2);
@@ -142,3 +188,8 @@ patternExercises.push(exercise3_5);
 patternExercises.push(exercise3_6);
 patternExercises.push(exercise3_7);
 patternExercises.push(exercise3_8);
+
+algorithmExercises.push(exercise4_1);
+algorithmExercises.push(exercise4_2);
+algorithmExercises.push(exercise4_3);
+algorithmExercises.push(exercise4_4);

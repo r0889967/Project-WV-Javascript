@@ -1,6 +1,7 @@
 var selectedExerciseIdx = 0;
 var chosenExercises = [];
 var chosenExercisesCount = 4;
+var score = 0;
 
 
 function loadMainMenu(){
@@ -42,7 +43,14 @@ function toNextLevel(){
 }
 
 function loadFinishedScreen(){
-
+    getElem("level").innerHTML = "";
+    let html = "";
+    html += "<h1>Result</h1>";
+    html += "<p>You have finished all exercises.</p>"
+    html += `<p>Your score is ${score}/${chosenExercisesCount}</p>`
+    html += emptyLine(3);
+    html += createButton("button1","","Module Selection","returnToModuleSelection();score=0");
+    getElem("finished").innerHTML = html;
 }
 
 function checkAnswerA(){
@@ -57,6 +65,7 @@ function checkAnswerA(){
     if(markedIdxs.toString()===exercise.correctAnswers.toString()){
         showAnswer.style.color = "green";
         showAnswer.innerHTML = "The answer is correct!";
+        score++;
     }else{
         showAnswer.style.color = "red";
         showAnswer.innerHTML = "The answer is incorrect!";
@@ -71,6 +80,7 @@ function checkAnswerB(input){
     if(input===exercise.correctAnswer){
         showAnswer.style.color = "green";
         showAnswer.innerHTML = "The answer is correct!";
+        score++;
     }else{
         showAnswer.style.color = "red";
         showAnswer.innerHTML = "The answer is incorrect!";
@@ -137,13 +147,14 @@ function loadExerciseContents(){
         html += emptyLine(1);
         html += `<p id="showanswer"></p>`;
         html += emptyLine(3);
-        html += "<button onclick=\"returnToModuleSelection()\" class=\"button1\">Module Selection</button>";
+        html += createButton("button1","","Module Selection","returnToModuleSelection()");
         level.innerHTML = html;
     }
 }
 
 function returnToModuleSelection(){
     getElem("level").innerHTML = "";
+    getElem("finished").innerHTML = "";
     loadModuleSelectionScreen();
 }
 
@@ -172,7 +183,7 @@ function loadModuleSelectionScreen(){
     html += emptyLine(2);
     html += "<p>Module 4: Algorithmic thinking</p>";
     html += createButton("button1","","Algorithm Exercises",
-        "");
+        `pickExercises(3);loadExerciseContents()`);
 
     html += emptyLine(2);
     html += "<p>Module 5: Integrated exercisesDatabase</p>";
@@ -217,6 +228,7 @@ function returnToMainMenu() {
     getElem("info").innerHTML = "";
     getElem("levelselection").innerHTML = "";
     getElem("level").innerHTML = "";
+    getElem("finished").innerHTML = "";
     loadMainMenu();
 }
 
