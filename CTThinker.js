@@ -13,6 +13,8 @@ function loadMainMenu(){
     html += emptyLine(3);
     html += createButton("button1","","Start Game","loadModuleSelectionScreen()");
     html += emptyLine(4);
+    html += createButton("button1","","Play Tutorial","");
+    html += emptyLine(4);
     html += createButton("button1","","About CTThinker","loadInfoScreen()");
     mainmenu.innerHTML = html;
 }

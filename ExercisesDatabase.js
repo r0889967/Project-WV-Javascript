@@ -26,10 +26,19 @@ let exercise1_1 = {
 }
 
 let exercise1_2 = {
-    title:"",
-    text:[],
-    type : "B",
-    correctAnswer : "",
+    title:"The card game",
+    text:["Alice, Bob and Carole are playing a game called \"guess the cards\", where Alice have 3 cards in her hand and she is",
+        "not allowed to show her cards directly to Bob or Carole, Alice have to try her best to give Bob hints about her",
+        "cards but must be aware of Carole, who might also use the hints to know Alice's cards. After giving the hints,",
+        "Bob and Carole must try to guess all of Sarah's cards. If Bob got all cards correct and Carole got at least one",
+        "card wrong, Alice and Bob will win, but if Carole got all cards correct, she will win regardless of how many cards",
+        "Bob got correct. Carole has sharp ears and eyes, can easily identify any subtle details, can speak all foreign ",
+        "languages and she has a device to intercept and decrypt any calls and messages between Alice and Bob.",
+        "What will be the best way for Alice to give hints to Bob without giving Carole too much information?"],
+    type : "A",
+    choices : ["Whispering to Bob, telling him the cards directly through voice.","Use fingers to depict the card's rank and suit to Bob.",
+        "Speak in a foreign language with Bob so Carole can't understand.","Send secret messages to Bob through phone to avoid Carole.","None of the above mentioned methods."],
+    correctAnswers : [4],
 }
 
 let exercise1_3 = {
@@ -63,7 +72,7 @@ let exercise1_5 = {
     type : "A",
     choices : ["The snail was a super-snail that can go very fast.","The man decided to sleep for many hours during the race, allowing the snail to win.",
     "The snail had asked an identical looking snail to stand at the finish line beforehand.","The snail had learned to teleport.","The man might had faced some unforeseen circumstances during the race, causing him to lose."],
-    correctAnswers : [1,2],
+    correctAnswers : [1,2,4],
 }
 
 let exercise3_1 = {
