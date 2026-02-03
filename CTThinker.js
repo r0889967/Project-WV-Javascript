@@ -175,7 +175,7 @@ function loadModuleSelectionScreen(){
     html += emptyLine(2);
     html += "<p>Module 2: Decomposition</p>";
     html += createButton("button1","","Decomposition Exercises",
-        "");
+        `pickExercises(1);loadExerciseContents()`);
 
     html += emptyLine(2);
     html += "<p>Module 3: Pattern recognization</p>";

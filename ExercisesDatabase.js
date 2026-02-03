@@ -5,12 +5,14 @@ const decompositionExercises = [];
 const patternExercises = [];
 const algorithmExercises = [];
 const IntegratedExercises = [];
+const tutorialExercises = [];
 
 Exercises.push(abstractionExercises);
 Exercises.push(decompositionExercises);
 Exercises.push(patternExercises);
 Exercises.push(algorithmExercises);
 Exercises.push(IntegratedExercises);
+Exercises.push(tutorialExercises);
 
 let exercise1_1 = {
     title: "Sarah and the Grim Reaper",
@@ -73,6 +75,72 @@ let exercise1_5 = {
     choices : ["The snail was a super-snail that can go very fast.","The man decided to sleep for many hours during the race, allowing the snail to win.",
     "The snail had asked an identical looking snail to stand at the finish line beforehand.","The snail had learned to teleport.","The man might had faced some unforeseen circumstances during the race, causing him to lose."],
     correctAnswers : [1,2,4],
+}
+
+let exercise1_6 = {
+    title:"Words inside scrambled text",
+    text:["Study this mess of letters below carefully.",
+    "knelybaeblewtodillehgcwreuer",
+    "Please list the 6 words that are part of this mess of letters alphabetically from left to right.",
+    "Use a single space to separate the words and don't use capitals.",
+    ""],
+    type : "B",
+    correctAnswer : "black blue green red white yellow"
+}
+
+let exercise1_7 = {
+    title:"Guess the secret number",
+    text:["Try to guess the secret number based on clues in the text. Between 10 and 99 (both boundaries included),",
+        "can't be divided by 3,4,5 or 7, the first digit is odd, the sum of the digits is greater than 12",
+        "the difference between the first and last digit is less or equal to 2, the first digit is greater than the last digit.",
+    ],
+    type : "B",
+    correctAnswer : "97"
+}
+
+let exercise2_1 = {
+    title:"Organize a birthday party",
+    text:["You want to organise a huge birthday party inside your garden. It will take you hours to prepare all the food",
+    "since you want to invite a lot of your friends, you also want to keep the food as fresh as possible for the party. ",
+    "Your friends don't live far from you, they will come in just a few minutes",
+    "after receiving your invitations. Also your garden needs to be decorated and cleaned.",
+    "What will be the most logical way to set up the party?",
+    ],
+    type : "A",
+    choices : ["Send invitations->Prepare food->Decorate garden->Clean garden","Clean garden->Prepare food->Decorate garden->Send invitations",
+    "Decorate garden->Clean garden->Send invitations->Prepare food","Clean garden->Decorate Garden->Prepare food->Send invitations",
+    "Prepare food->Clean garden->Decorate garden->Send invitations","Decorate garden->Send invitations->Prepare food->Clean garden",
+    "Clean garden->Decorate Garden->Send invitations->Prepare food"],
+    correctAnswers : [3],
+}
+
+let exercise2_2 = {
+    title:"5 persons and pocket lamp",
+    text:["There are 5 persons A,B,C,D and E who need to walk over a thin log above a cliff during the dark",
+        "Since it's dark, they need a pocket lamp to see, without the pocket lamp one will fall from the log and die.",
+        "There is only a single pocket lamp and its batteries only lasts for 90 seconds, anyone can hold the pocket lamp.",
+        "The log can only hold the weight of at most 2 persons, or else it will break. It will take A 5 seconds to cross,",
+        "B 50 seconds, C 20 seconds, D 7 seconds and E 8 seconds.",
+        "How can they all walk over the cliff before the battery of their pocket lamp dies? "],
+    type : "A",
+    choices : ["Give C lamp->B and C walk over->C returns->Give A lamp->A and D walk over->A returns->A and E walk over",
+        "Give A lamp->A and B walk over->A returns->A and C walk over->A returns->A and E walk over->A returns->A and D walk over",
+        "Give C lamp->B and C walk over->C returns->Give A lamp->A and E walk over->A returns->A and D walk over"],
+    correctAnswers : [0,2],
+}
+
+let exercise2_3 = {
+    title:"",
+    text:[],
+    type : "B",
+    correctAnswer : "",
+}
+
+let exercise2_4 = {
+    title:"",
+    text:[],
+    type : "B",
+    correctAnswer : "",
 }
 
 let exercise3_1 = {
@@ -188,6 +256,13 @@ abstractionExercises.push(exercise1_2);
 abstractionExercises.push(exercise1_3);
 abstractionExercises.push(exercise1_4);
 abstractionExercises.push(exercise1_5);
+abstractionExercises.push(exercise1_6);
+abstractionExercises.push(exercise1_7);
+
+decompositionExercises.push(exercise2_1);
+decompositionExercises.push(exercise2_2);
+decompositionExercises.push(exercise2_3);
+decompositionExercises.push(exercise2_4);
 
 patternExercises.push(exercise3_1);
 patternExercises.push(exercise3_2);
