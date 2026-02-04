@@ -1,6 +1,7 @@
 var selectedExerciseIdx = 0;
 var chosenExercises = [];
-var chosenExercisesCount = 4;
+var chosenExercisesCount = 10;
+var limit = 0;
 var score = 0;
 
 
@@ -10,10 +11,12 @@ function loadMainMenu(){
     html += "<h1>CTThinker</h1>";
     html += "<p>A great tool to boost computional thinking</p>";
     html += "<p>Made by David Jiawei Wang and Senne Bosmans</p>";
+    html += "<p>If it is your first time playing, please play the tutorial first.</p>";
     html += emptyLine(3);
     html += createButton("button1","","Start Game","loadModuleSelectionScreen()");
     html += emptyLine(4);
-    html += createButton("button1","","Play Tutorial","");
+    html += createButton("button1","","Tutorial",
+        `pickExercises(5,false);loadExerciseContents()`);
     html += emptyLine(4);
     html += createButton("button1","","About CTThinker","loadInfoScreen()");
     mainmenu.innerHTML = html;
@@ -37,21 +40,21 @@ function emptyLine(count){
 
 function toNextLevel(){
     selectedExerciseIdx++;
-    if(selectedExerciseIdx < chosenExercisesCount) {
+    if(selectedExerciseIdx < Math.min(limit,chosenExercisesCount)) {
         loadExerciseContents();
     }else{
         loadFinishedScreen();
     }
 }
 
-function loadFinishedScreen(){
+function loadFinishedScreen(tutorial){
     getElem("level").innerHTML = "";
     let html = "";
     html += "<h1>Result</h1>";
     html += "<p>You have finished all exercises.</p>"
-    html += `<p>Your score is ${score}/${chosenExercisesCount}</p>`
+    html += `<p>Your score is ${score}/${Math.min(limit,chosenExercisesCount)}</p>`
     html += emptyLine(3);
-    html += createButton("button1","","Module Selection","returnToModuleSelection();score=0");
+    html += createButton("button1", "", "Module Selection", "returnToModuleSelection();score=0");
     getElem("finished").innerHTML = html;
 }
 
@@ -90,18 +93,29 @@ function checkAnswerB(input){
     showAnswer.innerHTML += createButton("button1","","Next Level","toNextLevel()");
 }
 
+function checkAnswerC(){
+    let exercise = chosenExercises[selectedExerciseIdx];
+    let showAnswer = getElem("showanswer");
 
-function pickExercises(moduleIdx){
+}
+
+
+function pickExercises(moduleIdx,scramble=true){
     selectedExerciseIdx = 0;
+    limit = Exercises[moduleIdx].length;
     chosenExercises = [];
-    for(var i = 0; i < chosenExercisesCount; i++){
-        let randomExerciseIdx = Math.floor(Math.random()*(Exercises[moduleIdx].length));
-        let exercise = Exercises[moduleIdx][randomExerciseIdx];
-        while(chosenExercises.includes(exercise)){
-            randomExerciseIdx = Math.floor(Math.random()*(Exercises[moduleIdx].length));
-            exercise = Exercises[moduleIdx][randomExerciseIdx];
+    if(scramble) {
+        for (var i = 0; i < Math.min(limit, chosenExercisesCount); i++) {
+            let randomExerciseIdx = Math.floor(Math.random() * (limit));
+            let exercise = Exercises[moduleIdx][randomExerciseIdx];
+            while (chosenExercises.includes(exercise)) {
+                randomExerciseIdx = Math.floor(Math.random() * (limit));
+                exercise = Exercises[moduleIdx][randomExerciseIdx];
+            }
+            chosenExercises.push(exercise)
         }
-        chosenExercises.push(exercise)
+    }else{
+        chosenExercises = Exercises[moduleIdx];
     }
 }
 
@@ -129,7 +143,13 @@ function loadTypeBExercise(){
     return html;
 }
 
+function loadTypeCExercise(){
+    let html = "";
+    return html;
+}
+
 function loadExerciseContents(){
+    getElem("mainmenu").innerHTML = "";
     let exercise = chosenExercises[selectedExerciseIdx]
     let level = getElem("level");
     let html = "";
@@ -145,6 +165,9 @@ function loadExerciseContents(){
         }
         else if(exercise.type==='B') {
             html += loadTypeBExercise();
+        }
+        else if(exercise.type==='C'){
+            html += loadTypeCExercise();
         }
         html += emptyLine(1);
         html += `<p id="showanswer"></p>`;

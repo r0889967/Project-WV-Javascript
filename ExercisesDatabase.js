@@ -132,8 +132,9 @@ let exercise2_2 = {
 let exercise2_3 = {
     title:"",
     text:[],
-    type : "B",
-    correctAnswer : "",
+    type : "C",
+    choices : [],
+    correctOrder : "",
 }
 
 let exercise2_4 = {
@@ -238,10 +239,12 @@ let exercise4_2 = {
 }
 
 let exercise4_3 = {
-    title:"",
-    text:[],
+    title:"Encrypted text",
+    text:["The following text has been encrypted using a simple algorithm.",
+    "w Isia hll fo oyg uool dcuk",
+    "You need to decrypt this text. (The answer is case-sensitive.)"],
     type : "B",
-    correctAnswer : "",
+    correctAnswer : "I wish all of you good luck",
 }
 
 let exercise4_4 = {
@@ -249,6 +252,53 @@ let exercise4_4 = {
     text:[],
     type : "B",
     correctAnswer : "",
+}
+
+let tutorial0 = {
+    title: "Tutorial 0",
+    text: ["You just need to click the 'check' button,",
+    "and then click on 'next level' to complete this exercise."],
+    type: "A",
+    choices: [],
+    correctAnswers: [],
+}
+
+let tutorial1 = {
+    title:"Tutorial 1",
+    text:["This is a typical type A exercise, you have to mark the correct boxes down below.",
+    "To mark a box, simply click on it, click it again to unmark it.",
+    "To complete this exercise, simply mark the boxes with A on it.",
+    "Once you are done, click the 'check button' to check your answer and go to the next exercise."],
+    type:"A",
+    choices : ["A","B","C","D","E"],
+    correctAnswers : [0],
+}
+
+let tutorial2 = {
+    title:"Tutorial 2",
+    text:["This is another type A exercise, this time you have to mark multiple boxes.",
+    "To complete this exercise, mark the boxes with A,C and E"],
+    type : "A",
+    choices : ["A","B","C","D","E"],
+    correctAnswers : [0,2,4],
+}
+
+let tutorial3 = {
+    title:"Tutorial 3",
+    text:["This is a typical type B exercise, you have have to enter your answer in the input box below.",
+    "To enter the text, simply click on the input box, use your keyboard to enter the text.",
+    "To complete this exercise, simply type 'a1b2c3' in the input box.",
+    "Once you are done, click the 'check button' to check your answer and go to the next exercise.",],
+    type: "B",
+    correctAnswer : "a1b2c3"
+}
+
+let tutorial4 = {
+    title:"Tutorial 4",
+    text:["Capital letters and whitespaces matters, make sure to keep this in mind.",
+    "To complete this exercise, type 'ABcd 123 4 5' in the input box",],
+    type: "B",
+    correctAnswer : "ABcd 123 4 5",
 }
 
 abstractionExercises.push(exercise1_1);
@@ -277,3 +327,9 @@ algorithmExercises.push(exercise4_1);
 algorithmExercises.push(exercise4_2);
 algorithmExercises.push(exercise4_3);
 algorithmExercises.push(exercise4_4);
+
+tutorialExercises.push(tutorial0);
+tutorialExercises.push(tutorial1);
+tutorialExercises.push(tutorial2);
+tutorialExercises.push(tutorial3);
+tutorialExercises.push(tutorial4);
