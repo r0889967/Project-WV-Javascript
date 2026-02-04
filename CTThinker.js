@@ -268,7 +268,7 @@ function loadInfoScreen(){
     let html = "";
     html += "<h1>About CTThinker</h1>";
     html += "<p>CTThinker is a tool developed to teach students vital computational thinking skills.</p>";
-    html += "<p>The tool contains 5 modules with 15 levels in each module.<\p>"
+    html += "<p>The tool contains 5 modules with challenging levels in each module.<\p>"
     html += emptyLine(1);
     html += "<p>Module 1 focuses on abstraction<\p>"
     html += "<p>Module 2 focuses on decomposition<\p>"

@@ -14,7 +14,7 @@ Exercises.push(algorithmExercises);
 Exercises.push(IntegratedExercises);
 Exercises.push(tutorialExercises);
 
-let exercise1_1 = {
+let grimReaper = {
     title: "Sarah and the Grim Reaper",
     text:["The Grim Reaper has arrived to take Sarah's life, but Sarah didn't want to die yet, so she begged the Grim Reaper",
     "to let her live longer by lighting up a candle and saying 'Let me live until you see candle burns up one day.'",
@@ -27,7 +27,7 @@ let exercise1_1 = {
     correctAnswers : [3],
 }
 
-let exercise1_2 = {
+let guessTheCardsGame = {
     title:"The card game",
     text:["Alice, Bob and Carole are playing a game called \"guess the cards\", where Alice have 3 cards in her hand and she is",
         "not allowed to show her cards directly to Bob or Carole, Alice have to try her best to give Bob hints about her",
@@ -43,16 +43,17 @@ let exercise1_2 = {
     correctAnswers : [4],
 }
 
-let exercise1_3 = {
-    title:"",
-    text:[],
+let OddWord = {
+    title:"Odd word",
+    text:["Below we have a bunch of words, all relating to fruits, except for some words.",
+    "Can you spot the odd words?"],
     type : "A",
-    choices : [],
-    correctAnswers : [],
+    choices : ["apple","pear","watermelon","kiwi","cherry","strawberry","orange","banana"],
+    correctAnswers : [3,6],
 
 }
 
-let exercise1_4 = {
+let whoIsTheCulprit = {
     title:"Who is the culprit?",
     text:["Sarah put a beautiful vase on a table touching the front door of her home. She then invited her friends Alice, Bob, Carole,",
     "Dilan and Eva to come and play with her inside her bedroom. The 5 friends all came rushing into her home through the",
@@ -64,7 +65,7 @@ let exercise1_4 = {
     correctAnswers : [0,1,2,3,4],
 }
 
-let exercise1_5 = {
+let manAndSnail = {
     title:"The man and the snail",
     text:["An confident man and a snail decided to have a very long race, the one who reaches the finish first wins.",
         "When the race started, the man was already gone while the snail was just crawling slowly.",
@@ -77,7 +78,7 @@ let exercise1_5 = {
     correctAnswers : [1,2,4],
 }
 
-let exercise1_6 = {
+let FindWordsInSrcambledText = {
     title:"Words inside scrambled text",
     text:["Study this mess of letters below carefully.",
     "knelybaeblewtodillehgcwreuer",
@@ -88,7 +89,7 @@ let exercise1_6 = {
     correctAnswer : "black blue green red white yellow"
 }
 
-let exercise1_7 = {
+let guessSecretNumber = {
     title:"Guess the secret number",
     text:["Try to guess the secret number based on clues in the text. Between 10 and 99 (both boundaries included),",
         "can't be divided by 3,4,5 or 7, the first digit is odd, the sum of the digits is greater than 12",
@@ -98,7 +99,7 @@ let exercise1_7 = {
     correctAnswer : "97"
 }
 
-let exercise1_8 = {
+let runningRace = {
     title:"100m running race",
     text:["Alice,Bob,Carole,Dilan and Eva are having a 100m race. Each of them has his or her own strategies.",
     "We will first assume that it will take each runner exactly 1 second to run 1 meter.",
@@ -114,7 +115,7 @@ let exercise1_8 = {
     correctOrder : ["Eva","Carole","Alice","Dilan","Bob"],
 }
 
-let exercise2_1 = {
+let birthdayParty = {
     title:"Organize a birthday party",
     text:["You want to organise a huge birthday party inside your garden. It will take you hours to prepare all the food",
     "since you want to invite a lot of your friends, you also want to keep the food as fresh as possible for the party. ",
@@ -130,7 +131,7 @@ let exercise2_1 = {
     correctAnswers : [3],
 }
 
-let exercise2_2 = {
+let pocketLampProblem = {
     title:"5 persons and pocket lamp",
     text:["There are 5 persons A,B,C,D and E who need to walk over a thin log above a cliff during the dark",
         "Since it's dark, they need a pocket lamp to see, without the pocket lamp one will fall from the log and die.",
@@ -145,7 +146,7 @@ let exercise2_2 = {
     correctAnswers : [0,2],
 }
 
-let exercise2_3 = {
+let naughtyKittens = {
     title:"The naughty kittens",
     text:["You are the owner of a pet shop and you need to put 5 naughty little kittens called",
     "Tommy, Celie, Johny, Mali and Daniel to sleep, but it won't be easy as they are very naughty.",
@@ -158,10 +159,10 @@ let exercise2_3 = {
     "In what order do you have to put the kittens asleep? "],
     type : "C",
     choices : ["Celie","Daniel","Johny","Mali","Tommy"],
-    correctOrder : ["Daniel","Celie","Tommy","Mali","Johny"],
+    correctOrder : ["Daniel","Celie","Tommy","Johny","Mali",],
 }
 
-let exercise2_4 = {
+let machinesInFactory = {
     title:"Machines in the factory",
     text:["Inside a factory there are 6 machines A,B,C,D,E and F that must be started. But some machines can only be started if ",
     "others has already been started up.",
@@ -174,10 +175,10 @@ let exercise2_4 = {
     "In what order do the machines have to be started?"],
     type : "C",
     choices : ["E","F","C","B","D","A"],
-    correctOrder : ["B","F","E","A","D","C"]
+    correctOrder : ["C","F","A","E","D","B"]
 }
 
-let exercise3_1 = {
+let nextNumberInSeq = {
     title: "Next number in sequence",
     text : ["Given the following sequence of numbers.",
         "2,5,10,17,28,41,58,77,100,129,?",
@@ -187,16 +188,7 @@ let exercise3_1 = {
     correctAnswer : "160",
 }
 
-let exercise3_2 = {
-    title: "Next string in sequence",
-    text:["Given the following sequence of strings.",
-        "a, abb, cccabb, cccabbdddd, eeeeecccabbdddd, ?",
-        "What is the next string in the sequence?",],
-    type:"B",
-    correctAnswer : "eeeeecccabbddddffffff",
-}
-
-let exercise3_3 = {
+let nextNumberInSeq2 = {
     title: "Next number in sequence",
     text:["Given the following sequence of numbers.",
         "5738, 121011, 33112, 6423, 1065, ?",
@@ -205,7 +197,7 @@ let exercise3_3 = {
     correctAnswer : "1611",
 }
 
-let exercise3_4 = {
+let nextNumberInSeq3 = {
     title: "Next number in sequence",
     text:["Given the following sequence of numbers.",
         "27, 9279, 27927927, ?",
@@ -213,17 +205,38 @@ let exercise3_4 = {
     type:"B",
     correctAnswer : "812792792781",
 }
-let exercise3_5 = {
+
+let nextStrInSeq = {
+    title: "Next string in sequence",
+    text:["Given the following sequence of strings.",
+        "a, abb, cccabb, cccabbdddd, eeeeecccabbdddd, ?",
+        "What is the next string in the sequence?",],
+    type:"B",
+    correctAnswer : "eeeeecccabbddddffffff",
+}
+
+
+
+let nextStrInSeq2 = {
     title: "Next string in sequence",
     text:["Given the following sequence of strings.",
     "a, ab, adad, ahahahah",
     "What is the next string in the sequence?",],
     type:"B",
     correctAnswer : "apapapapapapapap",
-
 }
 
-let exercise3_6 = {
+let findPatternSeq1 = {
+    title: "Find pattern sequences",
+    text:["Observe the sequences below carefully.",
+        "Which sequence(s) have a pattern inside them?"],
+    type:"A",
+    choices: ["1,123,12345,1234567,123456789","1,10,101,1001,10010,100101,1001011","1,2,4,8,17,33,64,128,256,513","1,10,5,2,11,6,3,12,7,4",
+        "1,12,412,4128,164128,16412832","1,8,56,2,7,5,3,9,12,200","1,20,300,4000,50001,600000,7000000"],
+    correctAnswers : [0,3,4],
+}
+
+let findNonPatternSeq1 = {
     title: "Find non-pattern sequences",
     text:["Observe the following sequences carefully.",
     "Which sequence(s) have no patterns?"],
@@ -233,27 +246,17 @@ let exercise3_6 = {
     correctAnswers : [2,5],
 }
 
-let exercise3_7 = {
-    title: "Find pattern sequences",
-    text:["Observe the sequences below carefully.",
-    "Which sequence(s) have a pattern inside them?"],
-    type:"A",
-    choices: ["1,123,12345,1234567,123456789","1,10,101,1001,10010,100101,1001011","1,2,4,8,17,33,64,128,256,513","1,10,5,2,11,6,3,12,7,4",
-    "1,12,412,4128,164128,16412832","1,8,56,2,7,5,3,9,12,200","1,20,300,4000,50001,600000,7000000"],
-    correctAnswers : [0,3,4],
-}
-
-let exercise3_8 = {
+let findNonPatternSeq2 = {
     title: "Find non-pattern sequences",
     text:["Observe the sequences below carefully.",
-    "Which sequence(s) have no patterns?"],
+        "Which sequence(s) have no patterns?"],
     type:"A",
     choices:["a,ab,abe,abec,abeci,abecid,abecido","abab,cbcb,cdcd,eded,efef,gfgf","a,bbbb,cc,ddddddd,eeee,fffff,gggggg","a,bab,cbabc,dcbabcd,dcbabcdee",
-    "aaa,aab,abb,bbb,bbc,bcc,ccc,ccd","a,b,c,d,e,f,g,h,j,i,k,l,n,m","a,aa,aaa,aaaa,aaaaa,aaaaaa","a,ab,abc,d,de,def,g,gh,ghi"],
+        "aaa,aab,abb,bbb,bbc,bcc,ccc,ccd","a,b,c,d,e,f,g,h,j,i,k,l,n,m","a,aa,aaa,aaaa,aaaaa,aaaaaa","a,ab,abc,d,de,def,g,gh,ghi"],
     correctAnswers : [2,3,5],
 }
 
-let exercise3_9 = {
+let WhatIsThePattern = {
     title: "What is the pattern?",
     text:["Observe the sequence below carefully, in what order are the operations of the pattern applied?",
         "5,35,8,80,16,6,42,6,60,12,2"],
@@ -262,7 +265,16 @@ let exercise3_9 = {
     correctOrder : ["x7","sum of digits","x10","/5","greatest digit"],
 }
 
-let exercise4_1 = {
+let formPattern = {
+    title: "Form a pattern",
+    text:["Below are a few numbers, please rearrange them to form a pattern.",
+    "The sequence should begin with 12 first."],
+    type:"C",
+    choices : ["16","10","70","85","12","17","15","80","75"],
+    correctOrder : ["10","15","75","70","12","17","85","80","16"],
+}
+
+let encryptedText1 = {
     title: "Encrypted text",
     text:["The following text has been encrypted using a simple algorithm.",
     "J thjnk ypv cbn dp thjs pnf",
@@ -271,7 +283,7 @@ let exercise4_1 = {
     correctAnswer : "I think you can do this one",
 }
 
-let exercise4_2 = {
+let encryptedText2 = {
     title:"Encrypted text",
     text:["The following text has been encrypted using a simple algorithm.",
     "J bn zpvs cftu gsjfoe",
@@ -280,7 +292,7 @@ let exercise4_2 = {
     correctAnswer : "I am your best friend",
 }
 
-let exercise4_3 = {
+let encryptedText3 = {
     title:"Encrypted text",
     text:["The following text has been encrypted using a simple algorithm.",
     "w Isia hll fo oyg uool dcuk",
@@ -289,12 +301,6 @@ let exercise4_3 = {
     correctAnswer : "I wish all of you good luck",
 }
 
-let exercise4_4 = {
-    title:"",
-    text:[],
-    type : "B",
-    correctAnswer : "",
-}
 
 let tutorial0 = {
     title: "Tutorial 0",
@@ -354,34 +360,34 @@ let tutorial5 = {
     correctOrder : ["1","2","3","4","5"],
 }
 
-abstractionExercises.push(exercise1_1);
-abstractionExercises.push(exercise1_2);
-abstractionExercises.push(exercise1_3);
-abstractionExercises.push(exercise1_4);
-abstractionExercises.push(exercise1_5);
-abstractionExercises.push(exercise1_6);
-abstractionExercises.push(exercise1_7);
-abstractionExercises.push(exercise1_8);
+abstractionExercises.push(grimReaper);
+abstractionExercises.push(guessTheCardsGame);
+abstractionExercises.push(OddWord);
+abstractionExercises.push(whoIsTheCulprit);
+abstractionExercises.push(manAndSnail);
+abstractionExercises.push(FindWordsInSrcambledText);
+abstractionExercises.push(guessSecretNumber);
+abstractionExercises.push(runningRace);
 
-decompositionExercises.push(exercise2_1);
-decompositionExercises.push(exercise2_2);
-decompositionExercises.push(exercise2_3);
-decompositionExercises.push(exercise2_4);
+decompositionExercises.push(birthdayParty);
+decompositionExercises.push(pocketLampProblem);
+decompositionExercises.push(naughtyKittens);
+decompositionExercises.push(machinesInFactory);
 
-patternExercises.push(exercise3_1);
-patternExercises.push(exercise3_2);
-patternExercises.push(exercise3_3);
-patternExercises.push(exercise3_4);
-patternExercises.push(exercise3_5);
-patternExercises.push(exercise3_6);
-patternExercises.push(exercise3_7);
-patternExercises.push(exercise3_8);
-patternExercises.push(exercise3_9);
+patternExercises.push(nextNumberInSeq);
+patternExercises.push(nextNumberInSeq2);
+patternExercises.push(nextNumberInSeq3);
+patternExercises.push(nextStrInSeq);
+patternExercises.push(nextStrInSeq2);
+patternExercises.push(findPatternSeq1);
+patternExercises.push(findNonPatternSeq1);
+patternExercises.push(findNonPatternSeq2);
+patternExercises.push(WhatIsThePattern);
+patternExercises.push(formPattern);
 
-algorithmExercises.push(exercise4_1);
-algorithmExercises.push(exercise4_2);
-algorithmExercises.push(exercise4_3);
-algorithmExercises.push(exercise4_4);
+algorithmExercises.push(encryptedText1);
+algorithmExercises.push(encryptedText2);
+algorithmExercises.push(encryptedText3);
 
 tutorialExercises.push(tutorial0);
 tutorialExercises.push(tutorial1);
