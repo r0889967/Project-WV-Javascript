@@ -98,6 +98,22 @@ let exercise1_7 = {
     correctAnswer : "97"
 }
 
+let exercise1_8 = {
+    title:"100m running race",
+    text:["Alice,Bob,Carole,Dilan and Eva are having a 100m race. Each of them has his or her own strategies.",
+    "We will first assume that it will take each runner exactly 1 second to run 1 meter.",
+    "Alice runs 1 meter and then stops for 1 second.",
+    "Bob runs 5 meters and then stops for 10 seconds.",
+    "Carole runs 3 meters and then stops for 2 seconds.",
+    "Dilan runs 50 meters and then stops for 75 seconds.",
+    "Eva runs 10 meters and then stops for 5 seconds.",
+    "Each runner will repeat their strategies during the entire race.",
+    "In what order will the runners reach the finish? "],
+    type:"C",
+    choices : ["Alice","Bob","Carole","Dilan","Eva"],
+    correctOrder : ["Eva","Carole","Alice","Dilan","Bob"],
+}
+
 let exercise2_1 = {
     title:"Organize a birthday party",
     text:["You want to organise a huge birthday party inside your garden. It will take you hours to prepare all the food",
@@ -146,10 +162,19 @@ let exercise2_3 = {
 }
 
 let exercise2_4 = {
-    title:"",
-    text:[],
-    type : "B",
-    correctAnswer : "",
+    title:"Machines in the factory",
+    text:["Inside a factory there are 6 machines A,B,C,D,E and F that must be started. But some machines can only be started if ",
+    "others has already been started up.",
+    "C can be started up right away.",
+    "F can be started only if C has started.",
+    "B can be started only if A and D has started.",
+    "D can be started only if F and E has started.",
+    "E can be started only if A has started.",
+    "A can be started only if F has started.",
+    "In what order do the machines have to be started?"],
+    type : "C",
+    choices : ["E","F","C","B","D","A"],
+    correctOrder : ["B","F","E","A","D","C"]
 }
 
 let exercise3_1 = {
@@ -226,6 +251,15 @@ let exercise3_8 = {
     choices:["a,ab,abe,abec,abeci,abecid,abecido","abab,cbcb,cdcd,eded,efef,gfgf","a,bbbb,cc,ddddddd,eeee,fffff,gggggg","a,bab,cbabc,dcbabcd,dcbabcdee",
     "aaa,aab,abb,bbb,bbc,bcc,ccc,ccd","a,b,c,d,e,f,g,h,j,i,k,l,n,m","a,aa,aaa,aaaa,aaaaa,aaaaaa","a,ab,abc,d,de,def,g,gh,ghi"],
     correctAnswers : [2,3,5],
+}
+
+let exercise3_9 = {
+    title: "What is the pattern?",
+    text:["Observe the sequence below carefully, in what order are the operations of the pattern applied?",
+        "5,35,8,80,16,6,42,6,60,12,2"],
+    type:"C",
+    choices : ["greatest digit","/5","x10","sum of digits","x7"],
+    correctOrder : ["x7","sum of digits","x10","/5","greatest digit"],
 }
 
 let exercise4_1 = {
@@ -309,6 +343,17 @@ let tutorial4 = {
     correctAnswer : "ABcd 123 4 5",
 }
 
+let tutorial5 = {
+    title:"Tutorial 5",
+    text:["This is a typical type C ecercise, you have to arrange boxes in the correct order.",
+    "To arrange the boxes, first click on a box and then click on another box to swap them in place.",
+    "To complete this exercise, simply arrange the boxes in the order 1,2,3,4,5 from left to right.",
+    "Once you are done, the click 'check button' to check your answer and go to the next exercise.",],
+    type:"C",
+    choices : ["5","1","2","4","3"],
+    correctOrder : ["1","2","3","4","5"],
+}
+
 abstractionExercises.push(exercise1_1);
 abstractionExercises.push(exercise1_2);
 abstractionExercises.push(exercise1_3);
@@ -316,6 +361,7 @@ abstractionExercises.push(exercise1_4);
 abstractionExercises.push(exercise1_5);
 abstractionExercises.push(exercise1_6);
 abstractionExercises.push(exercise1_7);
+abstractionExercises.push(exercise1_8);
 
 decompositionExercises.push(exercise2_1);
 decompositionExercises.push(exercise2_2);
@@ -330,6 +376,7 @@ patternExercises.push(exercise3_5);
 patternExercises.push(exercise3_6);
 patternExercises.push(exercise3_7);
 patternExercises.push(exercise3_8);
+patternExercises.push(exercise3_9);
 
 algorithmExercises.push(exercise4_1);
 algorithmExercises.push(exercise4_2);
@@ -341,3 +388,4 @@ tutorialExercises.push(tutorial1);
 tutorialExercises.push(tutorial2);
 tutorialExercises.push(tutorial3);
 tutorialExercises.push(tutorial4);
+tutorialExercises.push(tutorial5);

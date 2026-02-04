@@ -175,7 +175,7 @@ function loadTypeBExercise(){
 
 function loadTypeCExercise(choices){
     let html = "";
-    html += `<p>Please put the boxes in the correct order</p>`;
+    html += `<p>Please put the boxes in the correct order from left to right</p>`;
     html += emptyLine(1);
     let buttonIdx = 0;
     for(let choice of choices){
