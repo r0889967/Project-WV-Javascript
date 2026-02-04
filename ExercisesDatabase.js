@@ -130,11 +130,19 @@ let exercise2_2 = {
 }
 
 let exercise2_3 = {
-    title:"",
-    text:[],
+    title:"The naughty kittens",
+    text:["You are the owner of a pet shop and you need to put 5 naughty little kittens called",
+    "Tommy, Celie, Johny, Mali and Daniel to sleep, but it won't be easy as they are very naughty.",
+    "From days of observation you have noticed the following:",
+    "Celie will only sleep if Daniel sleeps.",
+    "If Daniel don't sleep, no kitten will ever sleep.",
+    "Johny will only sleep if Tommy sleeps.",
+    "Mali will only sleep if every kitten whose name comes before its name alphabetically sleeps.",
+    "Tommy will only sleep if Celie sleeps.",
+    "In what order do you have to put the kittens asleep? "],
     type : "C",
-    choices : [],
-    correctOrder : "",
+    choices : ["Celie","Daniel","Johny","Mali","Tommy"],
+    correctOrder : ["Daniel","Celie","Tommy","Mali","Johny"],
 }
 
 let exercise2_4 = {

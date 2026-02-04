@@ -3,6 +3,8 @@ var chosenExercises = [];
 var chosenExercisesCount = 10;
 var limit = 0;
 var score = 0;
+var selectedButton1 ;
+var selectedButton2;
 
 
 function loadMainMenu(){
@@ -20,6 +22,22 @@ function loadMainMenu(){
     html += emptyLine(4);
     html += createButton("button1","","About CTThinker","loadInfoScreen()");
     mainmenu.innerHTML = html;
+}
+
+function swapButtons(buttonIdx) {
+    if(selectedButton1===undefined){
+        selectedButton1 = getElem(buttonIdx);
+    }else{
+        selectedButton2 = getElem(buttonIdx);
+        selectedButton1.classList.remove("marked");
+        selectedButton2.classList.remove("marked");
+        let tmp = selectedButton1.innerText;
+        selectedButton1.innerText = selectedButton2.innerText;
+        selectedButton2.innerText = tmp;
+        selectedButton1 = undefined;
+        selectedButton2 = undefined;
+    }
+
 }
 
 function getElem(id){
@@ -96,7 +114,19 @@ function checkAnswerB(input){
 function checkAnswerC(){
     let exercise = chosenExercises[selectedExerciseIdx];
     let showAnswer = getElem("showanswer");
-
+    let currentOrder = [];
+    for(let i = 0; i < exercise.choices.length; i++){
+        currentOrder.push(getElem(i).innerText);
+    }
+    if(currentOrder.toString() === exercise.correctOrder.toString()){
+        showAnswer.style.color = "green";
+        showAnswer.innerHTML = "The answer is correct!";
+        score++;
+    }else{
+        showAnswer.style.color = "red";
+        showAnswer.innerHTML = "The answer is incorrect!";
+    }
+    showAnswer.innerHTML += createButton("button1","","Next Level","toNextLevel()");
 }
 
 
@@ -143,8 +173,19 @@ function loadTypeBExercise(){
     return html;
 }
 
-function loadTypeCExercise(){
+function loadTypeCExercise(choices){
     let html = "";
+    html += `<p>Please put the boxes in the correct order</p>`;
+    html += emptyLine(1);
+    let buttonIdx = 0;
+    for(let choice of choices){
+        html += createButton("button2",buttonIdx,choice,
+            `getElem(${buttonIdx}).classList.toggle('marked');swapButtons('${buttonIdx}')`);
+        buttonIdx++;
+    }
+    html += emptyLine(1);
+    html += createButton("button3","checkbutton","Check",
+        `checkAnswerC();getElem('checkbutton').disabled=true`);
     return html;
 }
 
@@ -167,7 +208,7 @@ function loadExerciseContents(){
             html += loadTypeBExercise();
         }
         else if(exercise.type==='C'){
-            html += loadTypeCExercise();
+            html += loadTypeCExercise(exercise.choices);
         }
         html += emptyLine(1);
         html += `<p id="showanswer"></p>`;
@@ -188,7 +229,7 @@ function loadModuleSelectionScreen(){
     getElem("mainmenu").innerHTML = "";
     let levelselection = getElem("levelselection");
     let html = "";
-    html += "<h1>Level Selection</h1>"
+    html += "<h1>Module Selection</h1>"
     html += "<p>Please select a module to play</p>";
     html += emptyLine(1);
     html += "<p>Module 1: Abstraction</p>";
