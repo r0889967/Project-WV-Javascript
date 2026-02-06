@@ -1,6 +1,6 @@
 var selectedExerciseIdx = 0;
 var chosenExercises = [];
-var chosenExercisesCount = 10;
+var chosenExercisesCount = 20;
 var limit = 0;
 var score = 0;
 var selectedButton1 ;

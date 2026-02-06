@@ -99,6 +99,15 @@ let guessSecretNumber = {
     correctAnswer : "97"
 }
 
+let guessSecretNumber2 = {
+    title:"Guess the secret number",
+    text:["Try to guess the secret number based on clues in the text. Between 1 and 99 (both boundaries included),",
+        "can be divided by 3 and 5, both digits are odd, the sum of two digits is less than 8.",
+    ],
+    type : "B",
+    correctAnswer : "15"
+}
+
 let runningRace = {
     title:"100m running race",
     text:["Alice,Bob,Carole,Dilan and Eva are having a 100m race. Each of them has his or her own strategies.",
@@ -113,6 +122,23 @@ let runningRace = {
     type:"C",
     choices : ["Alice","Bob","Carole","Dilan","Eva"],
     correctOrder : ["Eva","Carole","Alice","Dilan","Bob"],
+}
+
+let SarahLostBalls = {
+    title:"Sarah's lost balls",
+    text:["Sarah had lost her 4 balls while she was playing outside yesterday so she decided to for look them.",
+    "First she found her red ball when she fell into a hole. As she continued to look for the other balls,",
+    "a random bird flew by. She soon walked deep into the forest with some creepy-looking trees.",
+    "After some more walking, she finally found the yellow ball under a stone.",
+    "While looking for the green ball, she came across a abandoned hut filled with many spiders.",
+    "One spider suddenly jumped out of the hut and climbed onto her, causing her to panic and ran into a birch.",
+    "When she hit the birch, the green ball fell from the birch and onto her head, a bear in the distance looked confused at her,",
+    "wondering what was going on. She searched for the last ball, which was the blue ball. She walked across a pond,",
+    "eventually stopping at the foot of a hill, where she found the blue ball and walked back home.",
+    "What elements in the story are reluctant?"],
+    type : "A",
+    choices : ["hole","bird","scary trees","stone","spider","birch","bear","pond"],
+    correctAnswers : [1,2,6,7],
 }
 
 let birthdayParty = {
@@ -206,6 +232,15 @@ let nextNumberInSeq3 = {
     correctAnswer : "812792792781",
 }
 
+let nextNumberInSeq4 = {
+    title: "Next number in sequence",
+    text:["Given the following sequence of numbers.",
+        "0,1,1,2,3,5,8,13,21,34,? ",
+        "What is the next number in the sequence?"],
+    type:"B",
+    correctAnswer : "55",
+}
+
 let nextStrInSeq = {
     title: "Next string in sequence",
     text:["Given the following sequence of strings.",
@@ -265,13 +300,40 @@ let WhatIsThePattern = {
     correctOrder : ["x7","sum of digits","x10","/5","greatest digit"],
 }
 
+let WhatIsThePattern2 = {
+    title: "What is the pattern?",
+    text:["Observe the sequence below carefully, in what order are the operations of the pattern applied?",
+        "1,2,4,7,11,9,10,12,15,19,17"],
+    type:"C",
+    choices : ["+4","-1","+1","+3","+2"],
+    correctOrder : ["+1","+2","+3","+4","-1"],
+}
+
 let formPattern = {
     title: "Form a pattern",
     text:["Below are a few numbers, please rearrange them to form a pattern.",
-    "The sequence should begin with 12 first."],
+    "The sequence should begin with 10 first."],
     type:"C",
     choices : ["16","10","70","85","12","17","15","80","75"],
     correctOrder : ["10","15","75","70","12","17","85","80","16"],
+}
+
+let formPattern2 = {
+    title: "Form a pattern",
+    text:["Below are a few numbers, please rearrange them to form a pattern.",
+        "The sequence should begin with the smallest number first."],
+    type:"C",
+    choices : ["13","5","9","3","11","7","1","15"],
+    correctOrder : ["1","3","5","7","9","11","13","15"],
+}
+
+let formPattern3 = {
+    title: "Form a pattern",
+    text:["Below are a few numbers, please rearrange them to form a pattern.",
+        "The sequence should begin with the smallest number first."],
+    type:"C",
+    choices : ["2","5","7","3","23","11","17","19","13"],
+    correctOrder : ["2","3","5","7","11","13","17","19","23"],
 }
 
 let encryptedText1 = {
@@ -367,7 +429,9 @@ abstractionExercises.push(whoIsTheCulprit);
 abstractionExercises.push(manAndSnail);
 abstractionExercises.push(FindWordsInSrcambledText);
 abstractionExercises.push(guessSecretNumber);
+abstractionExercises.push(guessSecretNumber2);
 abstractionExercises.push(runningRace);
+abstractionExercises.push(SarahLostBalls);
 
 decompositionExercises.push(birthdayParty);
 decompositionExercises.push(pocketLampProblem);
@@ -377,13 +441,17 @@ decompositionExercises.push(machinesInFactory);
 patternExercises.push(nextNumberInSeq);
 patternExercises.push(nextNumberInSeq2);
 patternExercises.push(nextNumberInSeq3);
+patternExercises.push(nextNumberInSeq4);
 patternExercises.push(nextStrInSeq);
 patternExercises.push(nextStrInSeq2);
 patternExercises.push(findPatternSeq1);
 patternExercises.push(findNonPatternSeq1);
 patternExercises.push(findNonPatternSeq2);
 patternExercises.push(WhatIsThePattern);
+patternExercises.push(WhatIsThePattern2);
 patternExercises.push(formPattern);
+patternExercises.push(formPattern2);
+patternExercises.push(formPattern3);
 
 algorithmExercises.push(encryptedText1);
 algorithmExercises.push(encryptedText2);
