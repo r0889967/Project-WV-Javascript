@@ -272,6 +272,15 @@ let nextStrInSeq2 = {
     correctAnswer : "apapapapapapapap",
 }
 
+let missingStrInSeq1 = {
+    title: "Missing string in sequence",
+    text:["Given the following sequence of strings.",
+        "a, 11, e, 22, i, 33, o, 44, ?, 55",
+        "What is the missing string in the sequence?",],
+    type:"B",
+    correctAnswer : "u",
+}
+
 let findPatternSeq1 = {
     title: "Find pattern sequences",
     text:["Observe the sequences below carefully.",
@@ -412,7 +421,7 @@ let followAlgorithm1 = {
 
 
 let tutorial0 = {
-    title: "Tutorial 0",
+    title: "Check button",
     text: ["You just need to click the 'check' button,",
     "and then click on 'next level' to complete this exercise."],
     type: "A",
@@ -421,7 +430,7 @@ let tutorial0 = {
 }
 
 let tutorial1 = {
-    title:"Tutorial 1",
+    title:"Type A exercise(single answer)",
     text:["This is a typical type A exercise, you have to mark the correct boxes down below.",
     "To mark a box, simply click on it, click it again to unmark it.",
     "To complete this exercise, simply mark the boxes with A on it.",
@@ -432,7 +441,7 @@ let tutorial1 = {
 }
 
 let tutorial2 = {
-    title:"Tutorial 2",
+    title:"Type A exercise(multiple answers)",
     text:["This is another type A exercise, this time you have to mark multiple boxes.",
     "To complete this exercise, mark the boxes with A,C and E"],
     type : "A",
@@ -441,7 +450,7 @@ let tutorial2 = {
 }
 
 let tutorial3 = {
-    title:"Tutorial 3",
+    title:"Type B exercise(single-part answer)",
     text:["This is a typical type B exercise, you have have to enter your answer in the input box below.",
     "To enter the text, simply click on the input box, use your keyboard to enter the text.",
     "To complete this exercise, simply type 'a1b2c3' in the input box.",
@@ -451,15 +460,15 @@ let tutorial3 = {
 }
 
 let tutorial4 = {
-    title:"Tutorial 4",
-    text:["Capital letters and whitespaces matters, make sure to keep this in mind.",
-    "To complete this exercise, type 'ABcd 123 4 5' in the input box",],
+    title:"Type B exercise(multiple-parts answer)",
+    text:["If the answer consists of multiple parts, then you have to put a single space between each part.",
+    "To complete this exercise, type 'a1 B2 cd3' in the input box",],
     type: "B",
-    correctAnswer : "ABcd 123 4 5",
+    correctAnswer : "a1 B2 cd3",
 }
 
 let tutorial5 = {
-    title:"Tutorial 5",
+    title:"Type C exercise",
     text:["This is a typical type C ecercise, you have to arrange boxes in the correct order.",
     "To arrange the boxes, first click on a box and then click on another box to swap them in place.",
     "To complete this exercise, simply arrange the boxes in the order 1,2,3,4,5 from left to right.",
@@ -492,6 +501,7 @@ patternExercises.push(nextNumberInSeq3);
 patternExercises.push(nextNumberInSeq4);
 patternExercises.push(nextStrInSeq);
 patternExercises.push(nextStrInSeq2);
+patternExercises.push(missingStrInSeq1)
 patternExercises.push(findPatternSeq1);
 patternExercises.push(findNonPatternSeq1);
 patternExercises.push(findNonPatternSeq2);
