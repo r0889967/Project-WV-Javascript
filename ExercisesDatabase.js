@@ -89,6 +89,17 @@ let FindWordsInSrcambledText = {
     correctAnswer : "black blue green red white yellow"
 }
 
+let FindWordsInSrcambledText2 = {
+    title:"Words inside scrambled text",
+    text:["Study this mess of letters below carefully.",
+        "nysoe",
+        "Please list the 2 words that are part of this mess of letters alphabetically from left to right.",
+        "Use a single space to separate the words and don't use capitals.",
+        ""],
+    type : "B",
+    correctAnswer : "no yes"
+}
+
 let guessSecretNumber = {
     title:"Guess the secret number",
     text:["Try to guess the secret number based on clues in the text. Between 10 and 99 (both boundaries included),",
@@ -363,6 +374,42 @@ let encryptedText3 = {
     correctAnswer : "I wish all of you good luck",
 }
 
+let mapping1 = {
+    title:"Map function",
+    text:["If f(abc)=bdf, f(def)=egi, f(cbe)=ddh,",
+    "f(fas)=?"],
+    type : "B",
+    correctAnswer : "gcv",
+}
+
+let mapping2 = {
+    title:"Map function",
+    text:["If f(art)=3, f(flower)=6, f(dogs)=4, f(weather)=7",
+        "f(horse)=?"],
+    type : "B",
+    correctAnswer : "5",
+}
+
+let mapping3 = {
+    title:"Map function",
+    text:["If f(abghjkklei)=aaeeiiiiei, f(zzxwpbcpqqo)=uuuuoaaoooo, f(fghbz)=eeeau",
+        "f(afckelmuxiyoz)=?"],
+    type : "B",
+    correctAnswer : "aeaieiiuuiuou",
+}
+
+let followAlgorithm1 = {
+    title:"Follow algorithm",
+    text:["Suppose we have the number 137, we execute the following steps.",
+    "1) Replace every digit smaller than 5 with 2.",
+    "2) Swap the first and last digit.",
+    "3) Replace the first and second digit with their sum.",
+    "4) Minus one to every digit.",
+    "5) Replace the whole number by the sum of its digits."],
+    type : "B",
+    correctAnswer : "9"
+}
+
 
 let tutorial0 = {
     title: "Tutorial 0",
@@ -428,6 +475,7 @@ abstractionExercises.push(OddWord);
 abstractionExercises.push(whoIsTheCulprit);
 abstractionExercises.push(manAndSnail);
 abstractionExercises.push(FindWordsInSrcambledText);
+abstractionExercises.push(FindWordsInSrcambledText2);
 abstractionExercises.push(guessSecretNumber);
 abstractionExercises.push(guessSecretNumber2);
 abstractionExercises.push(runningRace);
@@ -456,6 +504,10 @@ patternExercises.push(formPattern3);
 algorithmExercises.push(encryptedText1);
 algorithmExercises.push(encryptedText2);
 algorithmExercises.push(encryptedText3);
+algorithmExercises.push(mapping1);
+algorithmExercises.push(mapping2);
+algorithmExercises.push(mapping3);
+algorithmExercises.push(followAlgorithm1)
 
 tutorialExercises.push(tutorial0);
 tutorialExercises.push(tutorial1);

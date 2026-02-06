@@ -252,7 +252,7 @@ function loadModuleSelectionScreen(){
         `pickExercises(3);loadExerciseContents()`);
 
     html += emptyLine(2);
-    html += "<p>Module 5: Integrated exercisesDatabase</p>";
+    html += "<p>Module 5: Integrated exercises</p>";
     html += createButton("button1","","Integrated Exercises",
         "");
 
