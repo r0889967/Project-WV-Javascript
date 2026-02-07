@@ -43,16 +43,6 @@ let guessTheCardsGame = {
     correctAnswers : [4],
 }
 
-let OddWord = {
-    title:"Odd word",
-    text:["Below we have a bunch of words, all relating to fruits, except for some words.",
-    "Can you spot the odd words?"],
-    type : "A",
-    choices : ["apple","pear","watermelon","kiwi","cherry","strawberry","orange","banana"],
-    correctAnswers : [3,6],
-
-}
-
 let whoIsTheCulprit = {
     title:"Who is the culprit?",
     text:["Sarah put a beautiful vase on a table touching the front door of her home. She then invited her friends Alice, Bob, Carole,",
@@ -135,8 +125,8 @@ let runningRace = {
     correctOrder : ["Eva","Carole","Alice","Dilan","Bob"],
 }
 
-let SarahLostBalls = {
-    title:"Sarah's lost balls",
+let reluctantStoryElements = {
+    title:"Reluctant story elements",
     text:["Sarah had lost her 4 balls while she was playing outside yesterday so she decided to for look them.",
     "First she found her red ball when she fell into a hole. As she continued to look for the other balls,",
     "a random bird flew by. She soon walked deep into the forest with some creepy-looking trees.",
@@ -160,12 +150,9 @@ let birthdayParty = {
     "after receiving your invitations. Also your garden needs to be decorated and cleaned.",
     "What will be the most logical way to set up the party?",
     ],
-    type : "A",
-    choices : ["Send invitations->Prepare food->Decorate garden->Clean garden","Clean garden->Prepare food->Decorate garden->Send invitations",
-    "Decorate garden->Clean garden->Send invitations->Prepare food","Clean garden->Decorate Garden->Prepare food->Send invitations",
-    "Prepare food->Clean garden->Decorate garden->Send invitations","Decorate garden->Send invitations->Prepare food->Clean garden",
-    "Clean garden->Decorate Garden->Send invitations->Prepare food"],
-    correctAnswers : [3],
+    type : "C",
+    choices : ["Decorate garden","Send invitations","Prepare food","Clean garden",],
+    correctOrder: ["Clean garden","Decorate garden","Prepare food","Send invitations"],
 }
 
 let pocketLampProblem = {
@@ -279,6 +266,15 @@ let missingStrInSeq1 = {
         "What is the missing string in the sequence?",],
     type:"B",
     correctAnswer : "u",
+}
+
+let missingNumberInSeq1 = {
+    title: "Missing numbers in sequence",
+    text:["Given the following sequence of strings.",
+        "1,?,333,?,?,666666,7777777",
+        "What are the missing strings in the sequence?",],
+    type:"B",
+    correctAnswer : "22 4444 55555",
 }
 
 let findPatternSeq1 = {
@@ -419,6 +415,18 @@ let followAlgorithm1 = {
     correctAnswer : "9"
 }
 
+let followAlgorithm2 = {
+    title:"Follow algorithm",
+    text:["Suppose we have A, we execute the following steps.",
+    "1) Add a whitespace at the end of the string, followed by a copy of the string to the end.",
+    "2) Add a B to the right of each A.",
+    "3) Add a C to the left of each B.",
+    "What is the result if we repeat the process 2 times?"],
+    type : "B",
+    correctAnswer : "ACBCCB ACBCCB ACBCCB ACBCCB",
+
+}
+
 
 let tutorial0 = {
     title: "Check button",
@@ -480,7 +488,6 @@ let tutorial5 = {
 
 abstractionExercises.push(grimReaper);
 abstractionExercises.push(guessTheCardsGame);
-abstractionExercises.push(OddWord);
 abstractionExercises.push(whoIsTheCulprit);
 abstractionExercises.push(manAndSnail);
 abstractionExercises.push(FindWordsInSrcambledText);
@@ -488,7 +495,7 @@ abstractionExercises.push(FindWordsInSrcambledText2);
 abstractionExercises.push(guessSecretNumber);
 abstractionExercises.push(guessSecretNumber2);
 abstractionExercises.push(runningRace);
-abstractionExercises.push(SarahLostBalls);
+abstractionExercises.push(reluctantStoryElements);
 
 decompositionExercises.push(birthdayParty);
 decompositionExercises.push(pocketLampProblem);
@@ -501,7 +508,8 @@ patternExercises.push(nextNumberInSeq3);
 patternExercises.push(nextNumberInSeq4);
 patternExercises.push(nextStrInSeq);
 patternExercises.push(nextStrInSeq2);
-patternExercises.push(missingStrInSeq1)
+patternExercises.push(missingStrInSeq1);
+patternExercises.push(missingNumberInSeq1);
 patternExercises.push(findPatternSeq1);
 patternExercises.push(findNonPatternSeq1);
 patternExercises.push(findNonPatternSeq2);
@@ -517,7 +525,9 @@ algorithmExercises.push(encryptedText3);
 algorithmExercises.push(mapping1);
 algorithmExercises.push(mapping2);
 algorithmExercises.push(mapping3);
-algorithmExercises.push(followAlgorithm1)
+algorithmExercises.push(followAlgorithm1);
+algorithmExercises.push(followAlgorithm2);
+
 
 tutorialExercises.push(tutorial0);
 tutorialExercises.push(tutorial1);
