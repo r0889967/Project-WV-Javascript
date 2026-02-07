@@ -397,10 +397,26 @@ let mapping2 = {
 
 let mapping3 = {
     title:"Map function",
-    text:["If f(abghjkklei)=aaeeiiiiei, f(zzxwpbcpqqo)=uuuuoaaoooo, f(fghbz)=eeeau",
-        "f(afckelmuxiyoz)=?"],
+    text:["If f(abghjp)=aaeeio, f(zzxwpb)=uuuuoa, f(fghbzi)=eeeaui",
+        "f(afckel)=?"],
     type : "B",
-    correctAnswer : "aeaieiiuuiuou",
+    correctAnswer : "aeaiei",
+}
+
+let mapping4 = {
+    title:"Map function",
+    text:["If f(2)=2,f(3)=3,f(4)=3,f(5)=5,f(6)=5,f(10)=7,f(12)=11,f(13)=11,f(16)=13",
+    "f(35)=?"],
+    type : "B",
+    correctAnswer : "31",
+}
+
+let filter1 = {
+    title:"Filter function",
+    text:["If f([1,2,4,3,5,7])=[1,3,5,7], f([9,7,4,5,6,1]=[9,7,5,1]",
+    "f([2,3,5,4,4,6])=? (Please make sure your answer is the same format as the examples)"],
+    type : "B",
+    correctAnswer : "[3,5]",
 }
 
 let followAlgorithm1 = {
@@ -525,6 +541,8 @@ algorithmExercises.push(encryptedText3);
 algorithmExercises.push(mapping1);
 algorithmExercises.push(mapping2);
 algorithmExercises.push(mapping3);
+algorithmExercises.push(mapping4);
+algorithmExercises.push(filter1);
 algorithmExercises.push(followAlgorithm1);
 algorithmExercises.push(followAlgorithm2);
 
