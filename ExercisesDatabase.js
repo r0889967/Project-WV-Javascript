@@ -226,7 +226,16 @@ let machinesInFactory = {
     correctOrder : ["C","F","A","E","D","B"]
 }
 
-
+let sortTheNumbers1 = {
+    title:"Sort the numbers",
+    text:["Please sort the numbers from small to big according to the following rules.",
+    "1) All prime numbers are greater than all non-prime numbers.",
+    "2) For prime numbers, simply sort them from small to big normally.",
+    "3) For non-prime numbers, sort them from small to big according to the sum of their digits."],
+    type : "C",
+    choices : ["31","52","18","29","13","15","21","5","2"],
+    correctOrder : ["21","15","52","18","2","5","13","29","31"]
+}
 
 
 
@@ -467,6 +476,15 @@ let encryptedText3 = {
     correctAnswer : "I wish all of you good luck",
 }
 
+let encryptedText4 = {
+    title:"Encrypted text",
+    text:["The following text has been encrypted using a simple algorithm.",
+        "uoY dluohs eb elba ot ees eht rewsna",
+        "You need to decrypt this text. (The answer is case-sensitive.)"],
+    type : "B",
+    correctAnswer : "You should be able to see the answer",
+}
+
 let mapping1 = {
     title:"Map function",
     text:["If f(abc)=bdf, f(def)=egi, f(cbe)=ddh,",
@@ -504,7 +522,16 @@ let mapping5 = {
     text:["If f([a,b])=3,f([b,a])=3,f([b,c,d])=9,f([a,c])=4,f([b,b])=4,f([a,c,b,e])=11",
     "f([a,a,b,c,e])=?"],
     type : "B",
+    hint:"Try to change the letters into numbers.",
     correctAnswer : "12",
+}
+
+let mapping6 = {
+    title:"Map function",
+    text:["If f(33)=[3,11],f(8)=[2,2,2],f(100)=[2,2,5,5],f(37)=[37]",
+        "f(78)="],
+    type : "B",
+    correctAnswer : "[2,3,13]",
 }
 
 let filter1 = {
@@ -630,7 +657,7 @@ let tutorial4 = {
 
 let tutorial5 = {
     title:"Type C exercise",
-    text:["This is a typical type C ecercise, you have to arrange boxes in the correct order.",
+    text:["This is a typical type C exercise, you have to arrange boxes in the correct order.",
     "To arrange the boxes, first click on a box and then click on another box to swap them in place.",
     "To complete this exercise, simply arrange the boxes in the order 1,2,3,4,5 from left to right.",
     "Once you are done, the click 'check button' to check your answer and go to the next exercise.",],
@@ -657,6 +684,7 @@ decompositionExercises.push(birthdayParty);
 decompositionExercises.push(pocketLampProblem);
 decompositionExercises.push(naughtyKittens);
 decompositionExercises.push(machinesInFactory);
+decompositionExercises.push(sortTheNumbers1);
 
 patternExercises.push(nextNumberInSeq);
 patternExercises.push(nextNumberInSeq2);
@@ -684,11 +712,13 @@ patternExercises.push(formPattern4);
 algorithmExercises.push(encryptedText1);
 algorithmExercises.push(encryptedText2);
 algorithmExercises.push(encryptedText3);
+algorithmExercises.push(encryptedText4);
 algorithmExercises.push(mapping1);
 algorithmExercises.push(mapping2);
 algorithmExercises.push(mapping3);
 algorithmExercises.push(mapping4);
 algorithmExercises.push(mapping5);
+algorithmExercises.push(mapping6);
 algorithmExercises.push(filter1);
 algorithmExercises.push(filter2);
 algorithmExercises.push(followAlgorithm1);
