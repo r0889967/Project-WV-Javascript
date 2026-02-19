@@ -11,9 +11,9 @@ function loadMainMenu(){
     let mainmenu = getElem("mainmenu");
     let html = "";
     html += "<h1>CTThinker</h1>";
-    html += "<p>A great tool to boost computional thinking</p>";
-    html += "<p>Made by David Jiawei Wang and Senne Bosmans</p>";
-    html += "<p>If it is your first time playing, please play the tutorial first.</p>";
+    html += textLine("A great tool to boost computional thinking");
+    html += textLine("Made by David Jiawei Wang and Senne Bosmans");
+    html += textLine("If it is your first time playing, please play the tutorial first.");
     html += emptyLine(3);
     html += createButton("button1","","Start Game","loadModuleSelectionScreen()");
     html += emptyLine(4);
@@ -48,6 +48,10 @@ function createButton(class_,id,text,onclickfunc){
     return `<button class="${class_}" id="${id}" onclick="${onclickfunc}">${text}</button>`;
 }
 
+function textLine(text){
+    return `<p>${text}</p>`;
+}
+
 function emptyLine(count){
     let html = "";
     for(let i = 0; i < count; i++){
@@ -69,8 +73,8 @@ function loadFinishedScreen(tutorial){
     getElem("level").innerHTML = "";
     let html = "";
     html += "<h1>Result</h1>";
-    html += "<p>You have finished all exercises.</p>"
-    html += `<p>Your score is ${score}/${Math.min(limit,chosenExercisesCount)}</p>`
+    html += textLine("You have finished all exercises.");
+    html += textLine(`Your score is ${score}/${Math.min(limit,chosenExercisesCount)}`)
     html += emptyLine(3);
     html += createButton("button1", "", "Module Selection", "returnToModuleSelection();score=0");
     getElem("finished").innerHTML = html;
@@ -151,7 +155,7 @@ function pickExercises(moduleIdx,scramble=true){
 
 function loadTypeAExercise(choices){
     let html = "";
-    html += `<p>Please mark the correct boxes</p>`;
+    html += textLine("Please mark the correct boxes");
     html += emptyLine(1);
     let buttonIdx = 0;
     for(let choice of choices) {
@@ -167,7 +171,7 @@ function loadTypeAExercise(choices){
 
 function loadTypeBExercise(){
     let html = "";
-    html += `<p>Please enter your answer:<input class="input1" id="inputprompt" ></p>`;
+    html += textLine(`Please enter your answer:<input class="input1" id="inputprompt" >`);
     html += createButton("button3","checkbutton","Check",
         `checkAnswerB(getElem('inputprompt').value);getElem('checkbutton').disabled=true`);
     return html;
@@ -175,18 +179,30 @@ function loadTypeBExercise(){
 
 function loadTypeCExercise(choices){
     let html = "";
-    html += `<p>Please put the boxes in the correct order from left to right</p>`;
+    html += textLine(`Please put the boxes in the correct order from left to right`);
     html += emptyLine(1);
     let buttonIdx = 0;
+    html += "<div id='choicesdiv'>";
     for(let choice of choices){
         html += createButton("button2",buttonIdx,choice,
             `getElem(${buttonIdx}).classList.toggle('marked');swapButtons('${buttonIdx}')`);
         buttonIdx++;
     }
+    html += "</div>";
     html += emptyLine(1);
     html += createButton("button3","checkbutton","Check",
         `checkAnswerC();getElem('checkbutton').disabled=true`);
     return html;
+}
+
+function showHint(){
+    let exercise = chosenExercises[selectedExerciseIdx]
+    let showHint = getElem("showhint");
+    if(exercise.hint){
+        showHint.innerHTML = exercise.hint;
+    }else{
+        showHint.innerHTML = "This exercise has no hint!";
+    }
 }
 
 function loadExerciseContents(){
@@ -198,7 +214,7 @@ function loadExerciseContents(){
         getElem("levelselection").innerHTML = "";
         html += `<h1>${exercise.title}</h1>`
         for (let line of exercise.text) {
-            html += `<p>${line}</p>`;
+            html += textLine(`${line}`);
         }
         html += emptyLine(1);
         if(exercise.type==='A'){
@@ -210,7 +226,9 @@ function loadExerciseContents(){
         else if(exercise.type==='C'){
             html += loadTypeCExercise(exercise.choices);
         }
+        html += createButton("button4","hintbutton","Hint","showHint()")
         html += emptyLine(1);
+        html += `<p id="showhint"></p>`;
         html += `<p id="showanswer"></p>`;
         html += emptyLine(3);
         html += createButton("button1","","Module Selection","returnToModuleSelection()");

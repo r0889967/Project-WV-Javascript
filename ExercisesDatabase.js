@@ -90,6 +90,30 @@ let FindWordsInSrcambledText2 = {
     correctAnswer : "no yes"
 }
 
+let spellWord1 ={
+    title:"Spell the word",
+    text:["The letters are scrambled, please rearrange them to form a word.",],
+    type : "C",
+    choices : ["O","L","E","W","L","Y"],
+    correctOrder : ["Y","E","L","L","O","W"],
+}
+
+let spellWord2 ={
+    title:"Spell the word",
+    text:["The letters are scrambled, please rearrange them to form a word.",],
+    type : "C",
+    choices : ["N","V","I","T","U","R","E","S","I","Y"],
+    correctOrder : ["U","N","I","V","E","R","S","I","T","Y"],
+}
+
+let spellWord3 ={
+    title:"Spell the word",
+    text:["The letters are scrambled, please rearrange them to form a word.",],
+    type : "C",
+    choices : ["W","R","B","T","A","R","E","S","I","Y"],
+    correctOrder : ["S","T","R","A","W","B","E","R","R","Y"],
+}
+
 let guessSecretNumber = {
     title:"Guess the secret number",
     text:["Try to guess the secret number based on clues in the text. Between 10 and 99 (both boundaries included),",
@@ -107,22 +131,6 @@ let guessSecretNumber2 = {
     ],
     type : "B",
     correctAnswer : "15"
-}
-
-let runningRace = {
-    title:"100m running race",
-    text:["Alice,Bob,Carole,Dilan and Eva are having a 100m race. Each of them has his or her own strategies.",
-    "We will first assume that it will take each runner exactly 1 second to run 1 meter.",
-    "Alice runs 1 meter and then stops for 1 second.",
-    "Bob runs 5 meters and then stops for 10 seconds.",
-    "Carole runs 3 meters and then stops for 2 seconds.",
-    "Dilan runs 50 meters and then stops for 75 seconds.",
-    "Eva runs 10 meters and then stops for 5 seconds.",
-    "Each runner will repeat their strategies during the entire race.",
-    "In what order will the runners reach the finish? "],
-    type:"C",
-    choices : ["Alice","Bob","Carole","Dilan","Eva"],
-    correctOrder : ["Eva","Carole","Alice","Dilan","Bob"],
 }
 
 let reluctantStoryElements = {
@@ -239,6 +247,15 @@ let nextNumberInSeq4 = {
     correctAnswer : "55",
 }
 
+let nextNumberInSeq5 = {
+    title: "Next number in sequence",
+    text:["Given the following sequence of numbers.",
+        "2,4,6,18,21,84,88,? ",
+        "What is the next number in the sequence?"],
+    type:"B",
+    correctAnswer : "440",
+}
+
 let nextStrInSeq = {
     title: "Next string in sequence",
     text:["Given the following sequence of strings.",
@@ -253,10 +270,19 @@ let nextStrInSeq = {
 let nextStrInSeq2 = {
     title: "Next string in sequence",
     text:["Given the following sequence of strings.",
-    "a, ab, adad, ahahahah",
+    "a, ab, adad, ahahahah, ?",
     "What is the next string in the sequence?",],
     type:"B",
     correctAnswer : "apapapapapapapap",
+}
+
+let nextStrInSeq3 = {
+    title: "Next string in sequence",
+    text:["Given the following sequence of strings.",
+        "a, bab, ccbabcc, dddccbabccddd, ?",
+        "What is the next string in the sequence?",],
+    type:"B",
+    correctAnswer : "eeeedddccbabccdddeeee",
 }
 
 let missingStrInSeq1 = {
@@ -411,12 +437,28 @@ let mapping4 = {
     correctAnswer : "31",
 }
 
+let mapping5 = {
+    title:"Map function",
+    text:["If f([a,b])=3,f([b,a])=3,f([b,c,d])=9,f([a,c])=4,f([b,b])=4,f([a,c,b,e])=11",
+    "f([a,a,b,c,e])=?"],
+    type : "B",
+    correctAnswer : "12",
+}
+
 let filter1 = {
     title:"Filter function",
     text:["If f([1,2,4,3,5,7])=[1,3,5,7], f([9,7,4,5,6,1]=[9,7,5,1]",
     "f([2,3,5,4,4,6])=? (Please make sure your answer is the same format as the examples)"],
     type : "B",
     correctAnswer : "[3,5]",
+}
+
+let filter2 = {
+    title:"Filter function",
+    text:["If f([10,25,41,3,9])=[41,3], f([7,61,88,5,91,110]=[7,61,5]",
+        "f([2,78,31,11,45,79,4])=? (Please make sure your answer is the same format as the examples)"],
+    type : "B",
+    correctAnswer : "[2,31,11,79]",
 }
 
 let followAlgorithm1 = {
@@ -441,6 +483,22 @@ let followAlgorithm2 = {
     type : "B",
     correctAnswer : "ACBCCB ACBCCB ACBCCB ACBCCB",
 
+}
+
+let runningRace = {
+    title:"100m running race",
+    text:["Alice,Bob,Carole,Dilan and Eva are having a 100m race. Each of them has his or her own strategies.",
+        "We will first assume that it will take each runner exactly 1 second to run 1 meter.",
+        "Alice runs 1 meter and then stops for 1 second.",
+        "Bob runs 5 meters and then stops for 10 seconds.",
+        "Carole runs 3 meters and then stops for 2 seconds.",
+        "Dilan runs 50 meters and then stops for 75 seconds.",
+        "Eva runs 10 meters and then stops for 5 seconds.",
+        "Each runner will repeat their strategies during the entire race.",
+        "In what order will the runners reach the finish? "],
+    type:"C",
+    choices : ["Alice","Bob","Carole","Dilan","Eva"],
+    correctOrder : ["Eva","Carole","Alice","Dilan","Bob"],
 }
 
 
@@ -508,9 +566,11 @@ abstractionExercises.push(whoIsTheCulprit);
 abstractionExercises.push(manAndSnail);
 abstractionExercises.push(FindWordsInSrcambledText);
 abstractionExercises.push(FindWordsInSrcambledText2);
+abstractionExercises.push(spellWord1);
+abstractionExercises.push(spellWord2);
+abstractionExercises.push(spellWord3);
 abstractionExercises.push(guessSecretNumber);
 abstractionExercises.push(guessSecretNumber2);
-abstractionExercises.push(runningRace);
 abstractionExercises.push(reluctantStoryElements);
 
 decompositionExercises.push(birthdayParty);
@@ -522,8 +582,10 @@ patternExercises.push(nextNumberInSeq);
 patternExercises.push(nextNumberInSeq2);
 patternExercises.push(nextNumberInSeq3);
 patternExercises.push(nextNumberInSeq4);
+patternExercises.push(nextNumberInSeq5);
 patternExercises.push(nextStrInSeq);
 patternExercises.push(nextStrInSeq2);
+patternExercises.push(nextStrInSeq3);
 patternExercises.push(missingStrInSeq1);
 patternExercises.push(missingNumberInSeq1);
 patternExercises.push(findPatternSeq1);
@@ -542,9 +604,12 @@ algorithmExercises.push(mapping1);
 algorithmExercises.push(mapping2);
 algorithmExercises.push(mapping3);
 algorithmExercises.push(mapping4);
+algorithmExercises.push(mapping5);
 algorithmExercises.push(filter1);
+algorithmExercises.push(filter2);
 algorithmExercises.push(followAlgorithm1);
 algorithmExercises.push(followAlgorithm2);
+algorithmExercises.push(runningRace);
 
 
 tutorialExercises.push(tutorial0);

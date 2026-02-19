@@ -21,6 +21,17 @@ td{
     background-color: #d2fff8;
     border: 1px solid black;
 }
+.div2{
+    place-items: flex-start;
+    text-align: center;
+    background-color: #fdfdfd;
+    border: 2px solid black;
+}
+.button4{
+    height: 40px;
+    font-size: 20px;
+    background-color: yellow;
+}
 .button3{
     height: 40px;
     font-size: 20px;
