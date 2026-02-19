@@ -51,6 +51,7 @@ let whoIsTheCulprit = {
     "found her vase broken on the ground. Sarah suspect that her friends might have broken her vase yesterday by accident.",
     "Which of Sarah's friends might be the culprits?"],
     type : "A",
+    hint: "All of Sarah's friends entered though the frontdoor, what could this imply?",
     choices : ["Alice","Bob","Carole","Dilan","Eva"],
     correctAnswers : [0,1,2,3,4],
 }
@@ -63,6 +64,7 @@ let manAndSnail = {
         "The man couldn't believe that he lost.",
         "What are the possible and logical causes that made the slow snail beat the fast man?"],
     type : "A",
+    hint: "By logical, we mean all reasons that can possibly happen in reality.",
     choices : ["The snail was a super-snail that can go very fast.","The man decided to sleep for many hours during the race, allowing the snail to win.",
     "The snail had asked an identical looking snail to stand at the finish line beforehand.","The snail had learned to teleport.","The man might had faced some unforeseen circumstances during the race, causing him to lose."],
     correctAnswers : [1,2,4],
@@ -133,6 +135,16 @@ let guessSecretNumber2 = {
     correctAnswer : "15"
 }
 
+let guessSecretNumber3 = {
+    title:"Guess the secret number",
+    text:["Try to guess the secret number based on clues in the text. Between 0 and 100 (both boundaries included),",
+        "can be divided by all numbers from 1 to 100, is even, has one digit, is less than 50.",
+    ],
+    type : "B",
+    hint:"This is very easy.",
+    correctAnswer : "0"
+}
+
 let reluctantStoryElements = {
     title:"Reluctant story elements",
     text:["Sarah had lost her 4 balls while she was playing outside yesterday so she decided to for look them.",
@@ -146,9 +158,13 @@ let reluctantStoryElements = {
     "eventually stopping at the foot of a hill, where she found the blue ball and walked back home.",
     "What elements in the story are reluctant?"],
     type : "A",
+    hint:"Reluctant means that the element played no role in the story.",
     choices : ["hole","bird","scary trees","stone","spider","birch","bear","pond"],
     correctAnswers : [1,2,6,7],
 }
+
+
+
 
 let birthdayParty = {
     title:"Organize a birthday party",
@@ -210,13 +226,17 @@ let machinesInFactory = {
     correctOrder : ["C","F","A","E","D","B"]
 }
 
+
+
+
+
 let nextNumberInSeq = {
     title: "Next number in sequence",
     text : ["Given the following sequence of numbers.",
         "2,5,10,17,28,41,58,77,100,129,?",
-        "What is the next number in the sequence?",
-        "Hint: it has something to do with prime numbers.",],
+        "What is the next number in the sequence?",],
     type:"B",
+    hint: "It has something to do with prime numbers.",
     correctAnswer : "160",
 }
 
@@ -296,11 +316,39 @@ let missingStrInSeq1 = {
 
 let missingNumberInSeq1 = {
     title: "Missing numbers in sequence",
-    text:["Given the following sequence of strings.",
+    text:["Given the following sequence of numbers.",
         "1,?,333,?,?,666666,7777777",
-        "What are the missing strings in the sequence?",],
+        "What are the missing numbers in the sequence?",],
     type:"B",
     correctAnswer : "22 4444 55555",
+}
+
+let missingNumberInSeq2 = {
+    title: "Missing numbers in sequence",
+    text:["Given the following sequence of numbers.",
+        "3000,?,1000,750,600,?",
+        "What are the missing numbers in the sequence?",],
+    type:"B",
+    hint:"Think of division.",
+    correctAnswer : "1500 500",
+}
+
+let missingNumberInSeq3 = {
+    title: "Missing numbers in sequence",
+    text:["Given the following sequence of numbers.",
+        "1,3,6,?,?,?,28,36,45",
+        "What are the missing numbers in the sequence?",],
+    type:"B",
+    correctAnswer : "10 15 21",
+}
+
+let missingNumberInSeq4 = {
+    title: "Missing numbers in sequence",
+    text:["Given the following sequence of numbers.",
+        "1,?,20,3,?,300,4,40,400,4000,?,?",
+        "What are the missing numbers in the sequence?",],
+    type:"B",
+    correctAnswer : "2 30 5 50",
 }
 
 let findPatternSeq1 = {
@@ -377,6 +425,20 @@ let formPattern3 = {
     choices : ["2","5","7","3","23","11","17","19","13"],
     correctOrder : ["2","3","5","7","11","13","17","19","23"],
 }
+
+let formPattern4 = {
+    title: "Form a pattern",
+    text:["Below are a few numbers, please rearrange them to form a pattern.",
+        "The sequence should begin with the greatest number first."],
+    type:"C",
+    choices : ["1500","6000","3000","1000","2000","1200"],
+    correctOrder : ["6000","3000","2000","1500","1200","1000"],
+}
+
+
+
+
+
 
 let encryptedText1 = {
     title: "Encrypted text",
@@ -463,7 +525,7 @@ let filter2 = {
 
 let followAlgorithm1 = {
     title:"Follow algorithm",
-    text:["Suppose we have the number 137, we execute the following steps.",
+    text:["Suppose we have the number 137 at the start, we execute the following steps.",
     "1) Replace every digit smaller than 5 with 2.",
     "2) Swap the first and last digit.",
     "3) Replace the first and second digit with their sum.",
@@ -475,14 +537,32 @@ let followAlgorithm1 = {
 
 let followAlgorithm2 = {
     title:"Follow algorithm",
-    text:["Suppose we have A, we execute the following steps.",
+    text:["Suppose we have A at the start, we execute the following steps.",
     "1) Add a whitespace at the end of the string, followed by a copy of the string to the end.",
     "2) Add a B to the right of each A.",
     "3) Add a C to the left of each B.",
     "What is the result if we repeat the process 2 times?"],
     type : "B",
     correctAnswer : "ACBCCB ACBCCB ACBCCB ACBCCB",
+}
 
+let followAlgorithm3 = {
+    title:"Follow algorithm",
+    text:["Suppose we have 4 at the start, we execute the following steps.",
+        "1) As long as the number is not divisible by 5, add 3 to the number.",
+        "2) Replace the number by the smallest prime number that's greater than the number.",
+        "What is the result if we repeat the process 4 times?"],
+    type : "B",
+    correctAnswer : "41",
+}
+
+let numberOfCombinations1 = {
+    title:"Number of Combinations",
+    text:["Suppose we have an empty string at the start, we execute the following steps.",
+        "1) Add either 1 a or 1 b at the end of the string.",
+        "How many possible strings can we make if we repeat the process 5 times?"],
+    type : "B",
+    correctAnswer : "32",
 }
 
 let runningRace = {
@@ -500,7 +580,6 @@ let runningRace = {
     choices : ["Alice","Bob","Carole","Dilan","Eva"],
     correctOrder : ["Eva","Carole","Alice","Dilan","Bob"],
 }
-
 
 let tutorial0 = {
     title: "Check button",
@@ -571,6 +650,7 @@ abstractionExercises.push(spellWord2);
 abstractionExercises.push(spellWord3);
 abstractionExercises.push(guessSecretNumber);
 abstractionExercises.push(guessSecretNumber2);
+abstractionExercises.push(guessSecretNumber3);
 abstractionExercises.push(reluctantStoryElements);
 
 decompositionExercises.push(birthdayParty);
@@ -588,6 +668,9 @@ patternExercises.push(nextStrInSeq2);
 patternExercises.push(nextStrInSeq3);
 patternExercises.push(missingStrInSeq1);
 patternExercises.push(missingNumberInSeq1);
+patternExercises.push(missingNumberInSeq2);
+patternExercises.push(missingNumberInSeq3);
+patternExercises.push(missingNumberInSeq4);
 patternExercises.push(findPatternSeq1);
 patternExercises.push(findNonPatternSeq1);
 patternExercises.push(findNonPatternSeq2);
@@ -596,6 +679,7 @@ patternExercises.push(WhatIsThePattern2);
 patternExercises.push(formPattern);
 patternExercises.push(formPattern2);
 patternExercises.push(formPattern3);
+patternExercises.push(formPattern4);
 
 algorithmExercises.push(encryptedText1);
 algorithmExercises.push(encryptedText2);
@@ -609,6 +693,8 @@ algorithmExercises.push(filter1);
 algorithmExercises.push(filter2);
 algorithmExercises.push(followAlgorithm1);
 algorithmExercises.push(followAlgorithm2);
+algorithmExercises.push(followAlgorithm3);
+algorithmExercises.push(numberOfCombinations1);
 algorithmExercises.push(runningRace);
 
 

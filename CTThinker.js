@@ -6,24 +6,6 @@ var score = 0;
 var selectedButton1 ;
 var selectedButton2;
 
-
-function loadMainMenu(){
-    let mainmenu = getElem("mainmenu");
-    let html = "";
-    html += "<h1>CTThinker</h1>";
-    html += textLine("A great tool to boost computional thinking");
-    html += textLine("Made by David Jiawei Wang and Senne Bosmans");
-    html += textLine("If it is your first time playing, please play the tutorial first.");
-    html += emptyLine(3);
-    html += createButton("button1","","Start Game","loadModuleSelectionScreen()");
-    html += emptyLine(4);
-    html += createButton("button1","","Tutorial",
-        `pickExercises(5,false);loadExerciseContents()`);
-    html += emptyLine(4);
-    html += createButton("button1","","About CTThinker","loadInfoScreen()");
-    mainmenu.innerHTML = html;
-}
-
 function swapButtons(buttonIdx) {
     if(selectedButton1===undefined){
         selectedButton1 = getElem(buttonIdx);
@@ -44,8 +26,9 @@ function getElem(id){
     return document.getElementById(id);
 }
 
-function createButton(class_,id,text,onclickfunc){
-    return `<button class="${class_}" id="${id}" onclick="${onclickfunc}">${text}</button>`;
+function createButton(class_,id,text,onclickfunc,ondragstartfunc="",draggable=false){
+    return `<button class="${class_}" id="${id}" onclick="${onclickfunc}" 
+ondragstart="${ondragstartfunc}" draggable="${draggable}">${text}</button>`;
 }
 
 function textLine(text){
@@ -133,6 +116,12 @@ function checkAnswerC(){
     showAnswer.innerHTML += createButton("button1","","Next Level","toNextLevel()");
 }
 
+function showHint(){
+    let exercise = chosenExercises[selectedExerciseIdx]
+    let showHint = getElem("showhint");
+    showHint.innerHTML = exercise.hint;
+}
+
 
 function pickExercises(moduleIdx,scramble=true){
     selectedExerciseIdx = 0;
@@ -182,27 +171,52 @@ function loadTypeCExercise(choices){
     html += textLine(`Please put the boxes in the correct order from left to right`);
     html += emptyLine(1);
     let buttonIdx = 0;
-    html += "<div id='choicesdiv'>";
     for(let choice of choices){
         html += createButton("button2",buttonIdx,choice,
             `getElem(${buttonIdx}).classList.toggle('marked');swapButtons('${buttonIdx}')`);
         buttonIdx++;
     }
-    html += "</div>";
     html += emptyLine(1);
     html += createButton("button3","checkbutton","Check",
         `checkAnswerC();getElem('checkbutton').disabled=true`);
     return html;
 }
 
-function showHint(){
-    let exercise = chosenExercises[selectedExerciseIdx]
-    let showHint = getElem("showhint");
-    if(exercise.hint){
-        showHint.innerHTML = exercise.hint;
-    }else{
-        showHint.innerHTML = "This exercise has no hint!";
+//work in progress
+function dragstartHandler(ev) {
+    ev.dataTransfer.setData("text", ev.target.id);
+}
+
+//work in progress
+function dragoverHandler(ev) {
+    ev.preventDefault();
+}
+
+//work in progress
+function dropHandler(ev) {
+    ev.preventDefault();
+    const data = ev.dataTransfer.getData("text");
+    ev.target.appendChild(document.getElementById(data));
+}
+
+//drag and drop work in progress
+function loadTypeDExercise(choices){
+    let html = "";
+    html += textLine(`Please put the boxes in the correct order from left to right`);
+    html += emptyLine(1);
+    let buttonIdx = 0;
+    html += "<div class='div2' id='choicesdiv' ondrop='dropHandler(event)' ondragover='dragoverHandler(event)'>";
+    for(let choice of choices){
+        html += createButton("button2",buttonIdx,choice, "","ondragstart=dragstartHandler(event)",true);
+        buttonIdx++;
     }
+    html += "</div>";
+    html += emptyLine(2);
+    html += "<div class='div2' id='answerdiv' ondrop='dropHandler(event)' ondragover='dragoverHandler(event)'></div>";
+    html += emptyLine(1);
+    html += createButton("button3","checkbutton","Check",
+        `checkAnswerC();getElem('checkbutton').disabled=true`);
+    return html;
 }
 
 function loadExerciseContents(){
@@ -226,22 +240,18 @@ function loadExerciseContents(){
         else if(exercise.type==='C'){
             html += loadTypeCExercise(exercise.choices);
         }
-        html += createButton("button4","hintbutton","Hint","showHint()")
+        if(exercise.hint) {
+            html += createButton("button4", "hintbutton", "Hint",
+                "showHint();getElem('hintbutton').disabled=true");
+        }
         html += emptyLine(1);
         html += `<p id="showhint"></p>`;
         html += `<p id="showanswer"></p>`;
         html += emptyLine(3);
-        html += createButton("button1","","Module Selection","returnToModuleSelection()");
+        html += createButton("button1","","Module Selection","returnToModuleSelection();");
         level.innerHTML = html;
     }
 }
-
-function returnToModuleSelection(){
-    getElem("level").innerHTML = "";
-    getElem("finished").innerHTML = "";
-    loadModuleSelectionScreen();
-}
-
 
 function loadModuleSelectionScreen(){
     getElem("mainmenu").innerHTML = "";
@@ -280,6 +290,12 @@ function loadModuleSelectionScreen(){
     levelselection.innerHTML = html;
 }
 
+function returnToModuleSelection(){
+    getElem("level").innerHTML = "";
+    getElem("finished").innerHTML = "";
+    loadModuleSelectionScreen();
+}
+
 function loadInfoScreen(){
     getElem("mainmenu").innerHTML = "";
     let info = getElem("info");
@@ -306,6 +322,23 @@ function loadInfoScreen(){
     html += "<p>to help students understand the solution.</p>"
     html += createButton("button1","","Main Menu","returnToMainMenu()");
     info.innerHTML = html;
+}
+
+function loadMainMenu(){
+    let mainmenu = getElem("mainmenu");
+    let html = "";
+    html += "<h1>CTThinker</h1>";
+    html += textLine("A great tool to boost computional thinking");
+    html += textLine("Made by David Jiawei Wang and Senne Bosmans");
+    html += textLine("If it is your first time playing, please play the tutorial first.");
+    html += emptyLine(3);
+    html += createButton("button1","","Start Game","loadModuleSelectionScreen()");
+    html += emptyLine(4);
+    html += createButton("button1","","Tutorial",
+        `pickExercises(5,false);loadExerciseContents()`);
+    html += emptyLine(4);
+    html += createButton("button1","","About CTThinker","loadInfoScreen()");
+    mainmenu.innerHTML = html;
 }
 
 function returnToMainMenu() {
