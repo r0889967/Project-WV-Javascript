@@ -122,6 +122,10 @@ function showHint(){
     showHint.innerHTML = exercise.hint;
 }
 
+function sortExercisesByDiff(){
+
+}
+
 
 function pickExercises(moduleIdx,scramble=true){
     selectedExerciseIdx = 0;
@@ -140,6 +144,18 @@ function pickExercises(moduleIdx,scramble=true){
     }else{
         chosenExercises = Exercises[moduleIdx];
     }
+    chosenExercises.sort((a, b) => {
+        const diff1 = a.diff;
+        const diff2 = b.diff;
+        if (diff1 < diff2) {
+            return -1;
+        }
+        if (diff1 > diff2) {
+            return 1;
+        }
+        return 0;
+    })
+    console.log(chosenExercises);
 }
 
 function loadTypeAExercise(choices){
