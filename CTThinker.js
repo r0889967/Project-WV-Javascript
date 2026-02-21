@@ -26,9 +26,9 @@ function getElem(id){
     return document.getElementById(id);
 }
 
-function createButton(class_,id,text,onclickfunc,ondragstartfunc="",draggable=false){
+function createButton(class_,id,text,onclickfunc,draggable=false,ondragstart=""){
     return `<button class="${class_}" id="${id}" onclick="${onclickfunc}" 
-ondragstart="${ondragstartfunc}" draggable="${draggable}">${text}</button>`;
+draggable="${draggable}" ondragstart="${ondragstart}">${text}</button>`;
 }
 
 function textLine(text){
@@ -116,16 +116,15 @@ function checkAnswerC(){
     showAnswer.innerHTML += createButton("button1","","Next Level","toNextLevel()");
 }
 
+function checkAnswerD(){
+    let exercise = chosenExercises[selectedExerciseIdx];
+}
+
 function showHint(){
     let exercise = chosenExercises[selectedExerciseIdx]
     let showHint = getElem("showhint");
     showHint.innerHTML = exercise.hint;
 }
-
-function sortExercisesByDiff(){
-
-}
-
 
 function pickExercises(moduleIdx,scramble=true){
     selectedExerciseIdx = 0;
@@ -155,7 +154,6 @@ function pickExercises(moduleIdx,scramble=true){
         }
         return 0;
     })
-    console.log(chosenExercises);
 }
 
 function loadTypeAExercise(choices){
@@ -198,21 +196,20 @@ function loadTypeCExercise(choices){
     return html;
 }
 
-//work in progress
 function dragstartHandler(ev) {
     ev.dataTransfer.setData("text", ev.target.id);
 }
 
-//work in progress
 function dragoverHandler(ev) {
     ev.preventDefault();
 }
 
-//work in progress
 function dropHandler(ev) {
     ev.preventDefault();
     const data = ev.dataTransfer.getData("text");
-    ev.target.appendChild(document.getElementById(data));
+    if(ev.target.id === "choicesdiv" || ev.target.id === "answerdiv"){
+        ev.target.appendChild(document.getElementById(data));
+    }
 }
 
 //drag and drop work in progress
@@ -223,7 +220,8 @@ function loadTypeDExercise(choices){
     let buttonIdx = 0;
     html += "<div class='div2' id='choicesdiv' ondrop='dropHandler(event)' ondragover='dragoverHandler(event)'>";
     for(let choice of choices){
-        html += createButton("button2",buttonIdx,choice, "","ondragstart=dragstartHandler(event)",true);
+        html += createButton("button2",buttonIdx,choice, "",true,
+            "dragstartHandler(event)");
         buttonIdx++;
     }
     html += "</div>";
@@ -232,6 +230,12 @@ function loadTypeDExercise(choices){
     html += emptyLine(1);
     html += createButton("button3","checkbutton","Check",
         `checkAnswerC();getElem('checkbutton').disabled=true`);
+
+    const buttons = document.getElementsByClassName('button2');
+    const divs = document.getElementsByClassName('div2');
+
+
+
     return html;
 }
 
@@ -242,7 +246,8 @@ function loadExerciseContents(){
     let html = "";
     if(exercise != null){
         getElem("levelselection").innerHTML = "";
-        html += `<h1>${exercise.title}</h1>`
+        let t = exercise.title+"("+(selectedExerciseIdx+1)+"/"+chosenExercises.length+")";
+        html += `<h1>${t}</h1>`
         for (let line of exercise.text) {
             html += textLine(`${line}`);
         }
@@ -255,6 +260,9 @@ function loadExerciseContents(){
         }
         else if(exercise.type==='C'){
             html += loadTypeCExercise(exercise.choices);
+        }
+        else if(exercise.type==='D'){
+            html += loadTypeDExercise(exercise.choices);
         }
         if(exercise.hint) {
             html += createButton("button4", "hintbutton", "Hint",

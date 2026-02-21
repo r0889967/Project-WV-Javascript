@@ -734,7 +734,7 @@ let runningRace = {
         "Eva runs 10 meters and then stops for 5 seconds.",
         "Each runner will repeat their strategies during the entire race.",
         "In what order will the runners reach the finish? "],
-    type:"C",
+    type:"D",
     diff:3,
     choices : ["Alice","Bob","Carole","Dilan","Eva"],
     correctOrder : ["Eva","Carole","Alice","Dilan","Bob"],
@@ -853,22 +853,22 @@ patternExercises.push(formPattern2);
 patternExercises.push(formPattern3);
 patternExercises.push(formPattern4);
 
-algorithmExercises.push(encryptedText1);
-algorithmExercises.push(encryptedText2);
-algorithmExercises.push(encryptedText3);
-algorithmExercises.push(encryptedText4);
-algorithmExercises.push(mapping1);
-algorithmExercises.push(mapping2);
-algorithmExercises.push(mapping3);
-algorithmExercises.push(mapping4);
-algorithmExercises.push(mapping5);
-algorithmExercises.push(mapping6);
-algorithmExercises.push(filter1);
-algorithmExercises.push(filter2);
-algorithmExercises.push(followAlgorithm1);
-algorithmExercises.push(followAlgorithm2);
-algorithmExercises.push(followAlgorithm3);
-algorithmExercises.push(ballsAndDrawers);
+// algorithmExercises.push(encryptedText1);
+// algorithmExercises.push(encryptedText2);
+// algorithmExercises.push(encryptedText3);
+// algorithmExercises.push(encryptedText4);
+// algorithmExercises.push(mapping1);
+// algorithmExercises.push(mapping2);
+// algorithmExercises.push(mapping3);
+// algorithmExercises.push(mapping4);
+// algorithmExercises.push(mapping5);
+// algorithmExercises.push(mapping6);
+// algorithmExercises.push(filter1);
+// algorithmExercises.push(filter2);
+// algorithmExercises.push(followAlgorithm1);
+// algorithmExercises.push(followAlgorithm2);
+// algorithmExercises.push(followAlgorithm3);
+// algorithmExercises.push(ballsAndDrawers);
 algorithmExercises.push(runningRace);
 
 
