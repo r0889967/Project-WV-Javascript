@@ -1,18 +1,18 @@
 const Exercises = [];
 
-const abstractionExercises = [];
-const decompositionExercises = [];
-const patternExercises = [];
-const algorithmExercises = [];
+const abExercises = [];
+const decExercises = [];
+const patExercises = [];
+const algoExercises = [];
 const IntegratedExercises = [];
-const tutorialExercises = [];
+const tutorExercises = [];
 
-Exercises.push(abstractionExercises);
-Exercises.push(decompositionExercises);
-Exercises.push(patternExercises);
-Exercises.push(algorithmExercises);
+Exercises.push(abExercises);
+Exercises.push(decExercises);
+Exercises.push(patExercises);
+Exercises.push(algoExercises);
 Exercises.push(IntegratedExercises);
-Exercises.push(tutorialExercises);
+Exercises.push(tutorExercises);
 
 let grimReaper = {
     title: "Sarah and the Grim Reaper",
@@ -35,7 +35,7 @@ let racersDilemma = {
     "E runs faster than F, F runs faster than A.",
     "Which racer is the fastest?"],
     type: "A",
-    diff : 2,
+    diff : 1,
     choices : ["A","B","C","D","E","F","All racers are equally fast.","There is a contradiction."],
     correctAnswers : [7],
 }
@@ -967,93 +967,93 @@ let tutorial5 = {
     correctOrder : ["1","2","3","4","5"],
 }
 
-abstractionExercises.push(grimReaper);
-abstractionExercises.push(racersDilemma);
-abstractionExercises.push(racersDilemma2);
-abstractionExercises.push(guessTheCardsGame);
-abstractionExercises.push(whoIsTheCulprit);
-abstractionExercises.push(manAndSnail);
-abstractionExercises.push(FindWordsInSrcambledText);
-abstractionExercises.push(FindWordsInSrcambledText2);
-abstractionExercises.push(FindWordsInSrcambledText3);
-abstractionExercises.push(FindWordsInSrcambledText4);
-abstractionExercises.push(spellWord1);
-abstractionExercises.push(spellWord2);
-abstractionExercises.push(spellWord3);
-abstractionExercises.push(spellWord4);
-abstractionExercises.push(spellWord5);
-abstractionExercises.push(spellWord6);
-abstractionExercises.push(guessSecretNumber);
-abstractionExercises.push(guessSecretNumber2);
-abstractionExercises.push(guessSecretNumber3);
-abstractionExercises.push(guessSecretNumber4);
-abstractionExercises.push(questionWithNoAnswer);
-abstractionExercises.push(questionWithNoAnswer2);
-abstractionExercises.push(prisonerAnd2Doors);
-abstractionExercises.push(reluctantStoryElements);
+abExercises.push(grimReaper);
+abExercises.push(racersDilemma);
+abExercises.push(racersDilemma2);
+abExercises.push(guessTheCardsGame);
+abExercises.push(whoIsTheCulprit);
+abExercises.push(manAndSnail);
+abExercises.push(FindWordsInSrcambledText);
+abExercises.push(FindWordsInSrcambledText2);
+abExercises.push(FindWordsInSrcambledText3);
+abExercises.push(FindWordsInSrcambledText4);
+abExercises.push(spellWord1);
+abExercises.push(spellWord2);
+abExercises.push(spellWord3);
+abExercises.push(spellWord4);
+abExercises.push(spellWord5);
+abExercises.push(spellWord6);
+abExercises.push(guessSecretNumber);
+abExercises.push(guessSecretNumber2);
+abExercises.push(guessSecretNumber3);
+abExercises.push(guessSecretNumber4);
+abExercises.push(questionWithNoAnswer);
+abExercises.push(questionWithNoAnswer2);
+abExercises.push(prisonerAnd2Doors);
+abExercises.push(reluctantStoryElements);
 
-decompositionExercises.push(birthdayParty);
-decompositionExercises.push(pocketLampProblem);
-decompositionExercises.push(naughtyKittens);
-decompositionExercises.push(machinesInFactory);
-decompositionExercises.push(sortTheNumbers1);
-decompositionExercises.push(sortTheNumbers2)
+decExercises.push(birthdayParty);
+decExercises.push(pocketLampProblem);
+decExercises.push(naughtyKittens);
+decExercises.push(machinesInFactory);
+decExercises.push(sortTheNumbers1);
+decExercises.push(sortTheNumbers2)
 
-patternExercises.push(nextNumberInSeq);
-patternExercises.push(nextNumberInSeq2);
-patternExercises.push(nextNumberInSeq3);
-patternExercises.push(nextNumberInSeq4);
-patternExercises.push(nextNumberInSeq5);
-patternExercises.push(nextNumberInSeq6);
-patternExercises.push(nextNumberInSeq7);
-patternExercises.push(nextStrInSeq);
-patternExercises.push(nextStrInSeq2);
-patternExercises.push(nextStrInSeq3);
-patternExercises.push(nextStrInSeq4);
-patternExercises.push(nextStrInSeq5);
-patternExercises.push(missingStrInSeq1);
-patternExercises.push(missingStrInSeq2);
-patternExercises.push(missingNumberInSeq1);
-patternExercises.push(missingNumberInSeq2);
-patternExercises.push(missingNumberInSeq3);
-patternExercises.push(missingNumberInSeq4);
-patternExercises.push(missingNumberInSeq5);
-patternExercises.push(findPatternSeq1);
-patternExercises.push(findPatternSeq2);
-patternExercises.push(findNonPatternSeq1);
-patternExercises.push(findNonPatternSeq2);
-patternExercises.push(WhatIsThePattern);
-patternExercises.push(WhatIsThePattern2);
-patternExercises.push(formPattern);
-patternExercises.push(formPattern2);
-patternExercises.push(formPattern3);
-patternExercises.push(formPattern4);
-patternExercises.push(formPattern5);
-patternExercises.push(formPattern6);
+patExercises.push(nextNumberInSeq);
+patExercises.push(nextNumberInSeq2);
+patExercises.push(nextNumberInSeq3);
+patExercises.push(nextNumberInSeq4);
+patExercises.push(nextNumberInSeq5);
+patExercises.push(nextNumberInSeq6);
+patExercises.push(nextNumberInSeq7);
+patExercises.push(nextStrInSeq);
+patExercises.push(nextStrInSeq2);
+patExercises.push(nextStrInSeq3);
+patExercises.push(nextStrInSeq4);
+patExercises.push(nextStrInSeq5);
+patExercises.push(missingStrInSeq1);
+patExercises.push(missingStrInSeq2);
+patExercises.push(missingNumberInSeq1);
+patExercises.push(missingNumberInSeq2);
+patExercises.push(missingNumberInSeq3);
+patExercises.push(missingNumberInSeq4);
+patExercises.push(missingNumberInSeq5);
+patExercises.push(findPatternSeq1);
+patExercises.push(findPatternSeq2);
+patExercises.push(findNonPatternSeq1);
+patExercises.push(findNonPatternSeq2);
+patExercises.push(WhatIsThePattern);
+patExercises.push(WhatIsThePattern2);
+patExercises.push(formPattern);
+patExercises.push(formPattern2);
+patExercises.push(formPattern3);
+patExercises.push(formPattern4);
+patExercises.push(formPattern5);
+patExercises.push(formPattern6);
 
-algorithmExercises.push(encryptedText1);
-algorithmExercises.push(encryptedText2);
-algorithmExercises.push(encryptedText3);
-algorithmExercises.push(encryptedText4);
-algorithmExercises.push(encryptedText5);
-algorithmExercises.push(mapping1);
-algorithmExercises.push(mapping2);
-algorithmExercises.push(mapping3);
-algorithmExercises.push(mapping4);
-algorithmExercises.push(mapping5);
-algorithmExercises.push(mapping6);
-algorithmExercises.push(filter1);
-algorithmExercises.push(filter2);
-algorithmExercises.push(followAlgorithm1);
-algorithmExercises.push(followAlgorithm2);
-algorithmExercises.push(followAlgorithm3);
-algorithmExercises.push(ballsAndDrawers);
-algorithmExercises.push(runningRace);
+algoExercises.push(encryptedText1);
+algoExercises.push(encryptedText2);
+algoExercises.push(encryptedText3);
+algoExercises.push(encryptedText4);
+algoExercises.push(encryptedText5);
+algoExercises.push(mapping1);
+algoExercises.push(mapping2);
+algoExercises.push(mapping3);
+algoExercises.push(mapping4);
+algoExercises.push(mapping5);
+algoExercises.push(mapping6);
+algoExercises.push(filter1);
+algoExercises.push(filter2);
+algoExercises.push(followAlgorithm1);
+algoExercises.push(followAlgorithm2);
+algoExercises.push(followAlgorithm3);
+algoExercises.push(ballsAndDrawers);
+algoExercises.push(runningRace);
 
 
-tutorialExercises.push(tutorial0);
-tutorialExercises.push(tutorial1);
-tutorialExercises.push(tutorial2);
-tutorialExercises.push(tutorial3);
-tutorialExercises.push(tutorial4);
-tutorialExercises.push(tutorial5);
+tutorExercises.push(tutorial0);
+tutorExercises.push(tutorial1);
+tutorExercises.push(tutorial2);
+tutorExercises.push(tutorial3);
+tutorExercises.push(tutorial4);
+tutorExercises.push(tutorial5);
