@@ -3,24 +3,6 @@ var chosenExercises = [];
 var chosenExercisesCount = 20;
 var limit = 0;
 var score = 0;
-var selectedButton1 ;
-var selectedButton2;
-
-function swapButtons(buttonIdx) {
-    if(selectedButton1===undefined){
-        selectedButton1 = getElem(buttonIdx);
-    }else{
-        selectedButton2 = getElem(buttonIdx);
-        selectedButton1.classList.remove("marked");
-        selectedButton2.classList.remove("marked");
-        let tmp = selectedButton1.innerText;
-        selectedButton1.innerText = selectedButton2.innerText;
-        selectedButton2.innerText = tmp;
-        selectedButton1 = undefined;
-        selectedButton2 = undefined;
-    }
-
-}
 
 function getElem(id){
     return document.getElementById(id);
@@ -102,8 +84,9 @@ function checkAnswerC(){
     let exercise = chosenExercises[selectedExerciseIdx];
     let showAnswer = getElem("showanswer");
     let currentOrder = [];
-    for(let i = 0; i < exercise.choices.length; i++){
-        currentOrder.push(getElem(i).innerText);
+    let answerdiv = getElem("answerdiv");
+    for(let i = 0; i < answerdiv.childNodes.length; i++){
+        currentOrder.push(answerdiv.childNodes[i].textContent);
     }
     if(currentOrder.toString() === exercise.correctOrder.toString()){
         showAnswer.style.color = "green";
@@ -114,10 +97,6 @@ function checkAnswerC(){
         showAnswer.innerHTML = "The answer is incorrect!";
     }
     showAnswer.innerHTML += createButton("button1","","Next Level","toNextLevel()");
-}
-
-function checkAnswerD(){
-    let exercise = chosenExercises[selectedExerciseIdx];
 }
 
 function showHint(){
@@ -180,22 +159,6 @@ function loadTypeBExercise(){
     return html;
 }
 
-function loadTypeCExercise(choices){
-    let html = "";
-    html += textLine(`Please put the boxes in the correct order from left to right`);
-    html += emptyLine(1);
-    let buttonIdx = 0;
-    for(let choice of choices){
-        html += createButton("button2",buttonIdx,choice,
-            `getElem(${buttonIdx}).classList.toggle('marked');swapButtons('${buttonIdx}')`);
-        buttonIdx++;
-    }
-    html += emptyLine(1);
-    html += createButton("button3","checkbutton","Check",
-        `checkAnswerC();getElem('checkbutton').disabled=true`);
-    return html;
-}
-
 function dragstartHandler(ev) {
     ev.dataTransfer.setData("text", ev.target.id);
 }
@@ -212,10 +175,9 @@ function dropHandler(ev) {
     }
 }
 
-//drag and drop work in progress
-function loadTypeDExercise(choices){
+function loadTypeCExercise(choices){
     let html = "";
-    html += textLine(`Please put the boxes in the correct order from left to right`);
+    html += textLine(`Please drag the boxes in the field down below in the correct order from left to right`);
     html += emptyLine(1);
     let buttonIdx = 0;
     html += "<div class='div2' id='choicesdiv' ondrop='dropHandler(event)' ondragover='dragoverHandler(event)'>";
@@ -230,12 +192,6 @@ function loadTypeDExercise(choices){
     html += emptyLine(1);
     html += createButton("button3","checkbutton","Check",
         `checkAnswerC();getElem('checkbutton').disabled=true`);
-
-    const buttons = document.getElementsByClassName('button2');
-    const divs = document.getElementsByClassName('div2');
-
-
-
     return html;
 }
 
@@ -260,9 +216,6 @@ function loadExerciseContents(){
         }
         else if(exercise.type==='C'){
             html += loadTypeCExercise(exercise.choices);
-        }
-        else if(exercise.type==='D'){
-            html += loadTypeDExercise(exercise.choices);
         }
         if(exercise.hint) {
             html += createButton("button4", "hintbutton", "Hint",
