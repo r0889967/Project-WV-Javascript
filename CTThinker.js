@@ -170,7 +170,7 @@ function dragoverHandler(ev) {
 function dropHandler(ev) {
     ev.preventDefault();
     const data = ev.dataTransfer.getData("text");
-    if(ev.target.id === "choicesdiv" || ev.target.id === "answerdiv"){
+    if(ev.target.classList.contains('div2')){
         ev.target.appendChild(document.getElementById(data));
     }
 }

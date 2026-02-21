@@ -28,6 +28,30 @@ let grimReaper = {
     correctAnswers : [3],
 }
 
+let racersDilemma = {
+    title: "Racers dilemma",
+    text:["Suppose we have 6 racers called A, B, C, D, E and F.",
+    "A runs faster than B, B runs faster than C, C runs faster than D, D runs faster than E,",
+    "E runs faster than F, F runs faster than A.",
+    "Which racer is the fastest?"],
+    type: "A",
+    diff : 2,
+    choices : ["A","B","C","D","E","F","All racers are equally fast.","There is a contradiction."],
+    correctAnswers : [7],
+}
+
+let racersDilemma2 = {
+    title: "Racers dilemma",
+    text:["Suppose we have 6 racers called A, B, C, D, E and F.",
+        "A is at least as fast as B, B is at least as fast as C, C is at least as fast as D, D is at least as fast as E,",
+        "E is at least as fast as F, F is at least as fast as A.",
+        "Which racer is the fastest?"],
+    type: "A",
+    diff : 2,
+    choices : ["A","B","C","D","E","F","All racers are equally fast.","There is a contradiction."],
+    correctAnswers : [6],
+}
+
 let guessTheCardsGame = {
     title:"The card game",
     text:["Alice, Bob and Carole are playing a game called \"guess the cards\", where Alice have 3 cards in her hand and she is",
@@ -165,6 +189,15 @@ let spellWord5 ={
     diff : 3,
     choices : ["I","Y","A","N","D","L","E","S","D","N"],
     correctOrder : ["D","I","S","N","E","Y","L","A","N","D"],
+}
+
+let spellWord6 ={
+    title:"Spell the word",
+    text:["The letters are scrambled, please rearrange them to form a word.",],
+    type : "C",
+    diff : 1,
+    choices : ["G","L","E","G","A","A","N","U"],
+    correctOrder : ["L","A","N","G","U","A","G","E"],
 }
 
 let guessSecretNumber = {
@@ -563,6 +596,17 @@ let findPatternSeq1 = {
     correctAnswers : [0,3,4],
 }
 
+let findPatternSeq2 = {
+    title: "Find pattern sequences",
+    text:["Observe the sequences below carefully.",
+        "Which sequence(s) have a pattern inside them?"],
+    type:"A",
+    diff:2,
+    choices: ["1,5,10,50,100,500","1,5,10,15,150,500","1,15,50,100,115,150","1,10,15,50,115,155",
+        "1,15,10,150,100,1500"],
+    correctAnswers : [0,2,4],
+}
+
 let findNonPatternSeq1 = {
     title: "Find non-pattern sequences",
     text:["Observe the following sequences carefully.",
@@ -653,6 +697,16 @@ let formPattern5 = {
     diff:0,
     choices : ["678","123","345","789","234","456","012","567"],
     correctOrder : ["012","123","234","345","456","567","678","789"],
+}
+
+let formPattern6 = {
+    title: "Form a pattern",
+    text:["Below are a few numbers, please rearrange them to form a pattern.",
+        "The sequence should begin with the smallest number first."],
+    type:"C",
+    diff:0,
+    choices : ["1","36","15","55","3","45","10","21","6","0"],
+    correctOrder : ["0","1","3","6","10","15","21","28","36","45","55"],
 }
 
 
@@ -914,6 +968,8 @@ let tutorial5 = {
 }
 
 abstractionExercises.push(grimReaper);
+abstractionExercises.push(racersDilemma);
+abstractionExercises.push(racersDilemma2);
 abstractionExercises.push(guessTheCardsGame);
 abstractionExercises.push(whoIsTheCulprit);
 abstractionExercises.push(manAndSnail);
@@ -926,6 +982,7 @@ abstractionExercises.push(spellWord2);
 abstractionExercises.push(spellWord3);
 abstractionExercises.push(spellWord4);
 abstractionExercises.push(spellWord5);
+abstractionExercises.push(spellWord6);
 abstractionExercises.push(guessSecretNumber);
 abstractionExercises.push(guessSecretNumber2);
 abstractionExercises.push(guessSecretNumber3);
@@ -962,6 +1019,7 @@ patternExercises.push(missingNumberInSeq3);
 patternExercises.push(missingNumberInSeq4);
 patternExercises.push(missingNumberInSeq5);
 patternExercises.push(findPatternSeq1);
+patternExercises.push(findPatternSeq2);
 patternExercises.push(findNonPatternSeq1);
 patternExercises.push(findNonPatternSeq2);
 patternExercises.push(WhatIsThePattern);
@@ -971,6 +1029,7 @@ patternExercises.push(formPattern2);
 patternExercises.push(formPattern3);
 patternExercises.push(formPattern4);
 patternExercises.push(formPattern5);
+patternExercises.push(formPattern6);
 
 algorithmExercises.push(encryptedText1);
 algorithmExercises.push(encryptedText2);
