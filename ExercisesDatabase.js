@@ -411,6 +411,26 @@ let nextNumberInSeq5 = {
     correctAnswer : "440",
 }
 
+let nextNumberInSeq6 = {
+    title: "Next number in sequence",
+    text:["Given the following sequence of numbers.",
+        "2,3,5,7,11,13,17,19,23,29,31,?",
+        "What is the next number in the sequence?"],
+    type:"B",
+    diff : 1,
+    correctAnswer : "37",
+}
+
+let nextNumberInSeq7 = {
+    title: "Next number in sequence",
+    text:["Given the following sequence of numbers.",
+        "11,121,1331,14641,15101051,?",
+        "What is the next number in the sequence?"],
+    type:"B",
+    diff : 2,
+    correctAnswer : "1615201561",
+}
+
 let nextStrInSeq = {
     title: "Next string in sequence",
     text:["Given the following sequence of strings.",
@@ -420,8 +440,6 @@ let nextStrInSeq = {
     diff:1,
     correctAnswer : "eeeeecccabbddddffffff",
 }
-
-
 
 let nextStrInSeq2 = {
     title: "Next string in sequence",
@@ -441,6 +459,26 @@ let nextStrInSeq3 = {
     type:"B",
     diff:0,
     correctAnswer : "eeeedddccbabccdddeeee",
+}
+
+let nextStrInSeq4 = {
+    title: "Next string in sequence",
+    text:["Given the following sequence of strings.",
+        "a, e, i, o, ?",
+        "What is the next string in the sequence?",],
+    type:"B",
+    diff:0,
+    correctAnswer : "u",
+}
+
+let nextStrInSeq5 = {
+    title: "Next string in sequence",
+    text:["Given the following sequence of strings.",
+        "a,aabb,aaabbbccc,aaaabbbbccccdddd,?",
+        "What is the next string in the sequence?",],
+    type:"B",
+    diff:1,
+    correctAnswer : "aaaaabbbbbcccccdddddeeeee",
 }
 
 let missingStrInSeq1 = {
@@ -502,6 +540,16 @@ let missingNumberInSeq4 = {
     type:"B",
     diff:1,
     correctAnswer : "2 30 5 50",
+}
+
+let missingNumberInSeq5 = {
+    title: "Missing numbers in sequence",
+    text:["Given the following sequence of numbers.",
+        "1,?,5,10,20,50,100,?,?,?",
+        "What are the missing numbers in the sequence?",],
+    type:"B",
+    diff:1,
+    correctAnswer : "2 200 500 1000",
 }
 
 let findPatternSeq1 = {
@@ -618,7 +666,7 @@ let encryptedText1 = {
     "J thjnk ypv cbn dp thjs pnf",
         "You need to decrypt this text.(The answer is case-sensitive)"],
     type: "B",
-    diff:0,
+    diff:1,
     correctAnswer : "I think you can do this one",
 }
 
@@ -650,6 +698,16 @@ let encryptedText4 = {
     type : "B",
     diff:0,
     correctAnswer : "You should be able to see the answer",
+}
+
+let encryptedText5 = {
+    title:"Encrypted text",
+    text:["The following text has been encrypted using a simple algorithm.",
+        "eavH nuf gearninl hitw shit loot",
+        "You need to decrypt this text. (The answer is case-sensitive.)"],
+    type : "B",
+    diff:0,
+    correctAnswer : "Have fun learning with this tool",
 }
 
 let mapping1 = {
@@ -889,15 +947,20 @@ patternExercises.push(nextNumberInSeq2);
 patternExercises.push(nextNumberInSeq3);
 patternExercises.push(nextNumberInSeq4);
 patternExercises.push(nextNumberInSeq5);
+patternExercises.push(nextNumberInSeq6);
+patternExercises.push(nextNumberInSeq7);
 patternExercises.push(nextStrInSeq);
 patternExercises.push(nextStrInSeq2);
 patternExercises.push(nextStrInSeq3);
+patternExercises.push(nextStrInSeq4);
+patternExercises.push(nextStrInSeq5);
 patternExercises.push(missingStrInSeq1);
 patternExercises.push(missingStrInSeq2);
 patternExercises.push(missingNumberInSeq1);
 patternExercises.push(missingNumberInSeq2);
 patternExercises.push(missingNumberInSeq3);
 patternExercises.push(missingNumberInSeq4);
+patternExercises.push(missingNumberInSeq5);
 patternExercises.push(findPatternSeq1);
 patternExercises.push(findNonPatternSeq1);
 patternExercises.push(findNonPatternSeq2);
@@ -913,6 +976,7 @@ algorithmExercises.push(encryptedText1);
 algorithmExercises.push(encryptedText2);
 algorithmExercises.push(encryptedText3);
 algorithmExercises.push(encryptedText4);
+algorithmExercises.push(encryptedText5);
 algorithmExercises.push(mapping1);
 algorithmExercises.push(mapping2);
 algorithmExercises.push(mapping3);
