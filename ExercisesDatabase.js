@@ -110,6 +110,18 @@ let FindWordsInSrcambledText3 = {
     correctAnswer : "cat cow dog pig"
 }
 
+let FindWordsInSrcambledText4 = {
+    title:"Words inside scrambled text",
+    text:["Study this mess of letters below carefully.",
+        "yeonteraonosaehfde",
+        "Please list the 5 words (they are all body parts) that are part of this mess of letters alphabetically from left to right.",
+        "Use a single space to separate the words and don't use capitals.",
+        ""],
+    type : "B",
+    diff : 2,
+    correctAnswer : "ear eye foot hand nose"
+}
+
 let spellWord1 ={
     title:"Spell the word",
     text:["The letters are scrambled, please rearrange them to form a word.",],
@@ -146,6 +158,15 @@ let spellWord4 ={
     correctOrder : ["T","H","R","E","E"],
 }
 
+let spellWord5 ={
+    title:"Spell the word",
+    text:["The letters are scrambled, please rearrange them to form a word.",],
+    type : "C",
+    diff : 3,
+    choices : ["I","Y","A","N","D","L","E","S","D","N"],
+    correctOrder : ["D","I","S","N","E","Y","L","A","N","D"],
+}
+
 let guessSecretNumber = {
     title:"Guess the secret number",
     text:["Try to guess the secret number based on clues in the text. Between 10 and 99 (both boundaries included),",
@@ -153,7 +174,7 @@ let guessSecretNumber = {
         "the difference between the first and last digit is less or equal to 2, the first digit is greater than the last digit.",
     ],
     type : "B",
-    diff : 2,
+    diff : 3,
     correctAnswer : "97"
 }
 
@@ -176,6 +197,16 @@ let guessSecretNumber3 = {
     diff : 0,
     hint:"This is very easy.",
     correctAnswer : "0"
+}
+
+let guessSecretNumber4 = {
+    title:"Guess the secret number",
+    text:["Try to guess the secret number based on clues in the text. Between 0 and 100 (both boundaries included),",
+        "the sum of its digits is divisible by 5, is a prime number, is less than 40.",
+    ],
+    type : "B",
+    diff : 2,
+    correctAnswer : "23"
 }
 
 let questionWithNoAnswer = {
@@ -422,6 +453,16 @@ let missingStrInSeq1 = {
     correctAnswer : "u",
 }
 
+let missingStrInSeq2 = {
+    title: "Missing strings in sequence",
+    text:["Given the following sequence of strings.",
+        "a, b, a, ?, c, a, b, ?, ?, a, b, ?, d, e",
+        "What are the missing strings in the sequence?",],
+    type:"B",
+    diff:1,
+    correctAnswer : "b c d c",
+}
+
 let missingNumberInSeq1 = {
     title: "Missing numbers in sequence",
     text:["Given the following sequence of numbers.",
@@ -554,6 +595,16 @@ let formPattern4 = {
     diff:2,
     choices : ["1500","6000","3000","1000","2000","1200"],
     correctOrder : ["6000","3000","2000","1500","1200","1000"],
+}
+
+let formPattern5 = {
+    title: "Form a pattern",
+    text:["Below are a few numbers, please rearrange them to form a pattern.",
+        "The sequence should begin with 012 first."],
+    type:"C",
+    diff:0,
+    choices : ["678","123","345","789","234","456","012","567"],
+    correctOrder : ["012","123","234","345","456","567","678","789"],
 }
 
 
@@ -811,13 +862,16 @@ abstractionExercises.push(manAndSnail);
 abstractionExercises.push(FindWordsInSrcambledText);
 abstractionExercises.push(FindWordsInSrcambledText2);
 abstractionExercises.push(FindWordsInSrcambledText3);
+abstractionExercises.push(FindWordsInSrcambledText4);
 abstractionExercises.push(spellWord1);
 abstractionExercises.push(spellWord2);
 abstractionExercises.push(spellWord3);
 abstractionExercises.push(spellWord4);
+abstractionExercises.push(spellWord5);
 abstractionExercises.push(guessSecretNumber);
 abstractionExercises.push(guessSecretNumber2);
 abstractionExercises.push(guessSecretNumber3);
+abstractionExercises.push(guessSecretNumber4);
 abstractionExercises.push(questionWithNoAnswer);
 abstractionExercises.push(questionWithNoAnswer2);
 abstractionExercises.push(prisonerAnd2Doors);
@@ -839,6 +893,7 @@ patternExercises.push(nextStrInSeq);
 patternExercises.push(nextStrInSeq2);
 patternExercises.push(nextStrInSeq3);
 patternExercises.push(missingStrInSeq1);
+patternExercises.push(missingStrInSeq2);
 patternExercises.push(missingNumberInSeq1);
 patternExercises.push(missingNumberInSeq2);
 patternExercises.push(missingNumberInSeq3);
@@ -852,6 +907,7 @@ patternExercises.push(formPattern);
 patternExercises.push(formPattern2);
 patternExercises.push(formPattern3);
 patternExercises.push(formPattern4);
+patternExercises.push(formPattern5);
 
 algorithmExercises.push(encryptedText1);
 algorithmExercises.push(encryptedText2);
