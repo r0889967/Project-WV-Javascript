@@ -377,6 +377,30 @@ let machinesInFactory = {
     correctOrder : ["C","F","A","E","D","B"]
 }
 
+let sortTheNumbers1 = {
+    title:"Sort the numbers",
+    text:["Please sort the numbers from small to big according to the following rules.",
+        "1) All prime numbers are greater than all non-prime numbers.",
+        "2) For prime numbers, simply sort them from small to big normally.",
+        "3) For non-prime numbers, sort them from small to big according to the sum of their digits."],
+    type : "C",
+    diff : 2,
+    choices : ["31","52","18","29","13","15","21","5","2"],
+    correctOrder : ["21","15","52","18","2","5","13","29","31"]
+}
+
+let sortTheNumbers2 = {
+    title:"Sort the numbers",
+    text:["Please sort the numbers from small to big according to the following rules.",
+        "1) Sort the numbers according to the sum of their digits.",
+        "2) For numbers with the same sum of digits, sort them according to the product of their digits.",],
+    type : "C",
+    diff : 1,
+    hint:"Try to sort the numbers according to step 1 first.",
+    choices : ["6","33","141","41","120","32","9","81","0"],
+    correctOrder : ["0","120","41","32","141","6","33","81","9"]
+}
+
 
 
 
@@ -753,30 +777,6 @@ let encryptedText5 = {
     correctAnswer : "Have fun learning with this tool",
 }
 
-let sortTheNumbers1 = {
-    title:"Sort the numbers",
-    text:["Please sort the numbers from small to big according to the following rules.",
-        "1) All prime numbers are greater than all non-prime numbers.",
-        "2) For prime numbers, simply sort them from small to big normally.",
-        "3) For non-prime numbers, sort them from small to big according to the sum of their digits."],
-    type : "C",
-    diff : 2,
-    choices : ["31","52","18","29","13","15","21","5","2"],
-    correctOrder : ["21","15","52","18","2","5","13","29","31"]
-}
-
-let sortTheNumbers2 = {
-    title:"Sort the numbers",
-    text:["Please sort the numbers from small to big according to the following rules.",
-        "1) Sort the numbers according to the sum of their digits.",
-        "2) For numbers with the same sum of digits, sort them according to the product of their digits.",],
-    type : "C",
-    diff : 1,
-    hint:"Try to sort the numbers according to step 1 first.",
-    choices : ["6","33","141","41","120","32","9","81","0"],
-    correctOrder : ["0","120","41","32","141","6","33","81","9"]
-}
-
 let mapping1 = {
     title:"Map function",
     text:["If f(abc)=bdf, f(def)=egi, f(cbe)=ddh,",
@@ -955,6 +955,20 @@ let farmerWolfGoatCabbage = {
     "F take C across","F returns alone","F take G across",]
 }
 
+let cannibalsAndMissionaries = {
+    title:"Cannibals and missionaries",
+    text:["3 Cannibals(C) and 3 missionaries(M) have to cross over a river by boat.",
+    "The boat can only hold the weight of at most 2 characters.",
+    "If there are more cannibals than missionaries on either bank, the missionaries are eaten.",
+    "How can all 3 missionaries and all 3 cannibals cross over without any missionaries being eaten?",],
+    type:"C",
+    diff:4,
+    choices:["2C go cross","2M go cross","1C returns","2C go cross","1C returns","2C go cross","2C go cross",
+        "1C returns","1C returns","2M go cross","1M and 1C return"],
+    correctOrder:["2C go cross","1C returns","2C go cross","1C returns","2M go cross","1M and 1C return",
+        "2M go cross","1C returns","2C go cross","1C returns","2C go cross"]
+}
+
 
 
 let tutorial0 = {
@@ -1064,6 +1078,10 @@ decExercises.push(birthdayParty);
 decExercises.push(pocketLampProblem);
 decExercises.push(naughtyKittens);
 decExercises.push(machinesInFactory);
+decExercises.push(farmerWolfGoatCabbage);
+decExercises.push(sortTheNumbers1);
+decExercises.push(sortTheNumbers2);
+decExercises.push(cannibalsAndMissionaries);
 
 patExercises.push(nextNumberInSeq);
 patExercises.push(nextNumberInSeq2);
@@ -1102,8 +1120,6 @@ algoExercises.push(encryptedText2);
 algoExercises.push(encryptedText3);
 algoExercises.push(encryptedText4);
 algoExercises.push(encryptedText5);
-algoExercises.push(sortTheNumbers1);
-algoExercises.push(sortTheNumbers2)
 algoExercises.push(mapping1);
 algoExercises.push(mapping2);
 algoExercises.push(mapping3);
@@ -1119,7 +1135,7 @@ algoExercises.push(followAlgorithm3);
 algoExercises.push(ballsAndDrawers);
 algoExercises.push(runningRace);
 algoExercises.push(stoneGame);
-algoExercises.push(farmerWolfGoatCabbage);
+
 
 
 tutorExercises.push(tutorial0);
