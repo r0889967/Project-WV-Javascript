@@ -146,6 +146,18 @@ let FindWordsInSrcambledText4 = {
     correctAnswer : "ear eye foot hand nose"
 }
 
+let FindWordsInSrcambledText5 = {
+    title:"Words inside scrambled text",
+    text:["Study this mess of letters below carefully.",
+        "nuosnmo",
+        "Please list the 2 words (they are in our skies) that are part of this mess of letters alphabetically from left to right.",
+        "Use a single space to separate the words and don't use capitals.",
+        ""],
+    type : "B",
+    diff : 0,
+    correctAnswer : "moon sun"
+}
+
 let spellWord1 ={
     title:"Spell the word",
     text:["The letters are scrambled, please rearrange them to form a word.",],
@@ -927,6 +939,22 @@ let stoneGame = {
     correctAnswers : [1]
 }
 
+let farmerWolfGoatCabbage = {
+    title:"Farmer wolf goat cabbage",
+    text:["A farmer(F), wolf(W), goat(G) and cabbage(C) have to cross over a river by boat.",
+    "The boat can only hold the weight of at most 2 characters.",
+    "Only the farmer can steer the boat.",
+    "The wolf will eat the goat if left alone.",
+    "The goat will eat the cabbage if left alone.",
+    "How can the farmer and his belongings cross over the river without losing something?"],
+    type : "C",
+    diff:3,
+    choices:["F take C across","F take W across","F take G across","F returns alone",
+        "F returns alone","F take G across","F returns with G","F returns with W","F returns with C"],
+    correctOrder:["F take G across","F returns alone","F take W across","F returns with G",
+    "F take C across","F returns alone","F take G across",]
+}
+
 
 
 let tutorial0 = {
@@ -1016,6 +1044,7 @@ abExercises.push(FindWordsInSrcambledText);
 abExercises.push(FindWordsInSrcambledText2);
 abExercises.push(FindWordsInSrcambledText3);
 abExercises.push(FindWordsInSrcambledText4);
+abExercises.push(FindWordsInSrcambledText5);
 abExercises.push(spellWord1);
 abExercises.push(spellWord2);
 abExercises.push(spellWord3);
@@ -1090,6 +1119,7 @@ algoExercises.push(followAlgorithm3);
 algoExercises.push(ballsAndDrawers);
 algoExercises.push(runningRace);
 algoExercises.push(stoneGame);
+algoExercises.push(farmerWolfGoatCabbage);
 
 
 tutorExercises.push(tutorial0);
