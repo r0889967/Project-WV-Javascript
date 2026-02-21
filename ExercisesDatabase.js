@@ -77,13 +77,13 @@ let manAndSnail = {
 let FindWordsInSrcambledText = {
     title:"Words inside scrambled text",
     text:["Study this mess of letters below carefully.",
-    "knelybaeblewtodillehgcwreuer",
-    "Please list the 6 words (they are all colors) that are part of this mess of letters alphabetically from left to right.",
+    "lndbgdeuerru",
+    "Please list the 3 words (they are all colors) that are part of this mess of letters alphabetically from left to right.",
     "Use a single space to separate the words and don't use capitals.",
     ""],
     type : "B",
-    diff : 3,
-    correctAnswer : "black blue green red white yellow"
+    diff : 1,
+    correctAnswer : "blue green red"
 }
 
 let FindWordsInSrcambledText2 = {
@@ -98,11 +98,23 @@ let FindWordsInSrcambledText2 = {
     correctAnswer : "no yes"
 }
 
+let FindWordsInSrcambledText3 = {
+    title:"Words inside scrambled text",
+    text:["Study this mess of letters below carefully.",
+        "iotopdcwagcg",
+        "Please list the 4 words (they are all animals) that are part of this mess of letters alphabetically from left to right.",
+        "Use a single space to separate the words and don't use capitals.",
+        ""],
+    type : "B",
+    diff : 1,
+    correctAnswer : "cat cow dog pig"
+}
+
 let spellWord1 ={
     title:"Spell the word",
     text:["The letters are scrambled, please rearrange them to form a word.",],
     type : "C",
-    diff : 0,
+    diff : 1,
     choices : ["O","L","E","W","L","Y"],
     correctOrder : ["Y","E","L","L","O","W"],
 }
@@ -111,7 +123,7 @@ let spellWord2 ={
     title:"Spell the word",
     text:["The letters are scrambled, please rearrange them to form a word.",],
     type : "C",
-    diff : 1,
+    diff : 2,
     choices : ["N","V","I","T","U","R","E","S","I","Y"],
     correctOrder : ["U","N","I","V","E","R","S","I","T","Y"],
 }
@@ -120,9 +132,18 @@ let spellWord3 ={
     title:"Spell the word",
     text:["The letters are scrambled, please rearrange them to form a word.",],
     type : "C",
-    diff : 1,
-    choices : ["W","R","B","T","A","R","E","S","I","Y"],
+    diff : 2,
+    choices : ["W","R","B","T","A","R","E","S","R","Y"],
     correctOrder : ["S","T","R","A","W","B","E","R","R","Y"],
+}
+
+let spellWord4 ={
+    title:"Spell the word",
+    text:["The letters are scrambled, please rearrange them to form a word.",],
+    type : "C",
+    diff : 0,
+    choices : ["H","R","E","T","E"],
+    correctOrder : ["T","H","R","E","E"],
 }
 
 let guessSecretNumber = {
@@ -155,6 +176,43 @@ let guessSecretNumber3 = {
     diff : 0,
     hint:"This is very easy.",
     correctAnswer : "0"
+}
+
+let questionWithNoAnswer = {
+    title:"Funny question",
+    text:["What is the answer of a question that has no answers?"],
+    type:"A",
+    diff:3,
+    choices : ["I don't know.","No answer.","No!","This is stupid.",".........","Kill me!","Only God knows."],
+    hint:"Do I even have to select an answer?",
+    correctAnswers : [],
+}
+
+let questionWithNoAnswer2 = {
+    title:"Funny question",
+    text:["What is the answer of a question that has 'No answer' as the answer?"],
+    type:"A",
+    diff:0,
+    choices : ["I don't know.","No answer.","No!","This is stupid.",".........","Kill me!","Only God knows."],
+    hint:"Why are there quotation marks around No answer?",
+    correctAnswers : [1],
+}
+
+let prisonerAnd2Doors = {
+    title:"Prisoner and 2 doors",
+    text:["A prisoner is standing in front of 2 doors, there is a guard standing next to each door.",
+    "One door will lead to freedom and one door will lead to death.",
+    "One guard always tells the truth and one guard always lies.",
+    "The prisoner doesn't know anything about the doors or guards.",
+    "The prisoner is given a chance to ask one of the guards one question.",
+    "What question should the prisoner ask to know 100% which door leads to freedom?"],
+    type:"A",
+    diff : 2,
+    hint:"Try to think on how you can get information of both doors with one question.",
+    choices:["Does door 1 lead to freedom?","Does door 2 lead to freedom?","Does door 1 lead to death?",
+    "Does door 2 lead to death?","Which door leads to freedom?","Which door leads to death?",
+    "What will the other guard say about which door leads to freedom?"],
+    correctAnswers : [6],
 }
 
 let reluctantStoryElements = {
@@ -254,6 +312,20 @@ let sortTheNumbers1 = {
     choices : ["31","52","18","29","13","15","21","5","2"],
     correctOrder : ["21","15","52","18","2","5","13","29","31"]
 }
+
+let sortTheNumbers2 = {
+    title:"Sort the numbers",
+    text:["Please sort the numbers from small to big according to the following rules.",
+        "1) Sort the numbers according to the sum of their digits.",
+        "2) For numbers with the same sum of digits, sort them according to the product of their digits.",],
+    type : "C",
+    diff : 1,
+    hint:"Try to sort the numbers according to step 1 first.",
+    choices : ["6","33","141","41","120","32","9","81","0"],
+    correctOrder : ["0","120","41","32","141","6","33","81","9"]
+}
+
+
 
 
 
@@ -638,14 +710,17 @@ let followAlgorithm3 = {
     correctAnswer : "41",
 }
 
-let numberOfCombinations1 = {
-    title:"Number of Combinations",
-    text:["Suppose we have an empty string at the start, we execute the following steps.",
-        "1) Add either 1 a or 1 b at the end of the string.",
-        "How many possible strings can we make if we repeat the process 5 times?"],
-    type : "B",
-    diff:0,
-    correctAnswer : "32",
+let ballsAndDrawers = {
+    title:"Balls and drawers",
+    text:["Sarah wants to put her balls inside her drawers, so she does the following.",
+    "She put the 1st ball in the blue drawer, the 2nd ball in the red drawer,",
+    "the 3rd ball in the green drawer and the 4th ball in the yellow drawer.",
+    "After putting the 4th ball, she will repeat the above mentioned cycle.",
+    "In which drawer will Sarah put the 35th ball?"],
+    type : "A",
+    diff:1,
+    choices:["blue","red","green","yellow"],
+    correctAnswers : [2]
 }
 
 let runningRace = {
@@ -735,12 +810,17 @@ abstractionExercises.push(whoIsTheCulprit);
 abstractionExercises.push(manAndSnail);
 abstractionExercises.push(FindWordsInSrcambledText);
 abstractionExercises.push(FindWordsInSrcambledText2);
+abstractionExercises.push(FindWordsInSrcambledText3);
 abstractionExercises.push(spellWord1);
 abstractionExercises.push(spellWord2);
 abstractionExercises.push(spellWord3);
+abstractionExercises.push(spellWord4);
 abstractionExercises.push(guessSecretNumber);
 abstractionExercises.push(guessSecretNumber2);
 abstractionExercises.push(guessSecretNumber3);
+abstractionExercises.push(questionWithNoAnswer);
+abstractionExercises.push(questionWithNoAnswer2);
+abstractionExercises.push(prisonerAnd2Doors);
 abstractionExercises.push(reluctantStoryElements);
 
 decompositionExercises.push(birthdayParty);
@@ -748,6 +828,7 @@ decompositionExercises.push(pocketLampProblem);
 decompositionExercises.push(naughtyKittens);
 decompositionExercises.push(machinesInFactory);
 decompositionExercises.push(sortTheNumbers1);
+decompositionExercises.push(sortTheNumbers2)
 
 patternExercises.push(nextNumberInSeq);
 patternExercises.push(nextNumberInSeq2);
@@ -787,7 +868,7 @@ algorithmExercises.push(filter2);
 algorithmExercises.push(followAlgorithm1);
 algorithmExercises.push(followAlgorithm2);
 algorithmExercises.push(followAlgorithm3);
-algorithmExercises.push(numberOfCombinations1);
+algorithmExercises.push(ballsAndDrawers);
 algorithmExercises.push(runningRace);
 
 
