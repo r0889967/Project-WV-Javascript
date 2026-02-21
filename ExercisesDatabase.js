@@ -365,29 +365,6 @@ let machinesInFactory = {
     correctOrder : ["C","F","A","E","D","B"]
 }
 
-let sortTheNumbers1 = {
-    title:"Sort the numbers",
-    text:["Please sort the numbers from small to big according to the following rules.",
-    "1) All prime numbers are greater than all non-prime numbers.",
-    "2) For prime numbers, simply sort them from small to big normally.",
-    "3) For non-prime numbers, sort them from small to big according to the sum of their digits."],
-    type : "C",
-    diff : 2,
-    choices : ["31","52","18","29","13","15","21","5","2"],
-    correctOrder : ["21","15","52","18","2","5","13","29","31"]
-}
-
-let sortTheNumbers2 = {
-    title:"Sort the numbers",
-    text:["Please sort the numbers from small to big according to the following rules.",
-        "1) Sort the numbers according to the sum of their digits.",
-        "2) For numbers with the same sum of digits, sort them according to the product of their digits.",],
-    type : "C",
-    diff : 1,
-    hint:"Try to sort the numbers according to step 1 first.",
-    choices : ["6","33","141","41","120","32","9","81","0"],
-    correctOrder : ["0","120","41","32","141","6","33","81","9"]
-}
 
 
 
@@ -764,6 +741,30 @@ let encryptedText5 = {
     correctAnswer : "Have fun learning with this tool",
 }
 
+let sortTheNumbers1 = {
+    title:"Sort the numbers",
+    text:["Please sort the numbers from small to big according to the following rules.",
+        "1) All prime numbers are greater than all non-prime numbers.",
+        "2) For prime numbers, simply sort them from small to big normally.",
+        "3) For non-prime numbers, sort them from small to big according to the sum of their digits."],
+    type : "C",
+    diff : 2,
+    choices : ["31","52","18","29","13","15","21","5","2"],
+    correctOrder : ["21","15","52","18","2","5","13","29","31"]
+}
+
+let sortTheNumbers2 = {
+    title:"Sort the numbers",
+    text:["Please sort the numbers from small to big according to the following rules.",
+        "1) Sort the numbers according to the sum of their digits.",
+        "2) For numbers with the same sum of digits, sort them according to the product of their digits.",],
+    type : "C",
+    diff : 1,
+    hint:"Try to sort the numbers according to step 1 first.",
+    choices : ["6","33","141","41","120","32","9","81","0"],
+    correctOrder : ["0","120","41","32","141","6","33","81","9"]
+}
+
 let mapping1 = {
     title:"Map function",
     text:["If f(abc)=bdf, f(def)=egi, f(cbe)=ddh,",
@@ -817,6 +818,15 @@ let mapping6 = {
     type : "B",
     diff:0,
     correctAnswer : "[2,3,13]",
+}
+
+let mapping7 = {
+    title:"Map function",
+    text:["If f(334)=1,f(7)=1,f(15)=1,f(20)=0,f(37)=1,f(49)=1,f(24)=0",
+        "f(51)="],
+    type : "B",
+    diff:0,
+    correctAnswer : "0",
 }
 
 let filter1 = {
@@ -902,6 +912,22 @@ let runningRace = {
     choices : ["Alice","Bob","Carole","Dilan","Eva"],
     correctOrder : ["Eva","Carole","Alice","Dilan","Bob"],
 }
+
+let stoneGame = {
+    title:"Stone Game",
+    text:["Alice and Bob are playing a game where there are a number of stones placed on a table.",
+    "Both player take turns to take 1, 2 or 3 stones away from the table, the player that takes away",
+    "the last stone will lose the game.",
+    "Assuming 7 stones at the start, both player play optimally and Alice plays first, how many stones should Alice take away",
+    "on her first turn so she can win 100%."],
+    type:"A",
+    diff:3,
+    hint:"You want there to be only 1 stone left on Bob's turn.",
+    choices:["1 stone","2 stones","3 stones","There is no way Alice can win 100%."],
+    correctAnswers : [1]
+}
+
+
 
 let tutorial0 = {
     title: "Check button",
@@ -996,8 +1022,6 @@ decExercises.push(birthdayParty);
 decExercises.push(pocketLampProblem);
 decExercises.push(naughtyKittens);
 decExercises.push(machinesInFactory);
-decExercises.push(sortTheNumbers1);
-decExercises.push(sortTheNumbers2)
 
 patExercises.push(nextNumberInSeq);
 patExercises.push(nextNumberInSeq2);
@@ -1036,12 +1060,15 @@ algoExercises.push(encryptedText2);
 algoExercises.push(encryptedText3);
 algoExercises.push(encryptedText4);
 algoExercises.push(encryptedText5);
+algoExercises.push(sortTheNumbers1);
+algoExercises.push(sortTheNumbers2)
 algoExercises.push(mapping1);
 algoExercises.push(mapping2);
 algoExercises.push(mapping3);
 algoExercises.push(mapping4);
 algoExercises.push(mapping5);
 algoExercises.push(mapping6);
+algoExercises.push(mapping7);
 algoExercises.push(filter1);
 algoExercises.push(filter2);
 algoExercises.push(followAlgorithm1);
@@ -1049,6 +1076,7 @@ algoExercises.push(followAlgorithm2);
 algoExercises.push(followAlgorithm3);
 algoExercises.push(ballsAndDrawers);
 algoExercises.push(runningRace);
+algoExercises.push(stoneGame);
 
 
 tutorExercises.push(tutorial0);
