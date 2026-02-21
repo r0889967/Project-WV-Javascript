@@ -180,6 +180,7 @@ function loadTypeCExercise(choices){
     html += textLine(`Please drag the boxes in the field down below in the correct order from left to right`);
     html += emptyLine(1);
     let buttonIdx = 0;
+    html += textLine("Choices field");
     html += "<div class='div2' id='choicesdiv' ondrop='dropHandler(event)' ondragover='dragoverHandler(event)'>";
     for(let choice of choices){
         html += createButton("button2",buttonIdx,choice, "",true,
@@ -188,6 +189,7 @@ function loadTypeCExercise(choices){
     }
     html += "</div>";
     html += emptyLine(2);
+    html += textLine("Answer field");
     html += "<div class='div2' id='answerdiv' ondrop='dropHandler(event)' ondragover='dragoverHandler(event)'></div>";
     html += emptyLine(1);
     html += createButton("button3","checkbutton","Check",

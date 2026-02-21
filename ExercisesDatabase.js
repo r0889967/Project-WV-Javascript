@@ -984,13 +984,26 @@ let tutorial4 = {
 let tutorial5 = {
     title:"Type C exercise",
     text:["This is a typical type C exercise, you have to arrange boxes in the correct order.",
-    "To arrange the boxes, first click on a box and then click on another box to swap them in place.",
-    "To complete this exercise, simply arrange the boxes in the order 1,2,3,4,5 from left to right.",
+    "To arrange the boxes, simply drag a box with the mouse from the choices field into the answer field below",
+    "You can also drag a box from the answer field back to the choices field.",
+    "To complete this exercise, simply arrange the boxes in the order 1,2,3,4,5 from left to right in the answer field.",
     "Once you are done, the click 'check button' to check your answer and go to the next exercise.",],
     type:"C",
     diff:0,
     choices : ["5","1","2","4","3"],
     correctOrder : ["1","2","3","4","5"],
+}
+
+let tutorial6 = {
+    title:"Type C exercise",
+    text:["This is another type C exercise, sometimes you might not need to use all the boxes in the choices field.",
+        "To complete this exercise, simply arrange the boxes in the order 1,2,3 from left to right in the answer field.",
+        "Leave the boxes that you don't need inside the choices field.",
+        "Once you are done, the click 'check button' to check your answer and go to the next exercise.",],
+    type:"C",
+    diff:0,
+    choices : ["5","1","2","4","3"],
+    correctOrder : ["1","2","3"],
 }
 
 abExercises.push(grimReaper);
@@ -1085,3 +1098,4 @@ tutorExercises.push(tutorial2);
 tutorExercises.push(tutorial3);
 tutorExercises.push(tutorial4);
 tutorExercises.push(tutorial5);
+tutorExercises.push(tutorial6);
