@@ -98,6 +98,18 @@ let manAndSnail = {
     correctAnswers : [1,2,4],
 }
 
+let equivalentStatement = {
+    title:"Equivalent statement",
+    text:["Suppose we have the following statement: If it rains, then I take my umbrella.",
+    "Which of the following statement(s) are equivalent with it?"],
+    type:"A",
+    diff : 3,
+    choices:["It rains or I take my umbrella.","It rains and I take my umbrella.",
+    "If it doesn't rain, then I don't take my umbrella.","If I don't take my umbrella, then it doesn't rain.",
+    "I only take my umbrella if it rains.","It is either I take my umbrella or it doesn't rain.",],
+    correctAnswers : [3,5],
+}
+
 let FindWordsInSrcambledText = {
     title:"Words inside scrambled text",
     text:["Study this mess of letters below carefully.",
@@ -693,6 +705,17 @@ let findPatternSeq4 = {
     correctAnswers : [1,2,4,6],
 }
 
+let findPatternSeq5 = {
+    title: "Find pattern sequences",
+    text:["Observe the sequences below carefully.",
+        "Which sequence(s) have a pattern inside them?"],
+    type:"A",
+    diff:3,
+    choices: ["3,5,9,17,33,65,128,257","2,4,8,16,32,64,128,256","2,8,16,64,256,1024,4096","2,5,8,17,32,65,128,257",
+    "15,25,45,85,165,325,645","2,4,9,17,32,64,128,257","6,12,24,48,96,193,384,768"],
+    correctAnswers : [1,2,3,4],
+}
+
 let findNonPatternSeq1 = {
     title: "Find non-pattern sequences",
     text:["Observe the following sequences carefully.",
@@ -858,6 +881,16 @@ let encryptedText5 = {
     type : "B",
     diff:0,
     correctAnswer : "Have fun learning with this tool",
+}
+
+let encryptedText6 = {
+    title:"Encrypted text",
+    text:["The following text has been encrypted using a simple algorithm.",
+        "L#f# i# a# e#d#e#s p#o#e#s o# l#a#r#i#g",
+        "You need to decrypt this text. (The answer is case-sensitive.)"],
+    type : "B",
+    diff:2,
+    correctAnswer : "Life is an endless process of learning",
 }
 
 let mapping1 = {
@@ -1157,6 +1190,7 @@ abExercises.push(racersDilemma2);
 abExercises.push(guessTheCardsGame);
 abExercises.push(whoIsTheCulprit);
 abExercises.push(manAndSnail);
+abExercises.push(equivalentStatement);
 abExercises.push(FindWordsInSrcambledText);
 abExercises.push(FindWordsInSrcambledText2);
 abExercises.push(FindWordsInSrcambledText3);
@@ -1214,6 +1248,7 @@ patExercises.push(findPatternSeq1);
 patExercises.push(findPatternSeq2);
 patExercises.push(findPatternSeq3);
 patExercises.push(findPatternSeq4);
+patExercises.push(findPatternSeq5);
 patExercises.push(findNonPatternSeq1);
 patExercises.push(findNonPatternSeq2);
 patExercises.push(WhatIsThePattern);
@@ -1231,6 +1266,7 @@ algoExercises.push(encryptedText2);
 algoExercises.push(encryptedText3);
 algoExercises.push(encryptedText4);
 algoExercises.push(encryptedText5);
+algoExercises.push(encryptedText6);
 algoExercises.push(mapping1);
 algoExercises.push(mapping2);
 algoExercises.push(mapping3);
