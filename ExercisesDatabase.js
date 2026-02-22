@@ -305,6 +305,16 @@ let largeProduct = {
     correctAnswer : "0"
 }
 
+let mountEverest = {
+    title:"Funny question",
+    text:["What was the tallest mountain on Earth before Mount Everest was discovered?"],
+    type:"A",
+    diff:0,
+    choices : ["Mount Fuji","Mount blanc","Mount Kilimanjaro","K2","Mount Elbrus","Mount Everest","Chogolisa","Annapurna"],
+    hint:"Just because vou haven't discovered something, doesn't mean it doesn't exist.",
+    correctAnswers:[5]
+}
+
 let prisonerAnd2Doors = {
     title:"Prisoner and 2 doors",
     text:["A prisoner is standing in front of 2 doors, there is a guard standing next to each door.",
@@ -655,10 +665,32 @@ let findPatternSeq2 = {
     text:["Observe the sequences below carefully.",
         "Which sequence(s) have a pattern inside them?"],
     type:"A",
-    diff:2,
+    diff:1,
     choices: ["1,5,10,50,100,500","1,5,10,15,150,500","1,15,50,100,115,150","1,10,15,50,115,155",
         "1,15,10,150,100,1500"],
     correctAnswers : [0,2,4],
+}
+
+let findPatternSeq3 = {
+    title: "Find pattern sequences",
+    text:["Observe the sequences below carefully.",
+        "Which sequence(s) have a pattern inside them?"],
+    type:"A",
+    diff:1,
+    choices: ["1,3,5,7,9,11,13,15","1,5,9,13,17,21,25,29","3,5,7,10,11,13,15,17","1,13,135,1357,13579",
+        "1,33,555,7677,99999","5,9,14,17,21,25,29"],
+    correctAnswers : [0,1,3],
+}
+
+let findPatternSeq4 = {
+    title: "Find pattern sequences",
+    text:["Observe the sequences below carefully.",
+        "Which sequence(s) have a pattern inside them?"],
+    type:"A",
+    diff:0,
+    choices: ["1,-1,-1,1,-1,1,-1,1,-1,1,-1","1,-1,1,-1,-1,1,-1,-1,-1,1","-1,1,-1,1,-1,1,-1","1,1,-1,-1,1,1,-1,-1,1,1,1",
+        "1,-1,1,-1,1,-1,1,-1,1","-1,-1,1,-1,-1,-1,-1,-1,-1","1,1,1,1,1,1,1,1,1,1"],
+    correctAnswers : [1,2,4,6],
 }
 
 let findNonPatternSeq1 = {
@@ -1146,6 +1178,7 @@ abExercises.push(questionWithNoAnswer);
 abExercises.push(questionWithNoAnswer2);
 abExercises.push(prisonerAnd2Doors);
 abExercises.push(largeProduct);
+abExercises.push(mountEverest);
 abExercises.push(reluctantStoryElements);
 
 decExercises.push(birthdayParty);
@@ -1179,6 +1212,8 @@ patExercises.push(missingNumberInSeq4);
 patExercises.push(missingNumberInSeq5);
 patExercises.push(findPatternSeq1);
 patExercises.push(findPatternSeq2);
+patExercises.push(findPatternSeq3);
+patExercises.push(findPatternSeq4);
 patExercises.push(findNonPatternSeq1);
 patExercises.push(findNonPatternSeq2);
 patExercises.push(WhatIsThePattern);
