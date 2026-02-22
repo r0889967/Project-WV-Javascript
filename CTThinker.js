@@ -137,7 +137,7 @@ function pickExercises(moduleIdx,scramble=true){
 
 function loadTypeAExercise(choices){
     let html = "";
-    html += textLine("Please mark the correct boxes");
+    html += textLine("Please mark the correct box(es)");
     html += emptyLine(1);
     let buttonIdx = 0;
     for(let choice of choices) {

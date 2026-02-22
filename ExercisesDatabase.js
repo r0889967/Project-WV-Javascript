@@ -149,13 +149,26 @@ let FindWordsInSrcambledText4 = {
 let FindWordsInSrcambledText5 = {
     title:"Words inside scrambled text",
     text:["Study this mess of letters below carefully.",
-        "nuosnmo",
+        "omousnn",
         "Please list the 2 words (they are in our skies) that are part of this mess of letters alphabetically from left to right.",
         "Use a single space to separate the words and don't use capitals.",
         ""],
     type : "B",
-    diff : 0,
-    correctAnswer : "moon sun"
+    diff : 2,
+    correctAnswer : ""
+}
+
+let FindWordsInSrcambledText6 = {
+    title:"Words inside scrambled text",
+    text:["Study this mess of letters below carefully.",
+        "rsnlnuFrGcnaDgtciheEmheh",
+        "Please list the 4 words (they are names of languages) that are part of this mess of letters alphabetically from left to right.",
+        "Use a single space to separate the words and don't use capitals.",
+        ""],
+    type : "B",
+    diff : 3,
+    hint: "Look at the capital letters for some clue.",
+    correctAnswer : "Dutch English French German"
 }
 
 let spellWord1 ={
@@ -210,6 +223,15 @@ let spellWord6 ={
     diff : 1,
     choices : ["G","L","E","G","A","A","N","U"],
     correctOrder : ["L","A","N","G","U","A","G","E"],
+}
+
+let spellWord7 ={
+    title:"Spell the word",
+    text:["The letters are scrambled, please rearrange them to form a word.",],
+    type : "C",
+    diff : 3,
+    choices : ["D","L","E","G","A","A","B","H","S","N"],
+    correctOrder : ["B","A","N","G","L","A","D","E","S","H"],
 }
 
 let guessSecretNumber = {
@@ -272,6 +294,15 @@ let questionWithNoAnswer2 = {
     choices : ["I don't know.","No answer.","No!","This is stupid.",".........","Kill me!","Only God knows."],
     hint:"Why are there quotation marks around No answer?",
     correctAnswers : [1],
+}
+
+let largeProduct = {
+    title:"Funny question",
+    text:["1x2x3x4x5x6x7x8x9x10x11x12x13x14x15x16x17x18x19x0x20x21x22x23x24x25x26x27x28x29x30=?"],
+    type:"B",
+    diff:1,
+    hint:"If you try to calculate this, then you are wasting your time.",
+    correctAnswer : "0"
 }
 
 let prisonerAnd2Doors = {
@@ -412,7 +443,7 @@ let nextNumberInSeq = {
         "2,5,10,17,28,41,58,77,100,129,?",
         "What is the next number in the sequence?",],
     type:"B",
-    diff : 2,
+    diff : 3,
     hint: "It has something to do with prime numbers.",
     correctAnswer : "160",
 }
@@ -475,6 +506,16 @@ let nextNumberInSeq7 = {
     type:"B",
     diff : 2,
     correctAnswer : "1615201561",
+}
+
+let nextNumberInSeq8 = {
+    title: "Next number in sequence",
+    text:["Given the following sequence of numbers.",
+        "2,6,12,20,30,42,56,72,90,110,?",
+        "What is the next number in the sequence?"],
+    type:"B",
+    diff : 2,
+    correctAnswer : "132",
 }
 
 let nextStrInSeq = {
@@ -722,6 +763,16 @@ let formPattern6 = {
     correctOrder : ["0","1","3","6","10","15","21","28","36","45","55"],
 }
 
+let formPattern7 = {
+    title: "Form a pattern",
+    text:["Below are a few numbers, please rearrange them to form a pattern.",
+        "The sequence should begin with the smallest number first."],
+    type:"C",
+    diff:1,
+    choices : ["1","6","120","5040","2","720","24"],
+    correctOrder : ["1","2","6","24","120","720","5040"],
+}
+
 
 
 
@@ -925,6 +976,26 @@ let runningRace = {
     correctOrder : ["Eva","Carole","Alice","Dilan","Bob"],
 }
 
+let randomNumberGenerator = {
+    title: "Random number generator",
+    text:["Suppose we have the following algorithm to generate the next random number.",
+    "x -> (x+3) modulo 10",
+    "If we begin with the number 5, what will be the 9th random number?",],
+    type:"B",
+    diff:2,
+    correctAnswer : "9"
+}
+
+let randomNumberGenerator2 = {
+    title: "Random number generator",
+    text:["Suppose we have the following algorithm to generate the next random number.",
+        "x -> (x*3) modulo 15",
+        "If we begin with the number 4, what will be the 8th random number?",],
+    type:"B",
+    diff:3,
+    correctAnswer : "3"
+}
+
 let stoneGame = {
     title:"Stone Game",
     text:["Alice and Bob are playing a game where there are a number of stones placed on a table.",
@@ -1059,12 +1130,14 @@ abExercises.push(FindWordsInSrcambledText2);
 abExercises.push(FindWordsInSrcambledText3);
 abExercises.push(FindWordsInSrcambledText4);
 abExercises.push(FindWordsInSrcambledText5);
+abExercises.push(FindWordsInSrcambledText6);
 abExercises.push(spellWord1);
 abExercises.push(spellWord2);
 abExercises.push(spellWord3);
 abExercises.push(spellWord4);
 abExercises.push(spellWord5);
 abExercises.push(spellWord6);
+abExercises.push(spellWord7);
 abExercises.push(guessSecretNumber);
 abExercises.push(guessSecretNumber2);
 abExercises.push(guessSecretNumber3);
@@ -1072,6 +1145,7 @@ abExercises.push(guessSecretNumber4);
 abExercises.push(questionWithNoAnswer);
 abExercises.push(questionWithNoAnswer2);
 abExercises.push(prisonerAnd2Doors);
+abExercises.push(largeProduct);
 abExercises.push(reluctantStoryElements);
 
 decExercises.push(birthdayParty);
@@ -1090,6 +1164,7 @@ patExercises.push(nextNumberInSeq4);
 patExercises.push(nextNumberInSeq5);
 patExercises.push(nextNumberInSeq6);
 patExercises.push(nextNumberInSeq7);
+patExercises.push(nextNumberInSeq8);
 patExercises.push(nextStrInSeq);
 patExercises.push(nextStrInSeq2);
 patExercises.push(nextStrInSeq3);
@@ -1114,6 +1189,7 @@ patExercises.push(formPattern3);
 patExercises.push(formPattern4);
 patExercises.push(formPattern5);
 patExercises.push(formPattern6);
+patExercises.push(formPattern7);
 
 algoExercises.push(encryptedText1);
 algoExercises.push(encryptedText2);
@@ -1135,6 +1211,8 @@ algoExercises.push(followAlgorithm3);
 algoExercises.push(ballsAndDrawers);
 algoExercises.push(runningRace);
 algoExercises.push(stoneGame);
+algoExercises.push(randomNumberGenerator);
+algoExercises.push(randomNumberGenerator2);
 
 
 
