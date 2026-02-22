@@ -110,79 +110,6 @@ let equivalentStatement = {
     correctAnswers : [3,5],
 }
 
-let FindWordsInSrcambledText = {
-    title:"Words inside scrambled text",
-    text:["Study this mess of letters below carefully.",
-    "lndbgdeuerru",
-    "Please list the 3 words (they are all colors) that are part of this mess of letters alphabetically from left to right.",
-    "Use a single space to separate the words and don't use capitals.",
-    ""],
-    type : "B",
-    diff : 1,
-    correctAnswer : "blue green red"
-}
-
-let FindWordsInSrcambledText2 = {
-    title:"Words inside scrambled text",
-    text:["Study this mess of letters below carefully.",
-        "nysoe",
-        "Please list the 2 words that are part of this mess of letters alphabetically from left to right.",
-        "Use a single space to separate the words and don't use capitals.",
-        ""],
-    type : "B",
-    diff : 0,
-    correctAnswer : "no yes"
-}
-
-let FindWordsInSrcambledText3 = {
-    title:"Words inside scrambled text",
-    text:["Study this mess of letters below carefully.",
-        "iotopdcwagcg",
-        "Please list the 4 words (they are all animals) that are part of this mess of letters alphabetically from left to right.",
-        "Use a single space to separate the words and don't use capitals.",
-        ""],
-    type : "B",
-    diff : 1,
-    correctAnswer : "cat cow dog pig"
-}
-
-let FindWordsInSrcambledText4 = {
-    title:"Words inside scrambled text",
-    text:["Study this mess of letters below carefully.",
-        "yeonteraonosaehfde",
-        "Please list the 5 words (they are all body parts) that are part of this mess of letters alphabetically from left to right.",
-        "Use a single space to separate the words and don't use capitals.",
-        ""],
-    type : "B",
-    diff : 2,
-    correctAnswer : "ear eye foot hand nose"
-}
-
-let FindWordsInSrcambledText5 = {
-    title:"Words inside scrambled text",
-    text:["Study this mess of letters below carefully.",
-        "omousnn",
-        "Please list the 2 words (they are in our skies) that are part of this mess of letters alphabetically from left to right.",
-        "Use a single space to separate the words and don't use capitals.",
-        ""],
-    type : "B",
-    diff : 2,
-    correctAnswer : ""
-}
-
-let FindWordsInSrcambledText6 = {
-    title:"Words inside scrambled text",
-    text:["Study this mess of letters below carefully.",
-        "rsnlnuFrGcnaDgtciheEmheh",
-        "Please list the 4 words (they are names of languages) that are part of this mess of letters alphabetically from left to right.",
-        "Use a single space to separate the words and don't use capitals.",
-        ""],
-    type : "B",
-    diff : 3,
-    hint: "Look at the capital letters for some clue.",
-    correctAnswer : "Dutch English French German"
-}
-
 let spellWord1 ={
     title:"Spell the word",
     text:["The letters are scrambled, please rearrange them to form a word.",],
@@ -452,6 +379,103 @@ let sortTheNumbers2 = {
     hint:"Try to sort the numbers according to step 1 first.",
     choices : ["6","33","141","41","120","32","9","81","0"],
     correctOrder : ["0","120","41","32","141","6","33","81","9"]
+}
+
+let numberOfWaysToReachSum = {
+    title:"Number of ways to reach sum",
+    text:["Suppose we have coins of values of 1, 2, 5 and 10.",
+    "How many ways are there to reach 10?"],
+    type : "B",
+    diff : 4,
+    hint : "Try to first calculate how many ways there are to make 1,2,3,4 or 5 and work you way step by step up.",
+    correctAnswer : "11"
+}
+
+let stoneGame = {
+    title:"Stone Game",
+    text:["Alice and Bob are playing a game where there are a number of stones placed on a table.",
+        "Both player take turns to take 1, 2 or 3 stones away from the table, the player that takes away",
+        "the last stone will lose the game.",
+        "Assuming 7 stones at the start, both player play optimally and Alice plays first, how many stones should Alice take away",
+        "on her first turn so she can win 100%."],
+    type:"A",
+    diff:3,
+    hint:"You want there to be only 1 stone left on Bob's turn.",
+    choices:["1 stone","2 stones","3 stones","There is no way Alice can win 100%."],
+    correctAnswers : [1]
+}
+
+let FindWordsInSrcambledText = {
+    title:"Words inside scrambled text",
+    text:["Study this mess of letters below carefully.",
+        "lndbgdeuerru",
+        "Please list the 3 words (they are all colors) that are part of this mess of letters alphabetically from left to right.",
+        "Use a single space to separate the words and don't use capitals.",
+        ""],
+    type : "B",
+    diff : 1,
+    correctAnswer : "blue green red"
+}
+
+let FindWordsInSrcambledText2 = {
+    title:"Words inside scrambled text",
+    text:["Study this mess of letters below carefully.",
+        "nysoe",
+        "Please list the 2 words that are part of this mess of letters alphabetically from left to right.",
+        "Use a single space to separate the words and don't use capitals.",
+        ""],
+    type : "B",
+    diff : 0,
+    correctAnswer : "no yes"
+}
+
+let FindWordsInSrcambledText3 = {
+    title:"Words inside scrambled text",
+    text:["Study this mess of letters below carefully.",
+        "iotopdcwagcg",
+        "Please list the 4 words (they are all animals) that are part of this mess of letters alphabetically from left to right.",
+        "Use a single space to separate the words and don't use capitals.",
+        ""],
+    type : "B",
+    diff : 1,
+    correctAnswer : "cat cow dog pig"
+}
+
+let FindWordsInSrcambledText4 = {
+    title:"Words inside scrambled text",
+    text:["Study this mess of letters below carefully.",
+        "yeonteraonosaehfde",
+        "Please list the 5 words (they are all body parts) that are part of this mess of letters alphabetically from left to right.",
+        "Use a single space to separate the words and don't use capitals.",
+        ""],
+    type : "B",
+    diff : 2,
+    correctAnswer : "ear eye foot hand nose"
+}
+
+let FindWordsInSrcambledText5 = {
+    title:"Words inside scrambled text",
+    text:["Study this mess of letters below carefully.",
+        "omousnn",
+        "Please list the 2 words (they are in our skies) that are part of this mess of letters alphabetically from left to right.",
+        "Use a single space to separate the words and don't use capitals.",
+        ""],
+    type : "B",
+    diff : 2,
+    correctAnswer : ""
+}
+
+let FindWordsInSrcambledText6 = {
+    title:"Words inside scrambled text",
+    text:["Study this mess of letters below carefully.",
+        "rsnlnuFrGcnaDgtciheEmheh",
+        "Please list the 4 words (they are names of languages) that are part of this mess of letters alphabetically from left to right.",
+        "Use a single space to separate the words and don't use capitals.",
+        ""],
+    type : "B",
+    diff : 3,
+    hint: "Look at the capital letters for some clue.",
+    correctAnswer : "Dutch English French German"
 }
 
 
@@ -1061,20 +1085,6 @@ let randomNumberGenerator2 = {
     correctAnswer : "3"
 }
 
-let stoneGame = {
-    title:"Stone Game",
-    text:["Alice and Bob are playing a game where there are a number of stones placed on a table.",
-    "Both player take turns to take 1, 2 or 3 stones away from the table, the player that takes away",
-    "the last stone will lose the game.",
-    "Assuming 7 stones at the start, both player play optimally and Alice plays first, how many stones should Alice take away",
-    "on her first turn so she can win 100%."],
-    type:"A",
-    diff:3,
-    hint:"You want there to be only 1 stone left on Bob's turn.",
-    choices:["1 stone","2 stones","3 stones","There is no way Alice can win 100%."],
-    correctAnswers : [1]
-}
-
 let farmerWolfGoatCabbage = {
     title:"Farmer wolf goat cabbage",
     text:["A farmer(F), wolf(W), goat(G) and cabbage(C) have to cross over a river by boat.",
@@ -1191,12 +1201,6 @@ abExercises.push(guessTheCardsGame);
 abExercises.push(whoIsTheCulprit);
 abExercises.push(manAndSnail);
 abExercises.push(equivalentStatement);
-abExercises.push(FindWordsInSrcambledText);
-abExercises.push(FindWordsInSrcambledText2);
-abExercises.push(FindWordsInSrcambledText3);
-abExercises.push(FindWordsInSrcambledText4);
-abExercises.push(FindWordsInSrcambledText5);
-abExercises.push(FindWordsInSrcambledText6);
 abExercises.push(spellWord1);
 abExercises.push(spellWord2);
 abExercises.push(spellWord3);
@@ -1223,6 +1227,14 @@ decExercises.push(farmerWolfGoatCabbage);
 decExercises.push(sortTheNumbers1);
 decExercises.push(sortTheNumbers2);
 decExercises.push(cannibalsAndMissionaries);
+decExercises.push(numberOfWaysToReachSum)
+decExercises.push(stoneGame);
+decExercises.push(FindWordsInSrcambledText);
+decExercises.push(FindWordsInSrcambledText2);
+decExercises.push(FindWordsInSrcambledText3);
+decExercises.push(FindWordsInSrcambledText4);
+decExercises.push(FindWordsInSrcambledText5);
+decExercises.push(FindWordsInSrcambledText6);
 
 patExercises.push(nextNumberInSeq);
 patExercises.push(nextNumberInSeq2);
@@ -1281,7 +1293,6 @@ algoExercises.push(followAlgorithm2);
 algoExercises.push(followAlgorithm3);
 algoExercises.push(ballsAndDrawers);
 algoExercises.push(runningRace);
-algoExercises.push(stoneGame);
 algoExercises.push(randomNumberGenerator);
 algoExercises.push(randomNumberGenerator2);
 
