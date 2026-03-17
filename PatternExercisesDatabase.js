@@ -409,6 +409,18 @@ let formPattern9 = {
     correctOrder : ["1","0","2","0","0","3","0","0","0","4","0","0","0","0"],
 }
 
+let redBlueCircles = {
+    title:"Rode en blauwe cirkels",
+    text:["Gegeven onderstaande tekening, er staan blauwe en rode cirkels.",
+    "De cirkels zou een patroon moeten vormen, maar sommige cirkels zijn verkeerd gekleurd.",
+    "Welke cirkels zijn verkeerd gekleurd? Geef de nummers van alle verkeerd gekleurde cirkels in"],
+    image: "images/rood blauw cirkels.png",
+    type:"B",
+    diff: 3,
+    hint:"Probeer eerst de patroon te vinden.",
+    correctAnswer: "7 11 20 24"
+}
+
 patExercises.push(nextNumberInSeq);
 patExercises.push(nextNumberInSeq2);
 patExercises.push(nextNumberInSeq3);
@@ -449,3 +461,4 @@ patExercises.push(formPattern6);
 patExercises.push(formPattern7);
 patExercises.push(formPattern8);
 patExercises.push(formPattern9);
+patExercises.push(redBlueCircles);

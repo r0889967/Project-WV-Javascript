@@ -276,6 +276,27 @@ let nonFittingWords6 = {
     correctAnswers : [3,8],
 }
 
+let minimalGraph = {
+    title:"Minimale graaf",
+    text:["Gegeven onderstaande graaf, hoeveel bogen kun je verwijderen zonder de graaf in stukken te breken?",
+        "Dit will dus zeggen dat elke knoop bereikbaar moet blijven van elke andere knoop."],
+    image:"images/minimale graaf.png",
+    type:"B",
+    diff : 2,
+    correctAnswer: "10"
+}
+
+let fourShapes = {
+    title:"4 figuren plaatsen",
+    text:["Gegeven 4 figuren, hoe moet je voor elkaar plaatsen om de onderste tekening te krijgen?",
+    "Zet de figuur die je eerste moet plaatsen aan de linkerkant."],
+    image:"images/4 figuren.png",
+    type:"C",
+    diff : 1,
+    choices : ["driehoek","ster","vierkant","cirkel"],
+    correctOrder : ["vierkant","cirkel","ster","driehoek"]
+}
+
 
 abExercises.push(grimReaper);
 abExercises.push(racersDilemma);
@@ -302,3 +323,5 @@ abExercises.push(nonFittingWords3);
 abExercises.push(nonFittingWords4);
 abExercises.push(nonFittingWords5);
 abExercises.push(nonFittingWords6);
+abExercises.push(minimalGraph);
+abExercises.push(fourShapes);
