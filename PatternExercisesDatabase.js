@@ -416,8 +416,8 @@ let redBlueCircles = {
     "Welke cirkels zijn verkeerd gekleurd? Geef de nummers van alle verkeerd gekleurde cirkels in"],
     image: "images/rood blauw cirkels.png",
     type:"B",
-    diff: 3,
-    hint:"Probeer eerst de patroon te vinden.",
+    diff: 4,
+    hint:"Probeer eerst de juiste patroon te herkennen.",
     correctAnswer: "7 11 20 24"
 }
 

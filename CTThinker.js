@@ -70,7 +70,7 @@ function checkAnswerA(){
 function checkAnswerB(input){
     let exercise = chosenExercises[selectedExerciseIdx];
     let showAnswer = getElem("showanswer");
-    if(input===exercise.correctAnswer){
+    if(input.trim()===exercise.correctAnswer){
         showAnswer.style.color = "green";
         showAnswer.innerHTML = "Het antwoord is juist!";
         score++;
@@ -106,12 +106,39 @@ function showHint(){
     showHint.innerHTML = exercise.hint;
 }
 
+function pickExercisesMixed(){
+    selectedExerciseIdx = 0;
+    chosenExercises = [];
+    for(let i = 0; i < chosenExercisesCount; i++){
+        let moduleIdx = Math.floor(Math.random()*4);
+        let exerciseIdx = Math.floor(Math.random()*Exercises[moduleIdx].length);
+        let exercise = Exercises[moduleIdx][exerciseIdx];
+        while (chosenExercises.includes(exercise)) {
+            moduleIdx = Math.floor(Math.random()*4);
+            exerciseIdx = Math.floor(Math.random() * (limit));
+            exercise = Exercises[moduleIdx][exerciseIdx];
+        }
+        chosenExercises.push(exercise);
+    }
+    chosenExercises.sort((a, b) => {
+        const diff1 = a.diff;
+        const diff2 = b.diff;
+        if (diff1 < diff2) {
+            return -1;
+        }
+        if (diff1 > diff2) {
+            return 1;
+        }
+        return 0;
+    })
+}
+
 function pickExercises(moduleIdx,scramble=true){
     selectedExerciseIdx = 0;
     limit = Exercises[moduleIdx].length;
     chosenExercises = [];
     if(scramble) {
-        for (var i = 0; i < Math.min(limit, chosenExercisesCount); i++) {
+        for (let i = 0; i < Math.min(limit, chosenExercisesCount); i++) {
             let randomExerciseIdx = Math.floor(Math.random() * (limit));
             let exercise = Exercises[moduleIdx][randomExerciseIdx];
             while (chosenExercises.includes(exercise)) {
@@ -274,7 +301,7 @@ function loadModuleSelectionScreen(){
     html += emptyLine(2);
     html += textLine("Module 5: Integreerde vragen");
     html += createButton("button1","","Integreerde vragen",
-        "");
+        "pickExercisesMixed();loadExerciseContents()");
 
     html += emptyLine(2);
     html += createButton("button1","","Hoofdmenu","returnToMainMenu()");
@@ -327,7 +354,7 @@ function loadMainMenu(){
     html += createButton("button1","","Starten","loadModuleSelectionScreen()");
     html += emptyLine(3);
     html += createButton("button1","","Tutorial",
-        `pickExercises(5,false);loadExerciseContents()`);
+        `pickExercises(4,false);loadExerciseContents()`);
     html += emptyLine(3);
     html += createButton("button1","","Over CTThinker","loadInfoScreen()");
     mainmenu.innerHTML = html;

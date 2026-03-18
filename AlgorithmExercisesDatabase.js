@@ -149,7 +149,7 @@ let followAlgorithm1 = {
         "4) Minus one to every digit.",
         "5) Replace the whole number by the sum of its digits."],
     type : "B",
-    diff:1,
+    diff:3,
     correctAnswer : "9"
 }
 
@@ -174,6 +174,21 @@ let followAlgorithm3 = {
     type : "B",
     diff:2,
     correctAnswer : "41",
+}
+
+let followAlgorithm4 = {
+    title:"Volg het algorithme",
+    text:["Stel we hebben in het begin de string AAAAAAAA, p=0 en q=1 hebben, we voeren onderstaande stappen uit.",
+        "1) Ga naar begin van de string.",
+    "2) Als p deelbaar is door q, zet de letter op die positie om naar de volgende letter in het alfabet.",
+    "3) Tel 1 op bij p",
+    "4) Ga naar de volgende positie in de string.",
+    "5) Als we niet op het einde van de string zitten, spring naar stap 2.",
+    "6) Zet p op 0, tel 1 op bij q",
+    "Wat is het resultaat als we bovenstaande stappen 4 keren achtereenvolgens uitvoeren?",],
+    type : "B",
+    diff:4,
+    correctAnswer : "EBCDEBDB",
 }
 
 let ballsAndDrawers = {
@@ -226,6 +241,21 @@ let randomNumberGenerator2 = {
     correctAnswer : "3"
 }
 
+let blueCar = {
+    title:"Rij naar het einde",
+    text:["Rij de blauwe auto naar het einde, hieronder zie je de wegenkaart.",
+    "De blauwe auto kan gestuurd worden door 3 soorten instructies:",
+    "↑: rij tot helemaal aan het einde van de weg, ↱: rechts afslaan, ↰: links afslaan",
+    "Plaats de instructies in de juiste volgorde zodat de auto naar het einde kan rijden",
+    "Let op: je hoeft niet alle blokken te gebruiken."],
+    image:"images/blauwe auto.png",
+    type: "C",
+    diff : 2,
+    choices : ["↑","↑","↑","↑","↑","↑","↑","↑","↑","↑","↑","↑","↑","↱","↱","↱","↱","↱","↱","↱","↱","↱","↱","↱","↱","↱",
+        "↰","↰","↰","↰","↰","↰","↰","↰","↰","↰","↰","↰","↰",],
+    correctOrder:["↑","↰","↑","↰","↑","↰","↑","↱","↑","↱","↑","↰","↑","↱","↑","↰","↑"]
+}
+
 
 
 
@@ -248,7 +278,9 @@ algoExercises.push(filter2);
 algoExercises.push(followAlgorithm1);
 algoExercises.push(followAlgorithm2);
 algoExercises.push(followAlgorithm3);
+algoExercises.push(followAlgorithm4);
 algoExercises.push(ballsAndDrawers);
 algoExercises.push(runningRace);
 algoExercises.push(randomNumberGenerator);
 algoExercises.push(randomNumberGenerator2);
+algoExercises.push(blueCar);

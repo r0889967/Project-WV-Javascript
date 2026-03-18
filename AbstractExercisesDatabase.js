@@ -209,7 +209,7 @@ let reluctantStoryElements = {
         "eventually stopping at the foot of a hill, where she found the blue ball and walked back home.",
         "What elements in the story are reluctant?"],
     type : "A",
-    diff : 2,
+    diff : 3,
     hint:"Reluctant means that the element played no role in the story.",
     choices : ["hole","bird","scary trees","stone","spider","birch","bear","pond"],
     correctAnswers : [1,2,6,7],
@@ -297,6 +297,18 @@ let fourShapes = {
     correctOrder : ["vierkant","cirkel","ster","driehoek"]
 }
 
+let soccerGame = {
+    title:"Voetbalwedstrijd",
+    text:["Stel dat er bij een voetbalwedstrijd van 90 minuten 7 goals in totaal gescoord wordt en",
+    "1 van beide teams slechts 2 goals achtereenvolgens gescoord hebben.",
+    "Welke van onderstaande finale uitkomsten van de wedstrijd zijn mogelijk?"],
+    type:"A",
+    diff : 1,
+    hint:"Als 1 van beide teams 2 goals achtereenvolgens gescoord hebben, hoe zit het dan met de overige goals?",
+    choices:["4-3","2-5","6-1","0-7","1-6","3-4","5-2","7-0"],
+    correctAnswers : [0,1,5,6],
+}
+
 
 abExercises.push(grimReaper);
 abExercises.push(racersDilemma);
@@ -325,3 +337,4 @@ abExercises.push(nonFittingWords5);
 abExercises.push(nonFittingWords6);
 abExercises.push(minimalGraph);
 abExercises.push(fourShapes);
+abExercises.push(soccerGame);

@@ -96,6 +96,19 @@ let sortTheNumbers3 = {
     correctOrder : ["111","31","5000","6","25","26","9"]
 }
 
+let sortColorfulBalls = {
+    title:"Sorteer de ballen",
+    text:["In de onderstaande tekening hebben 4 dozen en ballen met verschillende kleuren.",
+        "Er zitten al 2 ballen in elke doos.",
+    "De ballen moeten in de juiste doos geplaatst worden.",
+    "Hoeveel ballen zullen er in elke doos zijn als alle ballen zijn opgeruimd?",
+    "Begin met jouw antwoord eerst met de hoeveelheid ballen in de eerste doos links."],
+    image:"images/4 dozen en ballen.png",
+    type: "B",
+    diff : 1,
+    correctAnswer : "7 4 5 9"
+}
+
 let numberOfWaysToReachSum = {
     title:"Number of ways to reach sum",
     text:["Suppose we have coins of values of 1, 2, 5 and 10.",
@@ -273,6 +286,7 @@ decExercises.push(farmerWolfGoatCabbage);
 decExercises.push(sortTheNumbers1);
 decExercises.push(sortTheNumbers2);
 decExercises.push(sortTheNumbers3);
+decExercises.push(sortColorfulBalls);
 decExercises.push(cannibalsAndMissionaries);
 decExercises.push(numberOfWaysToReachSum)
 decExercises.push(stoneGame);
