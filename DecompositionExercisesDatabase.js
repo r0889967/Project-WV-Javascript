@@ -278,6 +278,19 @@ let guessSecretNumber4 = {
     correctAnswer : "23"
 }
 
+let robotMaze = {
+    title:"Robotdoolhof",
+    text:["Onze robot staat bij het groene vakje in de doolhof en moet naar het rode vakjes gaan,",
+    "De grijze vakjes zijn muren, de robot kan niet door de muren wandelen.",
+    "Hoeveel manieren zijn er voor de robot om van het groene vakje naar het rode vakjes te gaan,",
+    "als de robot slechts naar rechts en naar onder kan bewegen?"],
+    image:"images/robotdoolhof.png",
+    type:"B",
+    diff: 4,
+    hint:"Probeer de oplossing stap voor stap uit te werken door bij elke vakje het aantal manieren uit te rekenen, begin met de vakjes naast het rode vakje.",
+    correctAnswer : "15",
+}
+
 decExercises.push(birthdayParty);
 decExercises.push(pocketLampProblem);
 decExercises.push(naughtyKittens);
@@ -300,3 +313,4 @@ decExercises.push(guessSecretNumber);
 decExercises.push(guessSecretNumber2);
 decExercises.push(guessSecretNumber3);
 decExercises.push(guessSecretNumber4);
+decExercises.push(robotMaze);

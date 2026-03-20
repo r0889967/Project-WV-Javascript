@@ -179,6 +179,17 @@ let mountEverest = {
     correctAnswers:[5]
 }
 
+let answerCraziness = {
+    title:"Gekke vraag",
+    text:["Het juiste antwoord is 'Het Antwoord'."],
+    type:"A",
+    diff:1,
+    choices : ["het antwoord","het Antwoord","Het antwoord","Antwoord","antwoord","het AntwoorD",
+    "de antwoord","De antwoord","Het AntWoord","Het Antwoord","het AntWoord","Het AntwoorD","HET ANTWOORD"],
+    hint:"Let op op de kleine verschillen.",
+    correctAnswers:[9]
+}
+
 let prisonerAnd2Doors = {
     title:"Prisoner and 2 doors",
     text:["A prisoner is standing in front of 2 doors, there is a guard standing next to each door.",
@@ -279,7 +290,7 @@ let nonFittingWords6 = {
 let minimalGraph = {
     title:"Minimale graaf",
     text:["Gegeven onderstaande graaf, hoeveel bogen kun je verwijderen zonder de graaf in stukken te breken?",
-        "Dit will dus zeggen dat elke knoop bereikbaar moet blijven van elke andere knoop."],
+        "Dit wil dus zeggen dat elke knoop bereikbaar moet blijven vanuit elke andere knoop."],
     image:"images/minimale graaf.png",
     type:"B",
     diff : 2,
@@ -309,7 +320,6 @@ let soccerGame = {
     correctAnswers : [0,1,5,6],
 }
 
-
 abExercises.push(grimReaper);
 abExercises.push(racersDilemma);
 abExercises.push(racersDilemma2);
@@ -328,6 +338,7 @@ abExercises.push(questionWithNoAnswer2);
 abExercises.push(prisonerAnd2Doors);
 abExercises.push(largeProduct);
 abExercises.push(mountEverest);
+abExercises.push(answerCraziness);
 abExercises.push(reluctantStoryElements);
 abExercises.push(nonFittingWords);
 abExercises.push(nonFittingWords2);
