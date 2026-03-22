@@ -47,7 +47,7 @@ let tutorial3 = {
 let tutorial4 = {
     title:"Invulvraag(antwoord met meerdere delen)",
     text:["Als het antwoord uit meerdere delen bestaat, dan moet je tussen elk deel een spatie laten.",
-        "Om deze vraag te voltooien, vul 'a1 B2 cd3' in het veld.",
+        "Om deze vraag te voltooien, vul 'a1 B2 cd3' in het veld, de volgorde is niet belangrijk.",
     "Let op, er moet exact 1 spatie tussen de delen liggen, en het antwoord is ook hoofdletter-gevoelig!",
     "Herhaling: plaats zeker geen overbodige dingen bij jouw antwoord, anders wordt het als fout gerekend."],
     type: "B",

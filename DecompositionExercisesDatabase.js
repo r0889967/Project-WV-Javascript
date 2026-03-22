@@ -138,7 +138,7 @@ let FindWordsInSrcambledText = {
     text:["Kijk aandachtig naar onderstaande puin van letters.",
         "urberdoaowolgn",
         "Find de 3 woorden (ze zijn allemaal kleuren) die je met de letters in de puin kan spellen.",
-        "Vul de woorden in alfabetische volgorde, zet exact 1 spatie tussen de woorden en gebruik geen hoofdletters.",
+        "Vul de woorden in, de volgorde is niet belangrijk, zet exact 1 spatie tussen de woorden en gebruik geen hoofdletters.",
         ""],
     type : "B",
     diff : 1,
@@ -150,7 +150,7 @@ let FindWordsInSrcambledText2 = {
     text:["Kijk aandachtig naar onderstaande puin van letters.",
         "enejan",
         "Find de 2 woorden die je met de letters in de puin kan spellen.",
-        "Vul de woorden in alfabetische volgorde, zet exact 1 spatie tussen de woorden en gebruik geen hoofdletters.",
+        "Vul de woorden in, de volgorde is niet belangrijk, zet exact 1 spatie tussen de woorden en gebruik geen hoofdletters.",
         ""],
     type : "B",
     diff : 0,
@@ -162,7 +162,7 @@ let FindWordsInSrcambledText3 = {
     text:["Kijk aandachtig naar onderstaande puin van letters.",
         "oadhkntoke",
         "Find de 3 woorden (ze zijn allemaal dieren) die je met de letters in de puin kan spellen.",
-        "Vul de woorden in alfabetische volgorde, zet exact 1 spatie tussen de woorden en gebruik geen hoofdletters.",
+        "Vul de woorden in, de volgorde is niet belangrijk, zet exact 1 spatie tussen de woorden en gebruik geen hoofdletters.",
         ""],
     type : "B",
     diff : 2,
@@ -174,7 +174,7 @@ let FindWordsInSrcambledText4 = {
     text:["Kijk aandachtig naar onderstaande puin van letters.",
         "soertouoeonvgo",
         "Find de 4 woorden (ze zijn allemaal lichaamsdelen) die je met de letters in de puin kan spellen.",
-        "Vul de woorden in alfabetische volgorde, zet exact 1 spatie tussen de woorden en gebruik geen hoofdletters.",
+        "Vul de woorden in, de volgorde is niet belangrijk, zet exact 1 spatie tussen de woorden en gebruik geen hoofdletters.",
         ""],
     type : "B",
     diff : 3,
@@ -186,7 +186,7 @@ let FindWordsInSrcambledText5 = {
     text:["Kijk aandachtig naar onderstaande puin van letters.",
         "anmzano",
         "Find de 4 woorden (ze zijn in de hemel) die je met de letters in de puin kan spellen.",
-        "Vul de woorden in alfabetische volgorde, zet exact 1 spatie tussen de woorden en gebruik geen hoofdletters.",
+        "Vul de woorden in, de volgorde is niet belangrijk, zet exact 1 spatie tussen de woorden en gebruik geen hoofdletters.",
         ""],
     type : "B",
     diff : 0,
@@ -198,7 +198,7 @@ let FindWordsInSrcambledText6 = {
     text:["Kijk aandachtig naar onderstaande puin van letters.",
         "ragtFesnuDslsiEn",
         "Find de 3 woorden (ze zijn talen) die je met de letters in de puin kan spellen.",
-        "Vul de woorden in alfabetische volgorde, zet exact 1 spatie tussen de woorden en gebruik geen hoofdletters.",
+        "Vul de woorden in, de volgorde is niet belangrijk, zet exact 1 spatie tussen de woorden en gebruik geen hoofdletters.",
         ""],
     type : "B",
     diff : 2,
@@ -299,7 +299,7 @@ decExercises.push(farmerWolfGoatCabbage);
 decExercises.push(sortTheNumbers1);
 decExercises.push(sortTheNumbers2);
 decExercises.push(sortTheNumbers3);
-decExercises.push(sortColorfulBalls);
+//decExercises.push(sortColorfulBalls);
 decExercises.push(cannibalsAndMissionaries);
 decExercises.push(numberOfWaysToReachSum)
 decExercises.push(stoneGame);

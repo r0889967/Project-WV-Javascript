@@ -70,7 +70,19 @@ function checkAnswerA(){
 function checkAnswerB(input){
     let exercise = chosenExercises[selectedExerciseIdx];
     let showAnswer = getElem("showanswer");
-    if(input.trim()===exercise.correctAnswer){
+    let trimmedInput = input.trim();
+    let answerParts = trimmedInput.split(" ");
+    let isCorrect = true;
+    if(trimmedInput.length===0){
+        isCorrect = false;
+    }
+    for(let part of answerParts){
+        if(!exercise.correctAnswer.includes(part)){
+            isCorrect = false;
+            break;
+        }
+    }
+    if(isCorrect){
         showAnswer.style.color = "green";
         showAnswer.innerHTML = "Het antwoord is juist!";
         score++;
@@ -115,7 +127,7 @@ function pickExercisesMixed(){
         let exercise = Exercises[moduleIdx][exerciseIdx];
         while (chosenExercises.includes(exercise)) {
             moduleIdx = Math.floor(Math.random()*4);
-            exerciseIdx = Math.floor(Math.random() * (limit));
+            exerciseIdx = Math.floor(Math.random()*Exercises[moduleIdx].length);
             exercise = Exercises[moduleIdx][exerciseIdx];
         }
         chosenExercises.push(exercise);
