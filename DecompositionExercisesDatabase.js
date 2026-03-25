@@ -312,6 +312,17 @@ let minesweeper = {
     correctAnswers :[0,1,3,7]
 }
 
+let computerVirus = {
+    title:"Computervirus",
+    text:["Gegeven onderstaande computernetwerk, 1 van de computers is besmet met een virus.",
+    "Elke dag zal de virus zich verspreiding over het netwerk mbhv de verbindingen tussen de computers.",
+    "Hoeveel dagen duurt het voordat het virus het volledige netwerk besmet?"],
+    image:"images/computer virus.png",
+    type:"B",
+    diff:2,
+    correctAnswer :"4"
+}
+
 decExercises.push(birthdayParty);
 decExercises.push(pocketLampProblem);
 decExercises.push(naughtyKittens);
@@ -337,3 +348,4 @@ decExercises.push(guessSecretNumber4);
 decExercises.push(robotMaze);
 decExercises.push(stackBlocks);
 decExercises.push(minesweeper);
+decExercises.push(computerVirus);
