@@ -121,6 +121,7 @@ function showHint(){
 function pickExercisesMixed(){
     selectedExerciseIdx = 0;
     chosenExercises = [];
+    limit = chosenExercisesCount;
     for(let i = 0; i < chosenExercisesCount; i++){
         let moduleIdx = Math.floor(Math.random()*4);
         let exerciseIdx = Math.floor(Math.random()*Exercises[moduleIdx].length);

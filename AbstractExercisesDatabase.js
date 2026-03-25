@@ -82,17 +82,17 @@ let spellWord1 ={
     text:["De letters zijn door elkaar, rangschik de letters om het woord te vormen.",],
     type : "C",
     diff : 1,
-    choices : ["O","L","E","W","L","Y"],
-    correctOrder : ["Y","E","L","L","O","W"],
+    choices : ["A","R","T","W","Z"],
+    correctOrder : ["Z","W","A","R","T"],
 }
 
 let spellWord2 ={
     title:"Spel het woord",
     text:["De letters zijn door elkaar, rangschik de letters om het woord te vormen.",],
     type : "C",
-    diff : 2,
-    choices : ["N","V","I","T","U","R","E","S","I","Y"],
-    correctOrder : ["U","N","I","V","E","R","S","I","T","Y"],
+    diff : 3,
+    choices : ["N","T","V","I","T","I","U","R","E","S","I","E"],
+    correctOrder : ["U","N","I","V","E","R","S","I","T","E","I","T"],
 }
 
 let spellWord3 ={
@@ -100,8 +100,8 @@ let spellWord3 ={
     text:["De letters zijn door elkaar, rangschik de letters om het woord te vormen.",],
     type : "C",
     diff : 2,
-    choices : ["W","R","B","T","A","R","E","S","R","Y"],
-    correctOrder : ["S","T","R","A","W","B","E","R","R","Y"],
+    choices : ["I","B","A","E","A","R","D"],
+    correctOrder : ["A","A","R","D","B","E","I"],
 }
 
 let spellWord4 ={
@@ -109,8 +109,8 @@ let spellWord4 ={
     text:["De letters zijn door elkaar, rangschik de letters om het woord te vormen.",],
     type : "C",
     diff : 0,
-    choices : ["H","R","E","T","E"],
-    correctOrder : ["T","H","R","E","E"],
+    choices : ["I","R","E","D"],
+    correctOrder : ["D","R","I","E"],
 }
 
 let spellWord5 ={
@@ -126,8 +126,9 @@ let spellWord6 ={
     title:"Spel het woord",
     text:["De letters zijn door elkaar, rangschik de letters om het woord te vormen.",],
     type : "C",
-    diff : 1,
+    diff : 2,
     choices : ["G","L","E","G","A","A","N","U"],
+    hint:"Het is een woord uit het Engles.",
     correctOrder : ["L","A","N","G","U","A","G","E"],
 }
 

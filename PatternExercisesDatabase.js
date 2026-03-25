@@ -421,6 +421,16 @@ let redBlueCircles = {
     correctAnswer: "7 11 20 24"
 }
 
+let numberPyramid = {
+    title:"Getallenpiramide",
+    text:["Gegeven onderstaande piramide met getallen, er missen een paar getallen",
+    "Welke getallen missen er? Vul ze allemaal in."],
+    image: "images/getallenpiramide.png",
+    type:"B",
+    diff:1,
+    correctAnswer:"3 3 4 4 10 10"
+}
+
 patExercises.push(nextNumberInSeq);
 patExercises.push(nextNumberInSeq2);
 patExercises.push(nextNumberInSeq3);
@@ -450,8 +460,6 @@ patExercises.push(findPatternSeq5);
 patExercises.push(findPatternSeq6);
 patExercises.push(findNonPatternSeq1);
 patExercises.push(findNonPatternSeq2);
-patExercises.push(WhatIsThePattern);
-patExercises.push(WhatIsThePattern2);
 //patExercises.push(formPattern);
 //patExercises.push(formPattern2);
 //patExercises.push(formPattern3);
@@ -462,3 +470,4 @@ patExercises.push(WhatIsThePattern2);
 //patExercises.push(formPattern8);
 //patExercises.push(formPattern9);
 patExercises.push(redBlueCircles);
+patExercises.push(numberPyramid);

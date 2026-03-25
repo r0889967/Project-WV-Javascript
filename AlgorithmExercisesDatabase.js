@@ -258,8 +258,6 @@ let blueCar = {
 
 
 
-
-
 algoExercises.push(encryptedText1);
 algoExercises.push(encryptedText2);
 algoExercises.push(encryptedText3);

@@ -291,6 +291,27 @@ let robotMaze = {
     correctAnswer : "15",
 }
 
+let stackBlocks = {
+    title:"Blokken stapelen",
+    text:["We hebben 3 blauwe, 3 rode en 3 groene blokken, en we willen een toren van 3 blokken bouwen.",
+        "Op hoeveel manieren kun je de toren bouwen?",],
+    type:"B",
+    diff:2,
+    correctAnswer:"21"
+}
+
+let minesweeper = {
+    title:"Mijnenveger",
+    text:["Zie onderstaande spelbord, op welke vakken is er een mijn?",
+    "Duid alle vakken met een mijn aan."],
+    image:"images/mijnenveger.png",
+    type:"A",
+    diff:3,
+    hint:"Probeer de vakken met mijnen af te leiden aan de hand van getallen.",
+    choices:["A","B","C","D","E","F","G","H","I","J","K"],
+    correctAnswers :[0,1,3,7]
+}
+
 decExercises.push(birthdayParty);
 decExercises.push(pocketLampProblem);
 decExercises.push(naughtyKittens);
@@ -314,3 +335,5 @@ decExercises.push(guessSecretNumber2);
 decExercises.push(guessSecretNumber3);
 decExercises.push(guessSecretNumber4);
 decExercises.push(robotMaze);
+decExercises.push(stackBlocks);
+decExercises.push(minesweeper);
