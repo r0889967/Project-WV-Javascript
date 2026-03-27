@@ -1,21 +1,21 @@
 let encryptedText1 = {
-    title: "Encrypted text",
-    text:["The following text has been encrypted using a simple algorithm.",
-        "J thjnk ypv cbn dp thjs pnf",
-        "You need to decrypt this text.(The answer is case-sensitive)"],
+    title: "Versleutelde tekst",
+    text:["De onderstaande takest wordt versleutd.",
+        "Jk dfnk dbt jf djt kvnt",
+        "Probeer de tekst te ontcijferen.(Let op hoofdletters!)"],
     type: "B",
     diff:1,
-    correctAnswer : "I think you can do this one",
+    correctAnswer : "Ik denk dat je dit kunt",
 }
 
 let encryptedText2 = {
-    title:"Encrypted text",
-    text:["The following text has been encrypted using a simple algorithm.",
-        "J bn zpvs cftu gsjfoe",
-        "You need to decrypt this text.(The answer is case-sensitive)"],
+    title:"Versleutelde tekst",
+    text:["De onderstaande takest wordt versleutd.",
+        "J bn zpvs cftu gsjfoe Jl cfo kjvz cftuf wsjfoe",
+        "Probeer de tekst te ontcijferen.(Let op hoofdletters!)"],
     type : "B",
     diff:2,
-    correctAnswer : "I am your best friend",
+    correctAnswer : "Ik ben jouw beste vriend",
 }
 
 let encryptedText3 = {
@@ -59,8 +59,8 @@ let encryptedText6 = {
 }
 
 let mapping1 = {
-    title:"Map function",
-    text:["If f(abc)=bdf, f(def)=egi, f(cbe)=ddh,",
+    title:"Map functie",
+    text:["Als f(abc)=bdf, f(def)=egi, f(cbe)=ddh,",
         "f(fas)=?"],
     type : "B",
     diff:1,
@@ -68,8 +68,8 @@ let mapping1 = {
 }
 
 let mapping2 = {
-    title:"Map function",
-    text:["If f(art)=3, f(flower)=6, f(dogs)=4, f(weather)=7",
+    title:"Map functie",
+    text:["Als f(art)=3, f(flower)=6, f(dogs)=4, f(weather)=7",
         "f(horse)=?"],
     type : "B",
     diff:0,
@@ -77,8 +77,8 @@ let mapping2 = {
 }
 
 let mapping3 = {
-    title:"Map function",
-    text:["If f(abghjp)=aaeeio, f(zzxwpb)=uuuuoa, f(fghbzi)=eeeaui",
+    title:"Map functie",
+    text:["Als f(abghjp)=aaeeio, f(zzxwpb)=uuuuoa, f(fghbzi)=eeeaui",
         "f(afckel)=?"],
     type : "B",
     diff:3,
@@ -86,8 +86,8 @@ let mapping3 = {
 }
 
 let mapping4 = {
-    title:"Map function",
-    text:["If f(2)=2,f(3)=3,f(4)=3,f(5)=5,f(6)=5,f(10)=7,f(12)=11,f(13)=11,f(16)=13",
+    title:"Map functie",
+    text:["Als f(2)=2,f(3)=3,f(4)=3,f(5)=5,f(6)=5,f(10)=7,f(12)=11,f(13)=11,f(16)=13",
         "f(35)=?"],
     type : "B",
     diff:2,
@@ -95,8 +95,8 @@ let mapping4 = {
 }
 
 let mapping5 = {
-    title:"Map function",
-    text:["If f([a,b])=3,f([b,a])=3,f([b,c,d])=9,f([a,c])=4,f([b,b])=4,f([a,c,b,e])=11",
+    title:"Map functie",
+    text:["Als f([a,b])=3,f([b,a])=3,f([b,c,d])=9,f([a,c])=4,f([b,b])=4,f([a,c,b,e])=11",
         "f([a,a,b,c,e])=?"],
     type : "B",
     diff:1,
@@ -105,8 +105,8 @@ let mapping5 = {
 }
 
 let mapping6 = {
-    title:"Map function",
-    text:["If f(33)=[3,11],f(8)=[2,2,2],f(100)=[2,2,5,5],f(37)=[37]",
+    title:"Map functie",
+    text:["ALs f(33)=[3,11],f(8)=[2,2,2],f(100)=[2,2,5,5],f(37)=[37]",
         "f(78)="],
     type : "B",
     diff:0,
@@ -114,8 +114,8 @@ let mapping6 = {
 }
 
 let mapping7 = {
-    title:"Map function",
-    text:["If f(334)=1,f(7)=1,f(15)=1,f(20)=0,f(37)=1,f(49)=1,f(24)=0",
+    title:"Map functie",
+    text:["Als f(334)=1,f(7)=1,f(15)=1,f(20)=0,f(37)=1,f(49)=1,f(24)=0",
         "f(51)="],
     type : "B",
     diff:0,
@@ -149,7 +149,7 @@ let followAlgorithm1 = {
         "4) Minus one to every digit.",
         "5) Replace the whole number by the sum of its digits."],
     type : "B",
-    diff:1,
+    diff:3,
     correctAnswer : "9"
 }
 
@@ -176,6 +176,21 @@ let followAlgorithm3 = {
     correctAnswer : "41",
 }
 
+let followAlgorithm4 = {
+    title:"Volg het algorithme",
+    text:["Stel we hebben in het begin de string AAAAAAAA, p=0 en q=1 hebben, we voeren onderstaande stappen uit.",
+        "1) Ga naar begin van de string.",
+    "2) Als p deelbaar is door q, zet de letter op die positie om naar de volgende letter in het alfabet.",
+    "3) Tel 1 op bij p",
+    "4) Ga naar de volgende positie in de string.",
+    "5) Als we niet op het einde van de string zitten, spring naar stap 2.",
+    "6) Zet p op 0, tel 1 op bij q",
+    "Wat is het resultaat als we bovenstaande stappen 4 keren achtereenvolgens uitvoeren?",],
+    type : "B",
+    diff:4,
+    correctAnswer : "EBCDEBDB",
+}
+
 let ballsAndDrawers = {
     title:"Balls and drawers",
     text:["Sarah wants to put her balls inside her drawers, so she does the following.",
@@ -190,16 +205,16 @@ let ballsAndDrawers = {
 }
 
 let runningRace = {
-    title:"100m running race",
-    text:["Alice,Bob,Carole,Dilan and Eva are having a 100m race. Each of them has his or her own strategies.",
-        "We will first assume that it will take each runner exactly 1 second to run 1 meter.",
-        "Alice runs 1 meter and then stops for 1 second.",
-        "Bob runs 5 meters and then stops for 10 seconds.",
-        "Carole runs 3 meters and then stops for 2 seconds.",
-        "Dilan runs 50 meters and then stops for 75 seconds.",
-        "Eva runs 10 meters and then stops for 5 seconds.",
-        "Each runner will repeat their strategies during the entire race.",
-        "In what order will the runners reach the finish? "],
+    title:"100m ren race",
+    text:["Alice,Bob,Carole,Dilan en Eva hebben een race van 100m. Ze hebben elk zijn eigen strategie.",
+        "We veronderstellen dat elke renner loopt met snelheid 1m/s..",
+        "Alice rent 1 meter en stopt 1 second.",
+        "Bob rent 5 meter en stopt 10 seconden.",
+        "Carole rent 3 meter en stopt 2 seconden.",
+        "Dilan rent 50 meter en stopt 75 seconden.",
+        "Eva rent 10 meter en stopt 5 seconden.",
+        "Elke renner herhaalt zijn strategie tijdens de volledig race.",
+        "In welke volgorde komen ze aan bij het einde? "],
     type:"C",
     diff:3,
     choices : ["Alice","Bob","Carole","Dilan","Eva"],
@@ -226,6 +241,21 @@ let randomNumberGenerator2 = {
     correctAnswer : "3"
 }
 
+let blueCar = {
+    title:"Rij naar het einde",
+    text:["Rij de blauwe auto naar het einde, hieronder zie je de wegenkaart.",
+    "De blauwe auto kan gestuurd worden door 3 soorten instructies:",
+    "↑: rij tot helemaal aan het einde van de weg, ↱: rechts afslaan, ↰: links afslaan",
+    "Plaats de instructies in de juiste volgorde zodat de auto naar het einde kan rijden",
+    "Let op: je hoeft niet alle blokken te gebruiken."],
+    image:"images/blauwe auto.png",
+    type: "C",
+    diff : 2,
+    choices : ["↑","↑","↑","↑","↑","↑","↑","↑","↑","↑","↑","↑","↑","↱","↱","↱","↱","↱","↱","↱","↱","↱","↱","↱","↱","↱",
+        "↰","↰","↰","↰","↰","↰","↰","↰","↰","↰","↰","↰","↰",],
+    correctOrder:["↑","↰","↑","↰","↑","↰","↑","↱","↑","↱","↑","↰","↑","↱","↑","↰","↑"]
+}
+
 
 
 algoExercises.push(encryptedText1);
@@ -246,7 +276,9 @@ algoExercises.push(filter2);
 algoExercises.push(followAlgorithm1);
 algoExercises.push(followAlgorithm2);
 algoExercises.push(followAlgorithm3);
+algoExercises.push(followAlgorithm4);
 algoExercises.push(ballsAndDrawers);
 algoExercises.push(runningRace);
 algoExercises.push(randomNumberGenerator);
 algoExercises.push(randomNumberGenerator2);
+algoExercises.push(blueCar);

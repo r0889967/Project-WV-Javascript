@@ -29,16 +29,16 @@ let pocketLampProblem = {
 }
 
 let naughtyKittens = {
-    title:"The naughty kittens",
-    text:["You are the owner of a pet shop and you need to put 5 naughty little kittens called",
-        "Tommy, Celie, Johny, Mali and Daniel to sleep, but it won't be easy as they are very naughty.",
-        "From days of observation you have noticed the following:",
-        "Celie will only sleep if Daniel sleeps.",
-        "If Daniel don't sleep, no kitten will ever sleep.",
-        "Johny will only sleep if Tommy sleeps.",
-        "Mali will only sleep if every kitten whose name comes before its name alphabetically sleeps.",
-        "Tommy will only sleep if Celie sleeps.",
-        "In what order do you have to put the kittens asleep? "],
+    title:"De stoute poesjes",
+    text:["Je bent de eigenaar van een huisdierwinkel en wil 5 poesjes",
+        "Tommy, Celie, Johny, Mali en Daniel in slaap brengen, maar dit gaat niet zo soepel want de poesjes zijn stout",
+        "Hier is wat je weet:",
+        "Celie slaapt alleen als Daniel slaapt.",
+        "Als Daniel niet slaapt, zal de andere poesjes nooit slapen.",
+        "Johny slaapt alleen als Tommy slaapt.",
+        "Mali slaapt alleen als elke poesje wiens naam alfabetisch voor Mali is slaapt.",
+        "Tommy slaapt alleen als Celie slaapt.",
+        "In welke volgorde moet je de poesjes in slaap brengen? "],
     type : "C",
     diff : 1,
     choices : ["Celie","Daniel","Johny","Mali","Tommy"],
@@ -46,16 +46,16 @@ let naughtyKittens = {
 }
 
 let machinesInFactory = {
-    title:"Machines in the factory",
-    text:["Inside a factory there are 6 machines A,B,C,D,E and F that must be started. But some machines can only be started if ",
-        "others has already been started up.",
-        "C can be started up right away.",
-        "F can be started only if C has started.",
-        "B can be started only if A and D has started.",
-        "D can be started only if F and E has started.",
-        "E can be started only if A has started.",
-        "A can be started only if F has started.",
-        "In what order do the machines have to be started?"],
+    title:"Machinen in de fabriek",
+    text:["Er zijn 6 machines A,B,C,D,E en F die opgestart moet worden. Sommige machinen kunnen direct opgestart worden, ",
+        "sommige moeten wachten tot andere machinen eerst opgestart wordt.",
+        "C kan direct opgestart worden.",
+        "F start alleen op als C opstart.",
+        "B start alleen op als A en D opstarten.",
+        "D start alleen op als if F en E opstarten.",
+        "E start alleen op als if A opstart.",
+        "A start alleen op als if F opstart.",
+        "In welke volgorde moet de machinen opgestart worden?"],
     type : "C",
     diff : 1,
     choices : ["E","F","C","B","D","A"],
@@ -82,8 +82,31 @@ let sortTheNumbers2 = {
     type : "C",
     diff : 1,
     hint:"Try to sort the numbers according to step 1 first.",
-    choices : ["6","33","141","41","120","32","9","81","0"],
-    correctOrder : ["0","120","41","32","141","6","33","81","9"]
+    choices : ["6","33","141","41","120","32","9","81"],
+    correctOrder : ["120","41","32","141","6","33","81","9"]
+}
+
+let sortTheNumbers3 = {
+    title:"Sort the numbers",
+    text:["Please sort the numbers from small to big according to the following rules.",
+        "Sort the numbers according to the sum of their digits.",],
+    type : "C",
+    diff : 1,
+    choices : ["6","25","5000","31","111","26","9"],
+    correctOrder : ["111","31","5000","6","25","26","9"]
+}
+
+let sortColorfulBalls = {
+    title:"Sorteer de ballen",
+    text:["In de onderstaande tekening hebben 4 dozen en ballen met verschillende kleuren.",
+        "Er zitten al 2 ballen in elke doos.",
+    "De ballen moeten in de juiste doos geplaatst worden.",
+    "Hoeveel ballen zullen er in elke doos zijn als alle ballen zijn opgeruimd?",
+    "Begin met jouw antwoord eerst met de hoeveelheid ballen in de eerste doos links."],
+    image:"images/4 dozen en ballen.png",
+    type: "B",
+    diff : 1,
+    correctAnswer : "7 4 5 9"
 }
 
 let numberOfWaysToReachSum = {
@@ -111,76 +134,76 @@ let stoneGame = {
 }
 
 let FindWordsInSrcambledText = {
-    title:"Words inside scrambled text",
-    text:["Study this mess of letters below carefully.",
-        "lndbgdeuerru",
-        "Please list the 3 words (they are all colors) that are part of this mess of letters alphabetically from left to right.",
-        "Use a single space to separate the words and don't use capitals.",
+    title:"Woorden in letterpuin",
+    text:["Kijk aandachtig naar onderstaande puin van letters.",
+        "urberdoaowolgn",
+        "Find de 3 woorden (ze zijn allemaal kleuren) die je met de letters in de puin kan spellen.",
+        "Vul de woorden in, de volgorde is niet belangrijk, zet exact 1 spatie tussen de woorden en gebruik geen hoofdletters.",
         ""],
     type : "B",
     diff : 1,
-    correctAnswer : "blue green red"
+    correctAnswer : "blauw groen rood"
 }
 
 let FindWordsInSrcambledText2 = {
-    title:"Words inside scrambled text",
-    text:["Study this mess of letters below carefully.",
-        "nysoe",
-        "Please list the 2 words that are part of this mess of letters alphabetically from left to right.",
-        "Use a single space to separate the words and don't use capitals.",
+    title:"Woorden in letterpuin",
+    text:["Kijk aandachtig naar onderstaande puin van letters.",
+        "enejan",
+        "Find de 2 woorden die je met de letters in de puin kan spellen.",
+        "Vul de woorden in, de volgorde is niet belangrijk, zet exact 1 spatie tussen de woorden en gebruik geen hoofdletters.",
         ""],
     type : "B",
     diff : 0,
-    correctAnswer : "no yes"
+    correctAnswer : "ja neen"
 }
 
 let FindWordsInSrcambledText3 = {
-    title:"Words inside scrambled text",
-    text:["Study this mess of letters below carefully.",
-        "iotopdcwagcg",
-        "Please list the 4 words (they are all animals) that are part of this mess of letters alphabetically from left to right.",
-        "Use a single space to separate the words and don't use capitals.",
+    title:"Woorden in letterpuin",
+    text:["Kijk aandachtig naar onderstaande puin van letters.",
+        "oadhkntoke",
+        "Find de 3 woorden (ze zijn allemaal dieren) die je met de letters in de puin kan spellen.",
+        "Vul de woorden in, de volgorde is niet belangrijk, zet exact 1 spatie tussen de woorden en gebruik geen hoofdletters.",
         ""],
     type : "B",
-    diff : 1,
-    correctAnswer : "cat cow dog pig"
+    diff : 2,
+    correctAnswer : "hond kat koe"
 }
 
 let FindWordsInSrcambledText4 = {
-    title:"Words inside scrambled text",
-    text:["Study this mess of letters below carefully.",
-        "yeonteraonosaehfde",
-        "Please list the 5 words (they are all body parts) that are part of this mess of letters alphabetically from left to right.",
-        "Use a single space to separate the words and don't use capitals.",
-        ""],
-    type : "B",
-    diff : 2,
-    correctAnswer : "ear eye foot hand nose"
-}
-
-let FindWordsInSrcambledText5 = {
-    title:"Words inside scrambled text",
-    text:["Study this mess of letters below carefully.",
-        "omousnn",
-        "Please list the 2 words (they are in our skies) that are part of this mess of letters alphabetically from left to right.",
-        "Use a single space to separate the words and don't use capitals.",
-        ""],
-    type : "B",
-    diff : 2,
-    correctAnswer : ""
-}
-
-let FindWordsInSrcambledText6 = {
-    title:"Words inside scrambled text",
-    text:["Study this mess of letters below carefully.",
-        "rsnlnuFrGcnaDgtciheEmheh",
-        "Please list the 4 words (they are names of languages) that are part of this mess of letters alphabetically from left to right.",
-        "Use a single space to separate the words and don't use capitals.",
+    title:"Woorden in letterpuin",
+    text:["Kijk aandachtig naar onderstaande puin van letters.",
+        "soertouoeonvgo",
+        "Find de 4 woorden (ze zijn allemaal lichaamsdelen) die je met de letters in de puin kan spellen.",
+        "Vul de woorden in, de volgorde is niet belangrijk, zet exact 1 spatie tussen de woorden en gebruik geen hoofdletters.",
         ""],
     type : "B",
     diff : 3,
-    hint: "Look at the capital letters for some clue.",
-    correctAnswer : "Dutch English French German"
+    correctAnswer : "neus oog oor voet"
+}
+
+let FindWordsInSrcambledText5 = {
+    title:"Woorden in letterpuin",
+    text:["Kijk aandachtig naar onderstaande puin van letters.",
+        "anmzano",
+        "Find de 4 woorden (ze zijn in de hemel) die je met de letters in de puin kan spellen.",
+        "Vul de woorden in, de volgorde is niet belangrijk, zet exact 1 spatie tussen de woorden en gebruik geen hoofdletters.",
+        ""],
+    type : "B",
+    diff : 0,
+    correctAnswer : "maan zon"
+}
+
+let FindWordsInSrcambledText6 = {
+    title:"Woorden in letterpuin",
+    text:["Kijk aandachtig naar onderstaande puin van letters.",
+        "ragtFesnuDslsiEn",
+        "Find de 3 woorden (ze zijn talen) die je met de letters in de puin kan spellen.",
+        "Vul de woorden in, de volgorde is niet belangrijk, zet exact 1 spatie tussen de woorden en gebruik geen hoofdletters.",
+        ""],
+    type : "B",
+    diff : 2,
+    hint: "Kijk aandachtig naar de hoofdletters in de puin van letters.",
+    correctAnswer : "Duits Engels Frans"
 }
 
 let farmerWolfGoatCabbage = {
@@ -213,6 +236,93 @@ let cannibalsAndMissionaries = {
         "2M go cross","1C returns","2C go cross","1C returns","2C go cross"]
 }
 
+let guessSecretNumber = {
+    title:"Raad het getal",
+    text:["Probeer het geheime getal te raden door de volgende hints. Tussen 10 and 99,",
+        "niet deelbaar door 3,4,5 of 7, de eerste cijfer is oneven, de som van de cijfers is groter dan 12",
+        "het verschil tussen de eerste en laatste cijfer is gelijk of kleiner dan 2, de eerste cijfers is groter dan de laatste cijfer.",
+    ],
+    type : "B",
+    diff : 3,
+    correctAnswer : "97"
+}
+
+let guessSecretNumber2 = {
+    title:"Raad het getal",
+    text:["Probeer het geheime getal te raden door de volgende hints. Tussen 1 and 99,",
+        "deelbaar door 3 en 5, beide cijfers zijn oneven, de som van 2 cijfers is kleiner dan 8.",
+    ],
+    type : "B",
+    diff : 1,
+    correctAnswer : "15"
+}
+
+let guessSecretNumber3 = {
+    title:"Raad het getal",
+    text:["Probeer het geheime getal te raden door de volgende hints. Tussen 0 and 100,",
+        "deelbaar door alle getallen van 1 tot 100, is even, heeft slechts 1 cijfer, is kleiner dan 50.",
+    ],
+    type : "B",
+    diff : 0,
+    hint:"Dit is zeer makkelijk.",
+    correctAnswer : "0"
+}
+
+let guessSecretNumber4 = {
+    title:"Raad het getal",
+    text:["Probeer het geheime getal te raden door de volgende hints. Tussen 0 and 100,",
+        "de som van de cijfers is deelbaar door 5, is een priemgetal, is kleiner dan 40.",
+    ],
+    type : "B",
+    diff : 2,
+    correctAnswer : "23"
+}
+
+let robotMaze = {
+    title:"Robotdoolhof",
+    text:["Onze robot staat bij het groene vakje in de doolhof en moet naar het rode vakjes gaan,",
+    "De grijze vakjes zijn muren, de robot kan niet door de muren wandelen.",
+    "Hoeveel manieren zijn er voor de robot om van het groene vakje naar het rode vakjes te gaan,",
+    "als de robot slechts naar rechts en naar onder kan bewegen?"],
+    image:"images/robotdoolhof.png",
+    type:"B",
+    diff: 4,
+    hint:"Probeer de oplossing stap voor stap uit te werken door bij elke vakje het aantal manieren uit te rekenen, begin met de vakjes naast het rode vakje.",
+    correctAnswer : "15",
+}
+
+let stackBlocks = {
+    title:"Blokken stapelen",
+    text:["We hebben 3 blauwe, 3 rode en 3 groene blokken, en we willen een toren van 3 blokken bouwen.",
+        "Op hoeveel manieren kun je de toren bouwen?",],
+    type:"B",
+    diff:2,
+    correctAnswer:"21"
+}
+
+let minesweeper = {
+    title:"Mijnenveger",
+    text:["Zie onderstaande spelbord, op welke vakken is er een mijn?",
+    "Duid alle vakken met een mijn aan."],
+    image:"images/mijnenveger.png",
+    type:"A",
+    diff:3,
+    hint:"Probeer de vakken met mijnen af te leiden aan de hand van getallen.",
+    choices:["A","B","C","D","E","F","G","H","I","J","K"],
+    correctAnswers :[0,1,3,7]
+}
+
+let computerVirus = {
+    title:"Computervirus",
+    text:["Gegeven onderstaande computernetwerk, 1 van de computers is besmet met een virus.",
+    "Elke dag zal de virus zich verspreiding over het netwerk mbhv de verbindingen tussen de computers.",
+    "Hoeveel dagen duurt het voordat het virus het volledige netwerk besmet?"],
+    image:"images/computer virus.png",
+    type:"B",
+    diff:2,
+    correctAnswer :"4"
+}
+
 decExercises.push(birthdayParty);
 decExercises.push(pocketLampProblem);
 decExercises.push(naughtyKittens);
@@ -220,6 +330,8 @@ decExercises.push(machinesInFactory);
 decExercises.push(farmerWolfGoatCabbage);
 decExercises.push(sortTheNumbers1);
 decExercises.push(sortTheNumbers2);
+decExercises.push(sortTheNumbers3);
+//decExercises.push(sortColorfulBalls);
 decExercises.push(cannibalsAndMissionaries);
 decExercises.push(numberOfWaysToReachSum)
 decExercises.push(stoneGame);
@@ -229,3 +341,11 @@ decExercises.push(FindWordsInSrcambledText3);
 decExercises.push(FindWordsInSrcambledText4);
 decExercises.push(FindWordsInSrcambledText5);
 decExercises.push(FindWordsInSrcambledText6);
+decExercises.push(guessSecretNumber);
+decExercises.push(guessSecretNumber2);
+decExercises.push(guessSecretNumber3);
+decExercises.push(guessSecretNumber4);
+decExercises.push(robotMaze);
+decExercises.push(stackBlocks);
+decExercises.push(minesweeper);
+decExercises.push(computerVirus);

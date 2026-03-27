@@ -1,7 +1,9 @@
 let tutorial0 = {
-    title: "Check button",
-    text: ["You just need to click the 'check' button,",
-        "and then click on 'next level' to complete this exercise."],
+    title: "Check knop",
+    text: ["Je hoeft alleen de 'check' knoop te drukken,",
+        "druk dan op 'volgende vraag' om deze vraag te voltooien.",
+    "Telkens als je klaar bent met een vraag, druk op",
+    "die groene knop om naar de volgende vraag te gaan."],
     type: "A",
     diff:0,
     choices: [],
@@ -9,11 +11,10 @@ let tutorial0 = {
 }
 
 let tutorial1 = {
-    title:"Type A exercise(single answer)",
-    text:["This is a typical type A exercise, you have to mark the correct boxes down below.",
-        "To mark a box, simply click on it, click it again to unmark it.",
-        "To complete this exercise, simply mark the boxes with A on it.",
-        "Once you are done, click the 'check button' to check your answer and go to the next exercise."],
+    title:"Meerkeuzevraag(1 antwoord)",
+    text:["Dit is een meerkeuzevraag, je moet de juiste antwoorden aanduiden.",
+        "Om een antwoord te markeren, druk op het antwoord, druk op het nog een keer om het te demarkeren.",
+        "Duid het antwoord A aan om de vraag te voltooien.",],
     type:"A",
     diff:0,
     choices : ["A","B","C","D","E"],
@@ -21,9 +22,9 @@ let tutorial1 = {
 }
 
 let tutorial2 = {
-    title:"Type A exercise(multiple answers)",
-    text:["This is another type A exercise, this time you have to mark multiple boxes.",
-        "To complete this exercise, mark the boxes with A,C and E"],
+    title:"Meerkeuzevraag(Meerdere antwoorden)",
+    text:["Dit is een andere meerkeuzevraag, dit keer moet je meerdere antwoorden aanduiden.",
+        "Om deze vraag te voltooien, markeer de antwoorden A,C and E"],
     type : "A",
     diff:0,
     choices : ["A","B","C","D","E"],
@@ -31,32 +32,35 @@ let tutorial2 = {
 }
 
 let tutorial3 = {
-    title:"Type B exercise(single-part answer)",
-    text:["This is a typical type B exercise, you have have to enter your answer in the input box below.",
-        "To enter the text, simply click on the input box, use your keyboard to enter the text.",
-        "To complete this exercise, simply type 'a1b2c3' in the input box.",
-        "Once you are done, click the 'check button' to check your answer and go to the next exercise.",],
+    title:"Invulvraag(1 antwoord)",
+    text:["Dit is een typische invulvraag, je moet jouw antwoord in het onderstaande veld invullen.",
+        "Druk op het veld met jouw muis, gebruik jouw toetsenbord om text in te vullen.",
+        "Om deze vraag te voltooien, vul a1b2c3 in het veld.",
+    "Let op: het antwoord moet exact dezelfde zijn als hierboven!",
+    "Plaats dus geen onnodige dingen zoals spaties, leestekens of allerlei andere gekke tekens",
+    "bij het begin, het einde of tussen het antwoord."],
     type: "B",
     diff:0,
     correctAnswer : "a1b2c3"
 }
 
 let tutorial4 = {
-    title:"Type B exercise(multiple-parts answer)",
-    text:["If the answer consists of multiple parts, then you have to put a single space between each part.",
-        "To complete this exercise, type 'a1 B2 cd3' in the input box",],
+    title:"Invulvraag(antwoord met meerdere delen)",
+    text:["Als het antwoord uit meerdere delen bestaat, dan moet je tussen elk deel een spatie laten.",
+        "Om deze vraag te voltooien, vul 'a1 B2 cd3' in het veld, de volgorde is niet belangrijk.",
+    "Let op, er moet exact 1 spatie tussen de delen liggen, en het antwoord is ook hoofdletter-gevoelig!",
+    "Herhaling: plaats zeker geen overbodige dingen bij jouw antwoord, anders wordt het als fout gerekend."],
     type: "B",
     diff:0,
     correctAnswer : "a1 B2 cd3",
 }
 
 let tutorial5 = {
-    title:"Type C exercise",
-    text:["This is a typical type C exercise, you have to arrange boxes in the correct order.",
-        "To arrange the boxes, simply drag a box with the mouse from the choices field into the answer field below",
-        "You can also drag a box from the answer field back to the choices field.",
-        "To complete this exercise, simply arrange the boxes in the order 1,2,3,4,5 from left to right in the answer field.",
-        "Once you are done, the click 'check button' to check your answer and go to the next exercise.",],
+    title:"Drag en drop vraag",
+    text:["Dit is een typische drag en drop vraag, je moet de blokken in de juiste volgorde zetten.",
+        "Je kunt blokken met jouw muis van het optiesveld naar het antwoordveld draggen.",
+        "Je kunt ook blokken van het antwoordveld terug draggen naar het optiesveld.",
+        "Om deze vraag te voltooien, breng de blokken in de volgorde 1,2,3,4,5 van links naar rechts in het antwoordveld.",],
     type:"C",
     diff:0,
     choices : ["5","1","2","4","3"],
@@ -64,11 +68,10 @@ let tutorial5 = {
 }
 
 let tutorial6 = {
-    title:"Type C exercise",
-    text:["This is another type C exercise, sometimes you might not need to use all the boxes in the choices field.",
-        "To complete this exercise, simply arrange the boxes in the order 1,2,3 from left to right in the answer field.",
-        "Leave the boxes that you don't need inside the choices field.",
-        "Once you are done, the click 'check button' to check your answer and go to the next exercise.",],
+    title:"Drap en drop vraag",
+    text:["Dit is een andere drag en drop vraag, soms heb je niet alle opties nodig.",
+        "Om deze vraag te voltooien, breng de blokken in de volgorde 1,2,3 van links naar rechts in het antwoordveld.",
+        "Laat blokken die je niet nodig heb in het optiesveld.",],
     type:"C",
     diff:0,
     choices : ["5","1","2","4","3"],

@@ -4,8 +4,13 @@ var chosenExercisesCount = 20;
 var limit = 0;
 var score = 0;
 
+
 function getElem(id){
     return document.getElementById(id);
+}
+
+function getImage(path){
+    return `<img src="${path}" alt="">`;
 }
 
 function createButton(class_,id,text,onclickfunc,draggable=false,ondragstart=""){
@@ -25,24 +30,20 @@ function emptyLine(count){
     return html;
 }
 
-function toNextLevel(){
-    selectedExerciseIdx++;
-    if(selectedExerciseIdx < Math.min(limit,chosenExercisesCount)) {
-        loadExerciseContents();
-    }else{
-        loadFinishedScreen();
-    }
+function dragstartHandler(ev) {
+    ev.dataTransfer.setData("text", ev.target.id);
 }
 
-function loadFinishedScreen(tutorial){
-    getElem("level").innerHTML = "";
-    let html = "";
-    html += "<h1>Result</h1>";
-    html += textLine("You have finished all exercises.");
-    html += textLine(`Your score is ${score}/${Math.min(limit,chosenExercisesCount)}`)
-    html += emptyLine(3);
-    html += createButton("button1", "", "Module Selection", "returnToModuleSelection();score=0");
-    getElem("finished").innerHTML = html;
+function dragoverHandler(ev) {
+    ev.preventDefault();
+}
+
+function dropHandler(ev) {
+    ev.preventDefault();
+    const data = ev.dataTransfer.getData("text");
+    if(ev.target.classList.contains('div2')){
+        ev.target.appendChild(getElem(data));
+    }
 }
 
 function checkAnswerA(){
@@ -56,28 +57,40 @@ function checkAnswerA(){
     }
     if(markedIdxs.toString()===exercise.correctAnswers.toString()){
         showAnswer.style.color = "green";
-        showAnswer.innerHTML = "The answer is correct!";
+        showAnswer.innerHTML = "Het antwoord is juist!";
         score++;
     }else{
         showAnswer.style.color = "red";
-        showAnswer.innerHTML = "The answer is incorrect!";
+        showAnswer.innerHTML = "Het antwoord is fout!";
     }
-    showAnswer.innerHTML += createButton("button1","","Next Level","toNextLevel()");
+    showAnswer.innerHTML += createButton("button1","","Volgende vraag","toNextLevel()");
 
 }
 
 function checkAnswerB(input){
     let exercise = chosenExercises[selectedExerciseIdx];
     let showAnswer = getElem("showanswer");
-    if(input===exercise.correctAnswer){
+    let trimmedInput = input.trim();
+    let answerParts = trimmedInput.split(" ");
+    let isCorrect = true;
+    if(trimmedInput.length===0){
+        isCorrect = false;
+    }
+    for(let part of answerParts){
+        if(!exercise.correctAnswer.includes(part)){
+            isCorrect = false;
+            break;
+        }
+    }
+    if(isCorrect){
         showAnswer.style.color = "green";
-        showAnswer.innerHTML = "The answer is correct!";
+        showAnswer.innerHTML = "Het antwoord is juist!";
         score++;
     }else{
         showAnswer.style.color = "red";
-        showAnswer.innerHTML = "The answer is incorrect!";
+        showAnswer.innerHTML = "Het antwoord is fout!";
     }
-    showAnswer.innerHTML += createButton("button1","","Next Level","toNextLevel()");
+    showAnswer.innerHTML += createButton("button1","","Volgende vraag","toNextLevel()");
 }
 
 function checkAnswerC(){
@@ -90,13 +103,13 @@ function checkAnswerC(){
     }
     if(currentOrder.toString() === exercise.correctOrder.toString()){
         showAnswer.style.color = "green";
-        showAnswer.innerHTML = "The answer is correct!";
+        showAnswer.innerHTML = "Het antwoord is juist!";
         score++;
     }else{
         showAnswer.style.color = "red";
-        showAnswer.innerHTML = "The answer is incorrect!";
+        showAnswer.innerHTML = "Het antwoord is fout!";
     }
-    showAnswer.innerHTML += createButton("button1","","Next Level","toNextLevel()");
+    showAnswer.innerHTML += createButton("button1","","Volgende vraag","toNextLevel()");
 }
 
 function showHint(){
@@ -105,12 +118,40 @@ function showHint(){
     showHint.innerHTML = exercise.hint;
 }
 
+function pickExercisesMixed(){
+    selectedExerciseIdx = 0;
+    chosenExercises = [];
+    limit = chosenExercisesCount;
+    for(let i = 0; i < chosenExercisesCount; i++){
+        let moduleIdx = Math.floor(Math.random()*4);
+        let exerciseIdx = Math.floor(Math.random()*Exercises[moduleIdx].length);
+        let exercise = Exercises[moduleIdx][exerciseIdx];
+        while (chosenExercises.includes(exercise)) {
+            moduleIdx = Math.floor(Math.random()*4);
+            exerciseIdx = Math.floor(Math.random()*Exercises[moduleIdx].length);
+            exercise = Exercises[moduleIdx][exerciseIdx];
+        }
+        chosenExercises.push(exercise);
+    }
+    chosenExercises.sort((a, b) => {
+        const diff1 = a.diff;
+        const diff2 = b.diff;
+        if (diff1 < diff2) {
+            return -1;
+        }
+        if (diff1 > diff2) {
+            return 1;
+        }
+        return 0;
+    })
+}
+
 function pickExercises(moduleIdx,scramble=true){
     selectedExerciseIdx = 0;
     limit = Exercises[moduleIdx].length;
     chosenExercises = [];
     if(scramble) {
-        for (var i = 0; i < Math.min(limit, chosenExercisesCount); i++) {
+        for (let i = 0; i < Math.min(limit, chosenExercisesCount); i++) {
             let randomExerciseIdx = Math.floor(Math.random() * (limit));
             let exercise = Exercises[moduleIdx][randomExerciseIdx];
             while (chosenExercises.includes(exercise)) {
@@ -137,12 +178,15 @@ function pickExercises(moduleIdx,scramble=true){
 
 function loadTypeAExercise(choices){
     let html = "";
-    html += textLine("Please mark the correct box(es)");
+    html += textLine("Duid de juiste antwoord(en) aan.");
     html += emptyLine(1);
     let buttonIdx = 0;
+    let i = 0;
     for(let choice of choices) {
-        html += createButton("button2",buttonIdx,choice,`getElem(${buttonIdx}).classList.toggle('marked')`);
-        html += emptyLine(1);
+        html += createButton("button2", buttonIdx, choice, `getElem(${buttonIdx}).classList.toggle('marked')`);
+        if(buttonIdx%2===1) {
+            html += emptyLine(1);
+        }
         buttonIdx++;
     }
     html += emptyLine(1);
@@ -153,34 +197,18 @@ function loadTypeAExercise(choices){
 
 function loadTypeBExercise(){
     let html = "";
-    html += textLine(`Please enter your answer:<input class="input1" id="inputprompt" >`);
+    html += textLine(`Vul hier jouw antwoord(en):<input class="input1" id="inputprompt" >`);
     html += createButton("button3","checkbutton","Check",
         `checkAnswerB(getElem('inputprompt').value);getElem('checkbutton').disabled=true`);
     return html;
 }
 
-function dragstartHandler(ev) {
-    ev.dataTransfer.setData("text", ev.target.id);
-}
-
-function dragoverHandler(ev) {
-    ev.preventDefault();
-}
-
-function dropHandler(ev) {
-    ev.preventDefault();
-    const data = ev.dataTransfer.getData("text");
-    if(ev.target.classList.contains('div2')){
-        ev.target.appendChild(document.getElementById(data));
-    }
-}
-
 function loadTypeCExercise(choices){
     let html = "";
-    html += textLine(`Please drag the boxes in the field down below in the correct order from left to right`);
+    html += textLine(`Plaats de blokken in de juiste volgorde van links naar rechts.`);
     html += emptyLine(1);
     let buttonIdx = 0;
-    html += textLine("Choices field");
+    html += textLine("Optiesveld");
     html += "<div class='div2' id='choicesdiv' ondrop='dropHandler(event)' ondragover='dragoverHandler(event)'>";
     for(let choice of choices){
         html += createButton("button2",buttonIdx,choice, "",true,
@@ -189,7 +217,7 @@ function loadTypeCExercise(choices){
     }
     html += "</div>";
     html += emptyLine(2);
-    html += textLine("Answer field");
+    html += textLine("Antwoordveld");
     html += "<div class='div2' id='answerdiv' ondrop='dropHandler(event)' ondragover='dragoverHandler(event)'></div>";
     html += emptyLine(1);
     html += createButton("button3","checkbutton","Check",
@@ -197,12 +225,34 @@ function loadTypeCExercise(choices){
     return html;
 }
 
+
+function toNextLevel(){
+    selectedExerciseIdx++;
+    if(selectedExerciseIdx < Math.min(limit,chosenExercisesCount)) {
+        loadExerciseContents();
+    }else{
+        loadFinishedScreen();
+    }
+}
+
+function loadFinishedScreen(tutorial){
+    getElem("level").innerHTML = "";
+    let html = "";
+    html += "<h1>Result</h1>";
+    html += textLine("Je hebt alle vragen voltooid.");
+    html += textLine(`Jouw score is ${score}/${Math.min(limit,chosenExercisesCount)}`)
+    html += emptyLine(3);
+    html += createButton("button1", "", "Module Selectie", "returnToModuleSelection();score=0;"
+        );
+    getElem("finished").innerHTML = html;
+}
+
 function loadExerciseContents(){
     getElem("mainmenu").innerHTML = "";
     let exercise = chosenExercises[selectedExerciseIdx]
     let level = getElem("level");
     let html = "";
-    if(exercise != null){
+    if(exercise){
         getElem("levelselection").innerHTML = "";
         let t = exercise.title+"("+(selectedExerciseIdx+1)+"/"+chosenExercises.length+")";
         html += `<h1>${t}</h1>`
@@ -210,6 +260,9 @@ function loadExerciseContents(){
             html += textLine(`${line}`);
         }
         html += emptyLine(1);
+        if(exercise.image){
+            html += getImage(exercise.image);
+        }
         if(exercise.type==='A'){
             html += loadTypeAExercise(exercise.choices);
         }
@@ -227,7 +280,7 @@ function loadExerciseContents(){
         html += `<p id="showhint"></p>`;
         html += `<p id="showanswer"></p>`;
         html += emptyLine(3);
-        html += createButton("button1","","Module Selection","returnToModuleSelection();");
+        html += createButton("button1","","Module Selectie","returnToModuleSelection();");
         level.innerHTML = html;
     }
 }
@@ -280,7 +333,7 @@ function loadInfoScreen(){
     let info = getElem("info");
     let html = "";
     html += "<h1>Over CTThinker</h1>";
-    html += "<p>CTThinker is een tool om computationele denkvaardigheden bij leerlingen van de tweede graad te verbeteren.</p>";
+    html += "<p>CTThinker is een tool om de computationele denkvaardigheden bij leerlingen van de tweede graad te verbeteren.</p>";
     html += "<p>De tool bevat 5 modules gebaseerd op het PRADA-model van Computationeel Denken:<\p>"
     html += emptyLine(1);
     html += "<p>Module 1: Abstractie<\p>"
@@ -306,7 +359,7 @@ function loadMainMenu(){
     let mainmenu = getElem("mainmenu");
     let html = "";
     html += "<h1>CTThinker</h1>";
-    html += textLine("Een tool om computationeele denkvaardigheden te verbeteren!");
+    html += textLine("Een tool om computationele denkvaardigheden te verbeteren!");
     html += textLine("Door David Jiawei Wang en Senne Bosmans");
     html += textLine("Begin met de tutorial.");
     html += emptyLine(3);
