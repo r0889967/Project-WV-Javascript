@@ -237,34 +237,34 @@ function loadModuleSelectionScreen(){
     let levelselection = getElem("levelselection");
     let html = "";
     html += "<h1>Module Selection</h1>"
-    html += "<p>Please select a module to play</p>";
+    html += "<p>Selecteer een module:</p>";
     html += emptyLine(1);
-    html += "<p>Module 1: Abstraction</p>";
-    html += createButton("button1","","Abstraction Exercises",
+    html += "<p>Module 1:</p>";
+    html += createButton("button1","","Abstractie",
         `pickExercises(0);loadExerciseContents()`);
 
     html += emptyLine(2);
-    html += "<p>Module 2: Decomposition</p>";
-    html += createButton("button1","","Decomposition Exercises",
+    html += "<p>Module 2:</p>";
+    html += createButton("button1","","Decompositie",
         `pickExercises(1);loadExerciseContents()`);
 
     html += emptyLine(2);
-    html += "<p>Module 3: Pattern recognization</p>";
-    html += createButton("button1","","Pattern Exercises",
+    html += "<p>Module 3: </p>";
+    html += createButton("button1","","Patroonherkenning",
         `pickExercises(2);loadExerciseContents()`);
 
     html += emptyLine(2);
-    html += "<p>Module 4: Algorithmic thinking</p>";
-    html += createButton("button1","","Algorithm Exercises",
+    html += "<p>Module 4: </p>";
+    html += createButton("button1","","Algoritmisch denken",
         `pickExercises(3);loadExerciseContents()`);
 
     html += emptyLine(2);
-    html += "<p>Module 5: Integrated exercises</p>";
-    html += createButton("button1","","Integrated Exercises",
+    html += "<p>Module 5: </p>";
+    html += createButton("button1","","Geïntegreerde oefeningen",
         "");
 
     html += emptyLine(2);
-    html += createButton("button1","","Main Menu","returnToMainMenu()");
+    html += createButton("button1","","Hoofdmenu","returnToMainMenu()");
 
     levelselection.innerHTML = html;
 }
@@ -279,27 +279,26 @@ function loadInfoScreen(){
     getElem("mainmenu").innerHTML = "";
     let info = getElem("info");
     let html = "";
-    html += "<h1>About CTThinker</h1>";
-    html += "<p>CTThinker is a tool developed to teach students vital computational thinking skills.</p>";
-    html += "<p>The tool contains 5 modules with challenging levels in each module.<\p>"
+    html += "<h1>Over CTThinker</h1>";
+    html += "<p>CTThinker is een tool om computationele denkvaardigheden bij leerlingen van de tweede graad te verbeteren.</p>";
+    html += "<p>De tool bevat 5 modules gebaseerd op het PRADA-model van Computationeel Denken:<\p>"
     html += emptyLine(1);
-    html += "<p>Module 1 focuses on abstraction<\p>"
-    html += "<p>Module 2 focuses on decomposition<\p>"
-    html += "<p>Module 3 focuses on patterns<\p>"
-    html += "<p>Module 4 focuses on algorithmic thinking<\p>"
-    html += "<p>Module 5 combines the previous 4 skills<\p>"
+    html += "<p>Module 1: Abstractie<\p>"
+    html += "<p>Module 2: Decompositie<\p>"
+    html += "<p>Module 3: Patroonherkenning<\p>"
+    html += "<p>Module 4: Algoritmisch denken<\p>"
+    html += "<p>Module 5: Geïntegreerde oefeningen<\p>"
     html += emptyLine(1);
-    html += "<p>You can choose a module to start</p>"
-    html += "<p>You will then be presented with a few random exercisesDatabase from that module</p>"
-    html += "<p>There are different types of exercisesDatabase</p>"
+    html += "<p>Je kan beginnen met een module naar keuze, maar we raden aan module 5 als laatste te doen.</p>"
+    html += "<p>Je krijgt een aantal willekeurige en vaste oefeningen van de geselecteerde module</p>"
     html += emptyLine(1);
-    html += "<p>Type A: Mark one or more answers from the given options</p>";
-    html += "<p>Type B: Enter the correct answer inside an input prompt</p>";
-    html += "<p>Type C: Drag a few blocks into the right order</p>";
+    html += "<p> Er zijn drie soorten oefeningen in de tool:<\p>"
+    html += "<p>Type 1: Meerkeuze</p>";
+    html += "<p>Type 2: Invuloefeningen</p>";
+    html += "<p>Type 3: Interactieve sleepoefeningen (Drag and Drop)</p>";
     html += emptyLine(1);
-    html += "<p>The tool also provides feedbacks after completing each exercise<\p>"
-    html += "<p>to help students understand the solution.</p>"
-    html += createButton("button1","","Main Menu","returnToMainMenu()");
+    html += "<p>Je krijgt feedback na het beantwoorden van elke vraag, zodat je de oplossing goed begrepen hebt.</p>"
+    html += createButton("button1","","Hoofdmenu","returnToMainMenu()");
     info.innerHTML = html;
 }
 
@@ -307,16 +306,16 @@ function loadMainMenu(){
     let mainmenu = getElem("mainmenu");
     let html = "";
     html += "<h1>CTThinker</h1>";
-    html += textLine("A great tool to boost computional thinking");
-    html += textLine("Made by David Jiawei Wang and Senne Bosmans");
-    html += textLine("If it is your first time playing, please play the tutorial first.");
+    html += textLine("Een tool om computationeele denkvaardigheden te verbeteren!");
+    html += textLine("Door David Jiawei Wang en Senne Bosmans");
+    html += textLine("Begin met de tutorial.");
     html += emptyLine(3);
-    html += createButton("button1","","Start Game","loadModuleSelectionScreen()");
+    html += createButton("button1","","Start","loadModuleSelectionScreen()");
     html += emptyLine(4);
     html += createButton("button1","","Tutorial",
         `pickExercises(5,false);loadExerciseContents()`);
     html += emptyLine(4);
-    html += createButton("button1","","About CTThinker","loadInfoScreen()");
+    html += createButton("button1","","Over CTThinker","loadInfoScreen()");
     mainmenu.innerHTML = html;
 }
 
