@@ -318,97 +318,6 @@ let WhatIsThePattern2 = {
     correctOrder : ["+1","+2","+3","+4","-2"],
 }
 
-let formPattern = {
-    title: "Vorm een patroon",
-    text:["Rangschik onderstaande getallen om een reeks met patroon te vormen.",
-        "De reeks moet beginnen met 10."],
-    type:"C",
-    diff:3,
-    choices : ["16","10","70","85","12","17","15","80","75"],
-    correctOrder : ["10","15","75","70","12","17","85","80","16"],
-}
-
-let formPattern2 = {
-    title: "Vorm een patroon",
-    text:["Rangschik onderstaande getallen om een reeks met patroon te vormen.",
-        "De reeks moet beginnen met 1."],
-    type:"C",
-    diff:0,
-    choices : ["13","5","9","3","11","7","1","15"],
-    correctOrder : ["1","3","5","7","9","11","13","15"],
-}
-
-let formPattern3 = {
-    title: "Vorm een patroon",
-    text:["Rangschik onderstaande getallen om een reeks met patroon te vormen.",
-        "De reeks moet beginnen met 2."],
-    type:"C",
-    diff:1,
-    choices : ["2","5","7","3","23","11","17","19","13"],
-    correctOrder : ["2","3","5","7","11","13","17","19","23"],
-}
-
-let formPattern4 = {
-    title: "Vorm een patroon",
-    text:["Rangschik onderstaande getallen om een reeks met patroon te vormen.",
-        "De reeks moet beginnen met 6000."],
-    type:"C",
-    diff:2,
-    choices : ["1500","6000","3000","1000","2000","1200"],
-    correctOrder : ["6000","3000","2000","1500","1200","1000"],
-}
-
-let formPattern5 = {
-    title: "Vorm een patroon",
-    text:["Rangschik onderstaande getallen om een reeks met patroon te vormen.",
-        "De reeks moet beginnen met 012."],
-    type:"C",
-    diff:0,
-    choices : ["678","123","345","789","234","456","012","567"],
-    correctOrder : ["012","123","234","345","456","567","678","789"],
-}
-
-let formPattern6 = {
-    title: "Vorm een patroon",
-    text:["Rangschik onderstaande getallen om een reeks met patroon te vormen.",
-        "De reeks moet beginnen met 0."],
-    type:"C",
-    diff:0,
-    choices : ["1","36","15","55","3","45","10","21","6","0"],
-    correctOrder : ["0","1","3","6","10","15","21","28","36","45","55"],
-}
-
-let formPattern7 = {
-    title: "Vorm een patroon",
-    text:["Rangschik onderstaande getallen om een reeks met patroon te vormen.",
-        "De reeks moet beginnen met 1."],
-    type:"C",
-    diff:1,
-    choices : ["1","6","120","5040","2","720","24"],
-    correctOrder : ["1","2","6","24","120","720","5040"],
-}
-
-let formPattern8 = {
-    title: "Vorm een patroon",
-    text:["Rangschik onderstaande strings om een reeks met patroon te vormen.",
-        "De reeks moet beginnen met a."],
-    type:"C",
-    diff:0,
-    choices : ["klmno","bc","def","a","pqrstu","ghij"],
-    correctOrder : ["a","bc","def","ghij","klmno","pqrstu"],
-}
-
-let formPattern9 = {
-    title: "Vorm een patroon",
-    text:["Rangschik onderstaande strings om een reeks met patroon te vormen.",
-        "De reeks moet beginnen met 1."],
-    type:"C",
-    diff:4,
-    choices : ["0","0","0","2","0","0","4","0","0","3","0","1","0","0"],
-    hint:"Denk goed na over hoe je de nullen moeten plaatsen.",
-    correctOrder : ["1","0","2","0","0","3","0","0","0","4","0","0","0","0"],
-}
-
 let redBlueCircles = {
     title:"Rode en blauwe cirkels",
     text:["Gegeven onderstaande tekening, er staan blauwe en rode cirkels.",
@@ -460,14 +369,5 @@ patExercises.push(findPatternSeq5);
 patExercises.push(findPatternSeq6);
 patExercises.push(findNonPatternSeq1);
 patExercises.push(findNonPatternSeq2);
-//patExercises.push(formPattern);
-//patExercises.push(formPattern2);
-//patExercises.push(formPattern3);
-//patExercises.push(formPattern4);
-///patExercises.push(formPattern5);
-//patExercises.push(formPattern6);
-//patExercises.push(formPattern7);
-//patExercises.push(formPattern8);
-//patExercises.push(formPattern9);
 patExercises.push(redBlueCircles);
 patExercises.push(numberPyramid);
