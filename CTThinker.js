@@ -317,6 +317,11 @@ function loadModuleSelectionScreen(){
         "");
 
     html += emptyLine(2);
+    html += "<p>Maak je eigen module: </p>";
+    html += createButton("button1","","Aangepaste oefenset",
+        "loadCustomSelectionScreen()");
+
+    html += emptyLine(2);
     html += createButton("button1","","Hoofdmenu","returnToMainMenu()");
 
     levelselection.innerHTML = html;
@@ -380,6 +385,59 @@ function returnToMainMenu() {
     loadMainMenu();
 }
 
+function loadCustomSelectionScreen(){
+    getElem("mainmenu").innerHTML = "";
+    let html = "";
 
+    html += "<h1>Aangepaste oefenset</h1>";
+    html += textLine("Kies het aantal oefeningen per element:");
 
+    html += emptyLine(1);
 
+    // max aantal oefeningen per module: 28, 25, 30, 23 (afhankelijk van hoeveel we er uiteindelijk in elke module steken, maar dit zijn de huidige aantallen)
+    html += "Abstractie: <input class='input1' id='input0' type='number' onkeydown='return false' min='0' max='28' value='0'><br>";
+    html += "Decompositie: <input class='input1' id='input1' type='number' onkeydown='return false' min='0' max='25' value='0'><br>";
+    html += "Patroonherkenning: <input class='input1' id='input2' type='number' onkeydown='return false' min='0' max='30' value='0'><br>";
+    html += "Algoritmisch denken: <input class='input1' id='input3' type='number' onkeydown='return false' min='0' max='23' value='0'><br>";
+
+    html += emptyLine(2);
+
+    html += createButton("button3","","Start","startCustomExercises()");
+    html += emptyLine(2);
+    html += createButton("button1","","Hoofdmenu","returnToMainMenu()");
+
+    getElem("levelselection").innerHTML = html;
+}
+
+function startCustomExercises(){
+    selectedExerciseIdx = 0;
+    chosenExercises = [];
+
+    let counts = [
+        parseInt(getElem("input0").value) || 0,
+        parseInt(getElem("input1").value) || 0,
+        parseInt(getElem("input2").value) || 0,
+        parseInt(getElem("input3").value) || 0
+    ];
+
+    for(let moduleIdx = 0; moduleIdx < 4; moduleIdx++){
+        let moduleExercises = Exercises[moduleIdx];
+
+        for(let i = 0; i < counts[moduleIdx]; i++){
+            let randomExercise = moduleExercises[Math.floor(Math.random()*moduleExercises.length)];
+
+            while(chosenExercises.includes(randomExercise)){
+                randomExercise = moduleExercises[Math.floor(Math.random()*moduleExercises.length)];
+            }
+
+            chosenExercises.push(randomExercise);
+        }
+    }
+
+    limit = chosenExercises.length;
+
+    // sorteer op moeilijkheid
+    chosenExercises.sort((a, b) => a.diff - b.diff);
+
+    loadExerciseContents();
+}
