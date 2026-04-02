@@ -289,32 +289,32 @@ function loadModuleSelectionScreen(){
     getElem("mainmenu").innerHTML = "";
     let levelselection = getElem("levelselection");
     let html = "";
-    html += "<h1>Module Selection</h1>"
-    html += "<p>Selecteer een module:</p>";
+    html += "<h1>Module Selectie</h1>"
+    html += textLine("Kies een module om te beginnen")
     html += emptyLine(1);
-    html += "<p>Module 1:</p>";
+    html += textLine("Module 1: Abstractie");
     html += createButton("button1","","Abstractie",
         `pickExercises(0);loadExerciseContents()`);
 
     html += emptyLine(2);
-    html += "<p>Module 2:</p>";
+    html += textLine("Module 2: Decompositie");
     html += createButton("button1","","Decompositie",
         `pickExercises(1);loadExerciseContents()`);
 
     html += emptyLine(2);
-    html += "<p>Module 3: </p>";
+    html += textLine("Module 3: Patroonherkenning")
     html += createButton("button1","","Patroonherkenning",
         `pickExercises(2);loadExerciseContents()`);
 
     html += emptyLine(2);
-    html += "<p>Module 4: </p>";
-    html += createButton("button1","","Algoritmisch denken",
+    html += textLine("Module 4: Algorithmisch denken");
+    html += createButton("button1","","Algorithmisch denken",
         `pickExercises(3);loadExerciseContents()`);
 
     html += emptyLine(2);
-    html += "<p>Module 5: </p>";
-    html += createButton("button1","","Geïntegreerde oefeningen",
-        "");
+    html += textLine("Module 5: Integreerde vragen");
+    html += createButton("button1","","Integreerde vragen",
+        "pickExercisesMixed();loadExerciseContents()");
 
     html += emptyLine(2);
     html += "<p>Maak je eigen module: </p>";
@@ -371,7 +371,7 @@ function loadMainMenu(){
     html += createButton("button1","","Start","loadModuleSelectionScreen()");
     html += emptyLine(4);
     html += createButton("button1","","Tutorial",
-        `pickExercises(5,false);loadExerciseContents()`);
+        `pickExercises(4,false);loadExerciseContents()`);
     html += emptyLine(4);
     html += createButton("button1","","Over CTThinker","loadInfoScreen()");
     mainmenu.innerHTML = html;

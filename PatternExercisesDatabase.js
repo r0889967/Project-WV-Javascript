@@ -298,25 +298,6 @@ let findNonPatternSeq2 = {
     correctAnswers : [2,3,5],
 }
 
-let WhatIsThePattern = {
-    title: "What is the pattern?",
-    text:["Observe the sequence below carefully, in what order are the operations of the pattern applied?",
-        "5,35,8,80,16,6,42,6,60,12,2"],
-    type:"C",
-    diff:1,
-    choices : ["greatest digit","/5","x10","sum of digits","x7"],
-    correctOrder : ["x7","sum of digits","x10","/5","greatest digit"],
-}
-
-let WhatIsThePattern2 = {
-    title: "What is the pattern?",
-    text:["Observe the sequence below carefully, in what order are the operations of the pattern applied?",
-        "1,2,4,7,11,9,10,12,15,19,17"],
-    type:"C",
-    diff:0,
-    choices : ["+4","-2","+1","+3","+2"],
-    correctOrder : ["+1","+2","+3","+4","-2"],
-}
 
 let redBlueCircles = {
     title:"Rode en blauwe cirkels",
