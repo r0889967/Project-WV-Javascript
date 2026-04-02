@@ -366,7 +366,7 @@ function loadMainMenu(){
     html += createButton("button1","","Start","loadModuleSelectionScreen()");
     html += emptyLine(4);
     html += createButton("button1","","Tutorial",
-        `pickExercises(5,false);loadExerciseContents()`);
+        `pickExercises(4,false);loadExerciseContents()`);
     html += emptyLine(4);
     html += createButton("button1","","Over CTThinker","loadInfoScreen()");
     mainmenu.innerHTML = html;
