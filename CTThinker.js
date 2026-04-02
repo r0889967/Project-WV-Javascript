@@ -333,25 +333,24 @@ function loadInfoScreen(){
     let info = getElem("info");
     let html = "";
     html += "<h1>Over CTThinker</h1>";
-    html += textLine("CTThinker is een tool ontwikkeld wordt om studenten computionele denken aan te leren.");
-    html += textLine("De tool bevat 5 modules met allerlei vragen.")
+    html += "<p>CTThinker is een tool om de computationele denkvaardigheden bij leerlingen van de tweede graad te verbeteren.</p>";
+    html += "<p>De tool bevat 5 modules gebaseerd op het PRADA-model van Computationeel Denken:<\p>"
     html += emptyLine(1);
-    html += textLine("Module 1 gaat over abstractie")
-    html += textLine("Module 2 gaat over decompositie")
-    html += textLine("Module 3 gaat over patroonherkenning")
-    html += textLine("Module 4 gaat over Algorithmisch denken")
-    html += textLine("Module 5 is een mix van bovenstaande modules")
+    html += "<p>Module 1: Abstractie<\p>"
+    html += "<p>Module 2: Decompositie<\p>"
+    html += "<p>Module 3: Patroonherkenning<\p>"
+    html += "<p>Module 4: Algoritmisch denken<\p>"
+    html += "<p>Module 5: Geïntegreerde oefeningen<\p>"
     html += emptyLine(1);
-    html += textLine("Je kunt een module kiezen om te starten.")
-    html += textLine("Elk keer wordt er 20 willekeurige vragen geselecteerd van makkelijk tot moeilijk.")
-    html += textLine("Er zijn verschillende types van oefeningen.")
+    html += "<p>Je kan beginnen met een module naar keuze, maar we raden aan module 5 als laatste te doen.</p>"
+    html += "<p>Je krijgt een aantal willekeurige en vaste oefeningen van de geselecteerde module</p>"
     html += emptyLine(1);
-    html += textLine("Meerkeuzevragen: Duid de juiste antwoord(en) aan.")
-    html += textLine("Invulvragen: Vul het correcte antwoord(en) in")
-    html += textLine("Drag en drop vragen: Blokken plaatsen in de juiste volgorde")
+    html += "<p> Er zijn drie soorten oefeningen in de tool:<\p>"
+    html += "<p>Type 1: Meerkeuze</p>";
+    html += "<p>Type 2: Invuloefeningen</p>";
+    html += "<p>Type 3: Interactieve sleepoefeningen (Drag and Drop)</p>";
     html += emptyLine(1);
-    html += textLine("Sommige oefeningen beschikken over hints en feedbacks")
-    html += textLine("om studenten te helpen.")
+    html += "<p>Je krijgt feedback na het beantwoorden van elke vraag, zodat je de oplossing goed begrepen hebt.</p>"
     html += createButton("button1","","Hoofdmenu","returnToMainMenu()");
     info.innerHTML = html;
 }
@@ -360,15 +359,15 @@ function loadMainMenu(){
     let mainmenu = getElem("mainmenu");
     let html = "";
     html += "<h1>CTThinker</h1>";
-    html += textLine("Een tool om computionele denken te bevorderen");
-    html += textLine("Gemaakt door David Jiawei Wang and Senne Bosmans");
-    html += textLine("Als het jouw eerste keer is, speel eerst de tutorial");
+    html += textLine("Een tool om computationele denkvaardigheden te verbeteren!");
+    html += textLine("Door David Jiawei Wang en Senne Bosmans");
+    html += textLine("Begin met de tutorial.");
     html += emptyLine(3);
-    html += createButton("button1","","Starten","loadModuleSelectionScreen()");
-    html += emptyLine(3);
+    html += createButton("button1","","Start","loadModuleSelectionScreen()");
+    html += emptyLine(4);
     html += createButton("button1","","Tutorial",
-        `pickExercises(4,false);loadExerciseContents()`);
-    html += emptyLine(3);
+        `pickExercises(5,false);loadExerciseContents()`);
+    html += emptyLine(4);
     html += createButton("button1","","Over CTThinker","loadInfoScreen()");
     mainmenu.innerHTML = html;
 }
