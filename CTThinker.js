@@ -312,8 +312,8 @@ function loadModuleSelectionScreen(){
         `pickExercises(3);loadExerciseContents()`);
 
     html += emptyLine(2);
-    html += textLine("Module 5: Integreerde vragen");
-    html += createButton("button1","","Integreerde vragen",
+    html += textLine("Module 5: Geïntegreerde oefeningen");
+    html += createButton("button1","","Geïntegreerde oefeningen",
         "pickExercisesMixed();loadExerciseContents()");
 
     html += emptyLine(2);
