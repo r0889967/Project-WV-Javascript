@@ -57,11 +57,24 @@ function checkAnswerA(){
     }
     if(markedIdxs.toString()===exercise.correctAnswers.toString()){
         showAnswer.style.color = "green";
-        showAnswer.innerHTML = "Het antwoord is juist!";
+        showAnswer.innerHTML = "Je hebt alle juiste antwoorden aangeduid!";
         score++;
     }else{
-        showAnswer.style.color = "red";
-        showAnswer.innerHTML = "Het antwoord is fout!";
+        let splittedMarkedIdxsString = markedIdxs.toString().split(",");
+        let partialCorrect = true;
+        for(let idx of splittedMarkedIdxsString){
+            if(!exercise.correctAnswers.toString().includes(idx)){
+                partialCorrect = false;
+                break;
+            }
+        }
+        if(partialCorrect){
+            showAnswer.style.color = "orange";
+            showAnswer.innerHTML = "Je hebt niet alle juiste antwoorden aangeduid!";
+        }else {
+            showAnswer.style.color = "red";
+            showAnswer.innerHTML = "Je hebt foute antwoorden aangeduid!";
+        }
     }
     showAnswer.innerHTML += createButton("button1","","Volgende vraag","toNextLevel()");
 
@@ -103,11 +116,11 @@ function checkAnswerC(){
     }
     if(currentOrder.toString() === exercise.correctOrder.toString()){
         showAnswer.style.color = "green";
-        showAnswer.innerHTML = "Het antwoord is juist!";
+        showAnswer.innerHTML = "De volgorde is juist!";
         score++;
     }else{
         showAnswer.style.color = "red";
-        showAnswer.innerHTML = "Het antwoord is fout!";
+        showAnswer.innerHTML = "De volgorde is fout!";
     }
     showAnswer.innerHTML += createButton("button1","","Volgende vraag","toNextLevel()");
 }
