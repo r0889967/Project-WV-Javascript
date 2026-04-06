@@ -1,6 +1,6 @@
 let encryptedText1 = {
     title: "Versleutelde tekst",
-    text:["De onderstaande takest wordt versleuteld.",
+    text:["De onderstaande tekst wordt versleuteld.",
         "Jk dfnk dbt jf djt kvnt",
         "Probeer de tekst te ontcijferen.(Let op hoofdletters!)"],
     type: "B",
@@ -10,7 +10,7 @@ let encryptedText1 = {
 
 let encryptedText2 = {
     title:"Versleutelde tekst",
-    text:["De onderstaande takest wordt versleuteld.",
+    text:["De onderstaande tekst wordt versleuteld.",
         "Jl cfo kjvz cftuf wsjfoe",
         "Probeer de tekst te ontcijferen.(Let op hoofdletters!)"],
     type : "B",
@@ -20,7 +20,7 @@ let encryptedText2 = {
 
 let encryptedText3 = {
     title:"Versleutelde tekst",
-    text:["De onderstaande takest wordt versleuteld.",
+    text:["De onderstaande tekst wordt versleuteld.",
         "kI ewns jluile eglku",
         "Probeer de tekst te ontcijferen.(Let op hoofdletters!)"],
     type : "B",
@@ -30,7 +30,7 @@ let encryptedText3 = {
 
 let encryptedText4 = {
     title:"Versleutelde tekst",
-    text:["De onderstaande takest wordt versleuteld.",
+    text:["De onderstaande tekst wordt versleuteld.",
         "eJ laz teh droowtna nennuk nezel",
         "Probeer de tekst te ontcijferen.(Let op hoofdletters!)"],
     type : "B",
@@ -40,7 +40,7 @@ let encryptedText4 = {
 
 let encryptedText5 = {
     title:"Versleutelde tekst",
-    text:["De onderstaande takest wordt versleuteld.",
+    text:["De onderstaande tekst wordt versleuteld.",
         "loot ezed nav ej dniv taW",
         "Probeer de tekst te ontcijferen.(Let op hoofdletters!)"],
     type : "B",
@@ -50,11 +50,12 @@ let encryptedText5 = {
 
 let encryptedText6 = {
     title:"Versleutelde tekst",
-    text:["De onderstaande takest wordt versleuteld.",
+    text:["De onderstaande tekst wordt versleuteld.",
         "L#f# i# a# e#d#e#s p#o#e#s o# l#a#r#i#g",
         "Probeer de tekst te ontcijferen.(Let op hoofdletters!)"],
     type : "B",
     diff:2,
+    hint:"De tekst is in het Engels.",
     correctAnswer : "Life is an endless process of learning",
 }
 
@@ -141,36 +142,36 @@ let filter2 = {
 }
 
 let followAlgorithm1 = {
-    title:"Follow algorithm",
-    text:["Suppose we have the number 137 at the start, we execute the following steps.",
-        "1) Replace every digit smaller than 5 with 2.",
-        "2) Swap the first and last digit.",
-        "3) Replace the first and second digit with their sum.",
-        "4) Minus one to every digit.",
-        "5) Replace the whole number by the sum of its digits."],
+    title:"Volg het algoritme",
+    text:["Stel dat we beginnen met het getal 137, dan voeren we de volgende stappen uit:",
+"1) Vervang elk cijfer kleiner dan 5 door 2.",
+"2) Wissel het eerste en het laatste cijfer om.",
+"3) Vervang het eerste en het tweede cijfer door hun som.",
+"4) Trek één af van elk cijfer.",
+"5) Vervang het hele getal door de som van zijn cijfers."],
     type : "B",
     diff:3,
     correctAnswer : "9"
 }
 
 let followAlgorithm2 = {
-    title:"Follow algorithm",
-    text:["Suppose we have A at the start, we execute the following steps.",
-        "1) Add a whitespace at the end of the string, followed by a copy of the string to the end.",
-        "2) Add a B to the right of each A.",
-        "3) Add a C to the left of each B.",
-        "What is the result if we repeat the process 2 times?"],
+    title:"Volg het algoritme",
+    text:["Stel dat we aan het begin een A hebben, dan voeren we de volgende stappen uit:",
+        "1) Voeg een spatie toe aan het einde van de string, gevolgd door een kopie van de string aan het einde.",
+"2) Voeg een B toe rechts van elke A.",
+"3) Voeg een C toe links van elke B.",
+    "Wat is het resultaat als we dit proces 2 keer herhalen?",],
     type : "B",
     diff:2,
     correctAnswer : "ACBCCB ACBCCB ACBCCB ACBCCB",
 }
 
 let followAlgorithm3 = {
-    title:"Follow algorithm",
-    text:["Suppose we have 4 at the start, we execute the following steps.",
-        "1) As long as the number is not divisible by 5, add 3 to the number.",
-        "2) Replace the number by the smallest prime number that's greater than the number.",
-        "What is the result if we repeat the process 4 times?"],
+    title:"Volg het algoritme",
+    text:["Stel dat we beginnen met 4, dan voeren we de volgende stappen uit:",
+"1) Zolang het getal niet deelbaar is door 5, tel er 3 bij op.",
+"2) Vervang het getal door het kleinste priemgetal dat groter is dan het getal.",
+    "Wat is het resultaat als we dit proces 4 keer herhalen?"],
     type : "B",
     diff:2,
     correctAnswer : "41",

@@ -193,18 +193,18 @@ let FindWordsInSrcambledText6 = {
 
 let farmerWolfGoatCabbage = {
     title:"Farmer wolf goat cabbage",
-    text:["A farmer(F), wolf(W), goat(G) and cabbage(C) have to cross over a river by boat.",
-        "The boat can only hold the weight of at most 2 characters.",
-        "Only the farmer can steer the boat.",
-        "The wolf will eat the goat if left alone.",
-        "The goat will eat the cabbage if left alone.",
-        "How can the farmer and his belongings cross over the river without losing something?"],
+    text:["Een boer (B), een wolf (W), een geit (G) en een kool (K) moeten met boot een rivier oversteken.",
+        "De boot kan maximaal het gewicht van 2 dingen dragen.",
+        "Alleen de boer kan de boot besturen.",
+        "De wolf zal de geit opeten als hij alleen wordt gelaten.",
+        "De geit zal de kool opeten als hij alleen wordt gelaten.",
+        "Hoe kunnen de boer en zijn bezittingen de rivier oversteken zonder iets te verliezen?"],
     type : "C",
     diff:3,
-    choices:["F take C across","F take W across","F take G across","F returns alone",
-        "F returns alone","F take G across","F returns with G","F returns with W","F returns with C"],
-    correctOrder:["F take G across","F returns alone","F take W across","F returns with G",
-        "F take C across","F returns alone","F take G across",]
+    choices:["B neemt K mee naar overkant","B neemt W mee naar overkant","B neemt G mee naar overkant","B komt terug alleen",
+        "B komt terug alleen","B neemt G mee naar overkant","B komt terug met G","B komt terug met W","B komt teurg met K"],
+    correctOrder:["B neemt G mee naar overkant","B komt terug alleen","B neemt W mee naar overkant","B komt terug met G",
+        "B neemt K mee naar overkant","B komt terug alleen","B neemt G mee naar overkant",]
 }
 
 let cannibalsAndMissionaries = {
