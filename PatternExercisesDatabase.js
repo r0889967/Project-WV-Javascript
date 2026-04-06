@@ -79,6 +79,16 @@ let nextNumberInSeq8 = {
     correctAnswer : "132",
 }
 
+let nextNumberInSeq9 = {
+    title: "Volgende element in reeks",
+    text:["Gegeven onderstaande reeks.",
+        "4,16,28,40,?",
+        "Wat is de volgende element in de reeks?"],
+    type:"B",
+    diff : 3,
+    correctAnswer : "16",
+}
+
 let nextStrInSeq = {
     title: "Volgende element in reeks",
     text:["Gegeven onderstaande reeks.",
@@ -329,6 +339,7 @@ patExercises.push(nextNumberInSeq5);
 patExercises.push(nextNumberInSeq6);
 patExercises.push(nextNumberInSeq7);
 patExercises.push(nextNumberInSeq8);
+patExercises.push(nextNumberInSeq9);
 patExercises.push(nextStrInSeq);
 patExercises.push(nextStrInSeq2);
 patExercises.push(nextStrInSeq3);

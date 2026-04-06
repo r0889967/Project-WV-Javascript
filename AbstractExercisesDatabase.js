@@ -225,6 +225,7 @@ let reluctantStoryElements = {
     hint:"Overbodig betekent dat het element geen grote rol heeft gespeeld, maar slechts als achtergrondfiguren.",
     choices : ["gat","vogel","griezelige bomen","steen","spin","berk","beer","vijver"],
     correctAnswers : [1,2,6,7],
+
 }
 
 let nonFittingWords = {

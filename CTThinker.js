@@ -58,6 +58,9 @@ function checkAnswerA(){
     if(markedIdxs.toString()===exercise.correctAnswers.toString()){
         showAnswer.style.color = "green";
         showAnswer.innerHTML = "Je hebt alle juiste antwoorden aangeduid!";
+        if(exercise.fb1){
+            let showFeedback1 = getElem("showfeedback1");
+        }
         score++;
     }else{
         let splittedMarkedIdxsString = markedIdxs.toString().split(",");
@@ -99,6 +102,9 @@ function checkAnswerB(input){
         showAnswer.style.color = "green";
         showAnswer.innerHTML = "Het antwoord is juist!";
         score++;
+        if(exercise.fb1){
+            let showFeedback1 = getElem("showfeedback1");
+        }
     }else{
         showAnswer.style.color = "red";
         showAnswer.innerHTML = "Het antwoord is fout!";
@@ -118,6 +124,9 @@ function checkAnswerC(){
         showAnswer.style.color = "green";
         showAnswer.innerHTML = "De volgorde is juist!";
         score++;
+        if(exercise.fb1){
+            let showFeedback1 = getElem("showfeedback1");
+        }
     }else{
         showAnswer.style.color = "red";
         showAnswer.innerHTML = "De volgorde is fout!";
@@ -183,7 +192,7 @@ function loadTypeAExercise(choices){
     }
     html += emptyLine(1);
     html += createButton("button3","checkbutton","Check",
-        `checkAnswerA();getElem('checkbutton').disabled=true`);
+        `checkAnswerA();this.disabled=true`);
     return html;
 }
 
@@ -191,7 +200,7 @@ function loadTypeBExercise(){
     let html = "";
     html += textLine(`Vul hier jouw antwoord(en):<input class="input1" id="inputprompt" >`);
     html += createButton("button3","checkbutton","Check",
-        `checkAnswerB(getElem('inputprompt').value);getElem('checkbutton').disabled=true`);
+        `checkAnswerB(getElem('inputprompt').value);this.disabled=true`);
     return html;
 }
 
@@ -213,7 +222,7 @@ function loadTypeCExercise(choices){
     html += "<div class='div2' id='answerdiv' ondrop='dropHandler(event)' ondragover='dragoverHandler(event)'></div>";
     html += emptyLine(1);
     html += createButton("button3","checkbutton","Check",
-        `checkAnswerC();getElem('checkbutton').disabled=true`);
+        `checkAnswerC();this.disabled=true`);
     return html;
 }
 
@@ -266,11 +275,13 @@ function loadExerciseContents(){
         }
         if(exercise.hint) {
             html += createButton("button4", "hintbutton", "Hint",
-                "showHint();getElem('hintbutton').disabled=true");
+                "showHint();this.disabled=true");
         }
         html += emptyLine(1);
         html += `<p id="showhint"></p>`;
         html += `<p id="showanswer"></p>`;
+        html += `<p id="showfeedback1"></p>`;
+        html += `<p id="showfeedback2"></p>`;
         html += emptyLine(3);
         html += createButton("button1","","Module Selectie","returnToModuleSelection();score=0");
         level.innerHTML = html;
