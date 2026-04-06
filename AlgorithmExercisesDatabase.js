@@ -1,17 +1,17 @@
 let encryptedText1 = {
     title: "Versleutelde tekst",
-    text:["De onderstaande takest wordt versleutd.",
+    text:["De onderstaande takest wordt versleuteld.",
         "Jk dfnk dbt jf djt kvnt",
         "Probeer de tekst te ontcijferen.(Let op hoofdletters!)"],
     type: "B",
-    diff:1,
+    diff:0,
     correctAnswer : "Ik denk dat je dit kunt",
 }
 
 let encryptedText2 = {
     title:"Versleutelde tekst",
-    text:["De onderstaande takest wordt versleutd.",
-        "J bn zpvs cftu gsjfoe Jl cfo kjvz cftuf wsjfoe",
+    text:["De onderstaande takest wordt versleuteld.",
+        "Jl cfo kjvz cftuf wsjfoe",
         "Probeer de tekst te ontcijferen.(Let op hoofdletters!)"],
     type : "B",
     diff:2,
@@ -19,40 +19,40 @@ let encryptedText2 = {
 }
 
 let encryptedText3 = {
-    title:"Encrypted text",
-    text:["The following text has been encrypted using a simple algorithm.",
-        "w Isia hll fo oyg uool dcuk",
-        "You need to decrypt this text. (The answer is case-sensitive.)"],
+    title:"Versleutelde tekst",
+    text:["De onderstaande takest wordt versleuteld.",
+        "kI ewns jluile eglku",
+        "Probeer de tekst te ontcijferen.(Let op hoofdletters!)"],
     type : "B",
     diff:2,
-    correctAnswer : "I wish all of you good luck",
+    correctAnswer : "Ik wens jullie geluk",
 }
 
 let encryptedText4 = {
-    title:"Encrypted text",
-    text:["The following text has been encrypted using a simple algorithm.",
-        "uoY dluohs eb elba ot ees eht rewsna",
-        "You need to decrypt this text. (The answer is case-sensitive.)"],
+    title:"Versleutelde tekst",
+    text:["De onderstaande takest wordt versleuteld.",
+        "eJ laz teh droowtna nennuk nezel",
+        "Probeer de tekst te ontcijferen.(Let op hoofdletters!)"],
     type : "B",
-    diff:0,
-    correctAnswer : "You should be able to see the answer",
+    diff:1,
+    correctAnswer : "Je zal het antwoord kunnen lezen",
 }
 
 let encryptedText5 = {
-    title:"Encrypted text",
-    text:["The following text has been encrypted using a simple algorithm.",
-        "eavH nuf gearninl hitw shit loot",
-        "You need to decrypt this text. (The answer is case-sensitive.)"],
+    title:"Versleutelde tekst",
+    text:["De onderstaande takest wordt versleuteld.",
+        "loot ezed nav ej dniv taW",
+        "Probeer de tekst te ontcijferen.(Let op hoofdletters!)"],
     type : "B",
-    diff:0,
-    correctAnswer : "Have fun learning with this tool",
+    diff:1,
+    correctAnswer : "Wat vind je van deze tool",
 }
 
 let encryptedText6 = {
-    title:"Encrypted text",
-    text:["The following text has been encrypted using a simple algorithm.",
+    title:"Versleutelde tekst",
+    text:["De onderstaande takest wordt versleuteld.",
         "L#f# i# a# e#d#e#s p#o#e#s o# l#a#r#i#g",
-        "You need to decrypt this text. (The answer is case-sensitive.)"],
+        "Probeer de tekst te ontcijferen.(Let op hoofdletters!)"],
     type : "B",
     diff:2,
     correctAnswer : "Life is an endless process of learning",
@@ -99,8 +99,8 @@ let mapping5 = {
     text:["Als f([a,b])=3,f([b,a])=3,f([b,c,d])=9,f([a,c])=4,f([b,b])=4,f([a,c,b,e])=11",
         "f([a,a,b,c,e])=?"],
     type : "B",
-    diff:1,
-    hint:"Try to change the letters into numbers.",
+    diff:3,
+    hint:"Probeer een relatie tussen de letters en de getallen te vinden.",
     correctAnswer : "12",
 }
 
@@ -123,18 +123,18 @@ let mapping7 = {
 }
 
 let filter1 = {
-    title:"Filter function",
-    text:["If f([1,2,4,3,5,7])=[1,3,5,7], f([9,7,4,5,6,1]=[9,7,5,1]",
-        "f([2,3,5,4,4,6])=? (Please make sure your answer is the same format as the examples)"],
+    title:"Filter functie",
+    text:["Als f([1,2,4,3,5,7])=[1,3,5,7], f([9,7,4,5,6,1]=[9,7,5,1]",
+        "f([2,3,5,4,4,6])=?"],
     type : "B",
     diff:0,
     correctAnswer : "[3,5]",
 }
 
 let filter2 = {
-    title:"Filter function",
-    text:["If f([10,25,41,3,9])=[41,3], f([7,61,88,5,91,110]=[7,61,5]",
-        "f([2,78,31,11,45,79,4])=? (Please make sure your answer is the same format as the examples)"],
+    title:"Filter functie",
+    text:["Als f([10,25,41,3,9])=[41,3], f([7,61,88,5,91,110]=[7,61,5]",
+        "f([2,78,31,11,45,79,4])=?"],
     type : "B",
     diff:1,
     correctAnswer : "[2,31,11,79]",
@@ -192,15 +192,15 @@ let followAlgorithm4 = {
 }
 
 let ballsAndDrawers = {
-    title:"Balls and drawers",
-    text:["Sarah wants to put her balls inside her drawers, so she does the following.",
-        "She put the 1st ball in the blue drawer, the 2nd ball in the red drawer,",
-        "the 3rd ball in the green drawer and the 4th ball in the yellow drawer.",
-        "After putting the 4th ball, she will repeat the above mentioned cycle.",
-        "In which drawer will Sarah put the 35th ball?"],
+    title:"Ballen en schotels",
+    text:["Sarah wil haar ballen in haar lades leggen, dus doet ze het volgende.",
+        "Ze legt de eerste bal in de blauwe schotel, de tweede bal in de rode schotel,",
+        "de derde bal in de groene schotel en de vierde bal in de gele schotel.",
+        "Nadat ze de vierde bal erin heeft gelegd, herhaalt ze de bovenstaande cyclus.",
+        "In welke schotel legt Sarah de 35e bal?"],
     type : "A",
     diff:1,
-    choices:["blue","red","green","yellow"],
+    choices:["blauw","rood","groen","geel"],
     correctAnswers : [2]
 }
 
@@ -222,20 +222,20 @@ let runningRace = {
 }
 
 let randomNumberGenerator = {
-    title: "Random number generator",
-    text:["Suppose we have the following algorithm to generate the next random number.",
+    title: "Getalgenerator",
+    text:["Stel dat we het volgende algoritme hebben om het volgende willekeurige getal te genereren.",
         "x -> (x+3) modulo 10",
-        "If we begin with the number 5, what will be the 9th random number?",],
+        "Als we beginnen met 5, wat zal de 9de getal zijn?",],
     type:"B",
     diff:2,
     correctAnswer : "9"
 }
 
 let randomNumberGenerator2 = {
-    title: "Random number generator",
-    text:["Suppose we have the following algorithm to generate the next random number.",
+    title: "Getalgenerator",
+    text:["Stel dat we het volgende algoritme hebben om het volgende willekeurige getal te genereren.",
         "x -> (x*3) modulo 15",
-        "If we begin with the number 4, what will be the 8th random number?",],
+        "Als we beginnen met 4, wat zal de 8ste getal zijn?",],
     type:"B",
     diff:3,
     correctAnswer : "3"

@@ -8,7 +8,7 @@ let grimReaper = {
     type : "A",
     diff : 0,
     choices : ["Grim Reaper wil wegblijven van kaarsen.","Grim Reaper wil gewoon dat Sarah voor eeuwig leeft.","Grim Reaper was bang om terug te komen.",
-        "Grim Reaper heeft nog de kaars zien opbranden.","Grim Reaper heeft Sarah vergeten.","Grim Reaper is dood."],
+        "Grim Reaper heeft nooit de kaars zien opbranden.","Grim Reaper heeft Sarah vergeten.","Grim Reaper is dood."],
     correctAnswers : [3],
 }
 
@@ -51,17 +51,17 @@ let whoIsTheCulprit = {
 }
 
 let manAndSnail = {
-    title:"The man and the snail",
-    text:["An confident man and a snail decided to have a very long race, the one who reaches the finish first wins.",
-        "When the race started, the man was already gone while the snail was just crawling slowly.",
-        "The man was very confident that he will win but once he reaches the finish, the snail was already there.",
-        "The man couldn't believe that he lost.",
-        "What are the possible and logical causes that made the slow snail beat the fast man?"],
+    title:"De man en de slak",
+    text:["Een zelfverzekerde man en een slak besloten een lange race te houden; wie als eerste de finish bereikt, wint.",
+        "Toen de race begon, was de man al vertrokken, terwijl de slak langzaam voortkroop.",
+        "De man was er heel zeker van dat hij zou winnen, maar toen hij de finish bereikte, was de slak er al.",
+        "De man kon niet geloven dat hij had verloren.",
+        "Wat zijn de mogelijke en logische oorzaken dat de langzame slak de snelle man versloeg?"],
     type : "A",
     diff : 2,
-    hint: "By logical, we mean all reasons that can possibly happen in reality.",
-    choices : ["The snail was a super-snail that can go very fast.","The man decided to sleep for many hours during the race, allowing the snail to win.",
-        "The snail had asked an identical looking snail to stand at the finish line beforehand.","The snail had learned to teleport.","The man might had faced some unforeseen circumstances during the race, causing him to lose."],
+    hint: "Met logisch bedoelen we elke mogelijkheid die mogelijk is in het echt.",
+    choices : ["De slak was een snelle superslak.","De man had te lang geslapen tijdens de race zodat de slak kan winnen.",
+        "De slak had op voorhand een identische slak bij de finish gezet.","De slak kon teleporteren.","De man was ziek en kan nauwelijks lopen."],
     correctAnswers : [1,2,4],
 }
 
@@ -109,8 +109,8 @@ let spellWord4 ={
     text:["De letters zijn door elkaar, rangschik de letters om het woord te vormen.",],
     type : "C",
     diff : 0,
-    choices : ["I","R","E","D"],
-    correctOrder : ["D","R","I","E"],
+    choices : ["I","R","E","V"],
+    correctOrder : ["V","I","E","R"],
 }
 
 let spellWord5 ={
@@ -192,38 +192,38 @@ let answerCraziness = {
 }
 
 let prisonerAnd2Doors = {
-    title:"Prisoner and 2 doors",
-    text:["A prisoner is standing in front of 2 doors, there is a guard standing next to each door.",
-        "One door will lead to freedom and one door will lead to death.",
-        "One guard always tells the truth and one guard always lies.",
-        "The prisoner doesn't know anything about the doors or guards.",
-        "The prisoner is given a chance to ask one of the guards one question.",
-        "What question should the prisoner ask to know 100% which door leads to freedom?"],
+    title:"Gevangene en 2 deuren",
+    text:["Een gevangene staat voor 2 deuren, voor elke deur staat er een agent.",
+        "1 deur leidt tot vrijheid en de andere leidt tot dood.",
+        "1 agent zegt altijd de waarheid en de andere liegt altijd.",
+        "De gevangene weet niets over de dueren en de agenten",
+        "De ontvangene heeft de mogelijkheid om slechts 1 vraag aan 1 van de 2 agenten te stellen.",
+        "Wat moet hij vragen zodat hij 100% weet welke deur tot vrijheid leidt?"],
     type:"A",
     diff : 2,
-    hint:"Try to think on how you can get information of both doors with one question.",
-    choices:["Does door 1 lead to freedom?","Does door 2 lead to freedom?","Does door 1 lead to death?",
-        "Does door 2 lead to death?","Which door leads to freedom?","Which door leads to death?",
-        "What will the other guard say about which door leads to freedom?"],
+    hint:"Hoe kun je informatie van 2 deuren krijgen met 1 vraag?",
+    choices:["Leidt deur 1 tot vrijheid?","Leidt deur 2 tot vrijheid?","Leidt deur 1 tot dood?",
+        "Leidt deur 2 tot dood?","Welke deur leidt tot vrijheid?","Welke deur leidt tot dood?",
+        "Wat zal de andere agent zeggen over welke deur leidt tot vrijheid?"],
     correctAnswers : [6],
 }
 
 let reluctantStoryElements = {
-    title:"Reluctant story elements",
-    text:["Sarah had lost her 4 balls while she was playing outside yesterday so she decided to for look them.",
-        "First she found her red ball when she fell into a hole. As she continued to look for the other balls,",
-        "a random bird flew by. She soon walked deep into the forest with some creepy-looking trees.",
-        "After some more walking, she finally found the yellow ball under a stone.",
-        "While looking for the green ball, she came across a abandoned hut filled with many spiders.",
-        "One spider suddenly jumped out of the hut and climbed onto her, causing her to panic and ran into a birch.",
-        "When she hit the birch, the green ball fell from the birch and onto her head, a bear in the distance looked confused at her,",
-        "wondering what was going on. She searched for the last ball, which was the blue ball. She walked across a pond,",
-        "eventually stopping at the foot of a hill, where she found the blue ball and walked back home.",
-        "What elements in the story are reluctant?"],
+    title:"Overbodig elementen",
+    text:["Sarah was gisteren tijdens het buitenspelen haar vier ballen kwijtgeraakt, dus besloot ze ernaar te zoeken.",
+        "Eerst vond ze haar rode bal toen ze in een gat viel. Terwijl ze verder zocht naar de andere ballen,",
+        "vloog er een vogel voorbij. Ze liep al snel diep het bos in, langs een paar griezelig uitziende bomen.",
+        "Na nog wat lopen vond ze eindelijk de gele bal onder een steen.",
+        "Tijdens haar zoektocht naar de groene bal kwam ze een verlaten hut tegen vol spinnen.",
+        "Een spin sprong plotseling uit de hut en klom op haar, waardoor ze in paniek raakte en tegen een berk aan rende.",
+        "Toen ze tegen de berk aan botste, viel de groene bal van de berk op haar hoofd. Een beer in de verte keek haar verward aan,",
+        "en vroeg zich af wat er aan de hand was. Ze zocht naar de laatste bal, de blauwe. Ze liep over een vijver,",
+        "uiteindelijk stopte ze aan de voet van een heuvel, waar ze de blauwe bal vond en terug naar huis liep.",
+        "Welke elementen in het verhaal zijn overbodig?"],
     type : "A",
     diff : 3,
-    hint:"Reluctant means that the element played no role in the story.",
-    choices : ["hole","bird","scary trees","stone","spider","birch","bear","pond"],
+    hint:"Overbodig betekent dat het element geen grote rol heeft gespeeld, maar slechts als achtergrondfiguren.",
+    choices : ["gat","vogel","griezelige bomen","steen","spin","berk","beer","vijver"],
     correctAnswers : [1,2,6,7],
 }
 

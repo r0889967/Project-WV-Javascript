@@ -1,15 +1,15 @@
 let birthdayParty = {
-    title:"Organize a birthday party",
-    text:["You want to organise a huge birthday party inside your garden. It will take you hours to prepare all the food",
-        "since you want to invite a lot of your friends, you also want to keep the food as fresh as possible for the party. ",
-        "Your friends don't live far from you, they will come in just a few minutes",
-        "after receiving your invitations. Also your garden needs to be decorated and cleaned.",
-        "What will be the most logical way to set up the party?",
+    title:"Verjaardagsfeest",
+    text:["Je wilt een groot verjaardagsfeest in je tuin organiseren. Het kost je uren om al het eten klaar te maken.",
+        "Omdat je veel vrienden wilt uitnodigen, wil je het eten ook zo vers mogelijk houden voor het feest.",
+        "Je vrienden wonen niet ver weg, ze komen binnen een paar minuten nadat ze je uitnodigingen hebben ontvangen.",
+        "Je tuin moet ook nog versierd en schoongemaakt worden.",
+        "Wat is de meest logische manier om het feest te organiseren?",
     ],
     type : "C",
     diff : 0,
-    choices : ["Decorate garden","Send invitations","Prepare food","Clean garden",],
-    correctOrder: ["Clean garden","Decorate garden","Prepare food","Send invitations"],
+    choices : ["Tuin versieren","Uitnodigingen sturen","Eten maken","Tuin schoonmaken",],
+    correctOrder: ["Tuin versieren","Tuin schoonmaken","Eten maken","Uitnodigingen sturen"],
 }
 
 let pocketLampProblem = {
@@ -63,11 +63,11 @@ let machinesInFactory = {
 }
 
 let sortTheNumbers1 = {
-    title:"Sort the numbers",
-    text:["Please sort the numbers from small to big according to the following rules.",
-        "1) All prime numbers are greater than all non-prime numbers.",
-        "2) For prime numbers, simply sort them from small to big normally.",
-        "3) For non-prime numbers, sort them from small to big according to the sum of their digits."],
+    title:"Getallen sorteren",
+    text:["Sorteer de getallen van klein naar groot volgens de volgende regels.",
+        "1) Alle priemgetallen zijn groter dan alle niet-priemgetallen.",
+        "2) Sorteer priemgetallen gewoon van klein naar groot op de normale manier.",
+        "3) Sorteer niet-priemgetallen van klein naar groot op basis van de som van hun cijfers."],
     type : "C",
     diff : 2,
     choices : ["31","52","18","29","13","15","21","5","2"],
@@ -75,48 +75,46 @@ let sortTheNumbers1 = {
 }
 
 let sortTheNumbers2 = {
-    title:"Sort the numbers",
-    text:["Please sort the numbers from small to big according to the following rules.",
-        "1) Sort the numbers according to the sum of their digits.",
-        "2) For numbers with the same sum of digits, sort them according to the product of their digits.",],
+    title:"Getallen sorteren",
+    text:["Sorteer de getallen van klein naar groot volgens de volgende regels.",
+        "1) Sorteer de getallen op basis van de som van hun cijfers.",
+        "2) Sorteer getallen met dezelfde som van hun cijfers op basis van het product van hun cijfers.",],
     type : "C",
     diff : 1,
-    hint:"Try to sort the numbers according to step 1 first.",
     choices : ["6","33","141","41","120","32","9","81"],
     correctOrder : ["120","41","32","141","6","33","81","9"]
 }
 
 let sortTheNumbers3 = {
-    title:"Sort the numbers",
-    text:["Please sort the numbers from small to big according to the following rules.",
-        "Sort the numbers according to the sum of their digits.",],
+    title:"Getallen sorteren",
+    text:["Sorteer de getallen van klein naar groot volgens de volgende regels.",
+        "Sorteer de getallen op basis van de som van hun cijfers.",],
     type : "C",
-    diff : 1,
+    diff : 0,
     choices : ["6","25","5000","31","111","26","9"],
     correctOrder : ["111","31","5000","6","25","26","9"]
 }
 
 let numberOfWaysToReachSum = {
-    title:"Number of ways to reach sum",
-    text:["Suppose we have coins of values of 1, 2, 5 and 10.",
-        "How many ways are there to reach 20?"],
+    title:"Munten",
+    text:["Stel dat we munten hebben met de waarden 1, 2, 5 en 10.",
+        "Op hoeveel manieren kunnen we 20 bereiken?"],
     type : "B",
     diff : 4,
-    hint : "Try to first calculate how many ways there are to make 1,2,3,4 or 5 and work you way step by step up.",
+    hint : "Probeer eerst te berekenen op hoeveel manieren je 1, 2, 3, 4 of 5 kunt maken en werk dan stap voor stap verder.",
     correctAnswer : "40"
 }
 
 let stoneGame = {
-    title:"Stone Game",
-    text:["Alice and Bob are playing a game where there are a number of stones placed on a table.",
-        "Both player take turns to take 1, 2 or 3 stones away from the table, the player that takes away",
-        "the last stone will lose the game.",
-        "Assuming 7 stones at the start, both player play optimally and Alice plays first, how many stones should Alice take away",
-        "on her first turn so she can win 100%."],
+    title:"Steen spel",
+    text:["Alice en Bob spelen een spel waarbij een aantal stenen op een tafel liggen.",
+        "Beide spelers nemen om de beurt 1, 2 of 3 stenen van de tafel. De speler die als eerste een steen wegneemt, verliest het spel.",
+        "Stel dat er aan het begin 7 stenen liggen, beide spelers spelen optimaal en Alice begint, ",
+        "hoeveel stenen moet Alice dan wegnemen zodat zij 100% kan winnen?"],
     type:"A",
     diff:3,
-    hint:"You want there to be only 1 stone left on Bob's turn.",
-    choices:["1 stone","2 stones","3 stones","There is no way Alice can win 100%."],
+    hint:"Je wil dat er alleen maar 1 steen overblijft bij Bob's beurt.",
+    choices:["1 steen","2 stenen","3 stenen","Alice kan nooit 100% winnen hoe dan ook."],
     correctAnswers : [1]
 }
 

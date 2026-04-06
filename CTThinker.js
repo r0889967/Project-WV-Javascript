@@ -163,17 +163,7 @@ function pickExercises(moduleIdx,scramble=true){
     }else{
         chosenExercises = Exercises[moduleIdx];
     }
-    chosenExercises.sort((a, b) => {
-        const diff1 = a.diff;
-        const diff2 = b.diff;
-        if (diff1 < diff2) {
-            return -1;
-        }
-        if (diff1 > diff2) {
-            return 1;
-        }
-        return 0;
-    })
+    chosenExercises.sort((a, b) => a.diff - b.diff);
 }
 
 function loadTypeAExercise(choices){
@@ -181,7 +171,6 @@ function loadTypeAExercise(choices){
     html += textLine("Duid de juiste antwoord(en) aan.");
     html += emptyLine(1);
     let buttonIdx = 0;
-    let i = 0;
     for(let choice of choices) {
         html += createButton("button2", buttonIdx, choice, `getElem(${buttonIdx}).classList.toggle('marked')`);
         if(buttonIdx%2===1) {
@@ -235,7 +224,7 @@ function toNextLevel(){
     }
 }
 
-function loadFinishedScreen(tutorial){
+function loadFinishedScreen(){
     getElem("level").innerHTML = "";
     let html = "";
     html += "<h1>Result</h1>";
@@ -280,7 +269,7 @@ function loadExerciseContents(){
         html += `<p id="showhint"></p>`;
         html += `<p id="showanswer"></p>`;
         html += emptyLine(3);
-        html += createButton("button1","","Module Selectie","returnToModuleSelection();");
+        html += createButton("button1","","Module Selectie","returnToModuleSelection();score=0");
         level.innerHTML = html;
     }
 }
