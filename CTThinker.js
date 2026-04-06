@@ -133,17 +133,7 @@ function pickExercisesMixed(){
         }
         chosenExercises.push(exercise);
     }
-    chosenExercises.sort((a, b) => {
-        const diff1 = a.diff;
-        const diff2 = b.diff;
-        if (diff1 < diff2) {
-            return -1;
-        }
-        if (diff1 > diff2) {
-            return 1;
-        }
-        return 0;
-    })
+    chosenExercises.sort((a, b) => a.diff - b.diff);
 }
 
 function pickExercises(moduleIdx,scramble=true){
