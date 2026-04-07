@@ -94,21 +94,22 @@ function checkAnswerB(input){
     let trimmedInput = input.trim();
     let answerParts = trimmedInput.split(" ");
     let isCorrect = true;
+    let partialCorrect = true;
     if(trimmedInput.length===0){
         isCorrect = false;
+        partialCorrect = false;
     }
     let len = 0;
-    console.log(answerParts);
     for(let part of answerParts){
         if(!exercise.correctAnswer.includes(part)){
             isCorrect = false;
+            partialCorrect = false;
             break;
         }
         if(part!=='') {
             len++;
         }
     }
-    console.log(len);
     if(len<exercise.correctAnswer.split(" ").length){
         isCorrect = false;
     }
@@ -121,8 +122,13 @@ function checkAnswerB(input){
             showFeedback1.innerHTML = exercise.fb1;
         }
     }else{
-        showAnswer.style.color = "red";
-        showAnswer.innerHTML = "Het antwoord is fout!";
+        if(partialCorrect){
+            showAnswer.style.color = "orange";
+            showAnswer.innerHTML = "Het antwoord is juist, maar onvolledig!"
+        }else {
+            showAnswer.style.color = "red";
+            showAnswer.innerHTML = "Het antwoord is fout!";
+        }
         if(exercise.fb2){
             let showFeedback2 = getElem("showfeedback2");
             showFeedback2.innerHTML = exercise.fb2;
