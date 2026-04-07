@@ -98,15 +98,18 @@ function checkAnswerB(input){
         isCorrect = false;
     }
     let len = 0;
+    console.log(answerParts);
     for(let part of answerParts){
-        let trimmedPart = part.trim();
-        if(!exercise.correctAnswer.includes(trimmedPart)){
+        if(!exercise.correctAnswer.includes(part)){
             isCorrect = false;
             break;
         }
-        len++;
+        if(part!=='') {
+            len++;
+        }
     }
-    if(len<exercise.correctAnswer.length){
+    console.log(len);
+    if(len<exercise.correctAnswer.split(" ").length){
         isCorrect = false;
     }
     if(isCorrect){
