@@ -3,13 +3,13 @@ let birthdayParty = {
     text:["Je wilt een groot verjaardagsfeest in je tuin organiseren. Het kost je uren om al het eten klaar te maken.",
         "Omdat je veel vrienden wilt uitnodigen, wil je het eten ook zo vers mogelijk houden voor het feest.",
         "Je vrienden wonen niet ver weg, ze komen binnen een paar minuten nadat ze je uitnodigingen hebben ontvangen.",
-        "Je tuin moet ook nog versierd en schoongemaakt worden.",
+        "Je tuin moet ook nog versierd en schoongemaakt worden, je wil dat de versieringen zo proper mogelijk zijn.",
         "Wat is de meest logische manier om het feest te organiseren?",
     ],
     type : "C",
     diff : 0,
     choices : ["Tuin versieren","Uitnodigingen sturen","Eten maken","Tuin schoonmaken",],
-    correctOrder: ["Tuin versieren","Tuin schoonmaken","Eten maken","Uitnodigingen sturen"],
+    correctOrder: ["Tuin schoonmaken","Tuin versieren","Eten maken","Uitnodigingen sturen"],
 }
 
 let pocketLampProblem = {
@@ -43,6 +43,7 @@ let naughtyKittens = {
     diff : 1,
     choices : ["Celie","Daniel","Johny","Mali","Tommy"],
     correctOrder : ["Daniel","Celie","Tommy","Johny","Mali",],
+
 }
 
 let machinesInFactory = {
@@ -250,7 +251,9 @@ let guessSecretNumber3 = {
     type : "B",
     diff : 0,
     hint:"Dit is zeer makkelijk.",
-    correctAnswer : "0"
+    correctAnswer : "0",
+    fb1:"Met deelbaar alle getallen van 1 tot 100 had je het antwoord al snel kunnen vinden.",
+    fb2:"Er is een zeer belangrijk hint in de vraag, probeer dit volgende keer te vinden!"
 }
 
 let guessSecretNumber4 = {

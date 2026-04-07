@@ -1,7 +1,7 @@
 let grimReaper = {
     title: "Sarah en de Grim Reaper",
     text:["De Grim Reaper kwam naar Sarah, maar sarah wou nog niet dood gaan, dus zij vroeg de Grim Reaper",
-        "om haar langer te laten leven door een kaars op te steken en zei 'Laat mij leven tot deze kaars opgebrand is.'",
+        "om haar langer te laten leven door een kaars op te steken en zei 'Laat mij leven tot deze kaars vanzelf opgebrand is.'",
         "De Grim Reaper zei ja en ging weg. Sarah bloos de kaars onmiddelijk uit nadat Grim Reaper weg is.",
         "Zelfs na vele jaren is het Grim reaper niet teruggekomen om haar leven te nemen.",
         "Hoe heeft Sarah ontsnapt aan de dood?"],
@@ -10,6 +10,8 @@ let grimReaper = {
     choices : ["Grim Reaper wil wegblijven van kaarsen.","Grim Reaper wil gewoon dat Sarah voor eeuwig leeft.","Grim Reaper was bang om terug te komen.",
         "Grim Reaper heeft nooit de kaars zien opbranden.","Grim Reaper heeft Sarah vergeten.","Grim Reaper is dood."],
     correctAnswers : [3],
+    fb1:"Grim Reaper komt alleen teurg als hij de kaars vanzelf zien opbranden, maar omdat Sarah de kaars al zelf uitgeblazen hebben, zag hij de kaars nooit opbranden.",
+    fb2:"Denk er goed over na wat Sarah tegen Grim Reaper gezegd heeft."
 }
 
 let racersDilemma = {
@@ -170,7 +172,7 @@ let questionWithNoAnswer2 = {
     hint:"Waarom zijn er aanhalingstekens rond Geen antwoord?",
     correctAnswers : [1],
     fb1:"Het is gewoon een kwestie van logisch denken.",
-    fb2:"Heb je echt gedacht dat de vraag geen antwoord heeft?"
+    fb2:"Een vraag met 'Geen antwoord' als antwoord is niet dezelfde als een vraag zonder antwoord."
 }
 
 let largeProduct = {
@@ -191,6 +193,7 @@ let mountEverest = {
     choices : ["Mount Fuji","Mount blanc","Mount Kilimanjaro","K2","Mount Elbrus","Mount Everest","Chogolisa","Annapurna"],
     correctAnswers:[5],
     fb1: "Omdat je iets niet ontdekt heeft, betekent niet dat het niet bestaat.",
+    fb2:"Misschien heb je de vraag fout begrepen: Wat was de hoogste berg die men kent voordat Mount Everest ontdekt wordt?"
 }
 
 let answerCraziness = {
@@ -201,7 +204,9 @@ let answerCraziness = {
     choices : ["het antwoord","het Antwoord","Het antwoord","Antwoord","antwoord","het AntwoorD",
     "de antwoord","De antwoord","Het AntWoord","Het Antwoord","het AntWoord","Het AntwoorD","HET ANTWOORD"],
     hint:"Let op op de kleine verschillen.",
-    correctAnswers:[9]
+    correctAnswers:[9],
+    fb1:"Goed gedaan, je hebt goed op de details gelet.",
+    fb2:"Het is belangrijk dat je goed op de details let.",
 }
 
 let prisonerAnd2Doors = {
@@ -214,11 +219,11 @@ let prisonerAnd2Doors = {
         "Wat moet hij vragen zodat hij 100% weet welke deur tot vrijheid leidt?"],
     type:"A",
     diff : 2,
-    hint:"Hoe kun je informatie van 2 deuren krijgen met 1 vraag?",
     choices:["Leidt deur 1 tot vrijheid?","Leidt deur 2 tot vrijheid?","Leidt deur 1 tot dood?",
         "Leidt deur 2 tot dood?","Welke deur leidt tot vrijheid?","Welke deur leidt tot dood?",
         "Wat zal de andere agent zeggen over welke deur leidt tot vrijheid?"],
     correctAnswers : [6],
+    fb2:"Hoe kun je informatie van 2 deuren krijgen met 1 vraag?"
 }
 
 let reluctantStoryElements = {
@@ -238,7 +243,7 @@ let reluctantStoryElements = {
     hint:"Overbodig betekent dat het element geen grote rol heeft gespeeld, maar slechts als achtergrondfiguren.",
     choices : ["gat","vogel","griezelige bomen","steen","spin","berk","beer","vijver"],
     correctAnswers : [1,2,6,7],
-
+    fb2:"Als je het verhaal goed gelezen hebben zou de antwoorden duidelijk moeten zijn."
 }
 
 let nonFittingWords = {
@@ -247,8 +252,9 @@ let nonFittingWords = {
     "Er zijn 2 woorden die niet thuishoren, duid die 2 woorden aan."],
     type:"A",
     diff : 1,
-    choices : ["appel","wortel","peer","perziek","wortel","meloen","pluim","kers","aardbei"],
+    choices : ["appel","wortel","peer","perziek","sla","meloen","pluim","kers","aardbei"],
     correctAnswers : [1,4],
+    fb1:"Wortel en sla zijn geen fruit."
 }
 
 let nonFittingWords2 = {
@@ -259,6 +265,7 @@ let nonFittingWords2 = {
     diff : 2,
     choices : ["aardbei","kers","banaan","appel","framboos","tomaat"],
     correctAnswers : [2],
+    fb1:"Een banaan is geel, de andere dingen zijn rood."
 }
 
 let nonFittingWords3 = {
@@ -267,9 +274,9 @@ let nonFittingWords3 = {
         "Er zijn 2 woorden die niet thuishoren, duid die 2 woorden aan."],
     type:"A",
     diff : 2,
-    hint:"Denk aan de regenboog.",
     choices : ["rood","indigo","bruin","groen","geel","zwart","blauw","violet","oranje"],
     correctAnswers : [2,5],
+    fb1:"Bruin en zwart zijn geen kleuren van de regenboog."
 }
 
 let nonFittingWords4 = {
@@ -280,6 +287,7 @@ let nonFittingWords4 = {
     diff : 1,
     choices : ["kip","mens","penguin","vogel","varken","eend","gans"],
     correctAnswers : [4],
+    fb1:"Een varken heeft 4 poten, de andere hebben 2 poten/voeten."
 }
 
 let nonFittingWords5 = {
@@ -290,6 +298,7 @@ let nonFittingWords5 = {
     diff : 0,
     choices : ["vliegtuig","paard","auto","fiets","schip"],
     correctAnswers : [1],
+    fb1:"Een paard is een dier, de andere dingen niet."
 }
 
 let nonFittingWords6 = {
@@ -300,22 +309,24 @@ let nonFittingWords6 = {
     diff : 3,
     choices : ["specht","uil","mus","pinguin","arend","valk","zwaluw","meeuw","struisvogel","duif"],
     correctAnswers : [3,8],
+    fb1:"Struisvogels en pinguins kunnen niet vliegen."
 }
 
 let minimalGraph = {
     title:"Minimale graaf",
-    text:["Gegeven onderstaande graaf, hoeveel bogen kun je verwijderen zonder de graaf in stukken te breken?",
+    text:["Gegeven onderstaande graaf, wat is het maximale aantal bogen die je kunt verwijderen zonder de graaf in stukken te breken?",
         "Dit wil dus zeggen dat elke knoop bereikbaar moet blijven vanuit elke andere knoop."],
     image:"images/minimale graaf.png",
     type:"B",
     diff : 2,
-    correctAnswer: "10"
+    correctAnswer: "10",
+    fb2:"Probeer de bogen 1 voor 1 weg te halen!"
 }
 
 let fourShapes = {
     title:"4 figuren plaatsen",
-    text:["Gegeven 4 figuren, hoe moet je voor elkaar plaatsen om de onderste tekening te krijgen?",
-    "Zet de figuur die je eerste moet plaatsen aan de linkerkant."],
+    text:["Gegeven 4 figuren, hoe moet je hen boven elkaar plaatsen om de onderste tekening te krijgen?",
+    "Zet de figuur die je eerste moet plaatsen aan de onderkant."],
     image:"images/4 figuren.png",
     type:"C",
     diff : 1,

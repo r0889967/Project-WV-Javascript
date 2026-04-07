@@ -6,6 +6,7 @@ let encryptedText1 = {
     type: "B",
     diff:0,
     correctAnswer : "Ik denk dat je dit kunt",
+    fb2:"Het heeft iets te maken met de klinkers."
 }
 
 let encryptedText2 = {
