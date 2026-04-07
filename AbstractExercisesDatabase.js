@@ -79,7 +79,7 @@ let equivalentStatement = {
     diff : 4,
     choices:["Het regent of ik neem mijn paraplu.","Hte regent en ik neem mijn paraplu.",
         "Als het niet regent, neem ik mijn paraplu niet.","Als ik mijn paraplu niet neem, regent het niet.",
-        "I neem mijn paraplu alleen als het regent.","Zowel neem ik mijn paraplu, of het regent niet.",],
+        "I neem mijn paraplu alleen als het regent.","Ofwel neem ik mijn paraplu, of het regent niet.",],
     correctAnswers : [3,5],
 }
 
