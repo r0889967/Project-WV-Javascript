@@ -97,11 +97,17 @@ function checkAnswerB(input){
     if(trimmedInput.length===0){
         isCorrect = false;
     }
+    let len = 0;
     for(let part of answerParts){
-        if(!exercise.correctAnswer.includes(part)){
+        let trimmedPart = part.trim();
+        if(!exercise.correctAnswer.includes(trimmedPart)){
             isCorrect = false;
             break;
         }
+        len++;
+    }
+    if(len<exercise.correctAnswer.length){
+        isCorrect = false;
     }
     if(isCorrect){
         showAnswer.style.color = "green";
