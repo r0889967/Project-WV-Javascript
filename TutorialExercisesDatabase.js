@@ -24,7 +24,8 @@ let tutorial1 = {
 let tutorial2 = {
     title:"Meerkeuzevraag(Meerdere antwoorden)",
     text:["Dit is een andere meerkeuzevraag, dit keer moet je meerdere antwoorden aanduiden.",
-        "Om deze vraag te voltooien, markeer de antwoorden A,C and E"],
+        "Om deze vraag te voltooien, markeer de antwoorden A,C and E",
+    "Let op: bij deze vragen moet je altijd alle juist antwoorden aanduiden."],
     type : "A",
     diff:0,
     choices : ["A","B","C","D","E"],

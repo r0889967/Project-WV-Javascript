@@ -60,6 +60,7 @@ function checkAnswerA(){
         showAnswer.innerHTML = "Je hebt alle juiste antwoorden aangeduid!";
         if(exercise.fb1){
             let showFeedback1 = getElem("showfeedback1");
+            showFeedback1.innerHTML = exercise.fb1;
         }
         score++;
     }else{
@@ -77,6 +78,10 @@ function checkAnswerA(){
         }else {
             showAnswer.style.color = "red";
             showAnswer.innerHTML = "Je hebt foute antwoorden aangeduid!";
+        }
+        if(exercise.fb2){
+            let showFeedback2 = getElem("showfeedback2");
+            showFeedback2.innerHTML = exercise.fb2;
         }
     }
     showAnswer.innerHTML += createButton("button1","","Volgende vraag","toNextLevel()");
@@ -104,10 +109,16 @@ function checkAnswerB(input){
         score++;
         if(exercise.fb1){
             let showFeedback1 = getElem("showfeedback1");
+            showFeedback1.innerHTML = exercise.fb1;
         }
     }else{
         showAnswer.style.color = "red";
         showAnswer.innerHTML = "Het antwoord is fout!";
+        if(exercise.fb2){
+            let showFeedback2 = getElem("showfeedback2");
+            showFeedback2.innerHTML = exercise.fb2;
+
+        }
     }
     showAnswer.innerHTML += createButton("button1","","Volgende vraag","toNextLevel()");
 }
@@ -126,10 +137,15 @@ function checkAnswerC(){
         score++;
         if(exercise.fb1){
             let showFeedback1 = getElem("showfeedback1");
+            showFeedback1.innerHTML = exercise.fb1;
         }
     }else{
         showAnswer.style.color = "red";
         showAnswer.innerHTML = "De volgorde is fout!";
+        if(exercise.fb2){
+            let showFeedback2 = getElem("showfeedback2");
+            showFeedback2.innerHTML = exercise.fb2;
+        }
     }
     showAnswer.innerHTML += createButton("button1","","Volgende vraag","toNextLevel()");
 }
