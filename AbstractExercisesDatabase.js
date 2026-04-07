@@ -19,9 +19,11 @@ let racersDilemma = {
         "E rent sneller dan F, F rent sneller dan A.",
         "Wie rent het snelste?"],
     type: "A",
-    diff : 1,
+    diff : 2,
     choices : ["A","B","C","D","E","F","Alle racers zijn even snel.","Er is een contradictie."],
     correctAnswers : [7],
+    fb1:"Goed gezien, er is dus een contradictie met deze vraag.",
+    fb2:"Kijk niet enkel naar 'normale' opties, maar ook abnormale opties!"
 }
 
 let racersDilemma2 = {
@@ -34,6 +36,8 @@ let racersDilemma2 = {
     diff : 2,
     choices : ["A","B","C","D","E","F","Alle racers zijn even snel.","Er is een contradictie."],
     correctAnswers : [6],
+    fb1:"Deze uitspraak kan alleen waar zijn als iedereen even snel is.",
+    fb2:"Probeer goed op te letten op de eerste en laatste deel van de vraag!"
 }
 
 let whoIsTheCulprit = {
@@ -48,6 +52,8 @@ let whoIsTheCulprit = {
     hint: "Alle vrienden zijn binnengekomen langs de voordeur, wat kan dit betekenen?",
     choices : ["Alice","Bob","Carole","Dilan","Eva"],
     correctAnswers : [0,1,2,3,4],
+    fb1:"Als iedereen langs de voordeur is binnengeraast, kunnen ze allemaal per ongeluk de vaas breken.",
+    fb2:"Probeer logisch te denken, wat betekent het als iedereen het huis binnenkomt bij de voordeur?"
 }
 
 let manAndSnail = {
@@ -128,8 +134,10 @@ let spellWord6 ={
     type : "C",
     diff : 2,
     choices : ["G","L","E","G","A","A","N","U"],
-    hint:"Het is een woord uit het Engles.",
+    hint:"Het is een woord uit het Engels.",
     correctOrder : ["L","A","N","G","U","A","G","E"],
+    fb1:"Je hebt goed op de letters gelet.",
+    fb2:"Denk ook aan het Engels!"
 }
 
 let spellWord7 ={
@@ -147,8 +155,10 @@ let questionWithNoAnswer = {
     type:"A",
     diff:3,
     choices : ["Ik weet niet.","geen antwoord.","Neen!","Dit is dom.",".........","Vermoord mij!","Alleen God weet het."],
-    hint:"Moet je zelfs een antwoord geven op dee vraag?",
+    hint:"Moet je zelfs een antwoord geven op deze vraag?",
     correctAnswers : [],
+    fb1:"Soms is niets aanduiden ook een mogelijk antwoord.",
+    fb2:"Waarom geef je zelfs een antwoord?"
 }
 
 let questionWithNoAnswer2 = {
@@ -159,6 +169,8 @@ let questionWithNoAnswer2 = {
     choices : ["Ik weet niet.","Geen antwoord.","Neen!","Dit is dom.",".........","Vermoord mij!","Alleen God weet het."],
     hint:"Waarom zijn er aanhalingstekens rond Geen antwoord?",
     correctAnswers : [1],
+    fb1:"Het is gewoon een kwestie van logisch denken.",
+    fb2:"Heb je echt gedacht dat de vraag geen antwoord heeft?"
 }
 
 let largeProduct = {
@@ -166,8 +178,9 @@ let largeProduct = {
     text:["Bereken 1x2x3x4x5x6x7x8x9x10x11x12x13x14x15x16x17x18x19x0x20x21x22x23x24x25x26x27x28x29x30="],
     type:"B",
     diff:1,
-    hint:"Als je dit probeert te berekenen, dan ben je tijd aan het verspillen.",
-    correctAnswer : "0"
+    correctAnswer : "0",
+    fb1:"Let altijd goed op kleine details, de vraag lijkt onmogelijk, maar door goed op te letten kun je het oplossen",
+    fb2:"Heb je goed naar de details gekeken?"
 }
 
 let mountEverest = {
@@ -176,8 +189,8 @@ let mountEverest = {
     type:"A",
     diff:0,
     choices : ["Mount Fuji","Mount blanc","Mount Kilimanjaro","K2","Mount Elbrus","Mount Everest","Chogolisa","Annapurna"],
-    hint:"Omdat je iets niet ontdekt heeft, betekent niet dat het niet bestaat.",
-    correctAnswers:[5]
+    correctAnswers:[5],
+    fb1: "Omdat je iets niet ontdekt heeft, betekent niet dat het niet bestaat.",
 }
 
 let answerCraziness = {
