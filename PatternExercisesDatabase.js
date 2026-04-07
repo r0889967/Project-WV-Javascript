@@ -328,7 +328,8 @@ let numberPyramid = {
     image: "images/getallenpiramide.png",
     type:"B",
     diff:1,
-    correctAnswer:"3 3 4 4 10 10"
+    correctAnswer:"3 3 4 4 10 10",
+    fb1:"Dit wordt ook de driehoek van Pascal genoemd."
 }
 
 patExercises.push(nextNumberInSeq);

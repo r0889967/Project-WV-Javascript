@@ -103,20 +103,21 @@ let numberOfWaysToReachSum = {
     type : "B",
     diff : 4,
     hint : "Probeer eerst te berekenen op hoeveel manieren je 1, 2, 3, 4 of 5 kunt maken en werk dan stap voor stap verder.",
-    correctAnswer : "40"
+    correctAnswer : "40",
 }
 
 let stoneGame = {
     title:"Steen spel",
     text:["Alice en Bob spelen een spel waarbij een aantal stenen op een tafel liggen.",
-        "Beide spelers nemen om de beurt 1, 2 of 3 stenen van de tafel. De speler die als eerste een steen wegneemt, verliest het spel.",
-        "Stel dat er aan het begin 7 stenen liggen, beide spelers spelen optimaal en Alice begint, ",
-        "hoeveel stenen moet Alice dan wegnemen zodat zij 100% kan winnen?"],
+        "Beide spelers nemen om de beurt 1, 2 of 3 stenen van de tafel. De speler die de laatste steen wegneemt, verliest het spel.",
+        "Stel dat er aan het begin 7 stenen liggen en Alice begint, ",
+        "hoeveel stenen moet Alice wegnemen op haar eerste beurt zodat zij 100% kan winnen?"],
     type:"A",
     diff:3,
     hint:"Je wil dat er alleen maar 1 steen overblijft bij Bob's beurt.",
     choices:["1 steen","2 stenen","3 stenen","Alice kan nooit 100% winnen hoe dan ook."],
-    correctAnswers : [1]
+    correctAnswers : [1],
+    fb2:"Probeer het spel stap voor stap uit te spelen met de verschillende mogelijkheden voor beide spelers op elke beurt!"
 }
 
 let FindWordsInSrcambledText = {
@@ -189,7 +190,9 @@ let FindWordsInSrcambledText6 = {
     type : "B",
     diff : 2,
     hint: "Kijk aandachtig naar de hoofdletters in de puin van letters.",
-    correctAnswer : "Duits Engels Frans"
+    correctAnswer : "Duits Engels Frans",
+    fb1:"De hoofdletters waren belangrijke sleutels.",
+    fb2:"De hoofdletters staan er niet voor niets."
 }
 
 let farmerWolfGoatCabbage = {
@@ -201,11 +204,12 @@ let farmerWolfGoatCabbage = {
         "De geit zal de kool opeten als hij alleen wordt gelaten.",
         "Hoe kunnen de boer en zijn bezittingen de rivier oversteken zonder iets te verliezen?"],
     type : "C",
-    diff:3,
+    diff:4,
     choices:["B neemt K mee naar overkant","B neemt W mee naar overkant","B neemt G mee naar overkant","B komt terug alleen",
         "B komt terug alleen","B neemt G mee naar overkant","B komt terug met G","B komt terug met W","B komt teurg met K"],
     correctOrder:["B neemt G mee naar overkant","B komt terug alleen","B neemt W mee naar overkant","B komt terug met G",
-        "B neemt K mee naar overkant","B komt terug alleen","B neemt G mee naar overkant",]
+        "B neemt K mee naar overkant","B komt terug alleen","B neemt G mee naar overkant",],
+    fb2:"Probeer de relaties tussen de boer, de geit, de wolf en de kool beter te bestuderen!"
 }
 
 let cannibalsAndMissionaries = {
@@ -275,8 +279,9 @@ let robotMaze = {
     image:"images/robotdoolhof.png",
     type:"B",
     diff: 4,
-    hint:"Probeer de oplossing stap voor stap uit te werken door bij elke vakje het aantal manieren uit te rekenen, begin met de vakjes naast het rode vakje.",
+    hint:"Denk goed na hoe je dit probleem kan opsplitsen in deelproblemen.",
     correctAnswer : "15",
+    fb2:"Probeer de oplossing stap voor stap uit te werken door bij elke vakje het aantal manieren uit te rekenen, begin met de vakjes naast het rode vakje."
 }
 
 let stackBlocks = {
@@ -285,19 +290,23 @@ let stackBlocks = {
         "Op hoeveel manieren kun je de toren bouwen?",],
     type:"B",
     diff:2,
-    correctAnswer:"21"
+    hint:"De toren kan ofwel 3 blokken met dezelfde kleuren, 2 blokken met dezelfde kleuren of 3 blokken met verschillende kleuren hebben.",
+    correctAnswer:"21",
+    fb2:"Probeer de manieren op te splitsen in verschillende categorien op basis van het aantal blokken met zelfde kleuren!",
 }
 
 
 let computerVirus = {
     title:"Computervirus",
     text:["Gegeven onderstaande computernetwerk, 1 van de computers is besmet met een virus.",
-    "Elke dag zal de virus zich verspreiding over het netwerk mbhv de verbindingen tussen de computers.",
+    "Elke dag zal de virus zich verspreiding over het netwerk via de verbindingen tussen de computers.",
     "Hoeveel dagen duurt het voordat het virus het volledige netwerk besmet?"],
     image:"images/computer virus.png",
     type:"B",
+    hint:"Doe het stap voor stap, welke computers worden besmet per dag?",
     diff:2,
-    correctAnswer :"4"
+    correctAnswer :"4",
+    fb2:"Het is altijd een betere idee om een groot probleem op te splitsen dan het in 1 keer uitrekenen."
 }
 
 decExercises.push(birthdayParty);
