@@ -138,8 +138,8 @@ let spellWord6 ={
     choices : ["G","L","E","G","A","A","N","U"],
     hint:"Het is een woord uit het Engels.",
     correctOrder : ["L","A","N","G","U","A","G","E"],
-    fb1:"Je hebt goed op de letters gelet.",
-    fb2:"Denk ook aan het Engels!"
+    fb1:"Je hebt goed op de letters gelet, het is inderdaad een Engels woord.",
+    fb2:"Hoeft het woord altijd een Nederlandse woord te zijn?"
 }
 
 let spellWord7 ={
@@ -193,7 +193,7 @@ let mountEverest = {
     choices : ["Mount Fuji","Mount blanc","Mount Kilimanjaro","K2","Mount Elbrus","Mount Everest","Chogolisa","Annapurna"],
     correctAnswers:[5],
     fb1: "Omdat je iets niet ontdekt heeft, betekent niet dat het niet bestaat.",
-    fb2:"Misschien heb je de vraag fout begrepen: Wat was de hoogste berg die men kent voordat Mount Everest ontdekt wordt?"
+    fb2:"Misschien heb je de vraag op de foutive manier begrepen: Wat was de hoogste berg die men kent voordat Mount Everest ontdekt wordt?"
 }
 
 let answerCraziness = {

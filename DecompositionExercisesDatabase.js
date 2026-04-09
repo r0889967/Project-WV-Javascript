@@ -12,22 +12,6 @@ let birthdayParty = {
     correctOrder: ["Tuin schoonmaken","Tuin versieren","Eten maken","Uitnodigingen sturen"],
 }
 
-let pocketLampProblem = {
-    title:"5 persons and pocket lamp",
-    text:["There are 5 persons A,B,C,D and E who need to walk over a thin log above a cliff during the dark",
-        "Since it's dark, they need a pocket lamp to see, without the pocket lamp one will fall from the log and die.",
-        "There is only a single pocket lamp and its batteries only lasts for 90 seconds, anyone can hold the pocket lamp.",
-        "The log can only hold the weight of at most 2 persons, or else it will break. It will take A 5 seconds to cross,",
-        "B 50 seconds, C 20 seconds, D 7 seconds and E 8 seconds.",
-        "How can they all walk over the cliff before the battery of their pocket lamp dies? "],
-    type : "A",
-    diff : 2,
-    choices : ["Give C lamp->B and C walk over->C returns->Give A lamp->A and D walk over->A returns->A and E walk over",
-        "Give A lamp->A and B walk over->A returns->A and C walk over->A returns->A and E walk over->A returns->A and D walk over",
-        "Give C lamp->B and C walk over->C returns->Give A lamp->A and E walk over->A returns->A and D walk over"],
-    correctAnswers : [0,2],
-}
-
 let naughtyKittens = {
     title:"De stoute poesjes",
     text:["Je bent de eigenaar van een huisdierwinkel en wil 5 poesjes",
@@ -212,20 +196,6 @@ let farmerWolfGoatCabbage = {
     fb2:"Probeer de relaties tussen de boer, de geit, de wolf en de kool beter te bestuderen!"
 }
 
-let cannibalsAndMissionaries = {
-    title:"Cannibals and missionaries",
-    text:["3 Cannibals(C) and 3 missionaries(M) have to cross over a river by boat.",
-        "The boat can only hold the weight of at most 2 characters.",
-        "If there are more cannibals than missionaries on either bank, the missionaries are eaten.",
-        "How can all 3 missionaries and all 3 cannibals cross over without any missionaries being eaten?",],
-    type:"C",
-    diff:4,
-    choices:["2C go cross","2M go cross","1C returns","2C go cross","1C returns","2C go cross","2C go cross",
-        "1C returns","1C returns","2M go cross","1M and 1C return"],
-    correctOrder:["2C go cross","1C returns","2C go cross","1C returns","2M go cross","1M and 1C return",
-        "2M go cross","1C returns","2C go cross","1C returns","2C go cross"]
-}
-
 let guessSecretNumber = {
     title:"Raad het getal",
     text:["Probeer het geheime getal te raden door de volgende hints. Tussen 10 and 99,",
@@ -290,9 +260,9 @@ let stackBlocks = {
         "Op hoeveel manieren kun je de toren bouwen?",],
     type:"B",
     diff:2,
-    hint:"De toren kan ofwel 3 blokken met dezelfde kleuren, 2 blokken met dezelfde kleuren of 3 blokken met verschillende kleuren hebben.",
-    correctAnswer:"21",
-    fb2:"Probeer de manieren op te splitsen in verschillende categorien op basis van het aantal blokken met zelfde kleuren!",
+    hint:"Probeer de manieren op te splitsen in verschillende categorien op basis van het aantal blokken met zelfde kleuren! ",
+    correctAnswer:"27",
+    fb2: "De toren kan ofwel 3 blokken met dezelfde kleuren, 2 blokken met dezelfde kleuren of 3 blokken met verschillende kleuren hebben.",
 }
 
 
@@ -306,18 +276,17 @@ let computerVirus = {
     hint:"Doe het stap voor stap, welke computers worden besmet per dag?",
     diff:2,
     correctAnswer :"4",
+    fb1:"Je kunt deze vraag gemakkelijk oplossen door elke dag de nieuwe besmette computers te vinden.",
     fb2:"Het is altijd een betere idee om een groot probleem op te splitsen dan het in 1 keer uitrekenen."
 }
 
 decExercises.push(birthdayParty);
-decExercises.push(pocketLampProblem);
 decExercises.push(naughtyKittens);
 decExercises.push(machinesInFactory);
 decExercises.push(farmerWolfGoatCabbage);
 decExercises.push(sortTheNumbers1);
 decExercises.push(sortTheNumbers2);
 decExercises.push(sortTheNumbers3);
-decExercises.push(cannibalsAndMissionaries);
 decExercises.push(numberOfWaysToReachSum)
 decExercises.push(stoneGame);
 decExercises.push(FindWordsInSrcambledText);

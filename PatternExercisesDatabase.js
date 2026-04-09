@@ -318,7 +318,8 @@ let redBlueCircles = {
     type:"B",
     diff: 4,
     hint:"Probeer eerst de juiste patroon te herkennen.",
-    correctAnswer: "7 11 20 24"
+    correctAnswer: "7 11 20 24",
+    fb2:"Kijk naar het aantal blauwe cirkels tussen opeenvolgende rode cirkels, probeer de patroon te vinden!"
 }
 
 let numberPyramid = {
