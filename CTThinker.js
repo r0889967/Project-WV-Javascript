@@ -75,6 +75,7 @@ function checkAnswerA(){
         if(partialCorrect){
             showAnswer.style.color = "orange";
             showAnswer.innerHTML = "Je hebt niet alle juiste antwoorden aangeduid!";
+            score += markedIdxs.length/exercise.correctAnswers.length;
         }else {
             showAnswer.style.color = "red";
             showAnswer.innerHTML = "Je hebt foute antwoorden aangeduid!";
@@ -99,7 +100,7 @@ function checkAnswerB(input){
         isCorrect = false;
         partialCorrect = false;
     }
-    let len = 0;
+    let inputLen = 0;
     for(let part of answerParts){
         if(!exercise.correctAnswer.includes(part)){
             isCorrect = false;
@@ -107,10 +108,10 @@ function checkAnswerB(input){
             break;
         }
         if(part!=='') {
-            len++;
+            inputLen++;
         }
     }
-    if(len<exercise.correctAnswer.split(" ").length){
+    if(inputLen<exercise.correctAnswer.split(" ").length){
         isCorrect = false;
     }
     if(isCorrect){
@@ -125,6 +126,7 @@ function checkAnswerB(input){
         if(partialCorrect){
             showAnswer.style.color = "orange";
             showAnswer.innerHTML = "Het antwoord is juist, maar onvolledig!"
+            score += inputLen/exercise.correctAnswer.split(" ").length;
         }else {
             showAnswer.style.color = "red";
             showAnswer.innerHTML = "Het antwoord is fout!";
@@ -314,6 +316,8 @@ function loadExerciseContents(){
         html += `<p id="showfeedback1"></p>`;
         html += `<p id="showfeedback2"></p>`;
         html += emptyLine(3);
+        html += `<h2>Moeilijkheidsgraad: ${exercise.diff} </h2>`
+        html += `<h2>Huidige score: ${score}/${chosenExercises.length} </h2>`
         html += createButton("button1","","Module Selectie","returnToModuleSelection();score=0");
         level.innerHTML = html;
     }
