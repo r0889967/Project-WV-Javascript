@@ -432,11 +432,10 @@ function loadCustomSelectionScreen(){
 
     html += emptyLine(1);
 
-    // max aantal oefeningen per module: 28, 25, 30, 23 (afhankelijk van hoeveel we er uiteindelijk in elke module steken, maar dit zijn de huidige aantallen)
-    html += "Abstractie: <input class='input1' id='input0' type='number' onkeydown='return false' min='0' max='28' value='0'><br>";
-    html += "Decompositie: <input class='input1' id='input1' type='number' onkeydown='return false' min='0' max='25' value='0'><br>";
-    html += "Patroonherkenning: <input class='input1' id='input2' type='number' onkeydown='return false' min='0' max='30' value='0'><br>";
-    html += "Algoritmisch denken: <input class='input1' id='input3' type='number' onkeydown='return false' min='0' max='23' value='0'><br>";
+    html += `Abstractie: <input class='input1' id='input0' type='number' onkeydown='return false' min='0' max=${abExercises.length} value='0'><br>`;
+    html += `Decompositie: <input class='input1' id='input1' type='number' onkeydown='return false' min='0' max=${decExercises.length} value='0'><br>`;
+    html += `Patroonherkenning: <input class='input1' id='input2' type='number' onkeydown='return false' min='0' max=${patExercises.length} value='0'><br>`;
+    html += `Algoritmisch denken: <input class='input1' id='input3' type='number' onkeydown='return false' min='0' max=${algoExercises.length} value='0'><br>`;
 
     html += emptyLine(2);
 
