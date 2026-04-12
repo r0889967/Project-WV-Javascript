@@ -346,6 +346,50 @@ let soccerGame = {
     correctAnswers : [0,1,5,6],
 }
 
+let guessSecretNumber = {
+    title:"Raad het getal",
+    text:["Probeer het geheime getal te raden door de volgende hints. Tussen 10 and 99,",
+        "niet deelbaar door 3,4,5 of 7, de eerste cijfer is oneven, de som van de cijfers is groter dan 12",
+        "het verschil tussen de eerste en laatste cijfer is gelijk of kleiner dan 2, de eerste cijfers is groter dan de laatste cijfer.",
+    ],
+    type : "B",
+    diff : 3,
+    correctAnswer : "97"
+}
+
+let guessSecretNumber2 = {
+    title:"Raad het getal",
+    text:["Probeer het geheime getal te raden door de volgende hints. Tussen 1 and 99,",
+        "deelbaar door 3 en 5, beide cijfers zijn oneven, de som van 2 cijfers is kleiner dan 8.",
+    ],
+    type : "B",
+    diff : 1,
+    correctAnswer : "15"
+}
+
+let guessSecretNumber3 = {
+    title:"Raad het getal",
+    text:["Probeer het geheime getal te raden door de volgende hints. Tussen 0 and 100,",
+        "deelbaar door alle getallen van 1 tot 100, is even, heeft slechts 1 cijfer, is kleiner dan 50.",
+    ],
+    type : "B",
+    diff : 0,
+    hint:"Dit is zeer makkelijk.",
+    correctAnswer : "0",
+    fb1:"Met deelbaar alle getallen van 1 tot 100 had je het antwoord al snel kunnen vinden.",
+    fb2:"Er is een zeer belangrijk hint in de vraag, probeer dit volgende keer te vinden!"
+}
+
+let guessSecretNumber4 = {
+    title:"Raad het getal",
+    text:["Probeer het geheime getal te raden door de volgende hints. Tussen 0 and 100,",
+        "de som van de cijfers is deelbaar door 5, is een priemgetal, is kleiner dan 40.",
+    ],
+    type : "B",
+    diff : 2,
+    correctAnswer : "23"
+}
+
 abExercises.push(grimReaper);
 abExercises.push(racersDilemma);
 abExercises.push(racersDilemma2);
@@ -375,3 +419,7 @@ abExercises.push(nonFittingWords6);
 abExercises.push(minimalGraph);
 abExercises.push(fourShapes);
 abExercises.push(soccerGame);
+abExercises.push(guessSecretNumber);
+abExercises.push(guessSecretNumber2);
+abExercises.push(guessSecretNumber3);
+abExercises.push(guessSecretNumber4);

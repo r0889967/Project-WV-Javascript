@@ -47,39 +47,6 @@ let machinesInFactory = {
     correctOrder : ["C","F","A","E","D","B"]
 }
 
-let sortTheNumbers1 = {
-    title:"Getallen sorteren",
-    text:["Sorteer de getallen van klein naar groot volgens de volgende regels.",
-        "1) Alle priemgetallen zijn groter dan alle niet-priemgetallen.",
-        "2) Sorteer priemgetallen gewoon van klein naar groot op de normale manier.",
-        "3) Sorteer niet-priemgetallen van klein naar groot op basis van de som van hun cijfers."],
-    type : "C",
-    diff : 2,
-    choices : ["31","52","18","29","13","15","21","5","2"],
-    correctOrder : ["21","15","52","18","2","5","13","29","31"]
-}
-
-let sortTheNumbers2 = {
-    title:"Getallen sorteren",
-    text:["Sorteer de getallen van klein naar groot volgens de volgende regels.",
-        "1) Sorteer de getallen op basis van de som van hun cijfers.",
-        "2) Sorteer getallen met dezelfde som van hun cijfers op basis van het product van hun cijfers.",],
-    type : "C",
-    diff : 1,
-    choices : ["6","33","141","41","120","32","9","81"],
-    correctOrder : ["120","41","32","141","6","33","81","9"]
-}
-
-let sortTheNumbers3 = {
-    title:"Getallen sorteren",
-    text:["Sorteer de getallen van klein naar groot volgens de volgende regels.",
-        "Sorteer de getallen op basis van de som van hun cijfers.",],
-    type : "C",
-    diff : 0,
-    choices : ["6","25","5000","31","111","26","9"],
-    correctOrder : ["111","31","5000","6","25","26","9"]
-}
-
 let numberOfWaysToReachSum = {
     title:"Munten",
     text:["Stel dat we munten hebben met de waarden 1, 2, 5 en 10.",
@@ -196,50 +163,6 @@ let farmerWolfGoatCabbage = {
     fb2:"Probeer de relaties tussen de boer, de geit, de wolf en de kool beter te bestuderen!"
 }
 
-let guessSecretNumber = {
-    title:"Raad het getal",
-    text:["Probeer het geheime getal te raden door de volgende hints. Tussen 10 and 99,",
-        "niet deelbaar door 3,4,5 of 7, de eerste cijfer is oneven, de som van de cijfers is groter dan 12",
-        "het verschil tussen de eerste en laatste cijfer is gelijk of kleiner dan 2, de eerste cijfers is groter dan de laatste cijfer.",
-    ],
-    type : "B",
-    diff : 3,
-    correctAnswer : "97"
-}
-
-let guessSecretNumber2 = {
-    title:"Raad het getal",
-    text:["Probeer het geheime getal te raden door de volgende hints. Tussen 1 and 99,",
-        "deelbaar door 3 en 5, beide cijfers zijn oneven, de som van 2 cijfers is kleiner dan 8.",
-    ],
-    type : "B",
-    diff : 1,
-    correctAnswer : "15"
-}
-
-let guessSecretNumber3 = {
-    title:"Raad het getal",
-    text:["Probeer het geheime getal te raden door de volgende hints. Tussen 0 and 100,",
-        "deelbaar door alle getallen van 1 tot 100, is even, heeft slechts 1 cijfer, is kleiner dan 50.",
-    ],
-    type : "B",
-    diff : 0,
-    hint:"Dit is zeer makkelijk.",
-    correctAnswer : "0",
-    fb1:"Met deelbaar alle getallen van 1 tot 100 had je het antwoord al snel kunnen vinden.",
-    fb2:"Er is een zeer belangrijk hint in de vraag, probeer dit volgende keer te vinden!"
-}
-
-let guessSecretNumber4 = {
-    title:"Raad het getal",
-    text:["Probeer het geheime getal te raden door de volgende hints. Tussen 0 and 100,",
-        "de som van de cijfers is deelbaar door 5, is een priemgetal, is kleiner dan 40.",
-    ],
-    type : "B",
-    diff : 2,
-    correctAnswer : "23"
-}
-
 let robotMaze = {
     title:"Robotdoolhof",
     text:["Onze robot staat bij het groene vakje in de doolhof en moet naar het rode vakjes gaan,",
@@ -284,9 +207,6 @@ decExercises.push(birthdayParty);
 decExercises.push(naughtyKittens);
 decExercises.push(machinesInFactory);
 decExercises.push(farmerWolfGoatCabbage);
-decExercises.push(sortTheNumbers1);
-decExercises.push(sortTheNumbers2);
-decExercises.push(sortTheNumbers3);
 decExercises.push(numberOfWaysToReachSum)
 decExercises.push(stoneGame);
 decExercises.push(FindWordsInSrcambledText);
@@ -295,10 +215,6 @@ decExercises.push(FindWordsInSrcambledText3);
 decExercises.push(FindWordsInSrcambledText4);
 decExercises.push(FindWordsInSrcambledText5);
 decExercises.push(FindWordsInSrcambledText6);
-decExercises.push(guessSecretNumber);
-decExercises.push(guessSecretNumber2);
-decExercises.push(guessSecretNumber3);
-decExercises.push(guessSecretNumber4);
 decExercises.push(robotMaze);
 decExercises.push(stackBlocks);
 decExercises.push(computerVirus);

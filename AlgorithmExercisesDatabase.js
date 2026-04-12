@@ -258,6 +258,48 @@ let blueCar = {
     correctOrder:["↑","↰","↑","↰","↑","↰","↑","↱","↑","↱","↑","↰","↑","↱","↑","↰","↑"]
 }
 
+let getGivenNumber1 = {
+    title: "Verkrijg gegeven getal",
+    text:["Stel dat we op het begin 36 hebben, in welke volgorde moeten we de onderstaande bewerkingen uitvoeren",
+    "om 2 te krijgen?"],
+    type:"C",
+    diff:1,
+    choices:["+5","neem som van cijfers","/7"],
+    correctOrder: ["neem som van cijfers","/7","+5"]
+}
+
+let sortTheNumbers1 = {
+    title:"Getallen sorteren",
+    text:["Sorteer de getallen van klein naar groot volgens de volgende regels.",
+        "1) Alle priemgetallen zijn groter dan alle niet-priemgetallen.",
+        "2) Sorteer priemgetallen gewoon van klein naar groot op de normale manier.",
+        "3) Sorteer niet-priemgetallen van klein naar groot op basis van de som van hun cijfers."],
+    type : "C",
+    diff : 2,
+    choices : ["31","52","18","29","13","15","21","5","2"],
+    correctOrder : ["21","15","52","18","2","5","13","29","31"]
+}
+
+let sortTheNumbers2 = {
+    title:"Getallen sorteren",
+    text:["Sorteer de getallen van klein naar groot volgens de volgende regels.",
+        "1) Sorteer de getallen op basis van de som van hun cijfers.",
+        "2) Sorteer getallen met dezelfde som van hun cijfers op basis van het product van hun cijfers.",],
+    type : "C",
+    diff : 1,
+    choices : ["6","33","141","41","120","32","9","81"],
+    correctOrder : ["120","41","32","141","6","33","81","9"]
+}
+
+let sortTheNumbers3 = {
+    title:"Getallen sorteren",
+    text:["Sorteer de getallen van klein naar groot volgens de volgende regels.",
+        "Sorteer de getallen op basis van de som van hun cijfers.",],
+    type : "C",
+    diff : 0,
+    choices : ["6","25","5000","31","111","26","9"],
+    correctOrder : ["111","31","5000","6","25","26","9"]
+}
 
 
 algoExercises.push(encryptedText1);
@@ -284,3 +326,7 @@ algoExercises.push(runningRace);
 algoExercises.push(randomNumberGenerator);
 algoExercises.push(randomNumberGenerator2);
 algoExercises.push(blueCar);
+algoExercises.push(getGivenNumber1);
+algoExercises.push(sortTheNumbers1);
+algoExercises.push(sortTheNumbers2);
+algoExercises.push(sortTheNumbers3);
