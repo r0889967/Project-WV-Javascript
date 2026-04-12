@@ -60,6 +60,17 @@ let encryptedText6 = {
     correctAnswer : "Life is an endless process of learning",
 }
 
+let encryptedText7 = {
+    title:"Versleutelde tekst",
+    text:["De onderstaande tekst wordt versleuteld.",
+    "Dverzaeag iesen guriottdeaging vjouolrlie",
+        "Probeer de tekst te ontcijferen.(Let op hoofdletters!)"],
+    type : "B",
+    diff:4,
+    hint:"Elk woord in de versleutelde tekst is een mix van 2 woorden.",
+    correctAnswer : "Deze vraag is een grote uitdaging voor jullie",
+}
+
 let mapping1 = {
     title:"Map functie",
     text:["Als f(abc)=bdf, f(def)=egi, f(cbe)=ddh,",
@@ -264,8 +275,8 @@ let getGivenNumber1 = {
     "om 2 te krijgen?"],
     type:"C",
     diff:1,
-    choices:["+5","neem som van cijfers","/7"],
-    correctOrder: ["neem som van cijfers","/7","+5"]
+    choices:["/7","neem som van cijfers","+5"],
+    correctOrder: ["neem som van cijfers","+5","/7"]
 }
 
 let sortTheNumbers1 = {
@@ -301,6 +312,18 @@ let sortTheNumbers3 = {
     correctOrder : ["111","31","5000","6","25","26","9"]
 }
 
+let frogAndFlies = {
+    title:"Kikker en vliegen",
+    text:["Op de onderstaande tekening staan een kikker en een ppar vliegjes op de lilypadden.",
+    "Deze kikker heeft een rare gedrag, hij wil namelijk altijd eerst het vliegje die het verste van hem staat.",
+    "In welke volgorde zal de kikker de vliegjes opeten?"],
+    image:"images/kikker en vliegen.png",
+    type:"C",
+    diff: 1,
+    choices : ["blauw vliegje","zwart vliegje","bruin vliegje","rood vliegje","paars vliegje"],
+    correctOrder : ["rood vliegje","paars vliegje","blauw vliegje","zwart vliegje","bruin vliegje"],
+}
+
 
 algoExercises.push(encryptedText1);
 algoExercises.push(encryptedText2);
@@ -308,6 +331,7 @@ algoExercises.push(encryptedText3);
 algoExercises.push(encryptedText4);
 algoExercises.push(encryptedText5);
 algoExercises.push(encryptedText6);
+algoExercises.push(encryptedText7);
 algoExercises.push(mapping1);
 algoExercises.push(mapping2);
 algoExercises.push(mapping3);
@@ -330,3 +354,4 @@ algoExercises.push(getGivenNumber1);
 algoExercises.push(sortTheNumbers1);
 algoExercises.push(sortTheNumbers2);
 algoExercises.push(sortTheNumbers3);
+algoExercises.push(frogAndFlies);
