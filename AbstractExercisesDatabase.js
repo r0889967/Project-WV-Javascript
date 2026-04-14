@@ -1,89 +1,50 @@
 let grimReaper = {
     title: "Sarah en de Grim Reaper",
-    text:["De Grim Reaper kwam naar Sarah, maar sarah wou nog niet dood gaan, dus zij vroeg de Grim Reaper",
-        "om haar langer te laten leven door een kaars op te steken en zei 'Laat mij leven tot deze kaars vanzelf opgebrand is.'",
-        "De Grim Reaper zei ja en ging weg. Sarah bloos de kaars onmiddelijk uit nadat Grim Reaper weg is.",
-        "Zelfs na vele jaren is het Grim reaper niet teruggekomen om haar leven te nemen.",
-        "Hoe heeft Sarah ontsnapt aan de dood?"],
+    text:["De Grim Reaper kwam tot bij Sarah, maar Sarah wou nog niet doodgaan. Daarom had ze een voorstel voor de Grim Reaper.",
+        "Ze stak een kaars aan en zei: 'Laat mij leven totdat deze kaars vanzelf is opgebrand.'",
+        "De Grim Reaper ging akkoord en ging weg, maar Sarah bloos de kaars onmiddelijk uit nadat de Grim Reaper verdween.",
+        "Zelfs na vele jaren is de Grim Reaper nooit teruggekomen voor haar ziel",
+        "Hoe is Sarah ontsnapt aan de dood?"],
     type : "A",
     diff : 0,
-    choices : ["Grim Reaper wil wegblijven van kaarsen.","Grim Reaper wil gewoon dat Sarah voor eeuwig leeft.","Grim Reaper was bang om terug te komen.",
-        "Grim Reaper heeft nooit de kaars zien opbranden.","Grim Reaper heeft Sarah vergeten.","Grim Reaper is dood."],
+    choices : ["De Grim Reaper wil wegblijven van kaarsen.","De Grim Reaper wil dat Sarah voor eeuwig leeft.","De Grim Reaper was bang om terug te komen.",
+        "De Grim Reaper heeft nooit de kaars zien opbranden.","De Grim Reaper is Sarah vergeten.","De Grim Reaper is dood."],
     correctAnswers : [3],
     fb1:"Grim Reaper komt alleen teurg als hij de kaars vanzelf zien opbranden, maar omdat Sarah de kaars al zelf uitgeblazen hebben, zag hij de kaars nooit opbranden.",
     fb2:"Denk er goed over na wat Sarah tegen Grim Reaper gezegd heeft."
 }
 
-let racersDilemma = {
-    title: "Racers dilemma",
-    text:["We hebben 6 racers A, B, C, D, E en F.",
-        "A rent sneller dan B, B rent sneller dan C, C rent sneller dan D, D rent sneller dan E,",
-        "E rent sneller dan F, F rent sneller dan A.",
-        "Wie rent het snelste?"],
-    type: "A",
-    diff : 2,
-    choices : ["A","B","C","D","E","F","Alle racers zijn even snel.","Er is een contradictie."],
-    correctAnswers : [7],
-    fb1:"Goed gezien, er is dus een contradictie met deze vraag.",
-    fb2:"Kijk niet enkel naar 'normale' opties, maar ook abnormale opties!"
-}
-
-let racersDilemma2 = {
-    title: "Racers dilemma",
-    text:["We hebben 6 racers A, B, C, D, E en F.",
-        "A rent tenminste zo snel als B, B rent tenminste zo snel als C, C rent tenminste zo snel als D, D rent tenminste zo snel als E,",
-        "E rent tenminste zo snel als F, F rent tenminste zo snel als A.",
-        "Wie rent het snelste?"],
-    type: "A",
-    diff : 2,
-    choices : ["A","B","C","D","E","F","Alle racers zijn even snel.","Er is een contradictie."],
-    correctAnswers : [6],
-    fb1:"Deze uitspraak kan alleen waar zijn als iedereen even snel is.",
-    fb2:"Probeer goed op te letten op de eerste en laatste deel van de vraag!"
-}
-
 let whoIsTheCulprit = {
     title:"Wie is de dader?",
-    text:["Sarah plaatste een mooie vaas op een tafel naast de voordeur van haar huis. Zij nodigde haar vrienden Alice, Bob, Carole,",
-        "Dilan en Eva uit om samen te spelen in het slaapkamer. De 5 vrienden raasten haar huis binnen via de voordeur.",
-        "Bij nacht gingen de vrienden weer weg. Maar toen Sarah in het morgen wakker wordt en naar beneden komt, was",
-        "haar vaas gebroken in stukken. Sarah denkt dat haar vrienden misschien de vaas gisteren per ongeluk gebroken heeft.",
-        "Welke van de frienden kunnen de daders zijn?"],
+    text:["Sarah plaatste een mooie vaas op een tafel naast de voordeur van haar huis. Ze nodigde haar vrienden Alice, Bob, Carole,",
+        "Dilan en Eva uit om samen te spelen in de slaapkamer. De 5 vrienden liepen 's ochtends haar huis binnen via de voordeur en ",
+        "gingen 's avonds weer naar huis. Maar toen Sarah de volgende ochtend wakker werd en naar beneden kwam, lag",
+        "haar vaas in duizend stukken op de grond. Sarah denkt dat één van haar vrienden per ongeluk de vaas heeft gebroken,", 
+        "maar ze weet niet wie.",
+        "Welke van haar vrienden kunnen de daders zijn?"],
     type : "A",
-    diff : 3,
+    diff : 1,
     hint: "Alle vrienden zijn binnengekomen langs de voordeur, wat kan dit betekenen?",
     choices : ["Alice","Bob","Carole","Dilan","Eva"],
     correctAnswers : [0,1,2,3,4],
-    fb1:"Als iedereen langs de voordeur is binnengeraast, kunnen ze allemaal per ongeluk de vaas breken.",
+    fb1:"Als iedereen langs de voordeur binnen is gelopen, kunnen ze allemaal per ongeluk de vaas hebben gebroken.",
     fb2:"Probeer logisch te denken, wat betekent het als iedereen het huis binnenkomt bij de voordeur?"
 }
 
-let manAndSnail = {
-    title:"De man en de slak",
-    text:["Een zelfverzekerde man en een slak besloten een lange race te houden; wie als eerste de finish bereikt, wint.",
-        "Toen de race begon, was de man al vertrokken, terwijl de slak langzaam voortkroop.",
-        "De man was er heel zeker van dat hij zou winnen, maar toen hij de finish bereikte, was de slak er al.",
-        "De man kon niet geloven dat hij had verloren.",
-        "Wat zijn de mogelijke en logische oorzaken dat de langzame slak de snelle man versloeg?"],
-    type : "A",
-    diff : 2,
-    hint: "Met logisch bedoelen we elke mogelijkheid die mogelijk is in het echt.",
-    choices : ["De slak was een snelle superslak.","De man had te lang geslapen tijdens de race zodat de slak kan winnen.",
-        "De slak had op voorhand een identische slak bij de finish gezet.","De slak kon teleporteren.","De man was ziek en kan nauwelijks lopen."],
-    correctAnswers : [1,2,4],
-}
-
-let equivalentStatement = {
-    title:"Equivalente statement",
-    text:["We hebben de volgorde statement: Als het regent, neem ik mijn paraplu.",
-        "Welke van de volgende statements zijn equivalent met de bovenstaande statement?"],
-    type:"A",
-    diff : 4,
-    choices:["Het regent of ik neem mijn paraplu.","Hte regent en ik neem mijn paraplu.",
-        "Als het niet regent, neem ik mijn paraplu niet.","Als ik mijn paraplu niet neem, regent het niet.",
-        "I neem mijn paraplu alleen als het regent.","Ofwel neem ik mijn paraplu, of het regent niet.",],
-    correctAnswers : [3,5],
-}
+//let manAndSnail = {
+//    title:"De man en de slak",
+//    text:["Een zelfverzekerde man en een slak besloten een lange race te houden; wie als eerste de finish bereikt, wint.",
+//        "Toen de race begon, was de man al vertrokken, terwijl de slak langzaam voortkroop.",
+//        "De man was er heel zeker van dat hij zou winnen, maar toen hij de finish bereikte, was de slak er al.",
+//        "De man kon niet geloven dat hij had verloren.",
+//        "Wat zijn de mogelijke en logische oorzaken dat de langzame slak de snelle man versloeg?"],
+//    type : "A",
+//    diff : 2,
+//    hint: "Met logisch bedoelen we elke mogelijkheid die mogelijk is in het echt.",
+//    choices : ["De slak was een snelle superslak.","De man had te lang geslapen tijdens de race zodat de slak kan winnen.",
+//        "De slak had op voorhand een identische slak bij de finish gezet.","De slak kon teleporteren.","De man was ziek en kan nauwelijks lopen."],
+//    correctAnswers : [1,2,4],
+//}
 
 let spellWord1 ={
     title:"Spel het woord",
@@ -153,14 +114,14 @@ let spellWord7 ={
 
 let questionWithNoAnswer = {
     title:"Gekke vraag",
-    text:["Wat is het antwoord van een vraag die geen antwoord heeft?"],
+    text:["Wat is het antwoord op een vraag die geen antwoord heeft?"],
     type:"A",
     diff:3,
-    choices : ["Ik weet niet.","geen antwoord.","Neen!","Dit is dom.",".........","Vermoord mij!","Alleen God weet het."],
-    hint:"Moet je zelfs een antwoord geven op deze vraag?",
+    choices : ["Ik weet het niet.","Geen antwoord.","Nee!","Dit is dom.",".........","Alleen God weet het."],
+    hint:"Moet je hier wel een antwoord op geven?",
     correctAnswers : [],
-    fb1:"Soms is niets aanduiden ook een mogelijk antwoord.",
-    fb2:"Waarom geef je zelfs een antwoord?"
+    fb1:"Soms is niets aanduiden ook een correct antwoord.",
+    fb2:"Waarom geef je überhaupt een antwoord?"
 }
 
 let questionWithNoAnswer2 = {
@@ -168,7 +129,7 @@ let questionWithNoAnswer2 = {
     text:["Wat is het antwoord van een vraag die 'Geen antwoord' als antwoord heeft?"],
     type:"A",
     diff:1,
-    choices : ["Ik weet niet.","Geen antwoord.","Neen!","Dit is dom.",".........","Vermoord mij!","Alleen God weet het."],
+    choices : ["Ik weet niet.","Geen antwoord.","Neen!","Dit is dom.",".........","Alleen God weet het."],
     hint:"Waarom zijn er aanhalingstekens rond Geen antwoord?",
     correctAnswers : [1],
     fb1:"Het is gewoon een kwestie van logisch denken.",
@@ -187,13 +148,13 @@ let largeProduct = {
 
 let mountEverest = {
     title:"Gekke vraag",
-    text:["Wat was de hoogste berg op Aarde voordat Mount Everest ontdekt wordt?"],
+    text:["Wat was de hoogste berg op aarde voordat Mount Everest ontdekt werd?"],
     type:"A",
     diff:0,
-    choices : ["Mount Fuji","Mount blanc","Mount Kilimanjaro","K2","Mount Elbrus","Mount Everest","Chogolisa","Annapurna"],
+    choices : ["Mount Fuji","Mont Blanc","Mount Kilimanjaro","K2","Mount Elbrus","Mount Everest","Chogolisa","Annapurna"],
     correctAnswers:[5],
-    fb1: "Omdat je iets niet ontdekt heeft, betekent niet dat het niet bestaat.",
-    fb2:"Misschien heb je de vraag op de foutive manier begrepen: Wat was de hoogste berg die men kent voordat Mount Everest ontdekt wordt?"
+    fb1: "Iets dat nog niet ontdekt is, bestaat nog steeds.",
+    fb2:"Lees de vraag zorgvuldig."
 }
 
 let answerCraziness = {
@@ -226,24 +187,24 @@ let prisonerAnd2Doors = {
     fb2:"Hoe kun je informatie van 2 deuren krijgen met 1 vraag?"
 }
 
-let reluctantStoryElements = {
-    title:"Overbodig elementen",
-    text:["Sarah was gisteren tijdens het buitenspelen haar vier ballen kwijtgeraakt, dus besloot ze ernaar te zoeken.",
+let redundantStoryElements = {
+    title:"Overbodige elementen",
+    text:["Sarah was gisteren tijdens het buitenspelen haar vier ballen kwijtgeraakt en besloot ze te gaan zoeken.",
         "Eerst vond ze haar rode bal toen ze in een gat viel. Terwijl ze verder zocht naar de andere ballen,",
-        "vloog er een vogel voorbij. Ze liep al snel diep het bos in, langs een paar griezelig uitziende bomen.",
-        "Na nog wat lopen vond ze eindelijk de gele bal onder een steen.",
+        "vloog er een vogel voorbij. Ze liep al snel diep het bos in, langs enkele griezelig uitziende bomen.",
+        "Na nog wat zoeken vond ze eindelijk de gele bal onder een steen.",
         "Tijdens haar zoektocht naar de groene bal kwam ze een verlaten hut tegen vol spinnen.",
-        "Een spin sprong plotseling uit de hut en klom op haar, waardoor ze in paniek raakte en tegen een berk aan rende.",
-        "Toen ze tegen de berk aan botste, viel de groene bal van de berk op haar hoofd. Een beer in de verte keek haar verward aan,",
-        "en vroeg zich af wat er aan de hand was. Ze zocht naar de laatste bal, de blauwe. Ze liep over een vijver,",
-        "uiteindelijk stopte ze aan de voet van een heuvel, waar ze de blauwe bal vond en terug naar huis liep.",
+        "Plots sprong er een spin uit de hut en klom op haar, waardoor ze in paniek raakte en tegen een berk aan liep.",
+        "Toen ze tegen de berk botste, viel de groene bal uit de boom op haar hoofd. Een beer in de verte keek verbaasd toe",
+        "en vroeg zich af wat er aan de hand was. Daarna zocht ze naar de laatste bal, de blauwe. Ze liep langs een vijver,",
+        "en uiteindelijk vond ze de blauwe bal aan de voet van een heuvel en ging ze terug naar huis.",
         "Welke elementen in het verhaal zijn overbodig?"],
     type : "A",
     diff : 3,
-    hint:"Overbodig betekent dat het element geen grote rol heeft gespeeld, maar slechts als achtergrondfiguren.",
+    hint:"Overbodig betekent dat het element geen belangrijke rol speelt in het verhaal.",
     choices : ["gat","vogel","griezelige bomen","steen","spin","berk","beer","vijver"],
     correctAnswers : [1,2,6,7],
-    fb2:"Als je het verhaal goed gelezen hebben zou de antwoorden duidelijk moeten zijn."
+    fb2:"Als je het verhaal goed leest, worden de antwoorden duidelijk."
 }
 
 let nonFittingWords = {
@@ -312,40 +273,6 @@ let nonFittingWords6 = {
     fb1:"Struisvogels en pinguins kunnen niet vliegen."
 }
 
-let minimalGraph = {
-    title:"Minimale graaf",
-    text:["Gegeven onderstaande graaf, wat is het maximale aantal bogen die je kunt verwijderen zonder de graaf in stukken te breken?",
-        "Dit wil dus zeggen dat elke knoop bereikbaar moet blijven vanuit elke andere knoop."],
-    image:"images/minimale graaf.png",
-    type:"B",
-    diff : 2,
-    correctAnswer: "10",
-    fb2:"Probeer de bogen 1 voor 1 weg te halen!"
-}
-
-let fourShapes = {
-    title:"4 figuren plaatsen",
-    text:["Gegeven 4 figuren, hoe moet je hen boven elkaar plaatsen om de onderste tekening te krijgen?",
-    "Zet de figuur die je eerste moet plaatsen aan de onderkant."],
-    image:"images/4 figuren.png",
-    type:"C",
-    diff : 1,
-    choices : ["driehoek","ster","vierkant","cirkel"],
-    correctOrder : ["vierkant","cirkel","ster","driehoek"]
-}
-
-let soccerGame = {
-    title:"Voetbalwedstrijd",
-    text:["Stel dat er bij een voetbalwedstrijd van 90 minuten 7 goals in totaal gescoord wordt en",
-    "1 van beide teams slechts 2 goals achtereenvolgens gescoord hebben.",
-    "Welke van onderstaande finale uitkomsten van de wedstrijd zijn mogelijk?"],
-    type:"A",
-    diff : 1,
-    hint:"Als 1 van beide teams 2 goals achtereenvolgens gescoord hebben, hoe zit het dan met de overige goals?",
-    choices:["4-3","2-5","6-1","0-7","1-6","3-4","5-2","7-0"],
-    correctAnswers : [0,1,5,6],
-}
-
 let guessSecretNumber = {
     title:"Raad het getal",
     text:["Probeer het geheime getal te raden door de volgende hints. Tussen 10 and 99,",
@@ -391,35 +318,29 @@ let guessSecretNumber4 = {
 }
 
 abExercises.push(grimReaper);
-abExercises.push(racersDilemma);
-abExercises.push(racersDilemma2);
 abExercises.push(whoIsTheCulprit);
-abExercises.push(manAndSnail);
-abExercises.push(equivalentStatement);
-abExercises.push(spellWord1);
-abExercises.push(spellWord2);
-abExercises.push(spellWord3);
-abExercises.push(spellWord4);
-abExercises.push(spellWord5);
-abExercises.push(spellWord6);
-abExercises.push(spellWord7);
+//abExercises.push(manAndSnail);
+//abExercises.push(spellWord1);
+//abExercises.push(spellWord2);
+//abExercises.push(spellWord3);
+//abExercises.push(spellWord4);
+//abExercises.push(spellWord5);
+//abExercises.push(spellWord6);
+//abExercises.push(spellWord7);
 abExercises.push(questionWithNoAnswer);
-abExercises.push(questionWithNoAnswer2);
-abExercises.push(prisonerAnd2Doors);
-abExercises.push(largeProduct);
+//abExercises.push(questionWithNoAnswer2);
+//abExercises.push(prisonerAnd2Doors);
+//abExercises.push(largeProduct);
 abExercises.push(mountEverest);
-abExercises.push(answerCraziness);
-abExercises.push(reluctantStoryElements);
-abExercises.push(nonFittingWords);
-abExercises.push(nonFittingWords2);
-abExercises.push(nonFittingWords3);
-abExercises.push(nonFittingWords4);
-abExercises.push(nonFittingWords5);
-abExercises.push(nonFittingWords6);
-abExercises.push(minimalGraph);
-abExercises.push(fourShapes);
-abExercises.push(soccerGame);
-abExercises.push(guessSecretNumber);
-abExercises.push(guessSecretNumber2);
-abExercises.push(guessSecretNumber3);
-abExercises.push(guessSecretNumber4);
+//abExercises.push(answerCraziness);
+abExercises.push(redundantStoryElements);
+//abExercises.push(nonFittingWords);
+//abExercises.push(nonFittingWords2);
+//abExercises.push(nonFittingWords3);
+//abExercises.push(nonFittingWords4);
+//abExercises.push(nonFittingWords5);
+//abExercises.push(nonFittingWords6);
+//abExercises.push(guessSecretNumber);
+//abExercises.push(guessSecretNumber2);
+//abExercises.push(guessSecretNumber3);
+//abExercises.push(guessSecretNumber4);

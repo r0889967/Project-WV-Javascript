@@ -203,6 +203,17 @@ let computerVirus = {
     fb2:"Het is altijd een betere idee om een groot probleem op te splitsen dan het in 1 keer uitrekenen."
 }
 
+let fourShapes = {
+    title:"4 figuren plaatsen",
+    text:["Gegeven vier figuren: hoe moet je ze op elkaar plaatsen om de onderste tekening te verkrijgen?",
+    "Zet de figuur die je eerst moet plaatsen onderaan."],
+    image:"images/4 figuren.png",
+    type:"C",
+    diff : 1,
+    choices : ["driehoek","ster","vierkant","cirkel"],
+    correctOrder : ["vierkant","cirkel","ster","driehoek"]
+}
+
 decExercises.push(birthdayParty);
 decExercises.push(naughtyKittens);
 decExercises.push(machinesInFactory);
@@ -218,3 +229,4 @@ decExercises.push(FindWordsInSrcambledText6);
 decExercises.push(robotMaze);
 decExercises.push(stackBlocks);
 decExercises.push(computerVirus);
+decExercises.push(fourShapes);

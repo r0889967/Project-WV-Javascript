@@ -324,6 +324,68 @@ let frogAndFlies = {
     correctOrder : ["rood vliegje","paars vliegje","blauw vliegje","zwart vliegje","bruin vliegje"],
 }
 
+let racersDilemma = {
+    title: "Racers dilemma",
+    text:["We hebben 6 racers A, B, C, D, E en F.",
+        "A rent sneller dan B, B rent sneller dan C, C rent sneller dan D, D rent sneller dan E,",
+        "E rent sneller dan F, F rent sneller dan A.",
+        "Wie rent het snelste?"],
+    type: "A",
+    diff : 2,
+    choices : ["A","B","C","D","E","F","Alle racers zijn even snel.","Er is een contradictie."],
+    correctAnswers : [7],
+    fb1:"Goed gezien, er is dus een contradictie met deze vraag.",
+    fb2:"Kijk niet enkel naar 'normale' opties, maar ook abnormale opties!"
+}
+
+let racersDilemma2 = {
+    title: "Racers dilemma",
+    text:["We hebben 6 racers A, B, C, D, E en F.",
+        "A rent minstens zo snel als B, B rent minstens zo snel als C, C rent minstens zo snel als D, D rent minstens zo snel als E,",
+        "E rent minstens zo snel als F, F rent minstens zo snel als A.",
+        "Wie rent het snelste?"],
+    type: "A",
+    diff : 2,
+    choices : ["A","B","C","D","E","F","Alle racers zijn even snel.","Er is een contradictie."],
+    correctAnswers : [6],
+    fb1:"Deze uitspraak kan alleen waar zijn als iedereen even snel is.",
+    fb2:"Kijk goed naar het eerste en laatste deel van deze vraag."
+}
+
+let equivalentStatement = {
+    title:"Equivalente uitspraak",
+    text:["We hebben de volgende uitspraak: Als het regent, neem ik mijn paraplu.",
+        "Welke van de volgende uitspraken zijn equivalent aan de bovenstaande uitspraak?"],
+    type:"A",
+    diff : 4,
+    choices:["Het regent of ik neem mijn paraplu.","Het regent en ik neem mijn paraplu.",
+        "Als het niet regent, neem ik mijn paraplu niet.","Als ik mijn paraplu niet neem, regent het niet.",
+        "Ik neem mijn paraplu alleen als het regent.","Ofwel neem ik mijn paraplu, of het regent niet."],
+    correctAnswers : [3,5],
+}
+
+let minimalGraph = {
+    title:"Minimale graaf",
+    text:["Gegeven de onderstaande graaf: wat is het maximale aantal bogen dat je kunt verwijderen zonder dat de graaf uit elkaar valt?",
+        "Dit betekent dat elke knoop bereikbaar moet blijven vanuit elke andere knoop."],
+    image:"images/minimale graaf.png",
+    type:"B",
+    diff : 2,
+    correctAnswer: "10",
+    fb2:"Probeer de bogen één voor één te verwijderen."
+}
+
+let soccerGame = {
+    title:"Voetbalwedstrijd",
+    text:["Stel dat er in een voetbalwedstrijd van 90 minuten in totaal 7 doelpunten worden gescoord,",
+    "en dat één van beide teams ergens twee doelpunten na elkaar scoort.",
+    "Welke van de onderstaande eindstanden zijn mogelijk?"],
+    type:"A",
+    diff : 1,
+    hint:"Als één team twee keer na elkaar scoort, wat betekent dat voor de volgorde van de andere doelpunten?",
+    choices:["4-3","2-5","6-1","0-7","1-6","3-4","5-2","7-0"],
+    correctAnswers : [0,1,5,6],
+}
 
 algoExercises.push(encryptedText1);
 algoExercises.push(encryptedText2);
@@ -355,3 +417,8 @@ algoExercises.push(sortTheNumbers1);
 algoExercises.push(sortTheNumbers2);
 algoExercises.push(sortTheNumbers3);
 algoExercises.push(frogAndFlies);
+algoExercises.push(racersDilemma);
+algoExercises.push(racersDilemma2);
+algoExercises.push(equivalentStatement);
+algoExercises.push(minimalGraph);
+algoExercises.push(soccerGame);
