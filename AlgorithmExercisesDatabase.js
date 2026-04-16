@@ -387,6 +387,20 @@ let soccerGame = {
     correctAnswers : [0,1,5,6],
 }
 
+let pathFinding = {
+    title:"Juiste pad vinden",
+    text:["Deze robot heeft een lage batterij en moet naar het oplaadstation bewegen, maar eerst moet hij de onderdelen",
+    "die hij heeft laten vallen weer gaan oprapen. Sleep de stappen die de robot moet volgen in de juiste volgorde.",
+    "De robot is oorspronkelijk naar rechts geörienteerd.",],
+    image:"images/pathfinding1.png",
+    type : "C",
+    diff : 0,
+    hint: "Probeer eerst de stappen te ordenen die de robot moet volgen om alle onderdelen op te rapen, en kijk dan welke stappen hij moet volgen om naar het oplaadstation te gaan.",
+    choices : ["Draai 90 graden links","Beweeg 50 stappen voorwaarts","Draai 90 graden rechts","Beweeg 100 stappen voorwaarts"],
+    correctOrder : ["Draai 90 graden rechts","Beweeg 50 stappen voorwaarts","Draai 90 graden links","Beweeg 100 stappen voorwaarts"],
+    fb1: "Goed gedaan, check altijd eerst of de robot in de juiste richting staat voordat je hem stappen laat zetten.",
+}
+
 //algoExercises.push(encryptedText1);
 //algoExercises.push(encryptedText2);
 //algoExercises.push(encryptedText3);
@@ -422,3 +436,4 @@ algoExercises.push(racersDilemma2);
 algoExercises.push(equivalentStatement);
 algoExercises.push(minimalGraph);
 algoExercises.push(soccerGame);
+algoExercises.push(pathFinding);
