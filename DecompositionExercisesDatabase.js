@@ -165,27 +165,25 @@ let farmerWolfGoatCabbage = {
 
 let robotMaze = {
     title:"Robotdoolhof",
-    text:["Onze robot staat bij het groene vakje in de doolhof en moet naar het rode vakjes gaan,",
-    "De grijze vakjes zijn muren, de robot kan niet door de muren wandelen.",
-    "Hoeveel manieren zijn er voor de robot om van het groene vakje naar het rode vakjes te gaan,",
-    "als de robot slechts naar rechts en naar onder kan bewegen?"],
+    text:["De robot staat op het groene vakje en moet naar het rode vakje gaan.",
+    "De grijze vakjes zijn muren waar de robot niet doorheen kan.",
+    "Op hoeveel manieren kan de robot het rode vakje bereiken,",
+    "als hij enkel naar rechts en naar beneden mag bewegen?"],
     image:"images/robotdoolhof.png",
     type:"B",
     diff: 4,
-    hint:"Denk goed na hoe je dit probleem kan opsplitsen in deelproblemen.",
+    hint:"Splits het probleem op in kleinere deelproblemen per vakje.",
     correctAnswer : "15",
-    fb2:"Probeer de oplossing stap voor stap uit te werken door bij elke vakje het aantal manieren uit te rekenen, begin met de vakjes naast het rode vakje."
 }
 
 let stackBlocks = {
     title:"Blokken stapelen",
-    text:["We hebben 3 blauwe, 3 rode en 3 groene blokken, en we willen een toren van 3 blokken bouwen.",
-        "Op hoeveel manieren kun je de toren bouwen?",],
+    text:["We hebben 3 blauwe, 3 rode en 3 groene blokken en willen een toren van 3 blokken bouwen.",
+        "Op hoeveel verschillende manieren kun je deze toren bouwen?"],
     type:"B",
     diff:2,
-    hint:"Probeer de manieren op te splitsen in verschillende categorien op basis van het aantal blokken met zelfde kleuren! ",
+    hint:"Verdeel de gevallen op basis van kleurcombinaties.",
     correctAnswer:"27",
-    fb2: "De toren kan ofwel 3 blokken met dezelfde kleuren, 2 blokken met dezelfde kleuren of 3 blokken met verschillende kleuren hebben.",
 }
 
 
@@ -214,19 +212,19 @@ let fourShapes = {
     correctOrder : ["vierkant","cirkel","ster","driehoek"]
 }
 
-decExercises.push(birthdayParty);
-decExercises.push(naughtyKittens);
-decExercises.push(machinesInFactory);
-decExercises.push(farmerWolfGoatCabbage);
-decExercises.push(numberOfWaysToReachSum)
-decExercises.push(stoneGame);
-decExercises.push(FindWordsInSrcambledText);
-decExercises.push(FindWordsInSrcambledText2);
-decExercises.push(FindWordsInSrcambledText3);
-decExercises.push(FindWordsInSrcambledText4);
-decExercises.push(FindWordsInSrcambledText5);
-decExercises.push(FindWordsInSrcambledText6);
+//decExercises.push(birthdayParty);
+//decExercises.push(naughtyKittens);
+//decExercises.push(machinesInFactory);
+//decExercises.push(farmerWolfGoatCabbage);
+//decExercises.push(numberOfWaysToReachSum)
+//decExercises.push(stoneGame);
+//decExercises.push(FindWordsInSrcambledText);
+//decExercises.push(FindWordsInSrcambledText2);
+//decExercises.push(FindWordsInSrcambledText3);
+//decExercises.push(FindWordsInSrcambledText4);
+//decExercises.push(FindWordsInSrcambledText5);
+//decExercises.push(FindWordsInSrcambledText6);
 decExercises.push(robotMaze);
 decExercises.push(stackBlocks);
-decExercises.push(computerVirus);
+//decExercises.push(computerVirus);
 decExercises.push(fourShapes);

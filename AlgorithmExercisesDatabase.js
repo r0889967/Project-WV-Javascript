@@ -314,9 +314,9 @@ let sortTheNumbers3 = {
 
 let frogAndFlies = {
     title:"Kikker en vliegen",
-    text:["Op de onderstaande tekening staan een kikker en een ppar vliegjes op de lilypadden.",
-    "Deze kikker heeft een rare gedrag, hij wil namelijk altijd eerst het vliegje die het verste van hem staat.",
-    "In welke volgorde zal de kikker de vliegjes opeten?"],
+    text:["Op de onderstaande tekening staan een kikker en een aantal vliegen op de lelies.",
+    "Deze kikker gedraagt zich vreeemd, hij wil namelijk altijd eerst de vlieg opeten die zich het verst van hem bevindt.",
+    "In welke volgorde zal de kikker de vliegen opeten?"],
     image:"images/kikker en vliegen.png",
     type:"C",
     diff: 1,
@@ -387,30 +387,30 @@ let soccerGame = {
     correctAnswers : [0,1,5,6],
 }
 
-algoExercises.push(encryptedText1);
-algoExercises.push(encryptedText2);
-algoExercises.push(encryptedText3);
-algoExercises.push(encryptedText4);
-algoExercises.push(encryptedText5);
-algoExercises.push(encryptedText6);
-algoExercises.push(encryptedText7);
-algoExercises.push(mapping1);
-algoExercises.push(mapping2);
-algoExercises.push(mapping3);
-algoExercises.push(mapping4);
-algoExercises.push(mapping5);
-algoExercises.push(mapping6);
-algoExercises.push(mapping7);
-algoExercises.push(filter1);
-algoExercises.push(filter2);
+//algoExercises.push(encryptedText1);
+//algoExercises.push(encryptedText2);
+//algoExercises.push(encryptedText3);
+//algoExercises.push(encryptedText4);
+//algoExercises.push(encryptedText5);
+//algoExercises.push(encryptedText6);
+//algoExercises.push(encryptedText7);
+//algoExercises.push(mapping1);
+//algoExercises.push(mapping2);
+//algoExercises.push(mapping3);
+//algoExercises.push(mapping4);
+//algoExercises.push(mapping5);
+//algoExercises.push(mapping6);
+//algoExercises.push(mapping7);
+//algoExercises.push(filter1);
+//algoExercises.push(filter2);
 algoExercises.push(followAlgorithm1);
 algoExercises.push(followAlgorithm2);
 algoExercises.push(followAlgorithm3);
 algoExercises.push(followAlgorithm4);
-algoExercises.push(ballsAndDrawers);
+//algoExercises.push(ballsAndDrawers); patroonherkenning, niet algoritmisch denken
 algoExercises.push(runningRace);
-algoExercises.push(randomNumberGenerator);
-algoExercises.push(randomNumberGenerator2);
+//algoExercises.push(randomNumberGenerator);
+//algoExercises.push(randomNumberGenerator2);
 algoExercises.push(blueCar);
 algoExercises.push(getGivenNumber1);
 algoExercises.push(sortTheNumbers1);

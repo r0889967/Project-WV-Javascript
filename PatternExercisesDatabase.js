@@ -1,8 +1,8 @@
 let nextNumberInSeq = {
-    title: "Volgende element in reeks",
-    text : ["Gegeven onderstaande reeks.",
-        "2,5,10,17,28,41,58,77,100,129,?",
-        "Wat is de volgende element in de reeks?",],
+    title: "Volgend element in de reeks",
+    text : ["Gegeven de onderstaande reeks:",
+        "2, 5, 10, 17, 28, 41, 58, 77, 100, 129, ?",
+        "Wat is het volgende element in de reeks?"],
     type:"B",
     diff : 3,
     hint: "Het heeft iets met priemgetallen te maken.",
@@ -10,12 +10,13 @@ let nextNumberInSeq = {
 }
 
 let nextNumberInSeq2 = {
-    title: "Volgende element in reekse",
-    text:["Gegeven onderstaande reeks.",
+    title: "Volgend element in de reeks",
+    text:["Gegeven de onderstaande reeks:",
         "5738, 121011, 33112, 6423, 1065, ?",
-        "Wat is de volgende element in de reeks?",],
+        "Wat is het volgende element in de reeks?"],
     type:"B",
     diff : 2,
+    hint : "Kijk wat je kan doen met de afzonderlijke cijfers van elk element in de reeks.",
     correctAnswer : "1611",
 }
 
@@ -23,7 +24,7 @@ let nextNumberInSeq3 = {
     title: "Volgende element in reeks",
     text:["Gegeven onderstaande reeks.",
         "27, 9279, 27927927, ?",
-        "Wat is de volgende element in de reeks?"],
+        "Wat is het volgende element in de reeks?"],
     type:"B",
     diff : 1,
     correctAnswer : "812792792781",
@@ -33,7 +34,7 @@ let nextNumberInSeq4 = {
     title: "Volgende element in reeks",
     text:["Gegeven onderstaande reeks.",
         "0,1,1,2,3,5,8,13,21,34,? ",
-        "Wat is de volgende element in de reeks?"],
+        "Wat is het volgende element in de reeks?"],
     type:"B",
     diff : 0,
     correctAnswer : "55",
@@ -43,7 +44,7 @@ let nextNumberInSeq5 = {
     title: "Volgende element in reeks",
     text:["Gegeven onderstaande reeks.",
         "2,4,6,18,21,84,88,? ",
-        "Wat is de volgende element in de reeks?"],
+        "Wat is het volgende element in de reeks?"],
     type:"B",
     diff : 0,
     correctAnswer : "440",
@@ -53,7 +54,7 @@ let nextNumberInSeq6 = {
     title: "Volgende element in reeks",
     text:["Gegeven onderstaande reeks.",
         "2,3,5,7,11,13,17,19,23,29,31,?",
-        "Wat is de volgende element in de reeks?"],
+        "Wat is het volgende element in de reeks?"],
     type:"B",
     diff : 1,
     correctAnswer : "37",
@@ -63,7 +64,7 @@ let nextNumberInSeq7 = {
     title: "Volgende element in reeks",
     text:["Gegeven onderstaande reeks.",
         "11,121,1331,14641,15101051,?",
-        "Wat is de volgende element in de reeks?"],
+        "Wat is het volgende element in de reeks?"],
     type:"B",
     diff : 2,
     correctAnswer : "1615201561",
@@ -73,27 +74,18 @@ let nextNumberInSeq8 = {
     title: "Volgende element in reeks",
     text:["Gegeven onderstaande reeks.",
         "2,6,12,20,30,42,56,72,90,110,?",
-        "Wat is de volgende element in de reeks?"],
+        "Wat is het volgende element in de reeks?"],
     type:"B",
     diff : 2,
     correctAnswer : "132",
 }
 
-let nextNumberInSeq9 = {
-    title: "Volgende element in reeks",
-    text:["Gegeven onderstaande reeks.",
-        "4,16,28,40,?",
-        "Wat is de volgende element in de reeks?"],
-    type:"B",
-    diff : 3,
-    correctAnswer : "16",
-}
 
 let nextStrInSeq = {
     title: "Volgende element in reeks",
     text:["Gegeven onderstaande reeks.",
         "a, abb, cccabb, cccabbdddd, eeeeecccabbdddd, ?",
-        "Wat is de volgende element in de reeks?",],
+        "Wat is het volgende element in de reeks?",],
     type:"B",
     diff:1,
     correctAnswer : "eeeeecccabbddddffffff",
@@ -103,7 +95,7 @@ let nextStrInSeq2 = {
     title: "Volgende element in reeks",
     text:["Gegeven onderstaande reeks.",
         "a, ab, adad, ahahahah, ?",
-        "Wat is de volgende element in de reeks?",],
+        "Wat is het volgende element in de reeks?",],
     type:"B",
     diff:2,
     correctAnswer : "apapapapapapapap",
@@ -113,7 +105,7 @@ let nextStrInSeq3 = {
     title: "Volgende element in reeks",
     text:["Gegeven onderstaande reeks.",
         "a, bab, ccbabcc, dddccbabccddd, ?",
-        "Wat is de volgende element in de reeks?",],
+        "Wat is het volgende element in de reeks?",],
     type:"B",
     diff:0,
     correctAnswer : "eeeedddccbabccdddeeee",
@@ -123,7 +115,7 @@ let nextStrInSeq4 = {
     title: "Volgende element in reeks",
     text:["Gegeven onderstaande reeks.",
         "a, e, i, o, ?",
-        "Wat is de volgende element in de reeks?",],
+        "Wat is het volgende element in de reeks?",],
     type:"B",
     diff:0,
     correctAnswer : "u",
@@ -133,7 +125,7 @@ let nextStrInSeq5 = {
     title: "Volgende element in reeks",
     text:["Gegeven onderstaande reeks.",
         "a,aabb,aaabbbccc,aaaabbbbccccdddd,?",
-        "Wat is de volgende element in de reeks?",],
+        "Wat is het volgende element in de reeks?",],
     type:"B",
     diff:1,
     correctAnswer : "aaaaabbbbbcccccdddddeeeee",
@@ -152,11 +144,11 @@ let missingStrInSeq1 = {
 let missingStrInSeq2 = {
     title: "Missende elementen in reeks",
     text:["Gegeven onderstaande reeks.",
-        "a, b, a, ?, c, a, b, ?, ?, a, b, ?, d, e",
+        "a, b, a, b, c, a, b, ?, ?, a, b, ?, d, e",
         "Wat zijn de missende elementen in de reeks?",],
     type:"B",
     diff:1,
-    correctAnswer : "b c d c",
+    correctAnswer : "c d c",
 }
 
 let missingNumberInSeq1 = {
@@ -341,7 +333,6 @@ patExercises.push(nextNumberInSeq5);
 patExercises.push(nextNumberInSeq6);
 patExercises.push(nextNumberInSeq7);
 patExercises.push(nextNumberInSeq8);
-patExercises.push(nextNumberInSeq9);
 patExercises.push(nextStrInSeq);
 patExercises.push(nextStrInSeq2);
 patExercises.push(nextStrInSeq3);
@@ -349,12 +340,12 @@ patExercises.push(nextStrInSeq4);
 patExercises.push(nextStrInSeq5);
 patExercises.push(missingStrInSeq1);
 patExercises.push(missingStrInSeq2);
-patExercises.push(missingNumberInSeq1);
-patExercises.push(missingNumberInSeq2);
-patExercises.push(missingNumberInSeq3);
-patExercises.push(missingNumberInSeq4);
-patExercises.push(missingNumberInSeq5);
-patExercises.push(missingNumberInSeq6);
+//patExercises.push(missingNumberInSeq1);
+//patExercises.push(missingNumberInSeq2);
+//patExercises.push(missingNumberInSeq3);
+//patExercises.push(missingNumberInSeq4);
+//patExercises.push(missingNumberInSeq5);
+//patExercises.push(missingNumberInSeq6);
 patExercises.push(findPatternSeq1);
 patExercises.push(findPatternSeq2);
 patExercises.push(findPatternSeq3);
@@ -364,4 +355,4 @@ patExercises.push(findPatternSeq6);
 patExercises.push(findNonPatternSeq1);
 patExercises.push(findNonPatternSeq2);
 patExercises.push(redBlueCircles);
-patExercises.push(numberPyramid);
+//patExercises.push(numberPyramid);  Dit is algoritmisch denken, niet patroonherkenning 
