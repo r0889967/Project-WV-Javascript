@@ -242,7 +242,7 @@ function loadTypeCExercise(choices){
     html += textLine(`Plaats de blokken in de juiste volgorde van links naar rechts.`);
     html += emptyLine(1);
     let buttonIdx = 0;
-    html += textLine("Optiesveld");
+    html += textLine("Optieveld");
     html += "<div class='div2' id='choicesdiv' ondrop='dropHandler(event)' ondragover='dragoverHandler(event)'>";
     for(let choice of choices){
         html += createButton("button2",buttonIdx,choice, "",true,

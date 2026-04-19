@@ -401,6 +401,51 @@ let pathFinding = {
     fb1: "Goed gedaan, check altijd eerst of de robot in de juiste richting staat voordat je hem stappen laat zetten.",
 }
 
+let pathFinding2 = {
+    title:"Juiste pad vinden",
+    text:["Deze robot heeft een lage batterij en moet naar het oplaadstation bewegen, maar eerst moet hij de onderdelen",
+    "die hij heeft laten vallen weer gaan oprapen. Sleep de stappen die de robot moet volgen in de juiste volgorde.",
+    "De robot is oorspronkelijk naar boven geörienteerd.",
+    "Het is mogelijk dat niet alle blokken gebruikt moeten worden.",],
+    image:"images/pathfinding2.png",
+    type : "C",
+    diff : 1,
+    hint: "Probeer eerst de stappen te ordenen die de robot moet volgen om alle onderdelen op te rapen, en kijk dan welke stappen hij moet volgen om naar het oplaadstation te gaan.",
+    choices : ["Draai 90 graden links","Beweeg 50 stappen voorwaarts","Draai 135 graden rechts","Beweeg 50 stappen voorwaarts","Draai 45 graden links", "Draai 45 graden rechts"],
+    correctOrder : ["Draai 135 graden rechts","Beweeg 50 stappen voorwaarts","Draai 90 graden links","Beweeg 50 stappen voorwaarts"],
+    fb1: "Goed gedaan, check altijd eerst of de robot in de juiste richting staat voordat je hem stappen laat zetten.",
+}
+
+let pathFinding3 = {
+    title:"Juiste pad vinden",
+    text:["Deze robot heeft een lage batterij en moet naar het oplaadstation bewegen, maar eerst moet hij de onderdelen",
+    "die hij heeft laten vallen weer gaan oprapen. Sleep de stappen die de robot moet volgen in de juiste volgorde.",
+    "De robot is oorspronkelijk naar rechts geörienteerd.",
+    "Gebruik zo weinig mogelijk blokken.",],
+    image:"images/pathfinding3.png",
+    type : "C",
+    diff : 2,
+    hint: "Probeer eerst de stappen te ordenen die de robot moet volgen om alle onderdelen op te rapen, en kijk dan welke stappen hij moet volgen om naar het oplaadstation te gaan.",
+    choices : ["Draai 90 graden links","Beweeg 50 stappen voorwaarts","Draai 270 graden rechts","Beweeg 50 stappen voorwaarts","Draai 45 graden links", "Draai 45 graden rechts", "Draai 270 graden links", "Beweeg 100 stappen voorwaarts", "Draai 270 graden links"],
+    correctOrder : ["Beweeg 50 stappen voorwaarts","Draai 270 graden links","Beweeg 100 stappen voorwaarts","Draai 270 graden links", "Beweeg 50 stappen voorwaarts"],
+    fb1: "Goed gedaan, check altijd eerst of de robot in de juiste richting staat voordat je hem stappen laat zetten.",
+}
+
+let pathFinding4 = {
+    title:"Juiste pad vinden",
+    text:["Deze robot heeft een lage batterij en moet naar het oplaadstation bewegen, maar eerst moet hij de onderdelen",
+    "die hij heeft laten vallen weer gaan oprapen. Sleep de stappen die de robot moet volgen in de juiste volgorde.",
+    "De robot is oorspronkelijk naar rechts geörienteerd.",
+    "Gebruik zo weinig mogelijk blokken.",],
+    image:"images/pathfinding4.png",
+    type : "C",
+    diff : 3,
+    hint: "Probeer eerst de stappen te ordenen die de robot moet volgen om alle onderdelen op te rapen, en kijk dan welke stappen hij moet volgen om naar het oplaadstation te gaan.",
+    choices : ["Draai 90 graden links", "Draai 135 graden rechts","Beweeg 50 stappen voorwaarts","Beweeg 50 stappen voorwaarts", "Draai 45 graden links", "Beweeg 100 stappen voorwaarts", "Draai 45 graden rechts", "Beweeg 100 stappen voorwaarts", "Draai 90 graden rechts","Draai 135 graden links", "Beweeg 100 stappen voorwaarts", "Draai 180 graden"],
+    correctOrder : ["Beweeg 50 stappen voorwaarts","Draai 135 graden rechts","Beweeg 100 stappen voorwaarts","Draai 90 graden rechts", "Beweeg 100 stappen voorwaarts", "Draai 90 graden links", "Beweeg 100 stappen voorwaarts"],
+    fb1: "Goed gedaan, check altijd eerst of de robot in de juiste richting staat voordat je hem stappen laat zetten.",
+}
+
 //algoExercises.push(encryptedText1);
 //algoExercises.push(encryptedText2);
 //algoExercises.push(encryptedText3);
@@ -437,3 +482,6 @@ algoExercises.push(equivalentStatement);
 algoExercises.push(minimalGraph);
 algoExercises.push(soccerGame);
 algoExercises.push(pathFinding);
+algoExercises.push(pathFinding2);
+algoExercises.push(pathFinding3);
+algoExercises.push(pathFinding4);
