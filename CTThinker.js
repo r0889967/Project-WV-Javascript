@@ -352,7 +352,7 @@ function loadModuleSelectionScreen(){
     html += emptyLine(2);
     html += textLine("Module 5: Geïntegreerde oefeningen");
     html += createButton("button1","","Geïntegreerde oefeningen",
-        "pickExercisesMixed();loadExerciseContents()");
+        `pickExercises(4);loadExerciseContents()`);
 
     html += emptyLine(2);
     html += "<p>Maak je eigen module: </p>";
@@ -409,7 +409,7 @@ function loadMainMenu(){
     html += createButton("button1","","Start","loadModuleSelectionScreen()");
     html += emptyLine(4);
     html += createButton("button1","","Tutorial",
-        `pickExercises(4,false);loadExerciseContents()`);
+        `pickExercises(5,false);loadExerciseContents()`);
     html += emptyLine(4);
     html += createButton("button1","","Over CTThinker","loadInfoScreen()");
     mainmenu.innerHTML = html;
