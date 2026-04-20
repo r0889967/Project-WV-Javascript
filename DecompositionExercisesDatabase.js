@@ -50,7 +50,7 @@ let machinesInFactory = {
 let numberOfWaysToReachSum = {
     title:"Munten",
     text:["Stel dat we munten hebben met de waarden 1, 2, 5 en 10.",
-        "Op hoeveel manieren kunnen we 20 bereiken?"],
+        "Op hoeveel manieren kunnen we een som van 20 bereiken?"],
     type : "B",
     diff : 4,
     hint : "Probeer eerst te berekenen op hoeveel manieren je 1, 2, 3, 4 of 5 kunt maken en werk dan stap voor stap verder.",
@@ -178,8 +178,8 @@ let robotMaze = {
 
 let stackBlocks = {
     title:"Blokken stapelen",
-    text:["We hebben 3 blauwe, 3 rode en 3 groene blokken en willen een toren van 3 blokken bouwen.",
-        "Op hoeveel verschillende manieren kun je deze toren bouwen?"],
+    text:["We hebben 3 blauwe, 3 rode en 3 groene blokken en willen een toren van 3 blokken hoog bouwen.",
+        "Hoeveel kleurencombinaties zijn er mogelijk met de blokken die we hebben?"],
     type:"B",
     diff:2,
     hint:"Verdeel de gevallen op basis van kleurcombinaties.",
@@ -190,15 +190,15 @@ let stackBlocks = {
 let computerVirus = {
     title:"Computervirus",
     text:["Gegeven onderstaande computernetwerk, 1 van de computers is besmet met een virus.",
-    "Elke dag zal de virus zich verspreiding over het netwerk via de verbindingen tussen de computers.",
-    "Hoeveel dagen duurt het voordat het virus het volledige netwerk besmet?"],
+    "Elke dag zal het virus zich verspreiden over het netwerk via de verbindingen tussen de computers.",
+    "Hoeveel dagen duurt het voordat het virus het volledige netwerk heeft besmet?"],
     image:"images/computer virus.png",
     type:"B",
     hint:"Doe het stap voor stap, welke computers worden besmet per dag?",
     diff:2,
     correctAnswer :"4",
     fb1:"Je kunt deze vraag gemakkelijk oplossen door elke dag de nieuwe besmette computers te vinden.",
-    fb2:"Het is altijd een betere idee om een groot probleem op te splitsen dan het in 1 keer uitrekenen."
+    fb2:"Het is altijd een beter idee om een groot probleem op te splitsen dan het in 1 keer uitrekenen."
 }
 
 let fourShapes = {
@@ -212,11 +212,50 @@ let fourShapes = {
     correctOrder : ["vierkant","cirkel","ster","driehoek"]
 }
 
+let decompMath = {
+    title:"Wiskundige stappen",
+    text:["Gegeven: (3 + 5) + (8 * 2)",
+    "In welke volgorde moet je de stappen uitvoeren? Als er blokken zijn met gelijke prioriteit, orden je ze van links naar rechts.",
+    "Je hebt misschien niet alle blokken nodig om het probleem op te lossen."],
+    type:"C",
+    diff : 0,
+    choices : ["8 * 2","De resultaten optellen","3 + 5"],
+    correctOrder : ["3 + 5","8 * 2","De resultaten optellen"],
+    fb1: "Goed gedaan! Het is belangrijk om in te zien dat je een groter probleem kan oplossen door het op te splitsen in kleinere problemen en deze stap voor stap op te lossen.",
+}
+
+let decompMath2 = {
+    title:"Wiskundige stappen",
+    text:["Gegeven: 20 - 4 * 3 + 18 ÷ 2",
+    "In welke volgorde moet je de stappen uitvoeren? Als er blokken zijn met gelijke prioriteit, orden je ze van links naar rechts.",
+    "Je hebt misschien niet alle blokken nodig om het probleem op te lossen."],
+    type:"C",
+    diff : 1,
+    choices : ["20 - resultaat","18 ÷ 2","De resultaten optellen","4 * 3","20 - 4"],
+    correctOrder : ["4 * 3","18 ÷ 2","20 - resultaat","De resultaten optellen"],
+    fb1: "Goed gedaan! Het is belangrijk om in te zien dat je een groter probleem kan oplossen door het op te splitsen in kleinere problemen en deze stap voor stap op te lossen.",
+}
+
+let decompMath3 = {
+    title:"De Bakker",
+    text:["Je bestelt bij de bakker 4 croissants, elk voor 2 euro, en 2 taarten van elk 11 euro. Je geeft de bakker 50 euro.",
+    "In welke volgorde moet je de stappen uitvoeren om te berekenen hoeveel wisselgeld je krijgt?", 
+    "Als er blokken zijn met gelijke prioriteit, orden je ze in de volgorde dat ze in de vraag staan.",
+    "Je hebt misschien niet alle blokken nodig om het probleem op te lossen."],
+    type:"C",
+    diff : 2,
+    hint : "Probeer eerst de kosten van de croissants en taarten apart te berekenen, tel dan deze resultaten op en trek dit af van het geld dat je aan de bakker hebt gegeven.",
+    choices : ["2 * 11","De resultaten optellen","50 - resultaat","11 * 4","4 * 2","2 + 11"],
+    correctOrder : ["4 * 2","2 * 11","De resultaten optellen","50 - resultaat"],
+    fb1: "Goed gedaan! Het is belangrijk om in te zien dat je een groter probleem kan oplossen door het op te splitsen in kleinere problemen en deze stap voor stap op te lossen.",
+}
+
+
 //decExercises.push(birthdayParty);
 //decExercises.push(naughtyKittens);
 //decExercises.push(machinesInFactory);
 //decExercises.push(farmerWolfGoatCabbage);
-//decExercises.push(numberOfWaysToReachSum)
+decExercises.push(numberOfWaysToReachSum)
 //decExercises.push(stoneGame);
 //decExercises.push(FindWordsInSrcambledText);
 //decExercises.push(FindWordsInSrcambledText2);
@@ -226,5 +265,8 @@ let fourShapes = {
 //decExercises.push(FindWordsInSrcambledText6);
 decExercises.push(robotMaze);
 decExercises.push(stackBlocks);
-//decExercises.push(computerVirus);
-decExercises.push(fourShapes);
+decExercises.push(computerVirus);
+//decExercises.push(fourShapes); algorithms
+decExercises.push(decompMath);
+decExercises.push(decompMath2);
+decExercises.push(decompMath3);
