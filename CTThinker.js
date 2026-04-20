@@ -327,32 +327,17 @@ function loadModuleSelectionScreen(){
     getElem("mainmenu").innerHTML = "";
     let levelselection = getElem("levelselection");
     let html = "";
+    let moduleNames = ["Abstractie","Decompositie","Patroonherkenning","Algoritmen",
+    "Geïntegreerde oefeningen"];
     html += "<h1>Module Selectie</h1>"
-    html += textLine("Kies een module om te beginnen")
-    html += emptyLine(1);
-    html += textLine("Module 1: Abstractie");
-    html += createButton("button1","","Abstractie",
-        `pickExercises(0);loadExerciseContents()`);
+    html += textLine("Kies een module om te beginnen");
 
-    html += emptyLine(2);
-    html += textLine("Module 2: Decompositie");
-    html += createButton("button1","","Decompositie",
-        `pickExercises(1);loadExerciseContents()`);
-
-    html += emptyLine(2);
-    html += textLine("Module 3: Patroonherkenning")
-    html += createButton("button1","","Patroonherkenning",
-        `pickExercises(2);loadExerciseContents()`);
-
-    html += emptyLine(2);
-    html += textLine("Module 4: Algorithmisch denken");
-    html += createButton("button1","","Algorithmisch denken",
-        `pickExercises(3);loadExerciseContents()`);
-
-    html += emptyLine(2);
-    html += textLine("Module 5: Geïntegreerde oefeningen");
-    html += createButton("button1","","Geïntegreerde oefeningen",
-        `pickExercises(4);loadExerciseContents()`);
+    for(let i=0;i<moduleNames.length;i++){
+        html += emptyLine(2);
+        html += textLine(`Module ${i+1}: ${moduleNames[i]}`);
+        html += createButton("button1","",moduleNames[i],
+            `pickExercises(${i});loadExerciseContents()`);
+    }
 
     html += emptyLine(2);
     html += "<p>Maak je eigen module: </p>";
@@ -379,11 +364,11 @@ function loadInfoScreen(){
     html += "<p>CTThinker is een tool om de computationele denkvaardigheden bij leerlingen van de tweede graad te verbeteren.</p>";
     html += "<p>De tool bevat 5 modules gebaseerd op het PRADA-model van Computationeel Denken:<\p>"
     html += emptyLine(1);
-    html += "<p>Module 1: Abstractie<\p>"
-    html += "<p>Module 2: Decompositie<\p>"
-    html += "<p>Module 3: Patroonherkenning<\p>"
-    html += "<p>Module 4: Algoritmisch denken<\p>"
-    html += "<p>Module 5: Geïntegreerde oefeningen<\p>"
+    let moduleNames = ["Abstractie","Decompositie","Patroonherkenning","Algoritmen",
+        "Geïntegreerde oefeningen"];
+    for(let i=0;i<moduleNames.length;i++){
+        html += textLine(`Module ${i+1}: ${moduleNames[i]}`);
+    }
     html += emptyLine(1);
     html += "<p>Je kan beginnen met een module naar keuze, maar we raden aan module 5 als laatste te doen.</p>"
     html += "<p>Je krijgt een aantal willekeurige en vaste oefeningen van de geselecteerde module</p>"
