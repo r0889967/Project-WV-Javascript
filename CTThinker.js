@@ -1,7 +1,6 @@
 var selectedExerciseIdx = 0;
 var chosenExercises = [];
-var chosenExercisesCount = 20;
-var limit = 0;
+var chosenExercisesMaxCount = 20;
 var score = 0;
 
 
@@ -173,34 +172,35 @@ function showHint(){
     showHint.innerHTML = exercise.hint;
 }
 
-function pickExercisesMixed(){
-    selectedExerciseIdx = 0;
-    chosenExercises = [];
-    limit = chosenExercisesCount;
-    for(let i = 0; i < chosenExercisesCount; i++){
-        let moduleIdx = Math.floor(Math.random()*4);
-        let exerciseIdx = Math.floor(Math.random()*Exercises[moduleIdx].length);
-        let exercise = Exercises[moduleIdx][exerciseIdx];
-        while (chosenExercises.includes(exercise)) {
-            moduleIdx = Math.floor(Math.random()*4);
-            exerciseIdx = Math.floor(Math.random()*Exercises[moduleIdx].length);
-            exercise = Exercises[moduleIdx][exerciseIdx];
-        }
-        chosenExercises.push(exercise);
-    }
-    chosenExercises.sort((a, b) => a.diff - b.diff);
-}
+// function pickExercisesMixed(){
+//     selectedExerciseIdx = 0;
+//     chosenExercises = [];
+//     limit = chosenExercisesMaxCount;
+//     for(let i = 0; i < chosenExercisesMaxCount; i++){
+//         let moduleIdx = Math.floor(Math.random()*4);
+//         let exerciseIdx = Math.floor(Math.random()*Exercises[moduleIdx].length);
+//         let exercise = Exercises[moduleIdx][exerciseIdx];
+//         while (chosenExercises.includes(exercise)) {
+//             moduleIdx = Math.floor(Math.random()*4);
+//             exerciseIdx = Math.floor(Math.random()*Exercises[moduleIdx].length);
+//             exercise = Exercises[moduleIdx][exerciseIdx];
+//         }
+//         chosenExercises.push(exercise);
+//     }
+//     chosenExercises.sort((a, b) => a.diff - b.diff);
+// }
 
 function pickExercises(moduleIdx,scramble=true){
     selectedExerciseIdx = 0;
-    limit = Exercises[moduleIdx].length;
+    let totalExercisesCount = Exercises[moduleIdx].length;
+    let actualChosenExercisesCount = Math.min(chosenExercisesMaxCount, totalExercisesCount);
     chosenExercises = [];
     if(scramble) {
-        for (let i = 0; i < Math.min(limit, chosenExercisesCount); i++) {
-            let randomExerciseIdx = Math.floor(Math.random() * (limit));
+        for (let i = 0; i < actualChosenExercisesCount; i++) {
+            let randomExerciseIdx = Math.floor(Math.random() * actualChosenExercisesCount);
             let exercise = Exercises[moduleIdx][randomExerciseIdx];
             while (chosenExercises.includes(exercise)) {
-                randomExerciseIdx = Math.floor(Math.random() * (limit));
+                randomExerciseIdx = Math.floor(Math.random() * actualChosenExercisesCount);
                 exercise = Exercises[moduleIdx][randomExerciseIdx];
             }
             chosenExercises.push(exercise)
@@ -262,7 +262,7 @@ function loadTypeCExercise(choices){
 
 function toNextLevel(){
     selectedExerciseIdx++;
-    if(selectedExerciseIdx < Math.min(limit,chosenExercisesCount)) {
+    if(selectedExerciseIdx < chosenExercises.length) {
         loadExerciseContents();
     }else{
         loadFinishedScreen();
@@ -274,7 +274,7 @@ function loadFinishedScreen(){
     let html = "";
     html += "<h1>Result</h1>";
     html += textLine("Je hebt alle vragen voltooid.");
-    html += textLine(`Jouw score is ${score}/${Math.min(limit,chosenExercisesCount)}`)
+    html += textLine(`Jouw score is ${score}/${chosenExercises.length}`)
     html += emptyLine(3);
     html += createButton("button1", "", "Module Selectie", "returnToModuleSelection();score=0;"
         );
@@ -471,10 +471,7 @@ function startCustomExercises(){
         }
     }
 
-    limit = chosenExercises.length;
-
     // sorteer op moeilijkheid
     chosenExercises.sort((a, b) => a.diff - b.diff);
-
     loadExerciseContents();
 }
