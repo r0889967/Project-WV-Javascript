@@ -179,32 +179,4 @@ function loadCustomSelectionScreen(){
     getElem("levelselection").innerHTML = html;
 }
 
-function startCustomExercises(){
-    selectedExerciseIdx = 0;
-    chosenExercises = [];
 
-    let counts = [
-        parseInt(getElem("input0").value) || 0,
-        parseInt(getElem("input1").value) || 0,
-        parseInt(getElem("input2").value) || 0,
-        parseInt(getElem("input3").value) || 0
-    ];
-
-    for(let moduleIdx = 0; moduleIdx < 4; moduleIdx++){
-        let moduleExercises = Exercises[moduleIdx];
-
-        for(let i = 0; i < counts[moduleIdx]; i++){
-            let randomExercise = moduleExercises[Math.floor(Math.random()*moduleExercises.length)];
-
-            while(chosenExercises.includes(randomExercise)){
-                randomExercise = moduleExercises[Math.floor(Math.random()*moduleExercises.length)];
-            }
-
-            chosenExercises.push(randomExercise);
-        }
-    }
-
-    // sorteer op moeilijkheid
-    chosenExercises.sort((a, b) => a.diff - b.diff);
-    loadExerciseContents();
-}
