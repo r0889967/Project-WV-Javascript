@@ -165,10 +165,10 @@ function loadCustomSelectionScreen(){
 
     html += emptyLine(1);
 
-    html += `Abstractie: <input class='input1' id='input0' type='number' onkeydown='return false' min='0' max=${abExercises.length} value='0'><br>`;
-    html += `Decompositie: <input class='input1' id='input1' type='number' onkeydown='return false' min='0' max=${decExercises.length} value='0'><br>`;
-    html += `Patroonherkenning: <input class='input1' id='input2' type='number' onkeydown='return false' min='0' max=${patExercises.length} value='0'><br>`;
-    html += `Algoritmisch denken: <input class='input1' id='input3' type='number' onkeydown='return false' min='0' max=${algoExercises.length} value='0'><br>`;
+    html += `Abstractie: <input class='input1' id='input0' type='number' onkeydown='return false' min='0' max=${Exercises[0].length} value='0'><br>`;
+    html += `Decompositie: <input class='input1' id='input1' type='number' onkeydown='return false' min='0' max=${Exercises[1].length} value='0'><br>`;
+    html += `Patroonherkenning: <input class='input1' id='input2' type='number' onkeydown='return false' min='0' max=${Exercises[2].length} value='0'><br>`;
+    html += `Algoritmisch denken: <input class='input1' id='input3' type='number' onkeydown='return false' min='0' max=${Exercises[3].length} value='0'><br>`;
 
     html += emptyLine(2);
 

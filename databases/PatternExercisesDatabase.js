@@ -314,17 +314,6 @@ let redBlueCircles = {
     fb2:"Kijk naar het aantal blauwe cirkels tussen opeenvolgende rode cirkels, probeer de patroon te vinden!"
 }
 
-let numberPyramid = {
-    title:"Getallenpiramide",
-    text:["Gegeven onderstaande piramide met getallen, er missen een paar getallen",
-    "Welke getallen missen er? Vul ze allemaal in."],
-    image: "images/getallenpiramide.png",
-    type:"B",
-    diff:1,
-    correctAnswer:"3 3 4 4 10 10",
-    fb1:"Dit wordt ook de driehoek van Pascal genoemd."
-}
-
 patExercises.push(nextNumberInSeq);
 patExercises.push(nextNumberInSeq2);
 patExercises.push(nextNumberInSeq3);
@@ -355,4 +344,3 @@ patExercises.push(findPatternSeq6);
 patExercises.push(findNonPatternSeq1);
 patExercises.push(findNonPatternSeq2);
 patExercises.push(redBlueCircles);
-//patExercises.push(numberPyramid);  Dit is algoritmisch denken, niet patroonherkenning 

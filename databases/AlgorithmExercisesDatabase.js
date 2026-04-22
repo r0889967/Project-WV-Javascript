@@ -446,6 +446,17 @@ let pathFinding4 = {
     fb1: "Goed gedaan, check altijd eerst of de robot in de juiste richting staat voordat je hem stappen laat zetten.",
 }
 
+let fourShapes = {
+    title:"4 figuren plaatsen",
+    text:["Gegeven vier figuren: hoe moet je ze op elkaar plaatsen om de onderste tekening te verkrijgen?",
+        "Zet de figuur die je eerst moet plaatsen onderaan."],
+    image:"images/4 figuren.png",
+    type:"C",
+    diff : 1,
+    choices : ["driehoek","ster","vierkant","cirkel"],
+    correctOrder : ["vierkant","cirkel","ster","driehoek"]
+}
+
 //algoExercises.push(encryptedText1);
 //algoExercises.push(encryptedText2);
 //algoExercises.push(encryptedText3);
@@ -485,3 +496,4 @@ algoExercises.push(pathFinding);
 algoExercises.push(pathFinding2);
 algoExercises.push(pathFinding3);
 algoExercises.push(pathFinding4);
+algoExercises.push(fourShapes);

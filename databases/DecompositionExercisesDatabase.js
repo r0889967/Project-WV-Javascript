@@ -57,20 +57,6 @@ let numberOfWaysToReachSum = {
     correctAnswer : "40",
 }
 
-let stoneGame = {
-    title:"Steen spel",
-    text:["Alice en Bob spelen een spel waarbij een aantal stenen op een tafel liggen.",
-        "Beide spelers nemen om de beurt 1, 2 of 3 stenen van de tafel. De speler die de laatste steen wegneemt, verliest het spel.",
-        "Stel dat er aan het begin 7 stenen liggen en Alice begint, ",
-        "hoeveel stenen moet Alice wegnemen op haar eerste beurt zodat zij 100% kan winnen?"],
-    type:"A",
-    diff:3,
-    hint:"Je wil dat er alleen maar 1 steen overblijft bij Bob's beurt.",
-    choices:["1 steen","2 stenen","3 stenen","Alice kan nooit 100% winnen hoe dan ook."],
-    correctAnswers : [1],
-    fb2:"Probeer het spel stap voor stap uit te spelen met de verschillende mogelijkheden voor beide spelers op elke beurt!"
-}
-
 let FindWordsInSrcambledText = {
     title:"Woorden in letterpuin",
     text:["Kijk aandachtig naar onderstaande puin van letters.",
@@ -201,17 +187,6 @@ let computerVirus = {
     fb2:"Het is altijd een beter idee om een groot probleem op te splitsen dan het in 1 keer uitrekenen."
 }
 
-let fourShapes = {
-    title:"4 figuren plaatsen",
-    text:["Gegeven vier figuren: hoe moet je ze op elkaar plaatsen om de onderste tekening te verkrijgen?",
-    "Zet de figuur die je eerst moet plaatsen onderaan."],
-    image:"images/4 figuren.png",
-    type:"C",
-    diff : 1,
-    choices : ["driehoek","ster","vierkant","cirkel"],
-    correctOrder : ["vierkant","cirkel","ster","driehoek"]
-}
-
 let decompMath = {
     title:"Wiskundige stappen",
     text:["Gegeven: (3 + 5) + (8 * 2)",
@@ -256,7 +231,6 @@ let decompMath3 = {
 //decExercises.push(machinesInFactory);
 //decExercises.push(farmerWolfGoatCabbage);
 decExercises.push(numberOfWaysToReachSum)
-//decExercises.push(stoneGame);
 //decExercises.push(FindWordsInSrcambledText);
 //decExercises.push(FindWordsInSrcambledText2);
 //decExercises.push(FindWordsInSrcambledText3);
@@ -266,7 +240,6 @@ decExercises.push(numberOfWaysToReachSum)
 decExercises.push(robotMaze);
 decExercises.push(stackBlocks);
 decExercises.push(computerVirus);
-//decExercises.push(fourShapes); algorithms
 decExercises.push(decompMath);
 decExercises.push(decompMath2);
 decExercises.push(decompMath3);
