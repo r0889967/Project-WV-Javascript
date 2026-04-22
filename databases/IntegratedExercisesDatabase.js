@@ -34,7 +34,7 @@ let catEatMice = {
     "Als je de blauwe muis opeet, wordt elke cijfer van jouw score de grootste cijfer van jouw score.",
     "Als je de paarse muis opeet, wordt jouw score vermenigvuldigd met het aantal muizen die je eerder hebt opgegeten,",
     "(de paarse muis zelf telt niet)",
-    "Als je de roze muis opeet, wordt jouw score -100.",
+    "Als je de roze muis opeet, wordt jouw score -10.",
     "In welke volgorde moet je de muizen opeten om de hoogste mogelijke score te behalen?"],
     image:"images/kat en muizen.png",
     type:"C",
