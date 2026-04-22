@@ -43,8 +43,40 @@ let catEatMice = {
     correctOrder:["roze muis","gele muis","groene muis","rode muis","oranje muis","blauwe muis","paarse muis"],
 }
 
+let farmerWolfGoatCabbage = {
+    title:"Farmer wolf goat cabbage",
+    text:["Een boer (B), een wolf (W), een geit (G) en een kool (K) moeten met boot een rivier oversteken.",
+        "De boot kan maximaal het gewicht van 2 dingen dragen.",
+        "Alleen de boer kan de boot besturen.",
+        "De wolf zal de geit opeten als hij alleen wordt gelaten.",
+        "De geit zal de kool opeten als hij alleen wordt gelaten.",
+        "Hoe kunnen de boer en zijn bezittingen de rivier oversteken zonder iets te verliezen?"],
+    type : "C",
+    diff:4,
+    choices:["B neemt K mee naar overkant","B neemt W mee naar overkant","B neemt G mee naar overkant","B komt terug alleen",
+        "B komt terug alleen","B neemt G mee naar overkant","B komt terug met G","B komt terug met W","B komt teurg met K"],
+    correctOrder:["B neemt G mee naar overkant","B komt terug alleen","B neemt W mee naar overkant","B komt terug met G",
+        "B neemt K mee naar overkant","B komt terug alleen","B neemt G mee naar overkant",],
+    fb2:"Probeer de relaties tussen de boer, de geit, de wolf en de kool beter te bestuderen!"
+}
+
+let answerCraziness = {
+    title:"Gekke vraag",
+    text:["Het juiste antwoord is 'Het Antwoord'."],
+    type:"A",
+    diff:1,
+    choices : ["het antwoord","het Antwoord","Het antwoord","Antwoord","antwoord","het AntwoorD",
+        "de antwoord","De antwoord","Het AntWoord","Het Antwoord","het AntWoord","Het AntwoorD","HET ANTWOORD"],
+    hint:"Let op op de kleine verschillen.",
+    correctAnswers:[9],
+    fb1:"Goed gedaan, je hebt goed op de details gelet.",
+    fb2:"Het is belangrijk dat je goed op de details let.",
+}
+
 
 
 integExercises.push(stoneGame);//decomposition+algoritme
 integExercises.push(numberPyramid);//patroon+algoritme
 integExercises.push(catEatMice);//abstraction+decomposition+algoritme
+integExercises.push(farmerWolfGoatCabbage);//logisch denken
+integExercises.push(answerCraziness);//logisch denken

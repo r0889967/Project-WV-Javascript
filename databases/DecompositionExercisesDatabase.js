@@ -132,23 +132,6 @@ let FindWordsInSrcambledText6 = {
     fb2:"De hoofdletters staan er niet voor niets."
 }
 
-let farmerWolfGoatCabbage = {
-    title:"Farmer wolf goat cabbage",
-    text:["Een boer (B), een wolf (W), een geit (G) en een kool (K) moeten met boot een rivier oversteken.",
-        "De boot kan maximaal het gewicht van 2 dingen dragen.",
-        "Alleen de boer kan de boot besturen.",
-        "De wolf zal de geit opeten als hij alleen wordt gelaten.",
-        "De geit zal de kool opeten als hij alleen wordt gelaten.",
-        "Hoe kunnen de boer en zijn bezittingen de rivier oversteken zonder iets te verliezen?"],
-    type : "C",
-    diff:4,
-    choices:["B neemt K mee naar overkant","B neemt W mee naar overkant","B neemt G mee naar overkant","B komt terug alleen",
-        "B komt terug alleen","B neemt G mee naar overkant","B komt terug met G","B komt terug met W","B komt teurg met K"],
-    correctOrder:["B neemt G mee naar overkant","B komt terug alleen","B neemt W mee naar overkant","B komt terug met G",
-        "B neemt K mee naar overkant","B komt terug alleen","B neemt G mee naar overkant",],
-    fb2:"Probeer de relaties tussen de boer, de geit, de wolf en de kool beter te bestuderen!"
-}
-
 let robotMaze = {
     title:"Robotdoolhof",
     text:["De robot staat op het groene vakje en moet naar het rode vakje gaan.",
@@ -229,7 +212,6 @@ let decompMath3 = {
 //decExercises.push(birthdayParty);
 //decExercises.push(naughtyKittens);
 //decExercises.push(machinesInFactory);
-//decExercises.push(farmerWolfGoatCabbage);
 decExercises.push(numberOfWaysToReachSum)
 //decExercises.push(FindWordsInSrcambledText);
 //decExercises.push(FindWordsInSrcambledText2);

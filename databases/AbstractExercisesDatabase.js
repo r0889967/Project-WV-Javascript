@@ -157,19 +157,6 @@ let mountEverest = {
     fb2:"Lees de vraag zorgvuldig."
 }
 
-let answerCraziness = {
-    title:"Gekke vraag",
-    text:["Het juiste antwoord is 'Het Antwoord'."],
-    type:"A",
-    diff:1,
-    choices : ["het antwoord","het Antwoord","Het antwoord","Antwoord","antwoord","het AntwoorD",
-    "de antwoord","De antwoord","Het AntWoord","Het Antwoord","het AntWoord","Het AntwoorD","HET ANTWOORD"],
-    hint:"Let op op de kleine verschillen.",
-    correctAnswers:[9],
-    fb1:"Goed gedaan, je hebt goed op de details gelet.",
-    fb2:"Het is belangrijk dat je goed op de details let.",
-}
-
 let prisonerAnd2Doors = {
     title:"Gevangene en 2 deuren",
     text:["Een gevangene staat voor 2 deuren, voor elke deur staat er een agent.",
@@ -328,11 +315,10 @@ abExercises.push(whoIsTheCulprit);
 //abExercises.push(spellWord6);
 //abExercises.push(spellWord7);
 abExercises.push(questionWithNoAnswer);
-//abExercises.push(questionWithNoAnswer2);
+abExercises.push(questionWithNoAnswer2);
 //abExercises.push(prisonerAnd2Doors);
 //abExercises.push(largeProduct);
 abExercises.push(mountEverest);
-//abExercises.push(answerCraziness);
 abExercises.push(redundantStoryElements);
 //abExercises.push(nonFittingWords);
 //abExercises.push(nonFittingWords2);
