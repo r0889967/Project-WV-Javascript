@@ -96,10 +96,11 @@ function startCustomExercises(){
         parseInt(getElem("input0").value) || 0,
         parseInt(getElem("input1").value) || 0,
         parseInt(getElem("input2").value) || 0,
-        parseInt(getElem("input3").value) || 0
+        parseInt(getElem("input3").value) || 0,
+        parseInt(getElem("input4").value) || 0,
     ];
 
-    for(let moduleIdx = 0; moduleIdx < 4; moduleIdx++){
+    for(let moduleIdx = 0; moduleIdx < 5; moduleIdx++){
         let moduleExercises = Exercises[moduleIdx];
 
         for(let i = 0; i < counts[moduleIdx]; i++){

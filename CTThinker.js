@@ -169,6 +169,7 @@ function loadCustomSelectionScreen(){
     html += `Decompositie: <input class='input1' id='input1' type='number' onkeydown='return false' min='0' max=${Exercises[1].length} value='0'><br>`;
     html += `Patroonherkenning: <input class='input1' id='input2' type='number' onkeydown='return false' min='0' max=${Exercises[2].length} value='0'><br>`;
     html += `Algoritmisch denken: <input class='input1' id='input3' type='number' onkeydown='return false' min='0' max=${Exercises[3].length} value='0'><br>`;
+    html += `Geintegreerde oefeningen: <input class='input1' id='input4' type='number' onkeydown='return false' min='0' max=${Exercises[4].length} value='0'><br>`;
 
     html += emptyLine(2);
 
