@@ -327,6 +327,138 @@ let ballsAndDrawers = {
     correctAnswers : [2]
 }
 
+let nonFittingWords = {
+    title:"Woorden die niet passen",
+    text:["Gegeven onderstaande woorden.",
+        "Er zijn 2 woorden die niet thuishoren, duid die 2 woorden aan."],
+    type:"A",
+    diff : 1,
+    choices : ["appel","wortel","peer","perziek","sla","meloen","pluim","kers","aardbei"],
+    correctAnswers : [1,4],
+    fb1:"Wortel en sla zijn geen fruit."
+}
+
+let nonFittingWords2 = {
+    title:"Woorden die niet passen",
+    text:["Gegeven onderstaande woorden.",
+        "Er is een woord die niet thuishoort, duid dat woord aan."],
+    type:"A",
+    diff : 2,
+    choices : ["aardbei","kers","banaan","appel","framboos","tomaat"],
+    correctAnswers : [2],
+    fb1:"Een banaan is geel, de andere dingen zijn rood."
+}
+
+let nonFittingWords3 = {
+    title:"Woorden die niet passen",
+    text:["Gegeven onderstaande woorden.",
+        "Er zijn 2 woorden die niet thuishoren, duid die 2 woorden aan."],
+    type:"A",
+    diff : 2,
+    choices : ["rood","indigo","bruin","groen","geel","zwart","blauw","violet","oranje"],
+    correctAnswers : [2,5],
+    fb1:"Bruin en zwart zijn geen kleuren van de regenboog."
+}
+
+let nonFittingWords4 = {
+    title:"Woorden die niet passen",
+    text:["Gegeven onderstaande woorden.",
+        "Er is een woord die niet thuishoort, duid dat woord aan."],
+    type:"A",
+    diff : 1,
+    choices : ["kip","mens","penguin","vogel","varken","eend","gans"],
+    correctAnswers : [4],
+    fb1:"Een varken heeft 4 poten, de andere hebben 2 poten/voeten."
+}
+
+let nonFittingWords5 = {
+    title:"Woorden die niet passen",
+    text:["Gegeven onderstaande woorden.",
+        "Er is een woord die niet thuishoort, duid dat woord aan."],
+    type:"A",
+    diff : 0,
+    choices : ["vliegtuig","paard","auto","fiets","schip"],
+    correctAnswers : [1],
+    fb1:"Een paard is een dier, de andere dingen niet."
+}
+
+let nonFittingWords6 = {
+    title:"Woorden die niet passen",
+    text:["Gegeven onderstaande woorden.",
+        "Er zijn 2 woorden die niet thuishoren, duid die 2 woorden aan."],
+    type:"A",
+    diff : 3,
+    choices : ["specht","uil","mus","pinguin","arend","valk","zwaluw","meeuw","struisvogel","duif"],
+    correctAnswers : [3,8],
+    fb1:"Struisvogels en pinguins kunnen niet vliegen."
+}
+
+let spellWord1 ={
+    title:"Spel het woord",
+    text:["De letters zijn door elkaar, rangschik de letters om het woord te vormen.",],
+    type : "C",
+    diff : 1,
+    choices : ["A","R","T","W","Z"],
+    correctOrder : ["Z","W","A","R","T"],
+}
+
+let spellWord2 ={
+    title:"Spel het woord",
+    text:["De letters zijn door elkaar, rangschik de letters om het woord te vormen.",],
+    type : "C",
+    diff : 3,
+    choices : ["N","T","V","I","T","I","U","R","E","S","I","E"],
+    correctOrder : ["U","N","I","V","E","R","S","I","T","E","I","T"],
+}
+
+let spellWord3 ={
+    title:"Spel het woord",
+    text:["De letters zijn door elkaar, rangschik de letters om het woord te vormen.",],
+    type : "C",
+    diff : 2,
+    choices : ["I","B","A","E","A","R","D"],
+    correctOrder : ["A","A","R","D","B","E","I"],
+}
+
+let spellWord4 ={
+    title:"Spel het woord",
+    text:["De letters zijn door elkaar, rangschik de letters om het woord te vormen.",],
+    type : "C",
+    diff : 0,
+    choices : ["I","R","E","V"],
+    correctOrder : ["V","I","E","R"],
+}
+
+let spellWord5 ={
+    title:"Spel het woord",
+    text:["De letters zijn door elkaar, rangschik de letters om het woord te vormen.",],
+    type : "C",
+    diff : 3,
+    choices : ["I","Y","A","N","D","L","E","S","D","N"],
+    correctOrder : ["D","I","S","N","E","Y","L","A","N","D"],
+}
+
+let spellWord6 ={
+    title:"Spel het woord",
+    text:["De letters zijn door elkaar, rangschik de letters om het woord te vormen.",],
+    type : "C",
+    diff : 2,
+    choices : ["G","L","E","G","A","A","N","U"],
+    hint:"Het is een woord uit het Engels.",
+    correctOrder : ["L","A","N","G","U","A","G","E"],
+    fb1:"Je hebt goed op de letters gelet, het is inderdaad een Engels woord.",
+    fb2:"Hoeft het woord altijd een Nederlandse woord te zijn?"
+}
+
+let spellWord7 ={
+    title:"Spel het woord",
+    text:["De letters zijn door elkaar, rangschik de letters om het woord te vormen.",],
+    type : "C",
+    diff : 3,
+    choices : ["D","L","E","G","A","A","B","H","S","N"],
+    correctOrder : ["B","A","N","G","L","A","D","E","S","H"],
+}
+
 patExercises.push(nextNumberInSeq);
 patExercises.push(nextNumberInSeq2);
 patExercises.push(nextNumberInSeq3);
@@ -358,3 +490,16 @@ patExercises.push(findNonPatternSeq1);
 patExercises.push(findNonPatternSeq2);
 patExercises.push(redBlueCircles);
 patExercises.push(ballsAndDrawers);
+//patExercises.push(nonFittingWords);
+//patExercises.push(nonFittingWords2);
+//patExercises.push(nonFittingWords3);
+//patExercises.push(nonFittingWords4);
+//patExercises.push(nonFittingWords5);
+//patExercises.push(nonFittingWords6);
+//patExercises.push(spellWord1);
+//patExercises.push(spellWord2);
+//patExercises.push(spellWord3);
+//patExercises.push(spellWord4);
+//patExercises.push(spellWord5);
+//patExercises.push(spellWord6);
+//patExercises.push(spellWord7);

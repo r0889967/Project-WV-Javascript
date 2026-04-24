@@ -46,72 +46,6 @@ let whoIsTheCulprit = {
 //    correctAnswers : [1,2,4],
 //}
 
-let spellWord1 ={
-    title:"Spel het woord",
-    text:["De letters zijn door elkaar, rangschik de letters om het woord te vormen.",],
-    type : "C",
-    diff : 1,
-    choices : ["A","R","T","W","Z"],
-    correctOrder : ["Z","W","A","R","T"],
-}
-
-let spellWord2 ={
-    title:"Spel het woord",
-    text:["De letters zijn door elkaar, rangschik de letters om het woord te vormen.",],
-    type : "C",
-    diff : 3,
-    choices : ["N","T","V","I","T","I","U","R","E","S","I","E"],
-    correctOrder : ["U","N","I","V","E","R","S","I","T","E","I","T"],
-}
-
-let spellWord3 ={
-    title:"Spel het woord",
-    text:["De letters zijn door elkaar, rangschik de letters om het woord te vormen.",],
-    type : "C",
-    diff : 2,
-    choices : ["I","B","A","E","A","R","D"],
-    correctOrder : ["A","A","R","D","B","E","I"],
-}
-
-let spellWord4 ={
-    title:"Spel het woord",
-    text:["De letters zijn door elkaar, rangschik de letters om het woord te vormen.",],
-    type : "C",
-    diff : 0,
-    choices : ["I","R","E","V"],
-    correctOrder : ["V","I","E","R"],
-}
-
-let spellWord5 ={
-    title:"Spel het woord",
-    text:["De letters zijn door elkaar, rangschik de letters om het woord te vormen.",],
-    type : "C",
-    diff : 3,
-    choices : ["I","Y","A","N","D","L","E","S","D","N"],
-    correctOrder : ["D","I","S","N","E","Y","L","A","N","D"],
-}
-
-let spellWord6 ={
-    title:"Spel het woord",
-    text:["De letters zijn door elkaar, rangschik de letters om het woord te vormen.",],
-    type : "C",
-    diff : 2,
-    choices : ["G","L","E","G","A","A","N","U"],
-    hint:"Het is een woord uit het Engels.",
-    correctOrder : ["L","A","N","G","U","A","G","E"],
-    fb1:"Je hebt goed op de letters gelet, het is inderdaad een Engels woord.",
-    fb2:"Hoeft het woord altijd een Nederlandse woord te zijn?"
-}
-
-let spellWord7 ={
-    title:"Spel het woord",
-    text:["De letters zijn door elkaar, rangschik de letters om het woord te vormen.",],
-    type : "C",
-    diff : 3,
-    choices : ["D","L","E","G","A","A","B","H","S","N"],
-    correctOrder : ["B","A","N","G","L","A","D","E","S","H"],
-}
-
 let questionWithNoAnswer = {
     title:"Gekke vraag",
     text:["Wat is het antwoord op een vraag die geen antwoord heeft?"],
@@ -194,71 +128,7 @@ let redundantStoryElements = {
     fb2:"Als je het verhaal goed leest, worden de antwoorden duidelijk."
 }
 
-let nonFittingWords = {
-    title:"Woorden die niet passen",
-    text:["Gegeven onderstaande woorden.",
-    "Er zijn 2 woorden die niet thuishoren, duid die 2 woorden aan."],
-    type:"A",
-    diff : 1,
-    choices : ["appel","wortel","peer","perziek","sla","meloen","pluim","kers","aardbei"],
-    correctAnswers : [1,4],
-    fb1:"Wortel en sla zijn geen fruit."
-}
 
-let nonFittingWords2 = {
-    title:"Woorden die niet passen",
-    text:["Gegeven onderstaande woorden.",
-        "Er is een woord die niet thuishoort, duid dat woord aan."],
-    type:"A",
-    diff : 2,
-    choices : ["aardbei","kers","banaan","appel","framboos","tomaat"],
-    correctAnswers : [2],
-    fb1:"Een banaan is geel, de andere dingen zijn rood."
-}
-
-let nonFittingWords3 = {
-    title:"Woorden die niet passen",
-    text:["Gegeven onderstaande woorden.",
-        "Er zijn 2 woorden die niet thuishoren, duid die 2 woorden aan."],
-    type:"A",
-    diff : 2,
-    choices : ["rood","indigo","bruin","groen","geel","zwart","blauw","violet","oranje"],
-    correctAnswers : [2,5],
-    fb1:"Bruin en zwart zijn geen kleuren van de regenboog."
-}
-
-let nonFittingWords4 = {
-    title:"Woorden die niet passen",
-    text:["Gegeven onderstaande woorden.",
-        "Er is een woord die niet thuishoort, duid dat woord aan."],
-    type:"A",
-    diff : 1,
-    choices : ["kip","mens","penguin","vogel","varken","eend","gans"],
-    correctAnswers : [4],
-    fb1:"Een varken heeft 4 poten, de andere hebben 2 poten/voeten."
-}
-
-let nonFittingWords5 = {
-    title:"Woorden die niet passen",
-    text:["Gegeven onderstaande woorden.",
-        "Er is een woord die niet thuishoort, duid dat woord aan."],
-    type:"A",
-    diff : 0,
-    choices : ["vliegtuig","paard","auto","fiets","schip"],
-    correctAnswers : [1],
-    fb1:"Een paard is een dier, de andere dingen niet."
-}
-
-let nonFittingWords6 = {
-    title:"Woorden die niet passen",
-    text:["Gegeven onderstaande woorden.",
-        "Er zijn 2 woorden die niet thuishoren, duid die 2 woorden aan."],
-    type:"A",
-    diff : 3,
-    choices : ["specht","uil","mus","pinguin","arend","valk","zwaluw","meeuw","struisvogel","duif"],
-    correctAnswers : [3,8],
-    fb1:"Struisvogels en pinguins kunnen niet vliegen."
-}
 
 let guessSecretNumber = {
     title:"Raad het getal",
@@ -313,25 +183,12 @@ let guessSecretNumber4 = {
 abExercises.push(grimReaper);
 abExercises.push(whoIsTheCulprit);
 //abExercises.push(manAndSnail);
-//abExercises.push(spellWord1);
-//abExercises.push(spellWord2);
-//abExercises.push(spellWord3);
-//abExercises.push(spellWord4);
-//abExercises.push(spellWord5);
-//abExercises.push(spellWord6);
-//abExercises.push(spellWord7);
 abExercises.push(questionWithNoAnswer);
 abExercises.push(questionWithNoAnswer2);
 abExercises.push(prisonerAnd2Doors);
 //abExercises.push(largeProduct);
 abExercises.push(mountEverest);
 abExercises.push(redundantStoryElements);
-//abExercises.push(nonFittingWords);
-//abExercises.push(nonFittingWords2);
-//abExercises.push(nonFittingWords3);
-//abExercises.push(nonFittingWords4);
-//abExercises.push(nonFittingWords5);
-//abExercises.push(nonFittingWords6);
 abExercises.push(guessSecretNumber);
 abExercises.push(guessSecretNumber2);
 abExercises.push(guessSecretNumber3);
