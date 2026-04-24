@@ -204,19 +204,6 @@ let followAlgorithm4 = {
     correctAnswer : "EBCDEBDB",
 }
 
-let ballsAndDrawers = {
-    title:"Ballen en schotels",
-    text:["Sarah wil haar ballen in haar lades leggen, dus doet ze het volgende.",
-        "Ze legt de eerste bal in de blauwe schotel, de tweede bal in de rode schotel,",
-        "de derde bal in de groene schotel en de vierde bal in de gele schotel.",
-        "Nadat ze de vierde bal erin heeft gelegd, herhaalt ze de bovenstaande cyclus.",
-        "In welke schotel legt Sarah de 35e bal?"],
-    type : "A",
-    diff:1,
-    choices:["blauw","rood","groen","geel"],
-    correctAnswers : [2]
-}
-
 let runningRace = {
     title:"100m ren race",
     text:["Alice,Bob,Carole,Dilan en Eva hebben een race van 100m. Ze hebben elk zijn eigen strategie.",
@@ -477,7 +464,6 @@ algoExercises.push(followAlgorithm1);
 algoExercises.push(followAlgorithm2);
 algoExercises.push(followAlgorithm3);
 algoExercises.push(followAlgorithm4);
-//algoExercises.push(ballsAndDrawers); patroonherkenning, niet algoritmisch denken
 algoExercises.push(runningRace);
 //algoExercises.push(randomNumberGenerator);
 //algoExercises.push(randomNumberGenerator2);

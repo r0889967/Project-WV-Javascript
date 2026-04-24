@@ -264,21 +264,25 @@ let guessSecretNumber = {
     title:"Raad het getal",
     text:["Probeer het geheime getal te raden door de volgende hints. Tussen 10 and 99,",
         "niet deelbaar door 3,4,5 of 7, de eerste cijfer is oneven, de som van de cijfers is groter dan 12",
-        "het verschil tussen de eerste en laatste cijfer is gelijk of kleiner dan 2, de eerste cijfers is groter dan de laatste cijfer.",
+        "het verschil tussen de eerste en laatste cijfer is gelijk of kleiner dan 2, de eerste cijfer is groter dan de laatste cijfer,",
+        "het is een priemgetal, de eerste cijfer is 9."
     ],
     type : "B",
     diff : 3,
-    correctAnswer : "97"
+    correctAnswer : "97",
+    fb1:"Je kunt al veel opties uitsluiten met de feit dat de eerste cijfer 9 is.",
+    fb2:"Probeer de hints te vinden waarmee je de meeste mogelijke opties kunnen uitsluiten."
 }
 
 let guessSecretNumber2 = {
     title:"Raad het getal",
-    text:["Probeer het geheime getal te raden door de volgende hints. Tussen 1 and 99,",
-        "deelbaar door 3 en 5, beide cijfers zijn oneven, de som van 2 cijfers is kleiner dan 8.",
+    text:["Probeer het geheime getal te raden door de volgende hints. Tussen 1 and 99, de eerste cijfer is 1",
+        "deelbaar door 3 en 5, de laatste cijfer is oneven, de som van 2 cijfers is kleiner dan 8 en groter dan 5.",
     ],
     type : "B",
     diff : 1,
-    correctAnswer : "15"
+    correctAnswer : "15",
+    fb2:"Probeer de hints te vinden waarmee je de meeste mogelijke opties kunnen uitsluiten."
 }
 
 let guessSecretNumber3 = {
@@ -290,18 +294,20 @@ let guessSecretNumber3 = {
     diff : 0,
     hint:"Dit is zeer makkelijk.",
     correctAnswer : "0",
-    fb1:"Met deelbaar alle getallen van 1 tot 100 had je het antwoord al snel kunnen vinden.",
+    fb1:"Met deelbaar door alle getallen van 1 tot 100 had je het antwoord al snel kunnen vinden.",
     fb2:"Er is een zeer belangrijk hint in de vraag, probeer dit volgende keer te vinden!"
 }
 
 let guessSecretNumber4 = {
     title:"Raad het getal",
     text:["Probeer het geheime getal te raden door de volgende hints. Tussen 0 and 100,",
-        "de som van de cijfers is deelbaar door 5, is een priemgetal, is kleiner dan 40.",
+        "de som van de cijfers is deelbaar door 5, het getal is oneven,",
+        "de eerste cijfer is kleiner dan de tweede cijfer, het verschil tussen de 2 cijfers is 1.",
     ],
     type : "B",
     diff : 2,
-    correctAnswer : "23"
+    correctAnswer : "23",
+    fb2:"Probeer de hints te vinden waarmee je de meeste mogelijke opties kunnen uitsluiten."
 }
 
 abExercises.push(grimReaper);
@@ -316,7 +322,7 @@ abExercises.push(whoIsTheCulprit);
 //abExercises.push(spellWord7);
 abExercises.push(questionWithNoAnswer);
 abExercises.push(questionWithNoAnswer2);
-//abExercises.push(prisonerAnd2Doors);
+abExercises.push(prisonerAnd2Doors);
 //abExercises.push(largeProduct);
 abExercises.push(mountEverest);
 abExercises.push(redundantStoryElements);
@@ -326,7 +332,7 @@ abExercises.push(redundantStoryElements);
 //abExercises.push(nonFittingWords4);
 //abExercises.push(nonFittingWords5);
 //abExercises.push(nonFittingWords6);
-//abExercises.push(guessSecretNumber);
-//abExercises.push(guessSecretNumber2);
-//abExercises.push(guessSecretNumber3);
-//abExercises.push(guessSecretNumber4);
+abExercises.push(guessSecretNumber);
+abExercises.push(guessSecretNumber2);
+abExercises.push(guessSecretNumber3);
+abExercises.push(guessSecretNumber4);
