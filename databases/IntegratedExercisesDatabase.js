@@ -2,40 +2,41 @@ let stoneGame = {
     title:"Steen spel",
     text:["Alice en Bob spelen een spel waarbij een aantal stenen op een tafel liggen.",
         "Beide spelers nemen om de beurt 1, 2 of 3 stenen van de tafel. De speler die de laatste steen wegneemt, verliest het spel.",
-        "Stel dat er aan het begin 7 stenen liggen, beide spelers optimaal spelen en Alice begint, ",
-        "hoeveel stenen moet Alice wegnemen op haar eerste beurt zodat zij 100% kan winnen?"],
+        "Stel dat er oorspronkelijk 7 stenen liggen, beide spelers optimaal spelen en Alice begint.",
+        "Hoeveel stenen moet Alice wegnemen bij haar eerste beurt zodat zij met 100% zekerheid kan winnen?"],
     type:"A",
     diff:3,
-    hint:"Je wil dat er alleen maar 1 steen overblijft bij Bob's beurt.",
-    choices:["1 steen","2 stenen","3 stenen","Alice kan nooit 100% winnen hoe dan ook."],
+    hint:"Je wil dat er maar 1 steen overblijft bij de start van de beurt van Bob.",
+    choices:["1 steen","2 stenen","3 stenen","Alice kan nooit met 100% zekerheid winnen"],
     correctAnswers : [1],
-    fb2:"Probeer het spel stap voor stap uit te spelen met de verschillende mogelijkheden voor beide spelers op elke beurt!"
+    fb2:"Probeer het spel stap voor stap uit te spelen met de verschillende mogelijkheden voor beide spelers bij elke beurt!"
 }
 
 let numberPyramid = {
     title:"Getallenpiramide",
     text:["Gegeven onderstaande piramide met getallen, er missen een paar getallen",
-        "Welke getallen missen er? Vul ze allemaal in."],
+        "Welke getallen missen er? Zet een spatie tussen de getallen en zet ze in volgorde van klein naar groot."],
     image: "images/getallenpiramide.png",
     type:"B",
     diff:1,
+    hint: "Zoek naar een patroon in de getallen van boven naar onder.",
     correctAnswer:"3 3 4 4 10 10",
     fb1:"Dit wordt ook de driehoek van Pascal genoemd."
 }
 
 let catEatMice = {
     title:"Kat eet muizen",
-    text:["We hebben een kat en 7 muizen, bij dit spel ben je de kat en je moet alle muizen opeten om te scoren",
-    "In het begin is jouw score 1, verder weten we de volgende over de muizen",
+    text:["Er zijn een kat en 7 muizen. Bij dit spel ben je de kat en je moet muizen opeten om punten te verdienen.",
+    "In het begin is je score 1, verder weten we het volgende over de muizen:",
     "Als je de rode muis opeet, wordt jouw score vermenigvuldigd met 2.",
     "Als je de orange muis opeet, wordt jouw score vermenigvuldigd met zichzelf.",
-    "Als je de gele muis opeet, wordt jouw score 0.",
-    "Als je de groene muis opeet, komt er 15 bij de score.",
-    "Als je de blauwe muis opeet, wordt elke cijfer van jouw score de grootste cijfer van jouw score.",
+    "Als je de gele muis opeet, wordt jouw score op 0 gezet.",
+    "Als je de groene muis opeet, komt er 15 bij je score.",
+    "Als je de blauwe muis opeet, wordt elk cijfer in je score het grootste cijfer in het getal van je score. (vb. 123 wordt 333)",
     "Als je de paarse muis opeet, wordt jouw score vermenigvuldigd met het aantal muizen die je eerder hebt opgegeten,",
     "(de paarse muis zelf telt niet)",
-    "Als je de roze muis opeet, wordt jouw score -10.",
-    "In welke volgorde moet je de muizen opeten om de hoogste mogelijke score te behalen?"],
+    "Als je de roze muis opeet, wordt jouw score op -10 gezet.",
+    "In welke volgorde moet je de muizen opeten om de hoogst mogelijke score te behalen?"],
     image:"images/kat en muizen.png",
     type:"C",
     diff:4,
@@ -45,11 +46,11 @@ let catEatMice = {
 
 let farmerWolfGoatCabbage = {
     title:"Farmer wolf goat cabbage",
-    text:["Een boer (B), een wolf (W), een geit (G) en een kool (K) moeten met boot een rivier oversteken.",
+    text:["Een boer (B), een wolf (W), een geit (G) en een kool (K) moeten met een boot een rivier oversteken.",
         "De boot kan maximaal het gewicht van 2 dingen dragen.",
         "Alleen de boer kan de boot besturen.",
-        "De wolf zal de geit opeten als hij alleen wordt gelaten.",
-        "De geit zal de kool opeten als hij alleen wordt gelaten.",
+        "De wolf zal de geit opeten als de boer ze alleen laat.",
+        "De geit zal de kool opeten als de boer ze alleen laat.",
         "Hoe kunnen de boer en zijn bezittingen de rivier oversteken zonder iets te verliezen?"],
     type : "C",
     diff:4,
@@ -69,8 +70,7 @@ let answerCraziness = {
         "de antwoord","De antwoord","Het AntWoord","Het Antwoord","het AntWoord","Het AntwoorD","HET ANTWOORD"],
     hint:"Let op op de kleine verschillen.",
     correctAnswers:[9],
-    fb1:"Goed gedaan, je hebt goed op de details gelet.",
-    fb2:"Het is belangrijk dat je goed op de details let.",
+    fb1:"Het is belangrijk dat je goed op de details let.",
 }
 
 
@@ -79,4 +79,4 @@ integExercises.push(stoneGame);//decomposition+algoritme
 integExercises.push(numberPyramid);//patroon+algoritme
 integExercises.push(catEatMice);//abstraction+decomposition+algoritme
 integExercises.push(farmerWolfGoatCabbage);//logisch denken
-integExercises.push(answerCraziness);//logisch denken
+//integExercises.push(answerCraziness);//niet echt CT

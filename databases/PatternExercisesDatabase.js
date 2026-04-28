@@ -7,6 +7,8 @@ let nextNumberInSeq = {
     diff : 3,
     hint: "Het heeft iets met priemgetallen te maken.",
     correctAnswer : "160",
+    fb1: "De verschillen tussen de opeenvolgende elementen in de reeks zijn de opeenvolgende priemgetallen.",
+    fb2: "De laatste stap was +29, dus de volgende stap is +31, want dat is het priemgetal dat volgt op 29."
 }
 
 let nextNumberInSeq2 = {
@@ -18,6 +20,7 @@ let nextNumberInSeq2 = {
     diff : 2,
     hint : "Kijk wat je kan doen met de afzonderlijke cijfers van elk element in de reeks.",
     correctAnswer : "1611",
+    fb1: "We leggen het patroon uit met behulp van de eerste overgang (5738 -> 121011): 5 + 7 = 12, 7 + 3 = 10, 3 + 8 = 11. Dus we krijgen 12, 10 en 11, wat samen 121011 vormt.",
 }
 
 let nextNumberInSeq3 = {
@@ -37,7 +40,9 @@ let nextNumberInSeq4 = {
         "Wat is het volgende element in de reeks?"],
     type:"B",
     diff : 0,
+    hint: "Het is mogelijk dat je de twee voorafgaande elementen nodig hebt in plaats van één om het volgende te vinden.",
     correctAnswer : "55",
+    fb1: "Deze reeks staat bekend als de Fibonacci-reeks, waarbij elk element de som is van de twee voorafgaande elementen."
 }
 
 let nextNumberInSeq5 = {
@@ -47,7 +52,9 @@ let nextNumberInSeq5 = {
         "Wat is het volgende element in de reeks?"],
     type:"B",
     diff : 0,
+    hint: "Je ziet grote en kleine sprongen, het is dus mogelijk dat er twee verschillende bewerkingen zijn die worden afgewisseld.",
     correctAnswer : "440",
+    fb1: "De bewerkingen gaan als volgt: *2, +2, *3, +3, *4, +4, *5, +5, ... Dus het volgende element is 88 * 5 = 440."
 }
 
 let nextNumberInSeq6 = {
@@ -57,7 +64,9 @@ let nextNumberInSeq6 = {
         "Wat is het volgende element in de reeks?"],
     type:"B",
     diff : 1,
+    hint: "Deze reeks gaat minder over de bewerkingen tussen de elementen, maar meer over de aard van de elementen zelf.",
     correctAnswer : "37",
+    fb1: "Deze reeks bestaat uit de opeenvolgende priemgetallen. Het volgende priemgetal na 31 is 37."
 }
 
 let nextNumberInSeq7 = {
@@ -68,6 +77,7 @@ let nextNumberInSeq7 = {
     type:"B",
     diff : 2,
     correctAnswer : "1615201561",
+    fb1: "Deze reeks maakt gebruik van de getallen in de driehoek van Pascal, maar de elementen worden aan elkaar geplakt."
 }
 
 let nextNumberInSeq8 = {
@@ -77,7 +87,9 @@ let nextNumberInSeq8 = {
         "Wat is het volgende element in de reeks?"],
     type:"B",
     diff : 2,
+    hint: "Zie je ook een verandering in de bewerking die wordt uitgevoerd?",
     correctAnswer : "132",
+    fb1: "Het getal dat wordt bijgeteld neemt steeds met 2 toe: +4, +6, +8, +10, +12, +14, +16, +18, +20, +22, ..."
 }
 
 
@@ -89,6 +101,8 @@ let nextStrInSeq = {
     type:"B",
     diff:1,
     correctAnswer : "eeeeecccabbddddffffff",
+    fb1: "Het aantal keer dat een letter wordt toegevoegd is steeds de plaats waarin ze in het alfabet staat (bijvoorbeeld, b staat op de tweede plaats, dus wordt twee keer toegevoegd.)",
+    fb2: "Ook worden ze afwisselend vooraan en achteraan toegevoegd."
 }
 
 let nextStrInSeq2 = {
@@ -215,7 +229,7 @@ let missingNumberInSeq6 = {
 let findPatternSeq1 = {
     title: "Vind reeks(en) met patronen",
     text:["Kijk aandachtig naar onderstaande reeksen.",
-        "Welke reeks(en) hebben een patroon?"],
+        "Welke reeks(en) hebben een duidelijk patroon?"],
     type:"A",
     diff:2,
     choices: ["1,123,12345,1234567,123456789","1,10,101,1001,10010,100101,1001011","1,2,4,8,17,33,64,128,256,513","1,10,5,2,11,6,3,12,7,4",
@@ -226,7 +240,7 @@ let findPatternSeq1 = {
 let findPatternSeq2 = {
     title: "Vind reeks(en) met patronen",
     text:["Kijk aandachtig naar onderstaande reeksen.",
-        "Welke reeks(en) hebben een patroon?"],
+        "Welke reeks(en) hebben een duidelijk patroon?"],
     type:"A",
     diff:1,
     choices: ["1,5,10,50,100,500","1,5,10,15,150,500","1,15,50,100,115,150","1,10,15,50,115,155",
@@ -237,7 +251,7 @@ let findPatternSeq2 = {
 let findPatternSeq3 = {
     title: "Vind reeks(en) met patronen",
     text:["Kijk aandachtig naar onderstaande reeksen.",
-        "Welke reeks(en) hebben een patroon?"],
+        "Welke reeks(en) hebben een duidelijk patroon?"],
     type:"A",
     diff:1,
     choices: ["1,3,5,7,9,11,13,15","1,5,9,13,17,21,25,29","3,5,7,10,11,13,15,17","1,13,135,1357,13579",
@@ -248,7 +262,7 @@ let findPatternSeq3 = {
 let findPatternSeq4 = {
     title: "Vind reeks(en) met patronen",
     text:["Kijk aandachtig naar onderstaande reeksen.",
-        "Welke reeks(en) hebben een patroon?"],
+        "Welke reeks(en) hebben een duidelijk patroon?"],
     type:"A",
     diff:0,
     choices: ["1,-1,-1,1,-1,1,-1,1,-1,1,-1","1,-1,1,-1,-1,1,-1,-1,-1,1","-1,1,-1,1,-1,1,-1","1,1,-1,-1,1,1,-1,-1,1,1,1",
@@ -259,12 +273,13 @@ let findPatternSeq4 = {
 let findPatternSeq5 = {
     title: "Vind reeks(en) met patronen",
     text:["Kijk aandachtig naar onderstaande reeksen.",
-        "Welke reeks(en) hebben een patroon?"],
+        "Welke reeks(en) hebben een duidelijkpatroon?"],
     type:"A",
     diff:3,
     choices: ["3,5,9,17,33,65,128,257","2,4,8,16,32,64,128,256","2,8,16,64,256,1024,4096","2,5,8,17,32,65,128,257",
         "15,25,45,85,165,325,645","2,4,9,17,32,64,128,257","6,12,24,48,96,193,384,768"],
     correctAnswers : [1,2,3,4],
+    fb1: "De tweede reeks: *2 bij elke stap, de derde reeks: *4 bij elke stap, de vierde reeks: *2 + 1 en *2 - 2 om de beurt, de vijfde reeks: optelstap verdubbelt bij elke stap, beginnende met 10"
 }
 
 let findPatternSeq6 = {
@@ -305,11 +320,12 @@ let redBlueCircles = {
     title:"Rode en blauwe cirkels",
     text:["Gegeven onderstaande tekening, er staan blauwe en rode cirkels.",
     "De cirkels zou een patroon moeten vormen, maar sommige cirkels zijn verkeerd gekleurd.",
-    "Welke cirkels zijn verkeerd gekleurd? Geef de nummers van alle verkeerd gekleurde cirkels in"],
+    "Welke cirkels zijn verkeerd gekleurd?", 
+    "Geef de nummers van alle verkeerd gekleurde cirkels en zet ze in volgorde van klein naar groot met een spatie tussen de nummers."],
     image: "images/rood blauw cirkels.png",
     type:"B",
     diff: 4,
-    hint:"Probeer eerst de juiste patroon te herkennen.",
+    hint:"Probeer eerst het juiste patroon te herkennen. ",
     correctAnswer: "7 11 20 24",
     fb2:"Kijk naar het aantal blauwe cirkels tussen opeenvolgende rode cirkels, probeer de patroon te vinden!"
 }
@@ -319,8 +335,8 @@ let ballsAndDrawers = {
     text:["Sarah wil haar ballen in haar lades leggen, dus doet ze het volgende.",
         "Ze legt de eerste bal in de blauwe schotel, de tweede bal in de rode schotel,",
         "de derde bal in de groene schotel en de vierde bal in de gele schotel.",
-        "Nadat ze de vierde bal erin heeft gelegd, herhaalt ze de bovenstaande cyclus.",
-        "In welke schotel legt Sarah de 35e bal?"],
+        "Nadat ze de vierde bal heeft opgeborgen, herhaalt ze de bovenstaande cyclus.",
+        "In welke schotel legt Sarah bal nummer 35?"],
     type : "A",
     diff:1,
     choices:["blauw","rood","groen","geel"],
@@ -461,19 +477,19 @@ let spellWord7 ={
 
 patExercises.push(nextNumberInSeq);
 patExercises.push(nextNumberInSeq2);
-patExercises.push(nextNumberInSeq3);
+//patExercises.push(nextNumberInSeq3); Kan te veel opties hebben
 patExercises.push(nextNumberInSeq4);
 patExercises.push(nextNumberInSeq5);
 patExercises.push(nextNumberInSeq6);
-patExercises.push(nextNumberInSeq7);
+//patExercises.push(nextNumberInSeq7); Te moeilijk, leerlingen kennen de driehoek van Pascal waarschijnlijk niet
 patExercises.push(nextNumberInSeq8);
 patExercises.push(nextStrInSeq);
 patExercises.push(nextStrInSeq2);
 patExercises.push(nextStrInSeq3);
-patExercises.push(nextStrInSeq4);
-patExercises.push(nextStrInSeq5);
-patExercises.push(missingStrInSeq1);
-patExercises.push(missingStrInSeq2);
+//patExercises.push(nextStrInSeq4);
+//patExercises.push(nextStrInSeq5);
+//patExercises.push(missingStrInSeq1);
+//patExercises.push(missingStrInSeq2);
 //patExercises.push(missingNumberInSeq1);
 //patExercises.push(missingNumberInSeq2);
 //patExercises.push(missingNumberInSeq3);
@@ -483,12 +499,12 @@ patExercises.push(missingStrInSeq2);
 patExercises.push(findPatternSeq1);
 patExercises.push(findPatternSeq2);
 patExercises.push(findPatternSeq3);
-patExercises.push(findPatternSeq4);
+//patExercises.push(findPatternSeq4);
 patExercises.push(findPatternSeq5);
-patExercises.push(findPatternSeq6);
-patExercises.push(findNonPatternSeq1);
-patExercises.push(findNonPatternSeq2);
-patExercises.push(redBlueCircles);
+//patExercises.push(findPatternSeq6);
+//patExercises.push(findNonPatternSeq1);
+//patExercises.push(findNonPatternSeq2);
+//patExercises.push(redBlueCircles); Je hebt niet genoeg informatie om dit probleem te kunnen oplossen...
 patExercises.push(ballsAndDrawers);
 //patExercises.push(nonFittingWords);
 //patExercises.push(nonFittingWords2);

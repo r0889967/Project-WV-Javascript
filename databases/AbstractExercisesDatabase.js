@@ -21,14 +21,15 @@ let whoIsTheCulprit = {
         "gingen 's avonds weer naar huis. Maar toen Sarah de volgende ochtend wakker werd en naar beneden kwam, lag",
         "haar vaas in duizend stukken op de grond. Sarah denkt dat één van haar vrienden per ongeluk de vaas heeft gebroken,", 
         "maar ze weet niet wie.",
-        "Welke van haar vrienden kunnen de daders zijn?"],
+        "Welke informatie mist er zodat Sarah kan weten wie de dader is?"],
     type : "A",
     diff : 1,
-    hint: "Alle vrienden zijn binnengekomen langs de voordeur, wat kan dit betekenen?",
-    choices : ["Alice","Bob","Carole","Dilan","Eva"],
-    correctAnswers : [0,1,2,3,4],
-    fb1:"Als iedereen langs de voordeur binnen is gelopen, kunnen ze allemaal per ongeluk de vaas hebben gebroken.",
-    fb2:"Probeer logisch te denken, wat betekent het als iedereen het huis binnenkomt bij de voordeur?"
+    hint: "Duidt alle opties aan waardoor Sarah met 100% zekerheid kan weten wie de dader is.",
+    choices : ["Geen informatie mist.","De volgorde waarin de vrienden zijn vertrokken.","Het tijdstip waarop de vrienden zijn vertrokken.",
+        "Of de vrienden aan Sarah zouden melden dat er een gebroken vaas op de grond ligt.","De volgorde waarin de vrienden zijn aangekomen."],
+    correctAnswers : [1,3],
+    fb1:"De volgorde is belangrijk omdat als de dader als laatste vertrokken is, dan zou hij of zij de vaas hebben kunnen breken en het niet hebben gemeld aan Sarah.",
+    fb2:"Het is ook belangrijk om te weten of ze iets zouden melden, want als ze dat niet zouden doen, zou je zelfs met de volgorde van vertrek nog niet kunnen weten wie de dader is."
 }
 
 //let manAndSnail = {
@@ -103,7 +104,7 @@ let prisonerAnd2Doors = {
     diff : 2,
     choices:["Leidt deur 1 tot vrijheid?","Leidt deur 2 tot vrijheid?","Leidt deur 1 tot dood?",
         "Leidt deur 2 tot dood?","Welke deur leidt tot vrijheid?","Welke deur leidt tot dood?",
-        "Wat zal de andere agent zeggen over welke deur leidt tot vrijheid?"],
+        "Wat zou de andere agent zeggen als ik hem vraag of deur 1 tot vrijheid leidt?"],
     correctAnswers : [6],
     fb2:"Hoe kun je informatie van 2 deuren krijgen met 1 vraag?"
 }
@@ -112,7 +113,7 @@ let redundantStoryElements = {
     title:"Overbodige elementen",
     text:["Sarah was gisteren tijdens het buitenspelen haar vier ballen kwijtgeraakt en besloot ze te gaan zoeken.",
         "Eerst vond ze haar rode bal toen ze in een gat viel. Terwijl ze verder zocht naar de andere ballen,",
-        "vloog er een vogel voorbij. Ze liep al snel diep het bos in, langs enkele griezelig uitziende bomen.",
+        "vloog er een vogel voorbij. Ze liep al snel diep het bos in, langs enkele griezelig bomen.",
         "Na nog wat zoeken vond ze eindelijk de gele bal onder een steen.",
         "Tijdens haar zoektocht naar de groene bal kwam ze een verlaten hut tegen vol spinnen.",
         "Plots sprong er een spin uit de hut en klom op haar, waardoor ze in paniek raakte en tegen een berk aan liep.",
@@ -123,8 +124,9 @@ let redundantStoryElements = {
     type : "A",
     diff : 3,
     hint:"Overbodig betekent dat het element geen belangrijke rol speelt in het verhaal.",
-    choices : ["gat","vogel","griezelige bomen","steen","spin","berk","beer","vijver"],
+    choices : ["gat","vogel","griezelige bomen","steen","spin","berk","beer","vijver", "heuvel"],
     correctAnswers : [1,2,6,7],
+    fb1: "De belangrijke elementen zijn die die ervoor hebben gezorgd dat Sarah haar ballen heeft gevonden, de rest is overbodig.",
     fb2:"Als je het verhaal goed leest, worden de antwoorden duidelijk."
 }
 
@@ -132,62 +134,62 @@ let redundantStoryElements = {
 
 let guessSecretNumber = {
     title:"Raad het getal",
-    text:["Probeer het geheime getal te raden door de volgende hints. Tussen 10 and 99,",
-        "niet deelbaar door 3,4,5 of 7, de eerste cijfer is oneven, de som van de cijfers is groter dan 12",
-        "het verschil tussen de eerste en laatste cijfer is gelijk of kleiner dan 2, de eerste cijfer is groter dan de laatste cijfer,",
-        "het is een priemgetal, de eerste cijfer is 9."
+    text:["Probeer het geheime getal te raden met behulp van de volgende hints: Tussen 10 and 99,",
+        "niet deelbaar door 3,4,5 of 7, het eerste cijfer is oneven, de som van de cijfers is groter dan 12",
+        "het verschil tussen het eerste en laatste cijfer is gelijk of kleiner dan 2, het eerste cijfer is groter dan het laatste cijfer,",
+        "het is een priemgetal, het eerste cijfer is 9."
     ],
     type : "B",
     diff : 3,
     correctAnswer : "97",
-    fb1:"Je kunt al veel opties uitsluiten met de feit dat de eerste cijfer 9 is.",
-    fb2:"Probeer de hints te vinden waarmee je de meeste mogelijke opties kunnen uitsluiten."
+    fb1:"Je kunt al veel opties uitsluiten met de feit dat het eerste cijfer 9 is.",
+    fb2:"Probeer de hints te vinden waarmee je de meeste opties kan uitsluiten."
 }
 
 let guessSecretNumber2 = {
     title:"Raad het getal",
-    text:["Probeer het geheime getal te raden door de volgende hints. Tussen 1 and 99, de eerste cijfer is 1",
-        "deelbaar door 3 en 5, de laatste cijfer is oneven, de som van 2 cijfers is kleiner dan 8 en groter dan 5.",
+    text:["Probeer het geheime getal te raden met behulp van de volgende hints. Tussen 1 and 99, het eerste cijfer is 1",
+        "deelbaar door 3 en 5, het laatste cijfer is oneven, de som van de 2 cijfers in het getal is kleiner dan 8 en groter dan 5.",
     ],
     type : "B",
     diff : 1,
     correctAnswer : "15",
-    fb2:"Probeer de hints te vinden waarmee je de meeste mogelijke opties kunnen uitsluiten."
+    fb2:"Probeer de hints te vinden waarmee je de meeste opties kan uitsluiten."
 }
 
 let guessSecretNumber3 = {
     title:"Raad het getal",
-    text:["Probeer het geheime getal te raden door de volgende hints. Tussen 0 and 100,",
-        "deelbaar door alle getallen van 1 tot 100, is even, heeft slechts 1 cijfer, is kleiner dan 50.",
+    text:["Stel dat je een geheim getal moet raden met behulp van de hints die hieronder staan. Duid alle hints aan die je zeker nodig hebt",
+        "om het geheime getal te kunnen vinden.",
     ],
-    type : "B",
+    type : "A",
     diff : 0,
-    hint:"Dit is zeer makkelijk.",
-    correctAnswer : "0",
-    fb1:"Met deelbaar door alle getallen van 1 tot 100 had je het antwoord al snel kunnen vinden.",
-    fb2:"Er is een zeer belangrijk hint in de vraag, probeer dit volgende keer te vinden!"
+    hint:"Denk goed na welke hints overlappen met elkaar. Als het getal kleiner is dan 50, dan is het ook kleiner dan 75.",
+    choices : ["Het getal is kleiner dan 50","Het getal is kleiner dan 75","Het laatste cijfer is 5","Het getal is oneven","De som van de cijfers is 8"],
+    correctAnswers : [0, 2, 4],
+    fb1:"Sommige hints geven dezelfde informatie, of minder informatie dan andere, dus je hoeft ze niet allemaal te gebruiken.",
 }
 
 let guessSecretNumber4 = {
     title:"Raad het getal",
-    text:["Probeer het geheime getal te raden door de volgende hints. Tussen 0 and 100,",
+    text:["Probeer het geheime getal te raden met behulp van de volgende hints: Tussen 0 and 100,",
         "de som van de cijfers is deelbaar door 5, het getal is oneven,",
-        "de eerste cijfer is kleiner dan de tweede cijfer, het verschil tussen de 2 cijfers is 1.",
+        "het eerste cijfer is kleiner dan het tweede cijfer, het verschil van de 2 cijfers is gelijk aan 1.",
     ],
     type : "B",
     diff : 2,
     correctAnswer : "23",
-    fb2:"Probeer de hints te vinden waarmee je de meeste mogelijke opties kunnen uitsluiten."
+    fb2:"Probeer de hints te vinden waarmee je de meeste opties kan uitsluiten."
 }
 
 abExercises.push(grimReaper);
 abExercises.push(whoIsTheCulprit);
 //abExercises.push(manAndSnail);
-abExercises.push(questionWithNoAnswer);
-abExercises.push(questionWithNoAnswer2);
+//abExercises.push(questionWithNoAnswer);
+//abExercises.push(questionWithNoAnswer2);
 abExercises.push(prisonerAnd2Doors);
 //abExercises.push(largeProduct);
-abExercises.push(mountEverest);
+//abExercises.push(mountEverest);
 abExercises.push(redundantStoryElements);
 abExercises.push(guessSecretNumber);
 abExercises.push(guessSecretNumber2);

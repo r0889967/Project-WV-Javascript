@@ -168,13 +168,14 @@ let followAlgorithm1 = {
 
 let followAlgorithm2 = {
     title:"Volg het algoritme",
-    text:["Stel dat we aan het begin een A hebben, dan voeren we de volgende stappen uit:",
+    text:["Stel dat we aan het begin een string 'A' hebben, dan voeren we de volgende stappen uit:",
         "1) Voeg een spatie toe aan het einde van de string, gevolgd door een kopie van de string aan het einde.",
 "2) Voeg een B toe rechts van elke A.",
 "3) Voeg een C toe links van elke B.",
     "Wat is het resultaat als we bovenstaande stappen 2 keren achtereenvolgens uitvoeren?",],
     type : "B",
     diff:2,
+    hint: "Om je op gang te helpen: na de eerste keer de stappen uit te voeren, zal de string er als volgt uitzien: 'ACB ACB' (Ga dit na). Gebruik nu deze string om nog eens de stappen uit te voeren.",
     correctAnswer : "ACBCCB ACBCCB ACBCCB ACBCCB",
 }
 
@@ -186,6 +187,7 @@ let followAlgorithm3 = {
     "Wat is het resultaat als we bovenstaande stappen 4 keren achtereenvolgens uitvoeren?"],
     type : "B",
     diff:2,
+    hint: "Om je op gang te helpen doen we één keer de lus: 4 + 3 + 3 = 10, wat deelbaar is door 5, dus we gaan naar stap 2, het kleinste priemgetal groter dan 10 is 11. Gebruik nu dit getal om nog 3 keer de stappen uit te voeren.",
     correctAnswer : "41",
 }
 
@@ -206,15 +208,15 @@ let followAlgorithm4 = {
 
 let runningRace = {
     title:"100m ren race",
-    text:["Alice,Bob,Carole,Dilan en Eva hebben een race van 100m. Ze hebben elk zijn eigen strategie.",
-        "We veronderstellen dat elke renner loopt met snelheid 1m/s..",
-        "Alice rent 1 meter en stopt 1 second.",
-        "Bob rent 5 meter en stopt 10 seconden.",
-        "Carole rent 3 meter en stopt 2 seconden.",
-        "Dilan rent 50 meter en stopt 75 seconden.",
-        "Eva rent 10 meter en stopt 5 seconden.",
-        "Elke renner herhaalt zijn strategie tijdens de volledig race.",
-        "In welke volgorde komen ze aan bij het einde? "],
+    text:["Alice, Bob, Carole, Dilan en Eva hebben een race van 100m. Ze hebben elk hun eigen strategie.",
+        "We veronderstellen dat elke renner loopt met een snelheid van 1 meter per seconde..",
+        "Alice rent 1 meter en rust 1 seconde.",
+        "Bob rent 5 meter en rust 10 seconden.",
+        "Carole rent 3 meter en rust 2 seconden.",
+        "Dilan rent 50 meter en rust 75 seconden.",
+        "Eva rent 10 meter en rust 5 seconden.",
+        "Elke renner blijft zijn/haar strategie herhalen gedurende de volledige race.",
+        "In welke volgorde komen ze aan aan de finish? Sleep ze in de juiste volgorde van eerste tot laatste."],
     type:"C",
     diff:3,
     choices : ["Alice","Bob","Carole","Dilan","Eva"],
@@ -244,8 +246,8 @@ let randomNumberGenerator2 = {
 let blueCar = {
     title:"Rij naar het einde",
     text:["Rij de blauwe auto naar het einde, hieronder zie je de wegenkaart.",
-    "De blauwe auto kan gestuurd worden door 3 soorten instructies:",
-    "↑: rij tot helemaal aan het einde van de weg, ↱: rechts afslaan, ↰: links afslaan",
+    "De blauwe auto kan bestuurd worden met behulp van 3 soorten instructies:",
+    "↑: Rij helemaal tot aan het einde van de weg (De kruispunten sla je dus over), ↱: rechts afslaan, ↰: links afslaan",
     "Plaats de instructies in de juiste volgorde zodat de auto naar het einde kan rijden",
     "Let op: je hoeft niet alle blokken te gebruiken."],
     image:"images/blauwe auto.png",
@@ -258,7 +260,7 @@ let blueCar = {
 
 let getGivenNumber1 = {
     title: "Verkrijg gegeven getal",
-    text:["Stel dat we op het begin 36 hebben, in welke volgorde moeten we de onderstaande bewerkingen uitvoeren",
+    text:["Stel dat we oorspronkelijk het getal 36 hebben, in welke volgorde moeten we de onderstaande bewerkingen uitvoeren",
     "om 2 te krijgen?"],
     type:"C",
     diff:1,
@@ -268,7 +270,7 @@ let getGivenNumber1 = {
 
 let sortTheNumbers1 = {
     title:"Getallen sorteren",
-    text:["Sorteer de getallen van klein naar groot volgens de volgende regels.",
+    text:["Sorteer de getallen van klein naar groot volgens deze regels:",
         "1) Alle priemgetallen zijn groter dan alle niet-priemgetallen.",
         "2) Sorteer priemgetallen gewoon van klein naar groot op de normale manier.",
         "3) Sorteer niet-priemgetallen van klein naar groot op basis van de som van hun cijfers."],
@@ -280,7 +282,7 @@ let sortTheNumbers1 = {
 
 let sortTheNumbers2 = {
     title:"Getallen sorteren",
-    text:["Sorteer de getallen van klein naar groot volgens de volgende regels.",
+    text:["Sorteer de getallen van klein naar groot volgens deze regels:",
         "1) Sorteer de getallen op basis van de som van hun cijfers.",
         "2) Sorteer getallen met dezelfde som van hun cijfers op basis van het product van hun cijfers.",],
     type : "C",
@@ -291,7 +293,7 @@ let sortTheNumbers2 = {
 
 let sortTheNumbers3 = {
     title:"Getallen sorteren",
-    text:["Sorteer de getallen van klein naar groot volgens de volgende regels.",
+    text:["Sorteer de getallen van klein naar groot volgens deze regels:",
         "Sorteer de getallen op basis van de som van hun cijfers.",],
     type : "C",
     diff : 0,
@@ -435,7 +437,7 @@ let pathFinding4 = {
 
 let fourShapes = {
     title:"4 figuren plaatsen",
-    text:["Gegeven vier figuren: hoe moet je ze op elkaar plaatsen om de onderste tekening te verkrijgen?",
+    text:["Gegeven vier figuren: In welke volgorde moet je ze op elkaar plaatsen om de onderstaande tekening te verkrijgen?",
         "Zet de figuur die je eerst moet plaatsen onderaan."],
     image:"images/4 figuren.png",
     type:"C",
@@ -463,8 +465,8 @@ let fourShapes = {
 algoExercises.push(followAlgorithm1);
 algoExercises.push(followAlgorithm2);
 algoExercises.push(followAlgorithm3);
-algoExercises.push(followAlgorithm4);
-algoExercises.push(runningRace);
+//algoExercises.push(followAlgorithm4); Voorlopig te moeilijk
+//algoExercises.push(runningRace); Lijkt meer richting decompositie
 //algoExercises.push(randomNumberGenerator);
 //algoExercises.push(randomNumberGenerator2);
 algoExercises.push(blueCar);
@@ -473,11 +475,11 @@ algoExercises.push(sortTheNumbers1);
 algoExercises.push(sortTheNumbers2);
 algoExercises.push(sortTheNumbers3);
 algoExercises.push(frogAndFlies);
-algoExercises.push(racersDilemma);
-algoExercises.push(racersDilemma2);
-algoExercises.push(equivalentStatement);
-algoExercises.push(minimalGraph);
-algoExercises.push(soccerGame);
+//algoExercises.push(racersDilemma);
+//algoExercises.push(racersDilemma2);
+//algoExercises.push(equivalentStatement);
+//algoExercises.push(minimalGraph);
+//algoExercises.push(soccerGame);
 algoExercises.push(pathFinding);
 algoExercises.push(pathFinding2);
 algoExercises.push(pathFinding3);
